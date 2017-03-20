@@ -2063,6 +2063,8 @@
     <!-- http://www.semanticweb.org/ontologyFTS/#shortName -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologyFTS/#shortName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/#NameEntity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">Short name of the legal entity</rdfs:comment>
         <rdfs:comment xml:lang="ru">Сокращенное наименование юридического лица</rdfs:comment>
         <rdfs:label xml:lang="en">short name</rdfs:label>
@@ -3809,10 +3811,10 @@ See also the &lt;a href=&quot;/docs/hotels.html&quot;&gt;dedicated document on t
         <schema1:domainIncludes rdf:resource="http://schema.org/Place"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/address">
-        <schema1:domainIncludes rdf:resource="http://schema.org/Place"/>
         <schema1:domainIncludes rdf:resource="http://schema.org/Person"/>
-        <rdfs:label>address</rdfs:label>
+        <schema1:domainIncludes rdf:resource="http://schema.org/Place"/>
         <rdfs:comment>Physical address of the item.</rdfs:comment>
+        <rdfs:label>address</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/addressCountry">
         <schema1:rangeIncludes rdf:resource="http://schema.org/Country"/>
@@ -3882,8 +3884,8 @@ See also the &lt;a href=&quot;/docs/hotels.html&quot;&gt;dedicated document on t
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/alumni">
         <rdfs:comment>Alumni of an organization.</rdfs:comment>
-        <rdfs:label>alumni</rdfs:label>
         <schema1:rangeIncludes rdf:resource="http://schema.org/Person"/>
+        <rdfs:label>alumni</rdfs:label>
         <schema1:inverseOf rdf:resource="http://schema.org/alumniOf"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/alumniOf">
@@ -4100,8 +4102,8 @@ See also the &lt;a href=&quot;/docs/hotels.html&quot;&gt;dedicated document on t
         <rdfs:comment>An award won by or for this item.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/awards">
-        <rdfs:comment>Awards won by or for this item.</rdfs:comment>
         <schema1:supersededBy rdf:resource="http://schema.org/award"/>
+        <rdfs:comment>Awards won by or for this item.</rdfs:comment>
         <schema1:domainIncludes rdf:resource="http://schema.org/Person"/>
         <rdfs:label>awards</rdfs:label>
     </rdf:Description>
@@ -4354,8 +4356,8 @@ See also the &lt;a href=&quot;/docs/hotels.html&quot;&gt;dedicated document on t
         <rdfs:comment>A circle is the circular region of a specified radius centered at a specified latitude and longitude. A circle is expressed as a pair followed by a radius in meters.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/citation">
-        <rdfs:comment>A citation or reference to another creative work, such as another publication, web page, scholarly article, etc.</rdfs:comment>
         <rdfs:label>citation</rdfs:label>
+        <rdfs:comment>A citation or reference to another creative work, such as another publication, web page, scholarly article, etc.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/closes">
         <rdfs:label>closes</rdfs:label>
@@ -4385,8 +4387,8 @@ See also the &lt;a href=&quot;/docs/hotels.html&quot;&gt;dedicated document on t
     <rdf:Description rdf:about="http://schema.org/colleagues">
         <schema1:rangeIncludes rdf:resource="http://schema.org/Person"/>
         <rdfs:comment>A colleague of the person.</rdfs:comment>
-        <rdfs:label>colleagues</rdfs:label>
         <schema1:supersededBy rdf:resource="http://schema.org/colleague"/>
+        <rdfs:label>colleagues</rdfs:label>
         <schema1:domainIncludes rdf:resource="http://schema.org/Person"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/color">
@@ -4441,20 +4443,20 @@ See also the &lt;a href=&quot;/docs/hotels.html&quot;&gt;dedicated document on t
     <rdf:Description rdf:about="http://schema.org/containedIn">
         <rdfs:comment>The basic containment relation between a place and one that contains it.</rdfs:comment>
         <schema1:supersededBy rdf:resource="http://schema.org/containedInPlace"/>
-        <rdfs:label>containedIn</rdfs:label>
         <schema1:domainIncludes rdf:resource="http://schema.org/Place"/>
+        <rdfs:label>containedIn</rdfs:label>
         <schema1:rangeIncludes rdf:resource="http://schema.org/Place"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/containedInPlace">
         <schema1:inverseOf rdf:resource="http://schema.org/containsPlace"/>
-        <rdfs:comment>The basic containment relation between a place and one that contains it.</rdfs:comment>
         <rdfs:label>containedInPlace</rdfs:label>
+        <rdfs:comment>The basic containment relation between a place and one that contains it.</rdfs:comment>
         <schema1:rangeIncludes rdf:resource="http://schema.org/Place"/>
         <schema1:domainIncludes rdf:resource="http://schema.org/Place"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/containsPlace">
-        <schema1:rangeIncludes rdf:resource="http://schema.org/Place"/>
         <schema1:inverseOf rdf:resource="http://schema.org/containedInPlace"/>
+        <schema1:rangeIncludes rdf:resource="http://schema.org/Place"/>
         <rdfs:label>containsPlace</rdfs:label>
         <rdfs:comment>The basic containment relation between a place and another that it contains.</rdfs:comment>
         <schema1:domainIncludes rdf:resource="http://schema.org/Place"/>
@@ -4985,8 +4987,8 @@ See also the &lt;a href=&quot;/docs/hotels.html&quot;&gt;dedicated document on t
 Typical unit code(s): MTK for square meter, FTK for square foot, or YDK for square yard</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/follows">
-        <rdfs:label>follows</rdfs:label>
         <schema1:rangeIncludes rdf:resource="http://schema.org/Person"/>
+        <rdfs:label>follows</rdfs:label>
         <schema1:domainIncludes rdf:resource="http://schema.org/Person"/>
         <rdfs:comment>The most generic uni-directional social relation.</rdfs:comment>
     </rdf:Description>
@@ -5061,8 +5063,8 @@ Typical unit code(s): MTK for square meter, FTK for square foot, or YDK for squa
         <schema1:rangeIncludes rdf:resource="http://schema.org/Thing"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/gameServer">
-        <rdfs:comment>The server on which  it is possible to play the game.</rdfs:comment>
         <schema1:inverseOf rdf:resource="http://schema.org/game"/>
+        <rdfs:comment>The server on which  it is possible to play the game.</rdfs:comment>
         <rdfs:label>gameServer</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/gameTip">
@@ -5529,10 +5531,10 @@ Typical unit code(s): MTK for square meter, FTK for square foot, or YDK for squa
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/mainEntityOfPage">
         <schema1:rangeIncludes rdf:resource="http://schema.org/URL"/>
-        <rdfs:comment>Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See &lt;a href=&quot;/docs/datamodel.html#mainEntityBackground&quot;&gt;background notes&lt;/a&gt; for details.</rdfs:comment>
         <schema1:inverseOf rdf:resource="http://schema.org/mainEntity"/>
-        <schema1:domainIncludes rdf:resource="http://schema.org/Thing"/>
+        <rdfs:comment>Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See &lt;a href=&quot;/docs/datamodel.html#mainEntityBackground&quot;&gt;background notes&lt;/a&gt; for details.</rdfs:comment>
         <rdfs:label>mainEntityOfPage</rdfs:label>
+        <schema1:domainIncludes rdf:resource="http://schema.org/Thing"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/makesOffer">
         <schema1:inverseOf rdf:resource="http://schema.org/offeredBy"/>
@@ -5614,8 +5616,8 @@ Typical unit code(s): MTK for square meter, FTK for square foot, or YDK for squa
     <rdf:Description rdf:about="http://schema.org/merchant">
         <rdfs:label>merchant</rdfs:label>
         <rdfs:comment>&apos;merchant&apos; is an out-dated term for &apos;seller&apos;.</rdfs:comment>
-        <schema1:rangeIncludes rdf:resource="http://schema.org/Person"/>
         <schema1:supersededBy rdf:resource="http://schema.org/seller"/>
+        <schema1:rangeIncludes rdf:resource="http://schema.org/Person"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/messageAttachment">
         <rdfs:comment>A CreativeWork attached to the message.</rdfs:comment>
@@ -5668,8 +5670,8 @@ Typical unit code(s): MTK for square meter, FTK for square foot, or YDK for squa
         <rdfs:label>musicCompositionForm</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/musicGroupMember">
-        <schema1:supersededBy rdf:resource="http://schema.org/member"/>
         <rdfs:comment>A member of a music group&amp;#x2014;for example, John, Paul, George, or Ringo.</rdfs:comment>
+        <schema1:supersededBy rdf:resource="http://schema.org/member"/>
         <schema1:rangeIncludes rdf:resource="http://schema.org/Person"/>
         <rdfs:label>musicGroupMember</rdfs:label>
     </rdf:Description>
@@ -5825,8 +5827,8 @@ Typical unit code(s): C62 for person</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/offeredBy">
         <schema1:inverseOf rdf:resource="http://schema.org/makesOffer"/>
-        <rdfs:label>offeredBy</rdfs:label>
         <schema1:rangeIncludes rdf:resource="http://schema.org/Person"/>
+        <rdfs:label>offeredBy</rdfs:label>
         <rdfs:comment>A pointer to the organization or person making the offer.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/offers">
@@ -6563,8 +6565,8 @@ Standards bodies should promote a standard prefix for the identifiers of propert
         <rdfs:label>serviceArea</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/serviceAudience">
-        <rdfs:comment>The audience eligible for this service.</rdfs:comment>
         <rdfs:label>serviceAudience</rdfs:label>
+        <rdfs:comment>The audience eligible for this service.</rdfs:comment>
         <schema1:supersededBy rdf:resource="http://schema.org/audience"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/serviceLocation">
@@ -6612,8 +6614,8 @@ Standards bodies should promote a standard prefix for the identifiers of propert
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/sibling">
         <schema1:domainIncludes rdf:resource="http://schema.org/Person"/>
-        <rdfs:label>sibling</rdfs:label>
         <schema1:rangeIncludes rdf:resource="http://schema.org/Person"/>
+        <rdfs:label>sibling</rdfs:label>
         <rdfs:comment>A sibling of the person.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/siblings">
@@ -6790,8 +6792,8 @@ Standards bodies should promote a standard prefix for the identifiers of propert
         <rdfs:comment>Supporting data for a SoftwareApplication.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/surface">
-        <schema1:supersededBy rdf:resource="http://schema.org/artworkSurface"/>
         <schema1:rangeIncludes rdf:resource="http://schema.org/URL"/>
+        <schema1:supersededBy rdf:resource="http://schema.org/artworkSurface"/>
         <rdfs:comment>e.g. Canvas, Paper, Wood, Board, etc.</rdfs:comment>
         <rdfs:label>surface</rdfs:label>
     </rdf:Description>
@@ -6826,8 +6828,8 @@ Standards bodies should promote a standard prefix for the identifiers of propert
         <schema1:domainIncludes rdf:resource="http://schema.org/Person"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/telephone">
-        <rdfs:label>telephone</rdfs:label>
         <rdfs:comment>The telephone number.</rdfs:comment>
+        <rdfs:label>telephone</rdfs:label>
         <schema1:domainIncludes rdf:resource="http://schema.org/Place"/>
         <schema1:domainIncludes rdf:resource="http://schema.org/Person"/>
     </rdf:Description>
@@ -7049,8 +7051,8 @@ Standards bodies should promote a standard prefix for the identifiers of propert
         <rdfs:label>valueRequired</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/vatID">
-        <schema1:domainIncludes rdf:resource="http://schema.org/Person"/>
         <rdfs:comment>The Value-added Tax ID of the organization or person.</rdfs:comment>
+        <schema1:domainIncludes rdf:resource="http://schema.org/Person"/>
         <rdfs:label>vatID</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/vehicleConfiguration">

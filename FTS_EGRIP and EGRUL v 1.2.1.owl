@@ -1035,6 +1035,83 @@
     
 
 
+    <!-- http://www.semanticweb.org/ontologyFTS/actsByInheritance -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologyFTS/actsByInheritance">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/TrusteeEntity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologyFTS/InheritanceManager"/>
+        <rdfs:label xml:lang="en">acts by inheritance</rdfs:label>
+        <rdfs:label xml:lang="ru">действует по наследству</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/actsOnBehalfOfLE -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologyFTS/actsOnBehalfOfLE">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/Applicant"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologyFTS/OrganizationDetails"/>
+        <rdfs:label xml:lang="en">acts on behalf of LE</rdfs:label>
+        <rdfs:label xml:lang="ru">действует от имени ЮЛ</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/actsOnBehalfOfManagementCompany -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologyFTS/actsOnBehalfOfManagementCompany">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/Applicant"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologyFTS/OrganizationDetails"/>
+        <rdfs:label xml:lang="en">acts on behalf of management company</rdfs:label>
+        <rdfs:label xml:lang="ru">действует от имени управляющей компании</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/basedOnPledgeAgreement -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologyFTS/basedOnPledgeAgreement">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/MortgageeEntity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologyFTS/#Document"/>
+        <rdfs:label xml:lang="en">based on pledge agreement</rdfs:label>
+        <rdfs:label xml:lang="ru">на основании договора залога</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/basesForImposing -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologyFTS/basesForImposing">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/EncumbranceOfParticipantShareEntity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologyFTS/#Document"/>
+        <rdfs:label xml:lang="en">bases for imposing</rdfs:label>
+        <rdfs:label xml:lang="ru">основание для обязательства</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/certifiedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologyFTS/certifiedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/PersonEntity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologyFTS/#Document"/>
+        <rdfs:comment xml:lang="en">certified by</rdfs:comment>
+        <rdfs:label xml:lang="ru">сертифицирован</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/createdAfterReorganization -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologyFTS/createdAfterReorganization">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/LegalSuccessorEntity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologyFTS/BasicReorganizationParticipantEntity"/>
+        <rdfs:label xml:lang="en">created after reorganization</rdfs:label>
+        <rdfs:label xml:lang="ru">создано после реорганизации</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/ontologyFTS/createdBy -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologyFTS/createdBy">
@@ -1042,6 +1119,28 @@
         <rdfs:range rdf:resource="http://www.semanticweb.org/ontologyFTS/#LegalEntity"/>
         <rdfs:label xml:lang="en">created by</rdfs:label>
         <rdfs:label xml:lang="ru">создано</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/declaredBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologyFTS/declaredBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/EGRUL_Record"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologyFTS/Applicant"/>
+        <rdfs:label xml:lang="en">declared by</rdfs:label>
+        <rdfs:label xml:lang="ru">заявлено</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/exerciseOfAuthorityThrough -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologyFTS/exerciseOfAuthorityThrough">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/ManagementOrganizationEntity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologyFTS/BranchOfForeignLegalEntity"/>
+        <rdfs:label xml:lang="en">exercise Of Authority Through</rdfs:label>
+        <rdfs:label xml:lang="ru">осуществляет полномочия через</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1057,6 +1156,155 @@
     
 
 
+    <!-- http://www.semanticweb.org/ontologyFTS/governedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologyFTS/governedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/TrusteeEntity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologyFTS/ParticipantEntity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologyFTS/PersonEntity"/>
+        <rdfs:label xml:lang="en">governed by</rdfs:label>
+        <rdfs:label xml:lang="ru">под управлением</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/hasBasicData -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologyFTS/hasBasicData">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/HolderOfRegisterOfShareholdersEntity"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/LEMortgageeEntity"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/ManagementCompanyEntity"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/ManagementOrganizationEntity"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/PeasantFarmEntity"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/PersonMortgageeEntity"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/PublicBodyExercisingFoundersFightsEntity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologyFTS/ForeignLegalEntity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologyFTS/ParticipantEntity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologyFTS/PersonEntity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologyFTS/#EGRUL_RegEntity"/>
+        <rdfs:label xml:lang="en">has basic data</rdfs:label>
+        <rdfs:label xml:lang="ru">имеет базовые данные</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/hasContactNumber -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologyFTS/hasContactNumber">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/ManagementOrganizationEntity"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/PersonEntity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologyFTS/ContactNumberEntity"/>
+        <rdfs:label xml:lang="en">has contact number</rdfs:label>
+        <rdfs:label xml:lang="ru">имеет контактный номер</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/hasEncumbrance -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologyFTS/hasEncumbrance">
+        <rdfs:domain rdf:resource="http://datafabric.cc/FounderEntity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologyFTS/EncumbranceOfParticipantShareEntity"/>
+        <rdfs:label xml:lang="en">has encumbrance</rdfs:label>
+        <rdfs:label xml:lang="ru">имеет обременение</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/hasMortgagee -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologyFTS/hasMortgagee">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/EncumbranceOfParticipantShareEntity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologyFTS/MortgageeEntity"/>
+        <rdfs:label xml:lang="en">has mortgagee</rdfs:label>
+        <rdfs:label xml:lang="ru">имеет обременение</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/hasName -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologyFTS/hasName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/MutualInvestmentFundNameEntity"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/SeparateBusinessUnitEntity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologyFTS/SeparateBusinessUnitNameEntity"/>
+        <rdfs:label xml:lang="en">has name</rdfs:label>
+        <rdfs:label xml:lang="ru">имеет наименование</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/hasNameAndITN -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologyFTS/hasNameAndITN">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/ForeignLegalEntity"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/InheritanceManager"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/PersonActingWithoutPowerOfAttorneyEntity"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/PersonFounderEntity"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/RussianLEFounderEntity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologyFTS/ParticipantEntity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologyFTS/PersonEntity"/>
+        <rdfs:label xml:lang="en">has name and ITN</rdfs:label>
+        <rdfs:label xml:lang="ru">наименование и ИНН</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/hasOldRegistrationData -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologyFTS/hasOldRegistrationData">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/RussianLEFounderEntity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologyFTS/OldRegistrationEntity"/>
+        <rdfs:label xml:lang="en">has old registration data</rdfs:label>
+        <rdfs:label xml:lang="ru">имеет старые регистрационные данные</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/hasParticipant -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologyFTS/hasParticipant">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/ReorganizationEntity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologyFTS/ReorganizationParticipant"/>
+        <rdfs:label xml:lang="en">has participant</rdfs:label>
+        <rdfs:label xml:lang="ru">участник</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/hasShare -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologyFTS/hasShare">
+        <rdfs:domain rdf:resource="http://datafabric.cc/FounderEntity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologyFTS/ShareInStatedCapitalEntity"/>
+        <rdfs:label xml:lang="en">has share</rdfs:label>
+        <rdfs:label xml:lang="ru">имеет долю</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/hasTrustee -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologyFTS/hasTrustee">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/PersonFounderEntity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologyFTS/TrusteeEntity"/>
+        <rdfs:label xml:lang="en">has trustee</rdfs:label>
+        <rdfs:label xml:lang="ru">имеет доверенное лицо</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/holdsPosition -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologyFTS/holdsPosition">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/PersonActingWithoutPowerOfAttorneyEntity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologyFTS/JobEntity"/>
+        <rdfs:label xml:lang="en">holds position</rdfs:label>
+        <rdfs:label xml:lang="ru">занимает позицию</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/ontologyFTS/invalidBasedOn -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologyFTS/invalidBasedOn">
@@ -1068,6 +1316,76 @@
     
 
 
+    <!-- http://www.semanticweb.org/ontologyFTS/isDisqualified -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologyFTS/isDisqualified">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/PersonActingWithoutPowerOfAttorneyEntity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologyFTS/DisqualificationEntity"/>
+        <rdfs:label xml:lang="en">is disqualified</rdfs:label>
+        <rdfs:label xml:lang="ru">дисквалифицирован</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/isManagedByPerson -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologyFTS/isManagedByPerson">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/ManagementOrganizationEntity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologyFTS/PersonEntity"/>
+        <rdfs:label xml:lang="en">is managed by person</rdfs:label>
+        <rdfs:label xml:lang="ru">управляется лицом</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/isPerson -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologyFTS/isPerson">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/Applicant"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologyFTS/PersonEntity"/>
+        <rdfs:label xml:lang="en">is person</rdfs:label>
+        <rdfs:label xml:lang="ru">является физическим лицом</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/isReducedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologyFTS/isReducedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/StatedCapitalEntity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologyFTS/CapitalDecreasingEntity"/>
+        <rdfs:label xml:lang="en">is reduced by</rdfs:label>
+        <rdfs:label xml:lang="ru">уменьшен</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/localTaxAuthority -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologyFTS/localTaxAuthority">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/SeparateBusinessUnitTaxRegistrationEntity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologyFTS/#PublicBody"/>
+        <rdfs:label xml:lang="en">local tax authority</rdfs:label>
+        <rdfs:label xml:lang="ru">локальный налоговый орган</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/locatedAt -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologyFTS/locatedAt">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/ManagementOrganizationEntity"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/PublicAuthorityFounderEntity"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/SeparateBusinessUnitEntity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologyFTS/AddressAbroadEntity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologyFTS/RegionType"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologyFTS/#AddressEntity"/>
+        <rdfs:label xml:lang="en">located at</rdfs:label>
+        <rdfs:label xml:lang="ru">расположено в</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/ontologyFTS/locatedIn -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologyFTS/locatedIn">
@@ -1075,6 +1393,19 @@
         <rdfs:range rdf:resource="http://www.semanticweb.org/ontologyFTS/KLADRElement"/>
         <rdfs:label xml:lang="en">located in</rdfs:label>
         <rdfs:label xml:lang="ru">расположено</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/managedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologyFTS/managedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/PeasantFarmEntity"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/PublicAuthorityFounderEntity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologyFTS/ManagementCompanyEntity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologyFTS/PersonEntity"/>
+        <rdfs:label xml:lang="en">managed by</rdfs:label>
+        <rdfs:label xml:lang="ru">под руководством</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1098,7 +1429,7 @@
         <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/#RegEntity"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/ontologyFTS/TerritorialStateBodies"/>
         <rdfs:label xml:lang="en">recorded by</rdfs:label>
-        <rdfs:label xml:lang="ru">записано в</rdfs:label>
+        <rdfs:label xml:lang="ru">запись добавлена в</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1106,7 +1437,9 @@
     <!-- http://www.semanticweb.org/ontologyFTS/registeredIn -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologyFTS/registeredIn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/SeparateBusinessUnitEntity"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/#RegEntity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologyFTS/SeparateBusinessUnitTaxRegistrationEntity"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/ontologyFTS/TerritorialStateBodies"/>
         <rdfs:label xml:lang="en">registered in</rdfs:label>
         <rdfs:label xml:lang="ru">поставлено на учет</rdfs:label>
@@ -1114,11 +1447,45 @@
     
 
 
+    <!-- http://www.semanticweb.org/ontologyFTS/registeredInCountryOfOrigin -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologyFTS/registeredInCountryOfOrigin">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/ManagementOrganizationEntity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologyFTS/ForeignLegalEntity"/>
+        <rdfs:label xml:lang="en">registered in country of origin</rdfs:label>
+        <rdfs:label xml:lang="ru">зарегистрировано в стране основания</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/registeredOutsideRussia -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologyFTS/registeredOutsideRussia">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/ForeignLEFounderEntity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologyFTS/ForeignLegalEntity"/>
+        <rdfs:label xml:lang="en">registered outside Russia</rdfs:label>
+        <rdfs:label xml:lang="ru">зарегистрировано вне России</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/rightsAreExercisedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologyFTS/rightsAreExercisedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/PublicAuthorityFounderEntity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologyFTS/PublicBodyExercisingFoundersFightsEntity"/>
+        <rdfs:label xml:lang="en">rights are exercised by</rdfs:label>
+        <rdfs:label xml:lang="ru">права осуществляются</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/ontologyFTS/#addedBy -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologyFTS/#addedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/EGRUL_Record"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/#EGRIP_Record"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologyFTS/#TerritorialBodyOfRussianPensionFund"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologyFTS/#TaxAuthoritiesDesignationSystem"/>
         <rdfs:label xml:lang="en">added by</rdfs:label>
         <rdfs:label xml:lang="ru">добавлено</rdfs:label>
     </owl:ObjectProperty>
@@ -1129,12 +1496,13 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologyFTS/#additionalActivity">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/LE_ActivityEntity"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/#IndividualEntrepreneurActivity"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/ontologyFTS/#EconomyActivityType"/>
         <rdfs:comment xml:lang="en">An additional activity type</rdfs:comment>
         <rdfs:comment xml:lang="ru">Дополнительный вид экономической деятельности ИП</rdfs:comment>
         <rdfs:label xml:lang="en">additional activity</rdfs:label>
-        <rdfs:label xml:lang="ru">доп вид деятельности</rdfs:label>
+        <rdfs:label xml:lang="ru">дополнительный вид деятельности</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1153,7 +1521,9 @@
     <!-- http://www.semanticweb.org/ontologyFTS/#confirmedBy -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologyFTS/#confirmedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/EGRUL_Record"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/#EGRIP_Record"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologyFTS/CertificateEntity"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/ontologyFTS/#ChangesConfirmationEntity"/>
         <rdfs:label xml:lang="en">confirmed by</rdfs:label>
         <rdfs:label xml:lang="ru">одобрено</rdfs:label>
@@ -1178,7 +1548,9 @@
     <!-- http://www.semanticweb.org/ontologyFTS/#hasReasonForMakingEntry -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologyFTS/#hasReasonForMakingEntry">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/EGRUL_Record"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/#EGRIP_Record"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologyFTS/EGRUL_RecordType"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/ontologyFTS/#EGRIP_RecordType"/>
         <rdfs:label xml:lang="en">has reason for making entry</rdfs:label>
         <rdfs:label xml:lang="ru">внесено по причине</rdfs:label>
@@ -1200,8 +1572,10 @@
     <!-- http://www.semanticweb.org/ontologyFTS/#includes -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologyFTS/#includes">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/Legal_Entity_Details"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/#IndividualEntrepreneurDetales"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/ontologyFTS/#EGRIP_RegEntity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologyFTS/#EGRUL_RegEntity"/>
         <rdfs:label xml:lang="en">includes</rdfs:label>
         <rdfs:label xml:lang="ru">включает</rdfs:label>
     </owl:ObjectProperty>
@@ -1211,6 +1585,7 @@
     <!-- http://www.semanticweb.org/ontologyFTS/#invalidate -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologyFTS/#invalidate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/EGRUL_Record"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/#EGRIP_Record"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/ontologyFTS/#ChangedRecord"/>
         <rdfs:comment xml:lang="en">Information about invalidated record</rdfs:comment>
@@ -1224,6 +1599,7 @@
     <!-- http://www.semanticweb.org/ontologyFTS/#invalidateBy -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologyFTS/#invalidateBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/EGRUL_Record"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/#EGRIP_Record"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/ontologyFTS/#ChangedRecord"/>
         <rdfs:label xml:lang="en">invalidate by</rdfs:label>
@@ -1235,6 +1611,7 @@
     <!-- http://www.semanticweb.org/ontologyFTS/#isAmendingBy -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologyFTS/#isAmendingBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/EGRUL_Record"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/#EGRIP_Record"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/ontologyFTS/#ChangedRecord"/>
         <rdfs:comment xml:lang="en">Is amending by entity</rdfs:comment>
@@ -1248,6 +1625,7 @@
     <!-- http://www.semanticweb.org/ontologyFTS/#isAmendingFor -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologyFTS/#isAmendingFor">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/EGRUL_Record"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/#EGRIP_Record"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/ontologyFTS/#ChangedRecord"/>
         <rdfs:comment xml:lang="en">Is amending for entry</rdfs:comment>
@@ -1284,12 +1662,13 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologyFTS/#mainActivity">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/LE_ActivityEntity"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/#IndividualEntrepreneurActivity"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/ontologyFTS/#EconomyActivityType"/>
         <rdfs:comment xml:lang="en">Main activity type</rdfs:comment>
         <rdfs:comment xml:lang="ru">Основной вид деятельности ИП</rdfs:comment>
         <rdfs:label xml:lang="en">main activity</rdfs:label>
-        <rdfs:label xml:lang="ru">осн вид деятельности</rdfs:label>
+        <rdfs:label xml:lang="ru">основной вид деятельности</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1334,7 +1713,9 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologyFTS/#relatesTo">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/Legal_Entity_Details"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/#RegEntity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologyFTS/#LegalEntity"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/ontologyFTS/#RegNumberDate"/>
         <rdfs:comment xml:lang="en">It contains SRN and date of adding the entry in the FTS register</rdfs:comment>
         <rdfs:comment xml:lang="ru">Содержит ГРН и дату внесения записи в реестр ФНС</rdfs:comment>
@@ -1348,6 +1729,7 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologyFTS/#submitted">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/#Document"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologyFTS/EGRUL_Record"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/ontologyFTS/#EGRIP_Record"/>
         <rdfs:label xml:lang="en">submitted</rdfs:label>
         <rdfs:label xml:lang="ru">предоставлен</rdfs:label>
@@ -1390,9 +1772,22 @@
     
 
 
+    <!-- http://schemaorgae.appspot.com/version/3.2/schema.ttl#additionalName -->
+
+    <owl:DatatypeProperty rdf:about="http://schemaorgae.appspot.com/version/3.2/schema.ttl#additionalName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/PersonEntity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>An additional name for a Person, can be used for a middle name</rdfs:comment>
+        <rdfs:label xml:lang="en">additional name</rdfs:label>
+        <rdfs:label xml:lang="ru">второе имя</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://schemaorgae.appspot.com/version/latest/schema.ttl#address -->
 
     <owl:DatatypeProperty rdf:about="http://schemaorgae.appspot.com/version/latest/schema.ttl#address">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/AddressAbroadEntity"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/#LE_StateEntity"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/#LE_TaxRegistratorEntity"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/#LegalEntity"/>
@@ -1406,6 +1801,17 @@
     
 
 
+    <!-- http://www.semanticweb.org/ontologyFTS/ClassifierOfOrganizationAndLegalForm -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologyFTS/ClassifierOfOrganizationAndLegalForm">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/Legal_Entity_Details"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">classifier of Organization and Legal Form</rdfs:label>
+        <rdfs:label xml:lang="ru">классификатор организационно-правовых форм</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.semanticweb.org/ontologyFTS/addressCode -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologyFTS/addressCode">
@@ -1415,6 +1821,28 @@
         <rdfs:comment xml:lang="ru">код адреса по КЛАДР</rdfs:comment>
         <rdfs:label xml:lang="en">address code</rdfs:label>
         <rdfs:label xml:lang="ru">код адреса</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/addressInCountryOfOrigin -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologyFTS/addressInCountryOfOrigin">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/ForeignLegalEntity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">address in country of origin</rdfs:label>
+        <rdfs:label xml:lang="ru">адрес в стране образования</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/amount -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologyFTS/amount">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/StatedCapitalEntity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">amount</rdfs:label>
+        <rdfs:label xml:lang="ru">размер капитала в рублях</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1452,6 +1880,30 @@
     
 
 
+    <!-- http://www.semanticweb.org/ontologyFTS/decisionDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologyFTS/decisionDate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/CapitalDecreasingEntity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">Date of the decision to reduce the share capital</rdfs:comment>
+        <rdfs:comment xml:lang="ru">Дата принятия решения об уменьшении уставного капитала</rdfs:comment>
+        <rdfs:label xml:lang="en">decision date</rdfs:label>
+        <rdfs:label xml:lang="ru">дата принятия решения</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/denominatorOfShare -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologyFTS/denominatorOfShare">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/ShareInStatedCapitalEntity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">denominator of share</rdfs:label>
+        <rdfs:label xml:lang="ru">знаменатель доли</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.semanticweb.org/ontologyFTS/docType -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologyFTS/docType">
@@ -1476,13 +1928,152 @@
     
 
 
-    <!-- http://www.semanticweb.org/ontologyFTS/itn -->
+    <!-- http://www.semanticweb.org/ontologyFTS/iePrimaryStateRegistrationNumber -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologyFTS/itn">
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologyFTS/iePrimaryStateRegistrationNumber">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/JobEntity"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/PersonActingWithoutPowerOfAttorneyEntity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">ie primary state registration number</rdfs:label>
+        <rdfs:label xml:lang="ru">ип оргн</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/itn_LE -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologyFTS/itn_LE">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/BasicReorganizationParticipantEntity"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/LE_TaxRegistrationEntity"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/OrganizationDetails"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/ParticipantEntity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">itn ((from EGRUL))</rdfs:label>
+        <rdfs:label xml:lang="ru">инн (из ЕГРЮЛ)</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/jobTitle -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologyFTS/jobTitle">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/JobEntity"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/PersonActingWithoutPowerOfAttorneyEntity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">job title</rdfs:label>
+        <rdfs:label xml:lang="ru">должность</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/kpp -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologyFTS/kpp">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/LE_TaxRegistrationEntity"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label xml:lang="en">ITN</rdfs:label>
-        <rdfs:label xml:lang="ru">ИНН</rdfs:label>
+        <rdfs:comment xml:lang="en">KPP of the legal entity</rdfs:comment>
+        <rdfs:comment xml:lang="ru">КПП юридического лица</rdfs:comment>
+        <rdfs:label xml:lang="en">kpp</rdfs:label>
+        <rdfs:label xml:lang="ru">кпп</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/municipalityName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologyFTS/municipalityName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/PublicAuthorityFounderEntity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">municipality name</rdfs:label>
+        <rdfs:label xml:lang="ru">наименование муниципалитета</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/nominalShareOfValueInRuble -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologyFTS/nominalShareOfValueInRuble">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/ShareInStatedCapitalEntity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">nominal share of value in ruble</rdfs:label>
+        <rdfs:label xml:lang="ru">номинальный размер доли в рублях</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/nominatorOfShare -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologyFTS/nominatorOfShare">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/ShareInStatedCapitalEntity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">nominator of share</rdfs:label>
+        <rdfs:label xml:lang="ru">назначение доли</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/officeNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologyFTS/officeNumber">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/#AddressEntity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">office number</rdfs:label>
+        <rdfs:label xml:lang="ru">номер офиса</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/openingInheritanceDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologyFTS/openingInheritanceDate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/InheritanceManager"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">opening inheritance date</rdfs:label>
+        <rdfs:label xml:lang="ru">дата открытия наследования</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/percentageShare -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologyFTS/percentageShare">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/ShareInStatedCapitalEntity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">percentage share</rdfs:label>
+        <rdfs:label xml:lang="ru">процент доли</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/periodOrProcedure -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologyFTS/periodOrProcedure">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/EncumbranceOfParticipantShareEntity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">period or procedure</rdfs:label>
+        <rdfs:label xml:lang="ru">период или процедура</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/personINN -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologyFTS/personINN">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/PersonEntity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">person INN</rdfs:label>
+        <rdfs:label xml:lang="ru">персональный ИНН</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/phoneNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologyFTS/phoneNumber">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/ContactNumberEntity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">phone number</rdfs:label>
+        <rdfs:label xml:lang="ru">номер телефона</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1494,6 +2085,17 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label xml:lang="en">post code</rdfs:label>
         <rdfs:label xml:lang="ru">почтовый индекс</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/psrn_IE -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologyFTS/psrn_IE">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/PeasantFarmEntity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">psrn_IE</rdfs:label>
+        <rdfs:label xml:lang="ru">огрн_ИП</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1511,6 +2113,19 @@
     
 
 
+    <!-- http://www.semanticweb.org/ontologyFTS/reductionAmount -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologyFTS/reductionAmount">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/CapitalDecreasingEntity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The amount by which the authorized capital is reduced (in rubles)</rdfs:comment>
+        <rdfs:comment xml:lang="ru">Величина, на которую уменьшается уставный капитал (в рублях)</rdfs:comment>
+        <rdfs:label xml:lang="en">reduction amount</rdfs:label>
+        <rdfs:label xml:lang="ru">величина уменьшения</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.semanticweb.org/ontologyFTS/regionCode -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologyFTS/regionCode">
@@ -1518,6 +2133,49 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label xml:lang="en">region code</rdfs:label>
         <rdfs:label xml:lang="ru">код региона</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/rubleShare -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologyFTS/rubleShare">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/StatedCapitalEntity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">ruble share</rdfs:label>
+        <rdfs:label xml:lang="ru">доля рубля в УстКап</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/shareInDecimalractions -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologyFTS/shareInDecimalractions">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/ShareInStatedCapitalEntity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">share in decimalractions</rdfs:label>
+        <rdfs:label xml:lang="ru">доля в десятичных дробях</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/stateAfterReorganization -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologyFTS/stateAfterReorganization">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/ReorganizationParticipant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">state after reorganization</rdfs:label>
+        <rdfs:label xml:lang="ru">статус после реорганизации</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/taxRegistrationReasonCode -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologyFTS/taxRegistrationReasonCode">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/SeparateBusinessUnitTaxRegistrationEntity"/>
+        <rdfs:label xml:lang="en">tax registration reason code</rdfs:label>
+        <rdfs:label xml:lang="ru">кпп представительства</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1656,12 +2314,11 @@
     <!-- http://www.semanticweb.org/ontologyFTS/#endDate -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologyFTS/#endDate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/DisqualificationEntity"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/#LicenseEntity"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
-        <rdfs:comment xml:lang="en">It contains information about the date of the end of license</rdfs:comment>
-        <rdfs:comment xml:lang="ru">Данные о дате окончания срока действительности лицензии</rdfs:comment>
         <rdfs:label xml:lang="en">end date</rdfs:label>
-        <rdfs:label xml:lang="ru">дата оконч лиц</rdfs:label>
+        <rdfs:label xml:lang="ru">дата окончания</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1669,6 +2326,7 @@
     <!-- http://www.semanticweb.org/ontologyFTS/#formationDate -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologyFTS/#formationDate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/Legal_Entity_Details"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/#IndividualEntrepreneurDetales"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:comment xml:lang="en">Date of formation of information from the EGRIP records about an individual entrepreneur</rdfs:comment>
@@ -1682,6 +2340,10 @@
     <!-- http://www.semanticweb.org/ontologyFTS/#fullName -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologyFTS/#fullName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/BasicReorganizationParticipantEntity"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/BranchOfForeignLegalEntity"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/OrganizationDetails"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/ParticipantEntity"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/#NameEntity"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">Full name of the legal entity</rdfs:comment>
@@ -1726,8 +2388,8 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">Taxpayer identification number</rdfs:comment>
         <rdfs:comment xml:lang="ru">ИНН</rdfs:comment>
-        <rdfs:label xml:lang="en">itn</rdfs:label>
-        <rdfs:label xml:lang="ru">инн</rdfs:label>
+        <rdfs:label xml:lang="en">itn (from EGRIP)</rdfs:label>
+        <rdfs:label xml:lang="ru">инн (из ЕГРИП)</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1828,6 +2490,7 @@
     <!-- http://www.semanticweb.org/ontologyFTS/#middleName -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologyFTS/#middleName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/PersonEntity"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/#NameAndGenderEntity"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">Father name (middle name)</rdfs:comment>
@@ -1868,6 +2531,10 @@
     <!-- http://www.semanticweb.org/ontologyFTS/#primaryStateRegistrationNumber -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologyFTS/#primaryStateRegistrationNumber">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/BasicReorganizationParticipantEntity"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/OrganizationDetails"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/ParticipantEntity"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/RussianLegalEntity"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/#RegistrationEntity"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">primary state registration number of the individual entrepreneur</rdfs:comment>
@@ -1895,6 +2562,7 @@
     <!-- http://www.semanticweb.org/ontologyFTS/#psrnAssignmentDate -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologyFTS/#psrnAssignmentDate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/RussianLegalEntity"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/#RegistrationEntity"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:label xml:lang="en">psrn assignment date</rdfs:label>
@@ -1920,6 +2588,7 @@
     <!-- http://www.semanticweb.org/ontologyFTS/#recordID -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologyFTS/#recordID">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/EGRUL_Record"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/#ChangedRecord"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/#EGRIP_Record"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
@@ -1934,6 +2603,7 @@
     <!-- http://www.semanticweb.org/ontologyFTS/#recordingDate -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologyFTS/#recordingDate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/EGRUL_Record"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/#EGRIP_Record"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:comment xml:lang="en">Date of entry in EGRIP</rdfs:comment>
@@ -1965,6 +2635,7 @@
         <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/LE_PensionFundRegistrationEntity"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/LE_SocialInsuranceFundRegistrationEntity"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/LE_TaxRegistrationEntity"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/SeparateBusinessUnitTaxRegistrationEntity"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/#PensionFundRegistrationEntity"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/#RegistrationEntity"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/#SocialInsuranceFundRegistrationEntity"/>
@@ -2037,6 +2708,7 @@
     <!-- http://www.semanticweb.org/ontologyFTS/#sertificateCeries -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologyFTS/#sertificateCeries">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/CertificateEntity"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/#ChangesConfirmationEntity"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">Series of sertificate</rdfs:comment>
@@ -2055,7 +2727,7 @@
         <rdfs:comment xml:lang="en">Certificate date</rdfs:comment>
         <rdfs:comment xml:lang="ru">Дата выдачи свидетельства</rdfs:comment>
         <rdfs:label xml:lang="en">certificate date</rdfs:label>
-        <rdfs:label xml:lang="ru">дата сертиф</rdfs:label>
+        <rdfs:label xml:lang="ru">дата бланка свидетельства</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -2076,12 +2748,11 @@
     <!-- http://www.semanticweb.org/ontologyFTS/#startDate -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologyFTS/#startDate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/DisqualificationEntity"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/#LicenseEntity"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
-        <rdfs:comment xml:lang="en">It contains information about the date of start license</rdfs:comment>
-        <rdfs:comment xml:lang="ru">Данные о дате начала срока действительности лицензии</rdfs:comment>
         <rdfs:label xml:lang="en">start date</rdfs:label>
-        <rdfs:label xml:lang="ru">дата нач лиц</rdfs:label>
+        <rdfs:label xml:lang="ru">дата начала</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -2089,6 +2760,7 @@
     <!-- http://www.semanticweb.org/ontologyFTS/#stateRegistrationNumber -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologyFTS/#stateRegistrationNumber">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/EGRUL_Record"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/#EGRIP_Record"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/#RegNumberDate"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
@@ -2129,6 +2801,7 @@
     <!-- http://xmlns.com/foaf/0.1/firstName -->
 
     <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/firstName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/PersonEntity"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/#NameAndGenderEntity"/>
         <rdfs:label xml:lang="ru">имя</rdfs:label>
     </rdf:Description>
@@ -2147,6 +2820,7 @@
     <!-- http://xmlns.com/foaf/0.1/lastName -->
 
     <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/lastName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/PersonEntity"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/#NameAndGenderEntity"/>
         <rdfs:label xml:lang="ru">фамилия</rdfs:label>
     </rdf:Description>
@@ -2156,6 +2830,7 @@
     <!-- http://xmlns.com/foaf/0.1/name -->
 
     <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/name">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/SeparateBusinessUnitNameEntity"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologyFTS/#LegalEntity"/>
         <rdfs:comment xml:lang="ru">Название организации</rdfs:comment>
         <rdfs:label xml:lang="ru">наименование</rdfs:label>
@@ -2171,6 +2846,16 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://datafabric.cc/FounderEntity -->
+
+    <owl:Class rdf:about="http://datafabric.cc/FounderEntity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologyFTS/#EGRUL_RegEntity"/>
+        <rdfs:label xml:lang="en">Founder Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">Учредители</rdfs:label>
+    </owl:Class>
     
 
 
@@ -2979,14 +3664,88 @@ See also the &lt;a href=&quot;/docs/hotels.html&quot;&gt;dedicated document on t
     
 
 
+    <!-- http://www.semanticweb.org/ontologyFTS/AddressAbroadEntity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologyFTS/AddressAbroadEntity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologyFTS/#EGRUL_RegEntity"/>
+        <rdfs:label xml:lang="en">Address Abroad Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">Зарубежный Адрес</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/Applicant -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologyFTS/Applicant">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:label xml:lang="en">Applicant</rdfs:label>
+        <rdfs:label xml:lang="ru">Заявитель</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/ApplicantType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologyFTS/ApplicantType">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologyFTS/#FTS_TypeList"/>
+        <rdfs:comment xml:lang="en">Information about the applicant name and type</rdfs:comment>
+        <rdfs:comment xml:lang="ru">Сведения о заявителе (тип и название)</rdfs:comment>
+        <rdfs:label xml:lang="en">Applicant Type</rdfs:label>
+        <rdfs:label xml:lang="ru">Вид Заявителя</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/BasicReorganizationParticipantEntity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologyFTS/BasicReorganizationParticipantEntity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologyFTS/#EGRUL_RegEntity"/>
+        <rdfs:label xml:lang="en">Basic Reorganization Participant Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">Участники Реорганизации</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/BranchOfForeignLegalEntity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologyFTS/BranchOfForeignLegalEntity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologyFTS/#EGRUL_RegEntity"/>
+        <rdfs:label xml:lang="en">Branch Of Foreign Legal Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">Филиал Зарубежной Компании</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/BranchOfficeEntity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologyFTS/BranchOfficeEntity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologyFTS/SeparateBusinessUnitEntity"/>
+        <rdfs:label xml:lang="en">Branch Office Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">Филиал</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/ontologyFTS/BusinessCessationEntity -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/ontologyFTS/BusinessCessationEntity">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologyFTS/#RegEntity"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologyFTS/#EGRUL_RegEntity"/>
         <rdfs:comment xml:lang="en">Information about the termination of a legal entity</rdfs:comment>
         <rdfs:comment xml:lang="ru">Сведения о прекращении юридического лица</rdfs:comment>
         <rdfs:label xml:lang="en">Business Cessation Entity</rdfs:label>
-        <rdfs:label xml:lang="ru">Прекращение деятельности</rdfs:label>
+        <rdfs:label xml:lang="ru">Прекращение Деятельности</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/CapitalDecreasingEntity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologyFTS/CapitalDecreasingEntity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologyFTS/#EGRUL_RegEntity"/>
+        <rdfs:comment xml:lang="en">Information about finding a business entity in the process of reduction of the authorized capital</rdfs:comment>
+        <rdfs:comment xml:lang="ru">Сведения о нахождении хозяйственного общества в процессе уменьшения уставного капитала</rdfs:comment>
+        <rdfs:label xml:lang="en">Capital Decreasing Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">Уменьшение Уставного Капитала</rdfs:label>
     </owl:Class>
     
 
@@ -3003,6 +3762,16 @@ See also the &lt;a href=&quot;/docs/hotels.html&quot;&gt;dedicated document on t
     
 
 
+    <!-- http://www.semanticweb.org/ontologyFTS/CertificateEntity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologyFTS/CertificateEntity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologyFTS/#Document"/>
+        <rdfs:label xml:lang="en">Certificate Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">Свидетельство</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/ontologyFTS/City -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/ontologyFTS/City">
@@ -3011,6 +3780,26 @@ See also the &lt;a href=&quot;/docs/hotels.html&quot;&gt;dedicated document on t
         <rdfs:comment xml:lang="ru">Код города по КЛАДР</rdfs:comment>
         <rdfs:label xml:lang="en">City</rdfs:label>
         <rdfs:label xml:lang="ru">Город</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/ContactNumberEntity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologyFTS/ContactNumberEntity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologyFTS/#EGRUL_RegEntity"/>
+        <rdfs:label xml:lang="en">Contact Number Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">Контактный Номер</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/DisqualificationEntity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologyFTS/DisqualificationEntity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologyFTS/#EGRUL_RegEntity"/>
+        <rdfs:label xml:lang="en">Disqualification Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">Дисквалификация</rdfs:label>
     </owl:Class>
     
 
@@ -3027,6 +3816,58 @@ See also the &lt;a href=&quot;/docs/hotels.html&quot;&gt;dedicated document on t
     
 
 
+    <!-- http://www.semanticweb.org/ontologyFTS/EGRUL_Record -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologyFTS/EGRUL_Record">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:label xml:lang="en">EGRUL_Record</rdfs:label>
+        <rdfs:label xml:lang="ru">ЕГРЮЛ_Запись</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/EGRUL_RecordType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologyFTS/EGRUL_RecordType">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologyFTS/#FTS_TypeList"/>
+        <rdfs:comment xml:lang="en">Information on the entries made in the Unified State Register of Legal Entities</rdfs:comment>
+        <rdfs:comment xml:lang="ru">Сведения о записях, внесенных в ЕГРЮЛ</rdfs:comment>
+        <rdfs:label xml:lang="en">EGRUL_Record Type</rdfs:label>
+        <rdfs:label xml:lang="ru">Вид записи ЕГРЮЛ</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/EncumbranceOfParticipantShareEntity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologyFTS/EncumbranceOfParticipantShareEntity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologyFTS/#EGRUL_RegEntity"/>
+        <rdfs:label xml:lang="en">Encumbrance Of Participant Share Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">Обременение Доли Участника</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/EncumbranceType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologyFTS/EncumbranceType">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologyFTS/#FTS_TypeList"/>
+        <rdfs:label xml:lang="en">Encumbrance Type</rdfs:label>
+        <rdfs:label xml:lang="ru">Тип Обременения</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/Error -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologyFTS/Error">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologyFTS/#FTS_TypeList"/>
+        <rdfs:label xml:lang="en">Error</rdfs:label>
+        <rdfs:label xml:lang="ru">Ошибка</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/ontologyFTS/ExclusionDecision -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/ontologyFTS/ExclusionDecision">
@@ -3035,6 +3876,65 @@ See also the &lt;a href=&quot;/docs/hotels.html&quot;&gt;dedicated document on t
         <rdfs:comment xml:lang="ru">Сведения о решении о предстоящем исключении недействующего ЮЛ из ЕГРЮЛ и его публикации</rdfs:comment>
         <rdfs:label xml:lang="en">Exclusion Decision</rdfs:label>
         <rdfs:label xml:lang="ru">Решение об исключении</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/ForeignLEFounderEntity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologyFTS/ForeignLEFounderEntity">
+        <rdfs:subClassOf rdf:resource="http://datafabric.cc/FounderEntity"/>
+        <rdfs:label xml:lang="en">Foreign LE Founder Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">Учредитель - Зарубежное ЮЛ</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/ForeignLegalEntity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologyFTS/ForeignLegalEntity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologyFTS/#LE_RegistrationEntity"/>
+        <rdfs:label xml:lang="en">Foreign Legal Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">Зарубежное ЮЛ</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/FounderType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologyFTS/FounderType">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologyFTS/#FTS_TypeList"/>
+        <rdfs:label xml:lang="en">Founder Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/HolderOfRegisterOfShareholdersEntity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologyFTS/HolderOfRegisterOfShareholdersEntity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologyFTS/#EGRUL_RegEntity"/>
+        <rdfs:label xml:lang="en">Holder Of Register Of Shareholders Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">Держатель Реестра Акционеров</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/InheritanceManager -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologyFTS/InheritanceManager">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologyFTS/#EGRUL_RegEntity"/>
+        <rdfs:label xml:lang="en">Inheritance Manager</rdfs:label>
+        <rdfs:label xml:lang="ru">Управляющий Наследник</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/JobEntity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologyFTS/JobEntity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologyFTS/#EGRUL_RegEntity"/>
+        <rdfs:label xml:lang="en">Job Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">Должность</rdfs:label>
     </owl:Class>
     
 
@@ -3051,6 +3951,26 @@ See also the &lt;a href=&quot;/docs/hotels.html&quot;&gt;dedicated document on t
     
 
 
+    <!-- http://www.semanticweb.org/ontologyFTS/LEMortgageeEntity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologyFTS/LEMortgageeEntity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologyFTS/MortgageeEntity"/>
+        <rdfs:label xml:lang="en">LE Mortgagee Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">Залогодержатель - ЮЛ</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/LE_ActivityEntity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologyFTS/LE_ActivityEntity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologyFTS/#EGRUL_RegEntity"/>
+        <rdfs:label xml:lang="en">LE_ActivityEntity</rdfs:label>
+        <rdfs:label xml:lang="ru">Вид Деятельности ЮЛ</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/ontologyFTS/LE_PensionFundRegistrationEntity -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/ontologyFTS/LE_PensionFundRegistrationEntity">
@@ -3058,7 +3978,7 @@ See also the &lt;a href=&quot;/docs/hotels.html&quot;&gt;dedicated document on t
         <rdfs:comment xml:lang="en">Information on the registration of a legal entity as an insured in the territorial body of the Pension Fund of the Russian Federation</rdfs:comment>
         <rdfs:comment xml:lang="ru">Сведения о регистрации юридического лица в качестве страхователя в территориальном органе Пенсионного фонда Российской Федерации</rdfs:comment>
         <rdfs:label xml:lang="en">LE Pension Fund Registration Entity</rdfs:label>
-        <rdfs:label xml:lang="ru">Регистрация ЮЛ в ПФР</rdfs:label>
+        <rdfs:label xml:lang="ru">Регистрация ЮЛ в ПФ</rdfs:label>
     </owl:Class>
     
 
@@ -3087,6 +4007,36 @@ See also the &lt;a href=&quot;/docs/hotels.html&quot;&gt;dedicated document on t
     
 
 
+    <!-- http://www.semanticweb.org/ontologyFTS/LegalPredecessorEntity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologyFTS/LegalPredecessorEntity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologyFTS/BasicReorganizationParticipantEntity"/>
+        <rdfs:label xml:lang="en">Legal Predecessor Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">ЮЛ-Предшественник</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/LegalSuccessorEntity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologyFTS/LegalSuccessorEntity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologyFTS/BasicReorganizationParticipantEntity"/>
+        <rdfs:label xml:lang="en">Legal Successor Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">ЮЛ-Правопреемник</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/Legal_Entity_Details -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologyFTS/Legal_Entity_Details">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:label xml:lang="en">Legal Entity Details</rdfs:label>
+        <rdfs:label xml:lang="ru">Сведения ЮЛ</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/ontologyFTS/Locality -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/ontologyFTS/Locality">
@@ -3095,6 +4045,185 @@ See also the &lt;a href=&quot;/docs/hotels.html&quot;&gt;dedicated document on t
         <rdfs:comment xml:lang="ru">Код населенного пункта по КЛАДР</rdfs:comment>
         <rdfs:label xml:lang="en">Locality</rdfs:label>
         <rdfs:label xml:lang="ru">Населенный пункт</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/ManagementCompanyEntity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologyFTS/ManagementCompanyEntity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologyFTS/#EGRUL_RegEntity"/>
+        <rdfs:label xml:lang="en">Management Company Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">Управляющая Компания</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/ManagementOrganizationEntity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologyFTS/ManagementOrganizationEntity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologyFTS/#EGRUL_RegEntity"/>
+        <rdfs:label xml:lang="en">Management Organization Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">Управляющая Организация</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/MortgageeEntity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologyFTS/MortgageeEntity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologyFTS/#EGRUL_RegEntity"/>
+        <rdfs:label xml:lang="en">Mortgagee Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">Залогодержатель</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/MutualInvestmentFundFounderEntity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologyFTS/MutualInvestmentFundFounderEntity">
+        <rdfs:subClassOf rdf:resource="http://datafabric.cc/FounderEntity"/>
+        <rdfs:label xml:lang="en">Mutual Investment Fund Founder Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">Учредительный инвестиционный фонд</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/MutualInvestmentFundNameEntity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologyFTS/MutualInvestmentFundNameEntity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologyFTS/#EGRUL_RegEntity"/>
+        <rdfs:label xml:lang="en">Mutual Investment Fund Name Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">Наименование Учредительного Фонда</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/OldRegistrationEntity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologyFTS/OldRegistrationEntity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologyFTS/#EGRUL_RegEntity"/>
+        <rdfs:label xml:lang="en">Old Registration Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">Старые Регистрационные Данные</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/OrganizationAndLegalFormType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologyFTS/OrganizationAndLegalFormType">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologyFTS/#FTS_TypeList"/>
+        <rdfs:label xml:lang="en">Organization And Legal Form Type</rdfs:label>
+        <rdfs:label xml:lang="ru">Организационная И Правовая Форма</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/OrganizationDetails -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologyFTS/OrganizationDetails">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:label xml:lang="en">Organization Details</rdfs:label>
+        <rdfs:label xml:lang="ru">Сведения Организации</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/ParticipantEntity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologyFTS/ParticipantEntity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologyFTS/#EGRUL_RegEntity"/>
+        <rdfs:label xml:lang="en">Participant Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">Участник</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/PeasantFarmDataAddedToEGRIP -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologyFTS/PeasantFarmDataAddedToEGRIP">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologyFTS/PeasantFarmEntity"/>
+        <rdfs:label xml:lang="en">Peasant Farm Data Added To EGRIP</rdfs:label>
+        <rdfs:label xml:lang="ru">Запись о ФХ в ЕГРИП</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/PeasantFarmEntity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologyFTS/PeasantFarmEntity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologyFTS/#EGRUL_RegEntity"/>
+        <rdfs:label xml:lang="en">Peasant Farm Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">Фермерское Хозяйство</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/PeasantFarmIsBaseForLEEntity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologyFTS/PeasantFarmIsBaseForLEEntity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologyFTS/PeasantFarmEntity"/>
+        <rdfs:label xml:lang="en">Peasant Farm Is Base For LE Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">ФХ Является Базой Для ЮЛ</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/PersonActingWithoutPowerOfAttorneyEntity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologyFTS/PersonActingWithoutPowerOfAttorneyEntity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologyFTS/#EGRUL_RegEntity"/>
+        <rdfs:label xml:lang="en">Person Acting Without Power Of Attorney Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">Лицо, Действующее Без Доверенности</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/PersonEntity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologyFTS/PersonEntity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologyFTS/#EGRUL_RegEntity"/>
+        <rdfs:label xml:lang="en">Person Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">Физическое Лицо</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/PersonFounderEntity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologyFTS/PersonFounderEntity">
+        <rdfs:subClassOf rdf:resource="http://datafabric.cc/FounderEntity"/>
+        <rdfs:label xml:lang="en">Person Founder Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">Учредитель - физическое лицо</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/PersonMortgageeEntity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologyFTS/PersonMortgageeEntity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologyFTS/MortgageeEntity"/>
+        <rdfs:label xml:lang="en">Person Mortgagee Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">Залогодержатель - ФЛ</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/PublicAuthorityFounderEntity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologyFTS/PublicAuthorityFounderEntity">
+        <rdfs:subClassOf rdf:resource="http://datafabric.cc/FounderEntity"/>
+        <rdfs:label xml:lang="en">Public Authority Founder Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">Учредитель - Государственный орган</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/PublicBodyExercisingFoundersFightsEntity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologyFTS/PublicBodyExercisingFoundersFightsEntity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologyFTS/#EGRUL_RegEntity"/>
+        <rdfs:label xml:lang="en">Public Body Exercising Founders Fights Entity</rdfs:label>
     </owl:Class>
     
 
@@ -3111,6 +4240,108 @@ See also the &lt;a href=&quot;/docs/hotels.html&quot;&gt;dedicated document on t
     
 
 
+    <!-- http://www.semanticweb.org/ontologyFTS/RegionType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologyFTS/RegionType">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologyFTS/#FTS_TypeList"/>
+        <rdfs:comment xml:lang="en">Name and code of the subject of the Russian Federation</rdfs:comment>
+        <rdfs:comment xml:lang="ru">Наименование и код субъекта Российской Федерации</rdfs:comment>
+        <rdfs:label xml:lang="en">Region Type</rdfs:label>
+        <rdfs:label xml:lang="ru">Тип Региона</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/ReorganizationEntity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologyFTS/ReorganizationEntity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologyFTS/#EGRUL_RegEntity"/>
+        <rdfs:label xml:lang="en">Reorganization Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">Реорганизация</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/ReorganizationParticipant -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologyFTS/ReorganizationParticipant">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologyFTS/BasicReorganizationParticipantEntity"/>
+        <rdfs:label xml:lang="en">Reorganization Participant</rdfs:label>
+        <rdfs:label xml:lang="ru">Участник Реорганизации</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/RepresentativeOfficeEntity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologyFTS/RepresentativeOfficeEntity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologyFTS/SeparateBusinessUnitEntity"/>
+        <rdfs:label xml:lang="en">Representative Office Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">Представительство</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/RussianLEFounderEntity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologyFTS/RussianLEFounderEntity">
+        <rdfs:subClassOf rdf:resource="http://datafabric.cc/FounderEntity"/>
+        <rdfs:label xml:lang="en">Russian LE Founder Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">Учредитель - Российское ЮЛ</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/RussianLegalEntity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologyFTS/RussianLegalEntity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologyFTS/#LE_RegistrationEntity"/>
+        <rdfs:label xml:lang="en">Russian Legal Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">Российское ЮЛ</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/SeparateBusinessUnitEntity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologyFTS/SeparateBusinessUnitEntity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologyFTS/#EGRUL_RegEntity"/>
+        <rdfs:label xml:lang="en">Separate Business Unit Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">Обособленное Представительство</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/SeparateBusinessUnitNameEntity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologyFTS/SeparateBusinessUnitNameEntity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologyFTS/#EGRUL_RegEntity"/>
+        <rdfs:label xml:lang="en">Separate Business Unit Name Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">Наименование Обособленного Представительства</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/SeparateBusinessUnitTaxRegistrationEntity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologyFTS/SeparateBusinessUnitTaxRegistrationEntity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologyFTS/SeparateBusinessUnitEntity"/>
+        <rdfs:label xml:lang="en">Separate Business Unit Tax Registration Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">Регистрация Обособленного Представительства</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/ShareInStatedCapitalEntity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologyFTS/ShareInStatedCapitalEntity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologyFTS/#EGRUL_RegEntity"/>
+        <rdfs:label xml:lang="en">Share In Stated Capital Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">Доля В Уставном Капитале</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/ontologyFTS/StatedCapitalEntity -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/ontologyFTS/StatedCapitalEntity">
@@ -3118,7 +4349,7 @@ See also the &lt;a href=&quot;/docs/hotels.html&quot;&gt;dedicated document on t
         <rdfs:comment xml:lang="en">Information on the amount of the authorized capital of a commercial organization</rdfs:comment>
         <rdfs:comment xml:lang="ru">Сведения о размере указанного в учредительных документах коммерческой организации уставного капитала (складочного капитала, уставного фонда, паевого фонда)</rdfs:comment>
         <rdfs:label xml:lang="en">Stated Capital Entity</rdfs:label>
-        <rdfs:label xml:lang="ru">Уставный капитал</rdfs:label>
+        <rdfs:label xml:lang="ru">Уставный Капитал</rdfs:label>
     </owl:Class>
     
 
@@ -3155,6 +4386,40 @@ See also the &lt;a href=&quot;/docs/hotels.html&quot;&gt;dedicated document on t
         <rdfs:comment xml:lang="ru">Класс, включающий информацию о Государственных территориальных органах</rdfs:comment>
         <rdfs:label xml:lang="en">Territorial State Bodies</rdfs:label>
         <rdfs:label xml:lang="ru">Территориальный государственный орган</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/TrusteeEntity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologyFTS/TrusteeEntity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologyFTS/#EGRUL_RegEntity"/>
+        <rdfs:label xml:lang="en">Trustee Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">Доверенное Лицо</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/TypeOfOfficial -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologyFTS/TypeOfOfficial">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologyFTS/#FTS_TypeList"/>
+        <rdfs:comment xml:lang="en">Information about the form of the founder</rdfs:comment>
+        <rdfs:comment xml:lang="ru">Сведения о виде учредителя (участника) и (при необходимости) наименовании муниципального образования и региона</rdfs:comment>
+        <rdfs:label xml:lang="en">Type Of Official</rdfs:label>
+        <rdfs:label xml:lang="ru">Тип учредителя</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologyFTS/TypeOfReorganizationForm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologyFTS/TypeOfReorganizationForm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologyFTS/#FTS_TypeList"/>
+        <rdfs:comment xml:lang="en">Code and name of the form of the reorganization (status) of the legal entity according to the SULST directory</rdfs:comment>
+        <rdfs:comment xml:lang="ru">Код и наименование формы реорганизации (статуса) юридического лица по справочнику СЮЛСТ</rdfs:comment>
+        <rdfs:label xml:lang="en">Type Of Reorganization Form</rdfs:label>
+        <rdfs:label xml:lang="ru">Форма Реорганизации</rdfs:label>
     </owl:Class>
     
 
@@ -3430,7 +4695,7 @@ See also the &lt;a href=&quot;/docs/hotels.html&quot;&gt;dedicated document on t
         <rdfs:comment xml:lang="en">Registration information of the legal entity</rdfs:comment>
         <rdfs:comment xml:lang="ru">Регистрационные данные ЮЛ</rdfs:comment>
         <rdfs:label xml:lang="en">Legal Entity Registration Entity</rdfs:label>
-        <rdfs:label xml:lang="ru">Регистрация (образование) ЮЛ</rdfs:label>
+        <rdfs:label xml:lang="ru">Образование ЮЛ</rdfs:label>
     </owl:Class>
     
 
@@ -3550,7 +4815,7 @@ See also the &lt;a href=&quot;/docs/hotels.html&quot;&gt;dedicated document on t
         <rdfs:comment xml:lang="en">The class that describes the registration of the individual entrepreneur in the Pension Fund of Russia</rdfs:comment>
         <rdfs:comment xml:lang="ru">Класс, описывающий регистрацию индивидуального предпринимателя в ПФР</rdfs:comment>
         <rdfs:label xml:lang="en">PF Reg Entity</rdfs:label>
-        <rdfs:label xml:lang="ru">Регистрация в ПФР</rdfs:label>
+        <rdfs:label xml:lang="ru">Регистрация в ПФ</rdfs:label>
     </owl:Class>
     
 
@@ -3670,7 +4935,7 @@ See also the &lt;a href=&quot;/docs/hotels.html&quot;&gt;dedicated document on t
         <rdfs:comment xml:lang="en">Territorial body of Russian Pension Fund</rdfs:comment>
         <rdfs:comment xml:lang="ru">Территориальный орган Пенсионного фонда России</rdfs:comment>
         <rdfs:label xml:lang="en">Territorial Body Of RPF</rdfs:label>
-        <rdfs:label xml:lang="ru">Территориальный Орган ПФР</rdfs:label>
+        <rdfs:label xml:lang="ru">Территориальный Орган ПФ</rdfs:label>
     </owl:Class>
     
 
@@ -3811,8 +5076,8 @@ See also the &lt;a href=&quot;/docs/hotels.html&quot;&gt;dedicated document on t
         <schema1:domainIncludes rdf:resource="http://schema.org/Place"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/address">
-        <schema1:domainIncludes rdf:resource="http://schema.org/Person"/>
         <schema1:domainIncludes rdf:resource="http://schema.org/Place"/>
+        <schema1:domainIncludes rdf:resource="http://schema.org/Person"/>
         <rdfs:comment>Physical address of the item.</rdfs:comment>
         <rdfs:label>address</rdfs:label>
     </rdf:Description>
@@ -3856,8 +5121,8 @@ See also the &lt;a href=&quot;/docs/hotels.html&quot;&gt;dedicated document on t
         <rdfs:label>albumProductionType</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/albumRelease">
-        <rdfs:comment>A release of this album.</rdfs:comment>
         <schema1:inverseOf rdf:resource="http://schema.org/releaseOf"/>
+        <rdfs:comment>A release of this album.</rdfs:comment>
         <rdfs:label>albumRelease</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/albumReleaseType">
@@ -3884,8 +5149,8 @@ See also the &lt;a href=&quot;/docs/hotels.html&quot;&gt;dedicated document on t
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/alumni">
         <rdfs:comment>Alumni of an organization.</rdfs:comment>
-        <schema1:rangeIncludes rdf:resource="http://schema.org/Person"/>
         <rdfs:label>alumni</rdfs:label>
+        <schema1:rangeIncludes rdf:resource="http://schema.org/Person"/>
         <schema1:inverseOf rdf:resource="http://schema.org/alumniOf"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/alumniOf">
@@ -3945,14 +5210,14 @@ See also the &lt;a href=&quot;/docs/hotels.html&quot;&gt;dedicated document on t
         <rdfs:comment>The payment method(s) to which the payment charge specification applies.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/area">
-        <rdfs:comment>The area within which users can expect to reach the broadcast service.</rdfs:comment>
         <schema1:rangeIncludes rdf:resource="http://schema.org/Place"/>
+        <rdfs:comment>The area within which users can expect to reach the broadcast service.</rdfs:comment>
         <schema1:supersededBy rdf:resource="http://schema.org/serviceArea"/>
         <rdfs:label>area</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/arrivalAirport">
-        <rdfs:label>arrivalAirport</rdfs:label>
         <schema1:rangeIncludes rdf:resource="http://schema.org/Airport"/>
+        <rdfs:label>arrivalAirport</rdfs:label>
         <rdfs:comment>The airport where the flight terminates.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/arrivalBusStop">
@@ -4056,8 +5321,8 @@ See also the &lt;a href=&quot;/docs/hotels.html&quot;&gt;dedicated document on t
         <rdfs:comment>An embedded audio object.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/author">
-        <rdfs:comment>The author of this content or rating. Please note that author is special in that HTML 5 provides a special mechanism for indicating authorship via the rel tag. That is equivalent to this and may be used interchangeably.</rdfs:comment>
         <schema1:rangeIncludes rdf:resource="http://schema.org/Person"/>
+        <rdfs:comment>The author of this content or rating. Please note that author is special in that HTML 5 provides a special mechanism for indicating authorship via the rel tag. That is equivalent to this and may be used interchangeably.</rdfs:comment>
         <rdfs:label>author</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/availability">
@@ -4119,8 +5384,8 @@ See also the &lt;a href=&quot;/docs/hotels.html&quot;&gt;dedicated document on t
         <rdfs:label>bed</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/benefits">
-        <rdfs:comment>Description of benefits associated with the job.</rdfs:comment>
         <schema1:supersededBy rdf:resource="http://schema.org/jobBenefits"/>
+        <rdfs:comment>Description of benefits associated with the job.</rdfs:comment>
         <rdfs:label>benefits</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/bestRating">
@@ -4147,8 +5412,8 @@ See also the &lt;a href=&quot;/docs/hotels.html&quot;&gt;dedicated document on t
     <rdf:Description rdf:about="http://schema.org/birthPlace">
         <schema1:rangeIncludes rdf:resource="http://schema.org/Place"/>
         <schema1:domainIncludes rdf:resource="http://schema.org/Person"/>
-        <rdfs:label>birthPlace</rdfs:label>
         <rdfs:comment>The place where the person was born.</rdfs:comment>
+        <rdfs:label>birthPlace</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/bitrate">
         <rdfs:label>bitrate</rdfs:label>
@@ -4200,8 +5465,8 @@ See also the &lt;a href=&quot;/docs/hotels.html&quot;&gt;dedicated document on t
 &lt;p&gt;For example, in the URL http://www.starbucks.co.uk/store-locator/etc/detail/3047 the code &quot;3047&quot; is a branchCode for a particular branch.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/branchOf">
-        <rdfs:comment>The larger organization that this local business is a branch of, if any. Not to be confused with (anatomical)&lt;a class=&quot;localLink&quot; href=&quot;/branch&quot;&gt;branch&lt;/a&gt;.</rdfs:comment>
         <rdfs:label>branchOf</rdfs:label>
+        <rdfs:comment>The larger organization that this local business is a branch of, if any. Not to be confused with (anatomical)&lt;a class=&quot;localLink&quot; href=&quot;/branch&quot;&gt;branch&lt;/a&gt;.</rdfs:comment>
         <schema1:supersededBy rdf:resource="http://schema.org/parentOrganization"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/brand">
@@ -4308,8 +5573,8 @@ See also the &lt;a href=&quot;/docs/hotels.html&quot;&gt;dedicated document on t
         <rdfs:comment>A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/character">
-        <rdfs:comment>Fictional person connected with a creative work.</rdfs:comment>
         <rdfs:label>character</rdfs:label>
+        <rdfs:comment>Fictional person connected with a creative work.</rdfs:comment>
         <schema1:rangeIncludes rdf:resource="http://schema.org/Person"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/characterAttribute">
@@ -4432,8 +5697,8 @@ See also the &lt;a href=&quot;/docs/hotels.html&quot;&gt;dedicated document on t
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/contactPoints">
         <schema1:supersededBy rdf:resource="http://schema.org/contactPoint"/>
-        <schema1:domainIncludes rdf:resource="http://schema.org/Person"/>
         <rdfs:label>contactPoints</rdfs:label>
+        <schema1:domainIncludes rdf:resource="http://schema.org/Person"/>
         <rdfs:comment>A contact point for a person or organization.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/contactType">
@@ -4442,9 +5707,9 @@ See also the &lt;a href=&quot;/docs/hotels.html&quot;&gt;dedicated document on t
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/containedIn">
         <rdfs:comment>The basic containment relation between a place and one that contains it.</rdfs:comment>
+        <rdfs:label>containedIn</rdfs:label>
         <schema1:supersededBy rdf:resource="http://schema.org/containedInPlace"/>
         <schema1:domainIncludes rdf:resource="http://schema.org/Place"/>
-        <rdfs:label>containedIn</rdfs:label>
         <schema1:rangeIncludes rdf:resource="http://schema.org/Place"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/containedInPlace">
@@ -4615,8 +5880,8 @@ See also the &lt;a href=&quot;/docs/hotels.html&quot;&gt;dedicated document on t
     <rdf:Description rdf:about="http://schema.org/deathPlace">
         <rdfs:comment>The place where the person died.</rdfs:comment>
         <schema1:rangeIncludes rdf:resource="http://schema.org/Place"/>
-        <schema1:domainIncludes rdf:resource="http://schema.org/Person"/>
         <rdfs:label>deathPlace</rdfs:label>
+        <schema1:domainIncludes rdf:resource="http://schema.org/Person"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/defaultValue">
         <schema1:rangeIncludes rdf:resource="http://schema.org/Thing"/>
@@ -4747,8 +6012,8 @@ See also the &lt;a href=&quot;/docs/hotels.html&quot;&gt;dedicated document on t
         <rdfs:label>driveWheelConfiguration</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/dropoffLocation">
-        <rdfs:label>dropoffLocation</rdfs:label>
         <schema1:rangeIncludes rdf:resource="http://schema.org/Place"/>
+        <rdfs:label>dropoffLocation</rdfs:label>
         <rdfs:comment>Where a rental car can be dropped off.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/dropoffTime">
@@ -4919,8 +6184,8 @@ See also the &lt;a href=&quot;/docs/hotels.html&quot;&gt;dedicated document on t
         <rdfs:label>expectedArrivalUntil</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/expectsAcceptanceOf">
-        <rdfs:comment>An Offer which must be accepted before the user can perform the Action. For example, the user may need to buy a movie before being able to watch it.</rdfs:comment>
         <rdfs:label>expectsAcceptanceOf</rdfs:label>
+        <rdfs:comment>An Offer which must be accepted before the user can perform the Action. For example, the user may need to buy a movie before being able to watch it.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/experienceRequirements">
         <rdfs:comment>Description of skills and experience needed for the position.</rdfs:comment>
@@ -4987,8 +6252,8 @@ See also the &lt;a href=&quot;/docs/hotels.html&quot;&gt;dedicated document on t
 Typical unit code(s): MTK for square meter, FTK for square foot, or YDK for square yard</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/follows">
-        <schema1:rangeIncludes rdf:resource="http://schema.org/Person"/>
         <rdfs:label>follows</rdfs:label>
+        <schema1:rangeIncludes rdf:resource="http://schema.org/Person"/>
         <schema1:domainIncludes rdf:resource="http://schema.org/Person"/>
         <rdfs:comment>The most generic uni-directional social relation.</rdfs:comment>
     </rdf:Description>
@@ -5042,8 +6307,8 @@ Typical unit code(s): MTK for square meter, FTK for square foot, or YDK for squa
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/game">
         <schema1:inverseOf rdf:resource="http://schema.org/gameServer"/>
-        <rdfs:comment>Video game which is played on this server.</rdfs:comment>
         <rdfs:label>game</rdfs:label>
+        <rdfs:comment>Video game which is played on this server.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/gameItem">
         <rdfs:label>gameItem</rdfs:label>
@@ -5073,8 +6338,8 @@ Typical unit code(s): MTK for square meter, FTK for square foot, or YDK for squa
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/gender">
         <schema1:domainIncludes rdf:resource="http://schema.org/Person"/>
-        <rdfs:label>gender</rdfs:label>
         <rdfs:comment>Gender of the person. While http://schema.org/Male and http://schema.org/Female may be used, text strings are also acceptable for people who do not identify as a binary gender.</rdfs:comment>
+        <rdfs:label>gender</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/genre">
         <schema1:rangeIncludes rdf:resource="http://schema.org/URL"/>
@@ -5174,8 +6439,8 @@ Typical unit code(s): MTK for square meter, FTK for square foot, or YDK for squa
         <rdfs:comment>The height of the item.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/highPrice">
-        <rdfs:comment>The highest price of all offers available.</rdfs:comment>
         <rdfs:label>highPrice</rdfs:label>
+        <rdfs:comment>The highest price of all offers available.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/hiringOrganization">
         <rdfs:label>hiringOrganization</rdfs:label>
@@ -5435,8 +6700,8 @@ Typical unit code(s): MTK for square meter, FTK for square foot, or YDK for squa
         <schema1:domainIncludes rdf:resource="http://schema.org/Person"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/keywords">
-        <rdfs:comment>Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.</rdfs:comment>
         <rdfs:label>keywords</rdfs:label>
+        <rdfs:comment>Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/knownVehicleDamages">
         <rdfs:label>knownVehicleDamages</rdfs:label>
@@ -5461,8 +6726,8 @@ Typical unit code(s): MTK for square meter, FTK for square foot, or YDK for squa
         <rdfs:label>learningResourceType</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/legalName">
-        <rdfs:comment>The official name of the organization, e.g. the registered company name.</rdfs:comment>
         <rdfs:label>legalName</rdfs:label>
+        <rdfs:comment>The official name of the organization, e.g. the registered company name.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/leiCode">
         <rdfs:comment>An organization identifier that uniquely identifies a legal entity as defined in ISO 17442.</rdfs:comment>
@@ -5531,10 +6796,10 @@ Typical unit code(s): MTK for square meter, FTK for square foot, or YDK for squa
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/mainEntityOfPage">
         <schema1:rangeIncludes rdf:resource="http://schema.org/URL"/>
-        <schema1:inverseOf rdf:resource="http://schema.org/mainEntity"/>
         <rdfs:comment>Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See &lt;a href=&quot;/docs/datamodel.html#mainEntityBackground&quot;&gt;background notes&lt;/a&gt; for details.</rdfs:comment>
-        <rdfs:label>mainEntityOfPage</rdfs:label>
+        <schema1:inverseOf rdf:resource="http://schema.org/mainEntity"/>
         <schema1:domainIncludes rdf:resource="http://schema.org/Thing"/>
+        <rdfs:label>mainEntityOfPage</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/makesOffer">
         <schema1:inverseOf rdf:resource="http://schema.org/offeredBy"/>
@@ -5550,8 +6815,8 @@ Typical unit code(s): MTK for square meter, FTK for square foot, or YDK for squa
         <rdfs:label>map</rdfs:label>
         <schema1:supersededBy rdf:resource="http://schema.org/hasMap"/>
         <rdfs:comment>A URL to a map of the place.</rdfs:comment>
-        <schema1:domainIncludes rdf:resource="http://schema.org/Place"/>
         <schema1:rangeIncludes rdf:resource="http://schema.org/URL"/>
+        <schema1:domainIncludes rdf:resource="http://schema.org/Place"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/mapType">
         <rdfs:comment>Indicates the kind of Map, from the MapCategoryType Enumeration.</rdfs:comment>
@@ -5605,8 +6870,8 @@ Typical unit code(s): MTK for square meter, FTK for square foot, or YDK for squa
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/mentions">
         <schema1:rangeIncludes rdf:resource="http://schema.org/Thing"/>
-        <rdfs:label>mentions</rdfs:label>
         <rdfs:comment>Indicates that the CreativeWork contains a reference to, but is not necessarily about a concept.</rdfs:comment>
+        <rdfs:label>mentions</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/menu">
         <schema1:rangeIncludes rdf:resource="http://schema.org/URL"/>
@@ -5684,8 +6949,8 @@ Typical unit code(s): MTK for square meter, FTK for square foot, or YDK for squa
         <rdfs:comment>The key, mode, or scale this composition uses.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/naics">
-        <rdfs:label>naics</rdfs:label>
         <rdfs:comment>The North American Industry Classification System (NAICS) code for a particular organization or business person.</rdfs:comment>
+        <rdfs:label>naics</rdfs:label>
         <schema1:domainIncludes rdf:resource="http://schema.org/Person"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/name">
@@ -5696,8 +6961,8 @@ Typical unit code(s): MTK for square meter, FTK for square foot, or YDK for squa
     <rdf:Description rdf:about="http://schema.org/namedPosition">
         <rdfs:label>namedPosition</rdfs:label>
         <rdfs:comment>A position played, performed or filled by a person or organization, as part of an organization. For example, an athlete in a SportsTeam might play in the position named &apos;Quarterback&apos;.</rdfs:comment>
-        <schema1:supersededBy rdf:resource="http://schema.org/roleName"/>
         <schema1:rangeIncludes rdf:resource="http://schema.org/URL"/>
+        <schema1:supersededBy rdf:resource="http://schema.org/roleName"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/nationality">
         <rdfs:label>nationality</rdfs:label>
@@ -5789,8 +7054,8 @@ Typical unit code(s): MTK for square meter, FTK for square foot, or YDK for squa
         <schema1:domainIncludes rdf:resource="http://schema.org/SingleFamilyResidence"/>
         <schema1:domainIncludes rdf:resource="http://schema.org/Suite"/>
         <schema1:domainIncludes rdf:resource="http://schema.org/House"/>
-        <schema1:domainIncludes rdf:resource="http://schema.org/Accomodation"/>
         <schema1:domainIncludes rdf:resource="http://schema.org/Apartment"/>
+        <schema1:domainIncludes rdf:resource="http://schema.org/Accomodation"/>
         <rdfs:comment>The number of rooms (excluding bathrooms and closets) of the acccommodation or lodging business.
 Typical unit code(s): ROM for room or C62 for no unit. The type of room can be put in the unitText property of the QuantitativeValue.</rdfs:comment>
     </rdf:Description>
@@ -5827,8 +7092,8 @@ Typical unit code(s): C62 for person</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/offeredBy">
         <schema1:inverseOf rdf:resource="http://schema.org/makesOffer"/>
-        <schema1:rangeIncludes rdf:resource="http://schema.org/Person"/>
         <rdfs:label>offeredBy</rdfs:label>
+        <schema1:rangeIncludes rdf:resource="http://schema.org/Person"/>
         <rdfs:comment>A pointer to the organization or person making the offer.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/offers">
@@ -5847,8 +7112,8 @@ Typical unit code(s): C62 for person</rdfs:comment>
         <rdfs:label>openingHours</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/openingHoursSpecification">
-        <schema1:domainIncludes rdf:resource="http://schema.org/Place"/>
         <rdfs:comment>The opening hours of a certain place.</rdfs:comment>
+        <schema1:domainIncludes rdf:resource="http://schema.org/Place"/>
         <rdfs:label>openingHoursSpecification</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/opens">
@@ -6010,8 +7275,8 @@ Typical unit code(s): C62 for person</rdfs:comment>
         <rdfs:comment>A performer at the event&amp;#x2014;for example, a presenter, musician, musical group or actor.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/performerIn">
-        <rdfs:label>performerIn</rdfs:label>
         <schema1:domainIncludes rdf:resource="http://schema.org/Person"/>
+        <rdfs:label>performerIn</rdfs:label>
         <rdfs:comment>Event that this person is a performer or participant in.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/performers">
@@ -6152,8 +7417,8 @@ Typical unit code(s): C62 for person</rdfs:comment>
         <rdfs:label>printEdition</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/printPage">
-        <rdfs:label>printPage</rdfs:label>
         <rdfs:comment>If this NewsArticle appears in print, this field indicates the name of the page on which the article is found. Please note that this field is intended for the exact page name (e.g. A5, B18).</rdfs:comment>
+        <rdfs:label>printPage</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/printSection">
         <rdfs:label>printSection</rdfs:label>
@@ -6175,8 +7440,8 @@ Typical unit code(s): C62 for person</rdfs:comment>
     <rdf:Description rdf:about="http://schema.org/produces">
         <schema1:supersededBy rdf:resource="http://schema.org/serviceOutput"/>
         <rdfs:label>produces</rdfs:label>
-        <rdfs:comment>The tangible thing generated by the service, e.g. a passport, permit, etc.</rdfs:comment>
         <schema1:rangeIncludes rdf:resource="http://schema.org/Thing"/>
+        <rdfs:comment>The tangible thing generated by the service, e.g. a passport, permit, etc.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/productID">
         <rdfs:comment>The product identifier, such as ISBN. For example: &lt;code&gt;meta itemprop=&quot;productID&quot; content=&quot;isbn:123-456-789&quot;&lt;/code&gt;.</rdfs:comment>
@@ -6407,8 +7672,8 @@ Standards bodies should promote a standard prefix for the identifiers of propert
         <rdfs:label>requiredMinAge</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/requirements">
-        <rdfs:comment>Component dependency requirements for application. This includes runtime environments and shared libraries that are not included in the application distribution package, but required to run the application (Examples: DirectX, Java or .NET runtime).</rdfs:comment>
         <schema1:rangeIncludes rdf:resource="http://schema.org/URL"/>
+        <rdfs:comment>Component dependency requirements for application. This includes runtime environments and shared libraries that are not included in the application distribution package, but required to run the application (Examples: DirectX, Java or .NET runtime).</rdfs:comment>
         <rdfs:label>requirements</rdfs:label>
         <schema1:supersededBy rdf:resource="http://schema.org/softwareRequirements"/>
     </rdf:Description>
@@ -6565,8 +7830,8 @@ Standards bodies should promote a standard prefix for the identifiers of propert
         <rdfs:label>serviceArea</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/serviceAudience">
-        <rdfs:label>serviceAudience</rdfs:label>
         <rdfs:comment>The audience eligible for this service.</rdfs:comment>
+        <rdfs:label>serviceAudience</rdfs:label>
         <schema1:supersededBy rdf:resource="http://schema.org/audience"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/serviceLocation">
@@ -6614,8 +7879,8 @@ Standards bodies should promote a standard prefix for the identifiers of propert
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/sibling">
         <schema1:domainIncludes rdf:resource="http://schema.org/Person"/>
-        <schema1:rangeIncludes rdf:resource="http://schema.org/Person"/>
         <rdfs:label>sibling</rdfs:label>
+        <schema1:rangeIncludes rdf:resource="http://schema.org/Person"/>
         <rdfs:comment>A sibling of the person.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/siblings">
@@ -6691,8 +7956,8 @@ Standards bodies should promote a standard prefix for the identifiers of propert
         <schema1:domainIncludes rdf:resource="http://schema.org/Place"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/specialty">
-        <rdfs:label>specialty</rdfs:label>
         <rdfs:comment>One of the domain specialities to which this web page&apos;s content applies.</rdfs:comment>
+        <rdfs:label>specialty</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/sport">
         <rdfs:label>sport</rdfs:label>
@@ -6905,8 +8170,8 @@ Standards bodies should promote a standard prefix for the identifiers of propert
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/trackingUrl">
         <rdfs:comment>Tracking url for the parcel delivery.</rdfs:comment>
-        <schema1:rangeIncludes rdf:resource="http://schema.org/URL"/>
         <rdfs:label>trackingUrl</rdfs:label>
+        <schema1:rangeIncludes rdf:resource="http://schema.org/URL"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/tracks">
         <rdfs:label>tracks</rdfs:label>
@@ -6974,8 +8239,8 @@ Standards bodies should promote a standard prefix for the identifiers of propert
         <rdfs:label>uploadDate</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/upvoteCount">
-        <schema1:rangeIncludes rdf:resource="http://schema.org/Integer"/>
         <rdfs:label>upvoteCount</rdfs:label>
+        <schema1:rangeIncludes rdf:resource="http://schema.org/Integer"/>
         <rdfs:comment>The number of upvotes this question, answer or comment has received from the community.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/url">
@@ -7051,8 +8316,8 @@ Standards bodies should promote a standard prefix for the identifiers of propert
         <rdfs:label>valueRequired</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/vatID">
-        <rdfs:comment>The Value-added Tax ID of the organization or person.</rdfs:comment>
         <schema1:domainIncludes rdf:resource="http://schema.org/Person"/>
+        <rdfs:comment>The Value-added Tax ID of the organization or person.</rdfs:comment>
         <rdfs:label>vatID</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/vehicleConfiguration">
@@ -7151,8 +8416,8 @@ Standards bodies should promote a standard prefix for the identifiers of propert
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/worksFor">
         <rdfs:label>worksFor</rdfs:label>
-        <schema1:domainIncludes rdf:resource="http://schema.org/Person"/>
         <rdfs:comment>Organizations that the person works for.</rdfs:comment>
+        <schema1:domainIncludes rdf:resource="http://schema.org/Person"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/worstRating">
         <rdfs:comment>The lowest value allowed in this rating system. If worstRating is omitted, 1 is assumed.</rdfs:comment>

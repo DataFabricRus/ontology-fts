@@ -1,0 +1,2698 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/fts-ontology/owl#"
+     xml:base="http://www.semanticweb.org/fts-ontology/owl"
+     xmlns:fts="http://www.semanticweb.org/fts-ontology/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/fts-ontology/owl#"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p100_certified_by -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p100_certified_by">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C6_Document"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C63_Person_Entity"/>
+        <rdfs:label xml:lang="en">p100 certified by</rdfs:label>
+        <rdfs:label xml:lang="ru">p100 удостоверено нотариусом</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p101_relates_to_person -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p101_relates_to_person">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C63_Person_Entity"/>
+        <rdfs:label xml:lang="en">p101 relates to person</rdfs:label>
+        <rdfs:label xml:lang="ru">p101 относится к физическому лицу</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p102_relates_to_organization -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p102_relates_to_organization">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C72_Participant_Entity"/>
+        <rdfs:label xml:lang="en">p102 relates to organization</rdfs:label>
+        <rdfs:label xml:lang="ru">p102 относится к организации</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p103_formed_by -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p103_formed_by">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C41_LE_Registration_Entity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C31_LE_Formation_Method"/>
+        <rdfs:label xml:lang="en">p103 formed by</rdfs:label>
+        <rdfs:label xml:lang="ru">p103 сформировано способом</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p104_forthcoming_exception_based_on -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p104_forthcoming_exception_based_on">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C42_LE_State_Entity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C16_Exclusion_Decision"/>
+        <rdfs:label xml:lang="en">p104 forthcoming exception based on</rdfs:label>
+        <rdfs:label xml:lang="ru">p104 будет исключено на основании</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p105_le_license_suspended_based_on -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p105_le_license_suspended_based_on">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C60_LE_License_Entity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C61_LE_License_Suspension_Entity"/>
+        <rdfs:label xml:lang="en">p105 le license suspended based on</rdfs:label>
+        <rdfs:label xml:lang="ru">p105 лицензия юл приостановлена на основании</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p106_ie_license_suspended_based_on -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p106_ie_license_suspended_based_on">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C88_IE_License_Entity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C89_IE_License_Suspension_Entity"/>
+        <rdfs:label xml:lang="en">p106 ie license suspended based on</rdfs:label>
+        <rdfs:label xml:lang="ru">p106 лицензия ип приостановлена на основании</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p107_is_main_activity -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p107_is_main_activity">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C18_Economic_Activity_Type"/>
+        <rdfs:label xml:lang="en">p107 is main activity</rdfs:label>
+        <rdfs:label xml:lang="ru">p107 есть основной вид деятельности</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p108_is_additional_activity -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p108_is_additional_activity">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C18_Economic_Activity_Type"/>
+        <rdfs:label xml:lang="en">p108 is additional activity</rdfs:label>
+        <rdfs:label xml:lang="ru">p108 есть дополнительный вид деятельности</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p109_was_put_on_record -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p109_was_put_on_record">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C17_Territorial_State_Bodies"/>
+        <rdfs:label xml:lang="en">p109 was put on record</rdfs:label>
+        <rdfs:label xml:lang="ru">p109 поставлено на учет в</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p110_is_reduced_by -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p110_is_reduced_by">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C47_Stated_Capital_Entity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C48_Capital_Decreasing_Entity"/>
+        <rdfs:label xml:lang="en">p110 is reduced by</rdfs:label>
+        <rdfs:label xml:lang="ru">p110 уменьшено на</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p111_represents_organization -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p111_represents_organization">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C9_Legal_Entity"/>
+        <rdfs:label xml:lang="en">p111 represents organization</rdfs:label>
+        <rdfs:label xml:lang="ru">p111 описывает юридическое лицо</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p112_has_citizenship_in -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p112_has_citizenship_in">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C80_Citizenship_Entity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C21_Country"/>
+        <rdfs:label xml:lang="en">p112 has citizenship in</rdfs:label>
+        <rdfs:label xml:lang="ru">p112 является гражданином</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p113_part_of -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p113_part_of">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C26_KLADR_Element"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C26_KLADR_Element"/>
+        <rdfs:label xml:lang="en">p113 part of</rdfs:label>
+        <rdfs:label xml:lang="ru">p113 является частью</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p114_is_head_of_peasant_farm -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p114_is_head_of_peasant_farm">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C90_IE_Registration_Entity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C9_Legal_Entity"/>
+        <rdfs:label xml:lang="en">p114 is head of peasant farm</rdfs:label>
+        <rdfs:label xml:lang="ru">p114 является главой фермерского хозяйства</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p115_acts_on_behalf_of -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p115_acts_on_behalf_of">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C59_Applicant_Entity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C72_Participant_Entity"/>
+        <rdfs:label xml:lang="en">p115 acts on behalf of</rdfs:label>
+        <rdfs:label xml:lang="ru">p115 действует от имени</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p116_relates_to_management_company -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p116_relates_to_management_company">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C59_Applicant_Entity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C72_Participant_Entity"/>
+        <rdfs:label xml:lang="en">p116 relates to management company</rdfs:label>
+        <rdfs:label xml:lang="ru">p116 выступает от управляющей организации</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p117_has_contact_number -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p117_has_contact_number">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C62_Contact_Number_Entity"/>
+        <rdfs:label xml:lang="en">p117 has contact number</rdfs:label>
+        <rdfs:label xml:lang="ru">p117 есть контактный телефон</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p118_is_managed_by -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p118_is_managed_by">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C63_Person_Entity"/>
+        <rdfs:label xml:lang="en">p118 is managed by</rdfs:label>
+        <rdfs:label xml:lang="ru">p118 управляется</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p119_registered_in_country_of_origin_as -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p119_registered_in_country_of_origin_as">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C102_Foreign_Legal_Entity"/>
+        <rdfs:label xml:lang="en">p119 registered in country of origin as</rdfs:label>
+        <rdfs:label xml:lang="ru">p119 зарегистрировано в стране происхождения как</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p120_exercise_of_authority_through -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p120_exercise_of_authority_through">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C49_Management_Organization_Entity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C50_Branch_Of_Foreign_Legal_Entity"/>
+        <rdfs:label xml:lang="en">p120 exercise of authority through</rdfs:label>
+        <rdfs:label xml:lang="ru">p120 осуществляет полномочия управляющей организации через</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p121_holds_position -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p121_holds_position">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C51_Person_Acting_Without_Power_Of_Auttorney_Entity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C52_Job_Entity"/>
+        <rdfs:label xml:lang="en">p121 holds position</rdfs:label>
+        <rdfs:label xml:lang="ru">p121 занимает должность</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p122_is_disqualified -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p122_is_disqualified">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C51_Person_Acting_Without_Power_Of_Auttorney_Entity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C53_Disqualification_Entity"/>
+        <rdfs:label xml:lang="en">p122 is disqualified</rdfs:label>
+        <rdfs:label xml:lang="ru">p122 дисквалифицировано</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p123_has_old_registration_data -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p123_has_old_registration_data">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C103_Russian_Organization_Founder_Entity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C56_Old_Registration_Entity"/>
+        <rdfs:label xml:lang="en">p123 has old registration data</rdfs:label>
+        <rdfs:label xml:lang="ru">p123 есть данные о регистрации до 2002 года</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p124_has_share -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p124_has_share">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C54_Founder_Entity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C55_Share_In_Stated_Capital_Entity"/>
+        <rdfs:label xml:lang="en">p124 has share</rdfs:label>
+        <rdfs:label xml:lang="ru">p124 имеет долю в уставном капитале</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p125_basis_for_imposing -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p125_basis_for_imposing">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C65_Encumbrance_Of_Participant_Share_Entity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C6_Document"/>
+        <rdfs:label xml:lang="en">p125 basis for imposing</rdfs:label>
+        <rdfs:label xml:lang="ru">p125 обременение наложено на основании</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p126_has_reorganization_participant -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p126_has_reorganization_participant">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C66_Reorganization_Entity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C110_Reorganization_Participant"/>
+        <rdfs:label xml:lang="en">p126 has reorganization participant</rdfs:label>
+        <rdfs:label xml:lang="ru">p126 является участником реорганизации</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p127_exists_before_reorganization -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p127_exists_before_reorganization">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C111_Legal_Predecessor_Entity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C72_Participant_Entity"/>
+        <rdfs:label xml:lang="en">p127 exists before reorganization</rdfs:label>
+        <rdfs:label xml:lang="ru">p127 существовало до реорганизации</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p128_created_after_reorganization -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p128_created_after_reorganization">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C112_Legal_Successor_Entity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C72_Participant_Entity"/>
+        <rdfs:label xml:lang="en">p128 created after reorganization</rdfs:label>
+        <rdfs:label xml:lang="ru">p128 создано после реорганизации</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p129_has_name -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p129_has_name">
+        <rdfs:label xml:lang="en">p129 has name</rdfs:label>
+        <rdfs:label xml:lang="ru">p129 есть наименование</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p130_separate_business_unit_registered_in -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p130_separate_business_unit_registered_in">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C69_Separate_Business_Unit_Entity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C58_Separate_Business_Unit_Tax_Registration_Entity"/>
+        <rdfs:label xml:lang="en">p130 separate business unit registered in</rdfs:label>
+        <rdfs:label xml:lang="ru">p130 обособленное подразделение состоит на учете в</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p131_based_on_pledge_agreement -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p131_based_on_pledge_agreement">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C71_Mortgagee_Entity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C6_Document"/>
+        <rdfs:label xml:lang="en">p131 based on pledge agreement</rdfs:label>
+        <rdfs:label xml:lang="ru">p131 есть нотариальное удостоверение договора залога</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p132_has_trustee -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p132_has_trustee">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C106_Person_Founder_Entity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C75_Trustee_Entity"/>
+        <rdfs:label xml:lang="en">p132 has trustee</rdfs:label>
+        <rdfs:label xml:lang="ru">p132 есть доверительный управляющий</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p133_rights_are_exercised_by -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p133_rights_are_exercised_by">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C105_Public_Authority_Founder_Entity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C74_Public_Body_Exercising_Founders_Fights_Entity"/>
+        <rdfs:label xml:lang="en">p133 rights are exercised by</rdfs:label>
+        <rdfs:label xml:lang="ru">p133 права осуществляются</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p134_acts_by_inheritance -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p134_acts_by_inheritance">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C75_Trustee_Entity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C76_Inheritance_Manager_Entity"/>
+        <rdfs:label xml:lang="en">p134 acts by inheritance</rdfs:label>
+        <rdfs:label xml:lang="ru">p134 действует на основании наследства</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p135_is_managed_by_company -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p135_is_managed_by_company">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C107_Mutual_Investment_Fund_Founder_Entity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C73_Management_Company_Entity"/>
+        <rdfs:label xml:lang="en">p135 is managed by company</rdfs:label>
+        <rdfs:label xml:lang="ru">p135 управляется управляющей компанией</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p136_includes_egrul_record -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p136_includes_egrul_record">
+        <rdfs:label xml:lang="en">p136 includes egrul record</rdfs:label>
+        <rdfs:label xml:lang="ru">p136 включает запись, внесенную в егрюл</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p137_includes_egrip_record -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p137_includes_egrip_record">
+        <rdfs:label xml:lang="en">p137 includes egrip record</rdfs:label>
+        <rdfs:label xml:lang="ru">p137 включает запись, внесенную в егрип</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p76_entered_on_registry_with -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p76_entered_on_registry_with">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C2_Reg_Entity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C1_Reg_Number_Date"/>
+        <rdfs:label xml:lang="en">p76 entered on registry with</rdfs:label>
+        <rdfs:label xml:lang="ru">p76 внесено в реестр с</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p77_recorded_by -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p77_recorded_by">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C2_Reg_Entity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C17_Territorial_State_Bodies"/>
+        <rdfs:label xml:lang="en">p77 recorded by</rdfs:label>
+        <rdfs:label xml:lang="ru">p77 запись внесена</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p78_registered_in -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p78_registered_in">
+        <rdfs:label xml:lang="en">p78 registered in</rdfs:label>
+        <rdfs:label xml:lang="ru">p78 зарегистрировано в</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p79_has_type -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p79_has_type">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C2_Reg_Entity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C7_FTS_Type_List"/>
+        <rdfs:label xml:lang="en">p79 has type</rdfs:label>
+        <rdfs:label xml:lang="ru">p79 есть тип</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p80_describes_company -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p80_describes_company">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C4_Legal_Entity_Details"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C9_Legal_Entity"/>
+        <rdfs:label xml:lang="en">p80 describes company</rdfs:label>
+        <rdfs:label xml:lang="ru">p80 описывает организацию</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p81_includes_le_reg_entity -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p81_includes_le_reg_entity">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C4_Legal_Entity_Details"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C12_EGRUL_Reg_Entity"/>
+        <rdfs:label xml:lang="en">p81 includes le reg entity</rdfs:label>
+        <rdfs:label xml:lang="ru">p81 включает сведения о юл</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p82_refers_to_company -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p82_refers_to_company">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C12_EGRUL_Reg_Entity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C9_Legal_Entity"/>
+        <rdfs:label xml:lang="en">p82 refers to company</rdfs:label>
+        <rdfs:label xml:lang="ru">p82 относится к юридическому лицу</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p83_describes_ie -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p83_describes_ie">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C5_Individual_Entrepreneur_Details"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C10_Individual_Entrepreneur"/>
+        <rdfs:label xml:lang="en">p83 describes ie</rdfs:label>
+        <rdfs:label xml:lang="ru">p83 описывает ип</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p84_includes_ie_reg_entity -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p84_includes_ie_reg_entity">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C5_Individual_Entrepreneur_Details"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C13_EGRIP_Reg_Entity"/>
+        <rdfs:label xml:lang="en">p84 includes ie reg entity</rdfs:label>
+        <rdfs:label xml:lang="ru">p84 включает сведения о ип</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p85_refers_to_ie -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p85_refers_to_ie">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C13_EGRIP_Reg_Entity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C10_Individual_Entrepreneur"/>
+        <rdfs:label xml:lang="en">p85 refers to ie</rdfs:label>
+        <rdfs:label xml:lang="ru">p85 относится к ип</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p86_was_submitted -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p86_was_submitted">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C6_Document"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C3_Record"/>
+        <rdfs:label xml:lang="en">p86 was submitted</rdfs:label>
+        <rdfs:label xml:lang="ru">p86 представлен при внесении записи</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p87_created_by -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p87_created_by">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C6_Document"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C9_Legal_Entity"/>
+        <rdfs:label xml:lang="en">p87 created by</rdfs:label>
+        <rdfs:label xml:lang="ru">p87 создан</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p88_added_by -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p88_added_by">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C3_Record"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C93_Tax_Authority"/>
+        <rdfs:label xml:lang="en">p88 added by</rdfs:label>
+        <rdfs:label xml:lang="ru">p88 добавлено</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p89_reason_for_making_entry -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p89_reason_for_making_entry">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C3_Record"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C20_Record_Type"/>
+        <rdfs:label xml:lang="en">p89 reason for making entry</rdfs:label>
+        <rdfs:label xml:lang="ru">p89 внесено по причине</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p90_invalidate_by -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p90_invalidate_by">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C3_Record"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C11_Changed_Reg_Number_Date"/>
+        <rdfs:label xml:lang="en">p90 invalidate by</rdfs:label>
+        <rdfs:label xml:lang="ru">p90 признает недействительной</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p91_invalidate -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p91_invalidate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C3_Record"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C11_Changed_Reg_Number_Date"/>
+        <rdfs:label xml:lang="en">p91 invalidate</rdfs:label>
+        <rdfs:label xml:lang="ru">p91 признана недействительной</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p92_is_amending_for -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p92_is_amending_for">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C3_Record"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C11_Changed_Reg_Number_Date"/>
+        <rdfs:label xml:lang="en">p92 is amending for</rdfs:label>
+        <rdfs:label xml:lang="ru">p92 вносит исправления в</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p93_is_amending_by -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p93_is_amending_by">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C3_Record"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C11_Changed_Reg_Number_Date"/>
+        <rdfs:label xml:lang="en">p93 is amending by</rdfs:label>
+        <rdfs:label xml:lang="ru">p93 исправлена</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p94_ie_record_confirmed_by -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p94_ie_record_confirmed_by">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C15_EGRIP_Record"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C92_IE_Changes_Confirmation_Entity"/>
+        <rdfs:comment xml:lang="ru">Внесение записи об индивидуальном предпринимателе подтверждено</rdfs:comment>
+        <rdfs:label xml:lang="en">p94 ie record confirmed by</rdfs:label>
+        <rdfs:label xml:lang="ru">p94 внесение записи о ип подтверждено</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p95_le_record_confirmed_by -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p95_le_record_confirmed_by">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C14_EGRUL_Record"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C78_LE_Changes_Confirmation_Entity"/>
+        <rdfs:comment xml:lang="ru">Внесение записи о юридическом лице подтверждено</rdfs:comment>
+        <rdfs:label xml:lang="en">p95 le record confirmed by</rdfs:label>
+        <rdfs:label xml:lang="ru">p95 внесение записи о юл подтверждено</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p96_declared_by -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p96_declared_by">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C14_EGRUL_Record"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C59_Applicant_Entity"/>
+        <rdfs:label xml:lang="en">p96 declared by</rdfs:label>
+        <rdfs:label xml:lang="ru">p96 заявлено</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p97_registered_by_public_body -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p97_registered_by_public_body">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C36_Public_Body"/>
+        <rdfs:label xml:lang="en">p97 registered by public body</rdfs:label>
+        <rdfs:label xml:lang="ru">p97 зарегистрирован в госоргане</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p98_located_at -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p98_located_at">
+        <rdfs:label xml:lang="en">p98 located at</rdfs:label>
+        <rdfs:label xml:lang="ru">p98 расположен в</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p99_invalid_based_on -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p99_invalid_based_on">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C39_Address_Entity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C6_Document"/>
+        <rdfs:label xml:lang="en">p99 invalid based on</rdfs:label>
+        <rdfs:label xml:lang="ru">p99 недостоверный на основании</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p10_doc_type -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p10_doc_type">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">p10 doc type</rdfs:label>
+        <rdfs:label xml:lang="ru">p10 тип документа</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p11_doc_number -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p11_doc_number">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">p11 doc number</rdfs:label>
+        <rdfs:label xml:lang="ru">p11 номер документа</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p12_doc_date -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p12_doc_date">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label xml:lang="en">p12 doc date</rdfs:label>
+        <rdfs:label xml:lang="ru">p12 дата документа</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p13_publication_date -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p13_publication_date">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label xml:lang="en">p13 publication date</rdfs:label>
+        <rdfs:label xml:lang="ru">p13 дата публикации</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p14_volume_number -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p14_volume_number">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="ru">Номер журнала, в котором опубликовано решение</rdfs:comment>
+        <rdfs:label xml:lang="en">p14 volume number</rdfs:label>
+        <rdfs:label xml:lang="ru">p14 номер журнала</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p15_address -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p15_address">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">p15 address</rdfs:label>
+        <rdfs:label xml:lang="ru">p15 адрес</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p16_full_name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p16_full_name">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">p16 full name</rdfs:label>
+        <rdfs:label xml:lang="ru">p16 полное наименование</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p17_short_name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p17_short_name">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">p17 short name</rdfs:label>
+        <rdfs:label xml:lang="ru">p17 краткое наименование</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p18_postcode -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p18_postcode">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">p18 postcode</rdfs:label>
+        <rdfs:label xml:lang="ru">p18 индекс</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p19_region_code -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p19_region_code">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">p19 region code</rdfs:label>
+        <rdfs:label xml:lang="ru">p19 код субъекта РФ</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p1_state_registration_number -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p1_state_registration_number">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">p1 state registration number</rdfs:label>
+        <rdfs:label xml:lang="ru">p1 государственный регистрационный номер</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p20_address_code -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p20_address_code">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">p20 address code</rdfs:label>
+        <rdfs:label xml:lang="ru">p20 код адреса по кладр</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p21_block -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p21_block">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">p21 block</rdfs:label>
+        <rdfs:label xml:lang="ru">p21 корпус</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p22_building_number -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p22_building_number">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">p22 building number</rdfs:label>
+        <rdfs:label xml:lang="ru">p22 дом</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p23_office_number -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p23_office_number">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">p23 office number</rdfs:label>
+        <rdfs:label xml:lang="ru">p23 офис (квартира)</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p24_reason_for_inability_to_interact -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p24_reason_for_inability_to_interact">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="ru">Признак невозможности взаимодействия с юридическим лицом по содержащемуся в ЕГРЮЛ адресу</rdfs:comment>
+        <rdfs:label xml:lang="en">p24 reason for inability to interact</rdfs:label>
+        <rdfs:label xml:lang="ru">p24 признак невозможности взаимодействия</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p25_element_type -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p25_element_type">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">p25 element type</rdfs:label>
+        <rdfs:label xml:lang="ru">p25 тип элемента</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p26_version -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p26_version">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">p26 version</rdfs:label>
+        <rdfs:label xml:lang="ru">p26 версия</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p27_email -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p27_email">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">p27 email</rdfs:label>
+        <rdfs:label xml:lang="ru">p27 адрес электронной почты</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p28_le_primary_state_registration_number -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p28_le_primary_state_registration_number">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="ru">Основной государственный регистрационный номер юридического лица</rdfs:comment>
+        <rdfs:label xml:lang="en">p28 le primary state registration number</rdfs:label>
+        <rdfs:label xml:lang="ru">p28 огрн юл</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p29_psrn_assignment_date -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p29_psrn_assignment_date">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label xml:lang="en">p29 psrn assignment date</rdfs:label>
+        <rdfs:label xml:lang="ru">p29 дата присвоения огрн</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p2_date -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p2_date">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label xml:lang="en">p2 date</rdfs:label>
+        <rdfs:label xml:lang="ru">p2 дата</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p30_address_in_country_of_origin -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p30_address_in_country_of_origin">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="ru">Адрес (место нахождения) в стране происхождения</rdfs:comment>
+        <rdfs:label xml:lang="en">p30 address in country of origin</rdfs:label>
+        <rdfs:label xml:lang="ru">p30 адрес в стране происхождения</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p31_le_registration_number -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p31_le_registration_number">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="ru">Регистрационный номер юридического лица</rdfs:comment>
+        <rdfs:label xml:lang="en">p31 le registration number</rdfs:label>
+        <rdfs:label xml:lang="ru">p31 регистрационный номер юл</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p32_le_registration_date -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p32_le_registration_date">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="ru">Дата регистрации юридического лица</rdfs:comment>
+        <rdfs:label xml:lang="en">p32 le registration date</rdfs:label>
+        <rdfs:label xml:lang="ru">p32 дата регистрации юл</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p33_registered_by -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p33_registered_by">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="ru">Наименование органа, зарегистрировавшего юридическое лицо</rdfs:comment>
+        <rdfs:label xml:lang="en">p33 registered by</rdfs:label>
+        <rdfs:label xml:lang="ru">p33 наименование органа, зарегистрировавшего юл</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p34_le_cessation_date -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p34_le_cessation_date">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label xml:lang="en">p34 le cessation date</rdfs:label>
+        <rdfs:label xml:lang="ru">p34 дата прекращения юридического лица</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p35_le_individual_tax_number -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p35_le_individual_tax_number">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="ru">Идентификационный номер юридического лица</rdfs:comment>
+        <rdfs:label xml:lang="en">p35 le individual tax number</rdfs:label>
+        <rdfs:label xml:lang="ru">p35 инн юл</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p36_tax_reason_code -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p36_tax_reason_code">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="ru">Код причины постановки на учет</rdfs:comment>
+        <rdfs:label xml:lang="en">p36 tax reason code</rdfs:label>
+        <rdfs:label xml:lang="ru">p36 кпп</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p37_reduction_amount -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p37_reduction_amount">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment xml:lang="ru">Величина, на которую уменьшается уставный капитал (в рублях)</rdfs:comment>
+        <rdfs:label xml:lang="en">p37 reduction amount</rdfs:label>
+        <rdfs:label xml:lang="ru">p37 величина, на которую уменьшается уставный капитал</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p38_decision_date -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p38_decision_date">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label xml:lang="en">p38 decision date</rdfs:label>
+        <rdfs:label xml:lang="ru">p38 дата решения</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p39_amount -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p39_amount">
+        <rdfs:label xml:lang="en">p39 amount</rdfs:label>
+        <rdfs:label xml:lang="ru">p39 размер в рублях</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p3_formation_date -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p3_formation_date">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="ru">Дата формирования сведений из реестра в отношении юридического лица или индивидуального предпринимателя</rdfs:comment>
+        <rdfs:label xml:lang="en">p3 formation date</rdfs:label>
+        <rdfs:label xml:lang="ru">p3 дата формирования сведений из реестра</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p40_ruble_share -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p40_ruble_share">
+        <rdfs:label xml:lang="en">p40 ruble share</rdfs:label>
+        <rdfs:label xml:lang="ru">p40 доля рубля в капитале</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p41_phone_number -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p41_phone_number">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">p41 phone number</rdfs:label>
+        <rdfs:label xml:lang="ru">p41 номер контактного телефона</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p42_first_name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p42_first_name">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">p42 first name</rdfs:label>
+        <rdfs:label xml:lang="ru">p42 имя</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p43_last_name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p43_last_name">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">p43 last name</rdfs:label>
+        <rdfs:label xml:lang="ru">p43 фамилия</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p44_middle_name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p44_middle_name">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">p44 middle name</rdfs:label>
+        <rdfs:label xml:lang="ru">p44 отчество</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p46_ie_primary_state_registration_number -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p46_ie_primary_state_registration_number">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="ru">Основной государственный регистрационный номер индивидуального предпринимателя</rdfs:comment>
+        <rdfs:label xml:lang="en">p46 ie primary state registration number</rdfs:label>
+        <rdfs:label xml:lang="ru">p46 огрн ип</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p47_job_title -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p47_job_title">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="ru">Наименование должности</rdfs:comment>
+        <rdfs:label xml:lang="en">p47 job title</rdfs:label>
+        <rdfs:label xml:lang="ru">p47 должность</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p48_start_date -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p48_start_date">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label xml:lang="en">p48 start date</rdfs:label>
+        <rdfs:label xml:lang="ru">p48 дата начала</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p49_end_date -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p49_end_date">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label xml:lang="en">p49 end date</rdfs:label>
+        <rdfs:label xml:lang="ru">p49 дата окончания</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p4_classifier_of_organization_and_legal_form -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p4_classifier_of_organization_and_legal_form">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="ru">Наименование классификатора, по которому введены сведения об организационно-правовой форме: ОКОПФ, КОПФ</rdfs:comment>
+        <rdfs:label xml:lang="en">p4 classifier of organization and legal form</rdfs:label>
+        <rdfs:label xml:lang="ru">p4 классификатор организационно-правовой формы</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p50_municipality_name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p50_municipality_name">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">p50 municipality name</rdfs:label>
+        <rdfs:label xml:lang="ru">p50 наименование муниципального образования</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p51_nominal_share_of_value_in_ruble -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p51_nominal_share_of_value_in_ruble">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:label xml:lang="en">p51 nominal share of value in ruble</rdfs:label>
+        <rdfs:label xml:lang="ru">p51 номинальная стоимость доли в рублях</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p52_percentage_share -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p52_percentage_share">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:label xml:lang="en">p52 percentage share</rdfs:label>
+        <rdfs:label xml:lang="ru">p52 размер доли в процентах</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p53_share_in_decimal_fractions -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p53_share_in_decimal_fractions">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label xml:lang="en">p53 share in decimal fractions</rdfs:label>
+        <rdfs:label xml:lang="ru">p53 размер доли в десятичных дробях</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p54_nominator_of_share -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p54_nominator_of_share">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:label xml:lang="en">p54 nominator of share</rdfs:label>
+        <rdfs:label xml:lang="ru">p54 числитель дроби размера доли</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p55_denominator_of_share -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p55_denominator_of_share">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:label xml:lang="en">p55 denominator of share</rdfs:label>
+        <rdfs:label xml:lang="ru">p55 знаменатель дроби размера доли</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p56_registration_date -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p56_registration_date">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label xml:lang="en">p56 registration date</rdfs:label>
+        <rdfs:label xml:lang="ru">p56 дата регистрации</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p57_opening_inheritance_date -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p57_opening_inheritance_date">
+        <rdfs:label xml:lang="en">p57 opening inheritance date</rdfs:label>
+        <rdfs:label xml:lang="ru">p57 день открытия наследства</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p58_period_of_procedure -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p58_period_of_procedure">
+        <rdfs:comment xml:lang="ru">Срок обременения или порядок определения срока</rdfs:comment>
+        <rdfs:label xml:lang="en">p58 period of procedure</rdfs:label>
+        <rdfs:label xml:lang="ru">p58 срок обременения</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p59_state_after_reorganization -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p59_state_after_reorganization">
+        <rdfs:comment xml:lang="ru">Состояние юридического лица после завершения реорганизации</rdfs:comment>
+        <rdfs:label xml:lang="en">p59 state after reorganization</rdfs:label>
+        <rdfs:label xml:lang="ru">p59 состояние юл после реорганизации</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p5_code -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p5_code">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">p5 code</rdfs:label>
+        <rdfs:label xml:lang="ru">p5 код</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p60_license_series -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p60_license_series">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">p60 license series</rdfs:label>
+        <rdfs:label xml:lang="ru">p60 серия лицензии</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p61_license_number -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p61_license_number">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">p61 license number</rdfs:label>
+        <rdfs:label xml:lang="ru">p61 номер лицензии</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p62_license_type -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p62_license_type">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">p62 license type</rdfs:label>
+        <rdfs:label xml:lang="ru">p62 вид лицензии</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p63_date_of_licensing -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p63_date_of_licensing">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label xml:lang="en">p63 date of licensing</rdfs:label>
+        <rdfs:label xml:lang="ru">p63 дата лицензии</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p64_licensed_activity_name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p64_licensed_activity_name">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="ru">Наименование лицензируемого вида деятельности, на который выдана лицензия</rdfs:comment>
+        <rdfs:label xml:lang="en">p64 licensed activity name</rdfs:label>
+        <rdfs:label xml:lang="ru">p64 лицензируемый вид деятельности</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p65_place_of_licensed_activity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p65_place_of_licensed_activity">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="ru">Сведения об адресе места осуществления лицензируемого вида деятельности</rdfs:comment>
+        <rdfs:label xml:lang="en">p65 place of licensed activity</rdfs:label>
+        <rdfs:label xml:lang="ru">p65 место осуществления лицензируемого вида деятельности</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p66_licensing_authority_name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p66_licensing_authority_name">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="ru">Наименование лицензирующего органа, выдавшего или переоформившего лицензию</rdfs:comment>
+        <rdfs:label xml:lang="en">p66 licensing authority name</rdfs:label>
+        <rdfs:label xml:lang="ru">p66 наименование лицензирующего органа, выдавшего лицензию</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p67_license_suspension_date -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p67_license_suspension_date">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label xml:lang="en">p67 license suspension date</rdfs:label>
+        <rdfs:label xml:lang="ru">p67 дата приостановления действия лицензии</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p68_license_suspension_authority -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p68_license_suspension_authority">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="ru">Наименование лицензирующего органа, приостановившего действие лицензии</rdfs:comment>
+        <rdfs:label xml:lang="en">p68 license suspension authority</rdfs:label>
+        <rdfs:label xml:lang="ru">p68 наименование лицензирующего органа, приостановившего лицензию</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p69_certificate_ceries -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p69_certificate_ceries">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">p69 certificate ceries</rdfs:label>
+        <rdfs:label xml:lang="ru">p69 серия бланка свидетельства</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p6_name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p6_name">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">p6 name</rdfs:label>
+        <rdfs:label xml:lang="ru">p6 наименование</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p70_certificate_number -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p70_certificate_number">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">p70 certificate number</rdfs:label>
+        <rdfs:label xml:lang="ru">p70 номер бланка свидетельства</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p71_certificate_date -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p71_certificate_date">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label xml:lang="en">p71 certificate date</rdfs:label>
+        <rdfs:label xml:lang="ru">p71 дата выдачи свидетельства</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p72_gender -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p72_gender">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">p72 gender</rdfs:label>
+        <rdfs:label xml:lang="ru">p72 пол</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p73_citizenship_type -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p73_citizenship_type">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">p73 citizenship type</rdfs:label>
+        <rdfs:label xml:lang="ru">p73 вид гражданства</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p74_ie_business_interuption_date -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p74_ie_business_interuption_date">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label xml:lang="en">p74 ie business interuption date</rdfs:label>
+        <rdfs:label xml:lang="ru">p74 дата прекращения ип</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p75_ie_individual_tax_number -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p75_ie_individual_tax_number">
+        <rdfs:comment xml:lang="ru">Идентификационный номер физического лица</rdfs:comment>
+        <rdfs:label xml:lang="en">p75 ie individual tax number</rdfs:label>
+        <rdfs:label xml:lang="ru">p75 инн фл</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p7_record_id -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p7_record_id">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">p7 record id</rdfs:label>
+        <rdfs:label xml:lang="ru">p7 системный идентификатор записи</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p8_recording_date -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p8_recording_date">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label xml:lang="en">p8 recording date</rdfs:label>
+        <rdfs:label xml:lang="ru">p8 дата внесения записи в реестр</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#p9_doc_name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fts-ontology/owl#p9_doc_name">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">p9 doc name</rdfs:label>
+        <rdfs:label xml:lang="ru">p9 наименование документа</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C100_Street_Element -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C100_Street_Element">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C26_KLADR_Element"/>
+        <rdfs:label xml:lang="en">C100 Street Element</rdfs:label>
+        <rdfs:label xml:lang="ru">C100 Адресообразующий Элемент Улица</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C101_Russian_Legal_Entity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C101_Russian_Legal_Entity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C41_LE_Registration_Entity"/>
+        <rdfs:label xml:lang="en">C101 Russian Legal Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">C101 Российское Юридическое Лицо</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C102_Foreign_Legal_Entity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C102_Foreign_Legal_Entity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C41_LE_Registration_Entity"/>
+        <rdfs:label xml:lang="en">C102 Foreign Legal Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">C102 Иностранное Юридическое Лицо</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C103_Russian_Organization_Founder_Entity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C103_Russian_Organization_Founder_Entity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C54_Founder_Entity"/>
+        <rdfs:comment xml:lang="ru">Сведения об учредителе (участнике) - российском юридическом лице (УчрЮЛРос)</rdfs:comment>
+        <rdfs:label xml:lang="en">C103 Russian Organization Founder Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">C103 Сведения Об Учредителе - Российском ЮЛ</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C104_Foreign_Organization_Founder_Entity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C104_Foreign_Organization_Founder_Entity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C54_Founder_Entity"/>
+        <rdfs:comment xml:lang="ru">Сведения об учредителе (участнике) - иностранном юридическом лице (УчрЮЛИн)</rdfs:comment>
+        <rdfs:label xml:lang="en">C104 Foreign Organization Founder Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">C104 Сведения Об Учредителе - Иностранном ЮЛ</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C105_Public_Authority_Founder_Entity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C105_Public_Authority_Founder_Entity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C54_Founder_Entity"/>
+        <rdfs:comment xml:lang="ru">Сведения об учредителе (участнике) - Российской Федерации, субъекте Российской Федерации, муниципальном образовании (УчрРФСубМО)</rdfs:comment>
+        <rdfs:label xml:lang="en">C105 Public Authority Founder Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">C105 Сведения Об Учредителе - РФ, Субъекте РФ Или Муниципальном Образовании РФ</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C106_Person_Founder_Entity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C106_Person_Founder_Entity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C54_Founder_Entity"/>
+        <rdfs:comment xml:lang="ru">Сведения об учредителе (участнике) - физическом лице (УчрФЛ)</rdfs:comment>
+        <rdfs:label xml:lang="en">C106 Person Founder Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">C106 Сведения Об Учредителе - Физическом Лице</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C107_Mutual_Investment_Fund_Founder_Entity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C107_Mutual_Investment_Fund_Founder_Entity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C54_Founder_Entity"/>
+        <rdfs:comment xml:lang="ru">Сведения о паевом инвестиционном фонде, в состав имущества которого включена доля в уставном капитале (УчрПИФ)</rdfs:comment>
+        <rdfs:label xml:lang="en">C107 Mutual Investment Fund Founder Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">C107 Сведения Об Учредителе - ПИФ</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C108_Peasant_Farm_Data_Added_To_EFGRIP -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C108_Peasant_Farm_Data_Added_To_EFGRIP">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C64_Peasant_Farm_Entity"/>
+        <rdfs:comment xml:lang="ru">Сведения о крестьянском (фермерском) хозяйстве, которые внесены в ЕГРИП в связи с приведением правового статуса крестьянского (фермерского) хозяйства в соответствие с нормами части первой Гражданского кодекса Российской Федерации (СвКФХПреем)</rdfs:comment>
+        <rdfs:label xml:lang="en">C108 Peasant Farm Data Added To EFGRIP</rdfs:label>
+        <rdfs:label xml:lang="ru">C108 Сведения О КФХ, Которые Внесены В ЕГРИП</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C109_Peasant_Farm_Base_For_LE_Entity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C109_Peasant_Farm_Base_For_LE_Entity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C64_Peasant_Farm_Entity"/>
+        <rdfs:comment xml:lang="ru">Сведения о крестьянском (фермерском) хозяйстве, на базе имущества которого создано юридическое лицо (СвКФХПредш)</rdfs:comment>
+        <rdfs:label xml:lang="en">C109 Peasant Farm Base For LE Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">C109 Сведения О КФХ, На Базе Которого Создано ЮЛ</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C10_Individual_Entrepreneur -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C10_Individual_Entrepreneur">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:label xml:lang="en">C10 Individual Entrepreneur</rdfs:label>
+        <rdfs:label xml:lang="ru">C10 Индивидуальный Предприниматель</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C110_Reorganization_Participant -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C110_Reorganization_Participant">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C72_Participant_Entity"/>
+        <rdfs:comment xml:lang="ru">Сведения о юридических лицах, участвующих в реорганизации (СвРеоргЮЛ)</rdfs:comment>
+        <rdfs:label xml:lang="en">C110 Reorganization Participant</rdfs:label>
+        <rdfs:label xml:lang="ru">C110 Сведения О ЮЛ, Участвующем В Реорганизации</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C111_Legal_Predecessor_Entity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C111_Legal_Predecessor_Entity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C72_Participant_Entity"/>
+        <rdfs:label xml:lang="en">C111 Legal Predecessor Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">C111 Сведения О Правопредшественнике</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C112_Legal_Successor_Entity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C112_Legal_Successor_Entity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C72_Participant_Entity"/>
+        <rdfs:label xml:lang="en">C112 Legal Successor Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">C112 Сведения О Правопреемнике</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C113_Representative_Office_Entity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C113_Representative_Office_Entity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C69_Separate_Business_Unit_Entity"/>
+        <rdfs:comment xml:lang="ru">Сведения об обособленных подразделениях юридического лица (СвПодразд)</rdfs:comment>
+        <rdfs:label xml:lang="en">C113 Representative Office Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">C113 Сведения Об Обособленных Подразделениях ЮЛ</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C114_Branch_Office_Entity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C114_Branch_Office_Entity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C69_Separate_Business_Unit_Entity"/>
+        <rdfs:comment xml:lang="ru">Сведения о филиалах юридического лица</rdfs:comment>
+        <rdfs:label xml:lang="en">C114 Branch Office Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">C114 Сведения О Филиалах ЮЛ</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C115_LE_Mortgagee_Entity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C115_LE_Mortgagee_Entity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C71_Mortgagee_Entity"/>
+        <rdfs:label xml:lang="en">C115 LE Mortgagee Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">C115 Сведения О Залогодержателе - ЮЛ</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C116_Person_Mortgagee_Entity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C116_Person_Mortgagee_Entity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C71_Mortgagee_Entity"/>
+        <rdfs:label xml:lang="en">C116 Person Mortgagee Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">C116 Сведения О Залогодержателе - ФЛ</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C11_Changed_Reg_Number_Date -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C11_Changed_Reg_Number_Date">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C1_Reg_Number_Date"/>
+        <rdfs:comment xml:lang="ru">ГРН и дата измененной записи: исправленной или признанной недействительной.</rdfs:comment>
+        <rdfs:label xml:lang="en">C11 Changed Reg Number Date</rdfs:label>
+        <rdfs:label xml:lang="ru">C11 ИдГРНДатаТип</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C12_EGRUL_Reg_Entity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C12_EGRUL_Reg_Entity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C2_Reg_Entity"/>
+        <rdfs:label xml:lang="en">C12 EGRUL Reg Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">C12 Сведения, Внесенные В ЕГРЮЛ</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C13_EGRIP_Reg_Entity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C13_EGRIP_Reg_Entity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C2_Reg_Entity"/>
+        <rdfs:label xml:lang="en">C13 EGRIP Reg Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">C13 Сведения, Внесенные В ЕГРИП</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C14_EGRUL_Record -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C14_EGRUL_Record">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C3_Record"/>
+        <rdfs:label xml:lang="en">C14 EGRUL Record</rdfs:label>
+        <rdfs:label xml:lang="ru">C14 Сведения О Записи, Внесенной В ЕГРЮЛ</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C15_EGRIP_Record -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C15_EGRIP_Record">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C3_Record"/>
+        <rdfs:label xml:lang="en">C15 EGRIP Record</rdfs:label>
+        <rdfs:label xml:lang="ru">C15 Сведения О Записи, Внесенной В ЕГРИП</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C16_Exclusion_Decision -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C16_Exclusion_Decision">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C6_Document"/>
+        <rdfs:comment xml:lang="ru">Сведения о решении о предстоящем исключении недействующего ЮЛ из ЕГРЮЛ и его публикации (СвРешИсклЮЛ)</rdfs:comment>
+        <rdfs:label xml:lang="en">C16 Exclusion Decision</rdfs:label>
+        <rdfs:label xml:lang="ru">C16 Решение Об Исключении Недействующего ЮЛ Из ЕГРЮЛ</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C17_Territorial_State_Bodies -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C17_Territorial_State_Bodies">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C7_FTS_Type_List"/>
+        <rdfs:label xml:lang="en">C17 Territorial State Bodies</rdfs:label>
+        <rdfs:label xml:lang="ru">C17 Регистрирующие Госорганы</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C18_Economic_Activity_Type -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C18_Economic_Activity_Type">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C7_FTS_Type_List"/>
+        <rdfs:comment xml:lang="ru">ОКВЭД</rdfs:comment>
+        <rdfs:label xml:lang="en">C18 Economic Activity Type</rdfs:label>
+        <rdfs:label xml:lang="ru">C18 Вид Экономической Деятельности</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C19_Organization_And_Legal_Form_Type -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C19_Organization_And_Legal_Form_Type">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C7_FTS_Type_List"/>
+        <rdfs:label xml:lang="en">C19 Organization And Legal Form Type</rdfs:label>
+        <rdfs:label xml:lang="ru">C19 Организационно-Правовая Форма</rdfs:label>
+        <rdfs:label xml:lang="ru">ОКОПФ</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C1_Reg_Number_Date -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C1_Reg_Number_Date">
+        <rdfs:comment xml:lang="ru">Класс для хранения государственного регистрационного номера и даты внесения записи в ЕГРЮЛ. Через свойство entered on registry with связывается с Reg Entity.</rdfs:comment>
+        <rdfs:label xml:lang="en">C1 Reg Number Date</rdfs:label>
+        <rdfs:label xml:lang="ru">C1 ГРНДатаТип</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C20_Record_Type -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C20_Record_Type">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C7_FTS_Type_List"/>
+        <rdfs:comment xml:lang="ru">Вид записи, внесенной в ЕГРЮЛ (ВидЗапТип)</rdfs:comment>
+        <rdfs:label xml:lang="en">C20 Record Type</rdfs:label>
+        <rdfs:label xml:lang="ru">C20 Вид Записи</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C21_Country -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C21_Country">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C7_FTS_Type_List"/>
+        <rdfs:label xml:lang="en">C21 Country</rdfs:label>
+        <rdfs:label xml:lang="ru">C21 Страна</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C22_Region -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C22_Region">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C7_FTS_Type_List"/>
+        <rdfs:label xml:lang="en">C22 Region</rdfs:label>
+        <rdfs:label xml:lang="ru">C22 Регион</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C23_Founder_Type -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C23_Founder_Type">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C7_FTS_Type_List"/>
+        <rdfs:label xml:lang="en">C23 Founder Type</rdfs:label>
+        <rdfs:label xml:lang="ru">C23 Вид Учредителя</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C24_Capital_Type -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C24_Capital_Type">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C7_FTS_Type_List"/>
+        <rdfs:comment xml:lang="ru">Принимает значение: УСТАВНЫЙ КАПИТАЛ | СКЛАДОЧНЫЙ КАПИТАЛ | УСТАВНЫЙ ФОНД | ПАЕВЫЕ ВЗНОСЫ | ПАЕВОЙ ФОНД</rdfs:comment>
+        <rdfs:label xml:lang="en">C24 Capital Type</rdfs:label>
+        <rdfs:label xml:lang="ru">C24 Вид Капитала</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C25_Applicant_Type -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C25_Applicant_Type">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C7_FTS_Type_List"/>
+        <rdfs:label xml:lang="en">C25 Applicant Type</rdfs:label>
+        <rdfs:label xml:lang="ru">C25 Вид Заявителя</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C26_KLADR_Element -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C26_KLADR_Element">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C7_FTS_Type_List"/>
+        <rdfs:label xml:lang="en">C26 KLADR Element</rdfs:label>
+        <rdfs:label xml:lang="ru">C26 КЛАДР</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C27_Type_Of_Reorganization_Form -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C27_Type_Of_Reorganization_Form">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C7_FTS_Type_List"/>
+        <rdfs:comment xml:lang="ru">Форма реорганизации (статус) юридического лица (СвСтатус), СЮЛСТ</rdfs:comment>
+        <rdfs:label xml:lang="en">C27 Type Of Reorganization Form</rdfs:label>
+        <rdfs:label xml:lang="ru">C27 Форма Реорганизации</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C28_Type_Of_Official -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C28_Type_Of_Official">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C7_FTS_Type_List"/>
+        <rdfs:label xml:lang="en">C28 Type Of Official</rdfs:label>
+        <rdfs:label xml:lang="ru">C28 Вид Должностного Лица</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C29_Encumbrance_Type -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C29_Encumbrance_Type">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C7_FTS_Type_List"/>
+        <rdfs:label xml:lang="en">C29 Encumbrance Type</rdfs:label>
+        <rdfs:label xml:lang="ru">C29 Вид Обременения</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C2_Reg_Entity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C2_Reg_Entity">
+        <rdfs:comment xml:lang="ru">Класс для хранения любых сведений, внесенных в реестры</rdfs:comment>
+        <rdfs:label xml:lang="en">C2 Reg Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">C2 Сведения (Информационный Объект)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C30_LE_State -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C30_LE_State">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C7_FTS_Type_List"/>
+        <rdfs:comment xml:lang="ru">Правоспособность (статус) юридического лица</rdfs:comment>
+        <rdfs:label xml:lang="en">C30 LE State</rdfs:label>
+        <rdfs:label xml:lang="ru">C30 Статус ЮЛ</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C31_LE_Formation_Method -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C31_LE_Formation_Method">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C7_FTS_Type_List"/>
+        <rdfs:comment xml:lang="ru">Способ образования юридического лица</rdfs:comment>
+        <rdfs:label xml:lang="en">C31 LE Formation Method</rdfs:label>
+        <rdfs:label xml:lang="ru">C31 Способ Образования ЮЛ</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C32_Cessation_Method -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C32_Cessation_Method">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C7_FTS_Type_List"/>
+        <rdfs:comment xml:lang="ru">Способ прекращения юридического лица</rdfs:comment>
+        <rdfs:label xml:lang="en">C32 Cessation Method</rdfs:label>
+        <rdfs:label xml:lang="ru">C32 Способ Прекращения ЮЛ</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C33_IE_Type -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C33_IE_Type">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C7_FTS_Type_List"/>
+        <rdfs:comment xml:lang="ru">Индивидуальный предприниматель/глава крестьянского (фермерского) хозяйства</rdfs:comment>
+        <rdfs:label xml:lang="en">C33 IE Type</rdfs:label>
+        <rdfs:label xml:lang="ru">C33 Вид Предпринимательства</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C34_IE_Status -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C34_IE_Status">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C7_FTS_Type_List"/>
+        <rdfs:comment xml:lang="ru">Правоспособность (статус) индивидуального предпринимателя</rdfs:comment>
+        <rdfs:label xml:lang="en">C34 IE Status</rdfs:label>
+        <rdfs:label xml:lang="ru">C34 Статус ИП</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C35_Type_Of_Reorganization_Form -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C35_Type_Of_Reorganization_Form">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C7_FTS_Type_List"/>
+        <rdfs:comment xml:lang="ru">Сведения о форме реорганизации (статусе) юридического лица (СвСтатус)</rdfs:comment>
+        <rdfs:label xml:lang="en">C35 Type Of Reorganization Form</rdfs:label>
+        <rdfs:label xml:lang="ru">C35 Форма Реорганизации</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C36_Public_Body -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C36_Public_Body">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C9_Legal_Entity"/>
+        <rdfs:label xml:lang="en">C36 Public Body</rdfs:label>
+        <rdfs:label xml:lang="ru">C36 Госорган</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C37_LE_Tax_Registrator_Entity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C37_LE_Tax_Registrator_Entity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C12_EGRUL_Reg_Entity"/>
+        <rdfs:comment xml:lang="ru">Сведения о регистрирующем органе по месту нахождения юридического лица (СвРегОрг)</rdfs:comment>
+        <rdfs:label xml:lang="en">C37 LE Tax Registrator Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">C37 Сведения О Региструющем ЮЛ Налоговом Органе</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C38_Name_Entity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C38_Name_Entity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C12_EGRUL_Reg_Entity"/>
+        <rdfs:comment xml:lang="ru">Сведения о наименовании юридического лица (СвНаимЮЛ)</rdfs:comment>
+        <rdfs:label xml:lang="en">C38 Name Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">C38 Сведения О Наименовании ЮЛ</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C39_Address_Entity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C39_Address_Entity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C12_EGRUL_Reg_Entity"/>
+        <rdfs:label xml:lang="en">C39 Address Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">C39 Сведения Об Адресе ЮЛ</rdfs:label>
+        <rdfs:label xml:lang="ru">Сведения об адресе (месте нахождения) юридического лица</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C3_Record -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C3_Record">
+        <rdfs:label xml:lang="en">C3 Record</rdfs:label>
+        <rdfs:label xml:lang="ru">C3 Запись, Внесенная В Реестр</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C40_LE_Email_Entity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C40_LE_Email_Entity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C12_EGRUL_Reg_Entity"/>
+        <rdfs:comment xml:lang="ru">Сведения об адресе электронной почты юридического лица</rdfs:comment>
+        <rdfs:label xml:lang="en">C40 LE Email Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">C40 Сведения Об Адресе Электронной Почты ЮЛ</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C41_LE_Registration_Entity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C41_LE_Registration_Entity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C12_EGRUL_Reg_Entity"/>
+        <rdfs:comment xml:lang="ru">Сведения о регистрации (образовании) юридического лица</rdfs:comment>
+        <rdfs:label xml:lang="en">C41 LE Registration Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">C41 Сведения О Регистрации ЮЛ</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C42_LE_State_Entity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C42_LE_State_Entity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C12_EGRUL_Reg_Entity"/>
+        <rdfs:comment xml:lang="ru">Сведения о состоянии (статусе) юридического лица</rdfs:comment>
+        <rdfs:label xml:lang="en">C42 LE State Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">C42 Сведения О Состоянии ЮЛ</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C43_Business_Cessation_Entity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C43_Business_Cessation_Entity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C12_EGRUL_Reg_Entity"/>
+        <rdfs:comment xml:lang="ru">Сведения о прекращении юридического лица (СвПрекрЮЛ)</rdfs:comment>
+        <rdfs:label xml:lang="en">C43 Business Cessation Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">C43 Сведения О Прекращении ЮЛ</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C44_LE_Tax_Accounting_Entity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C44_LE_Tax_Accounting_Entity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C12_EGRUL_Reg_Entity"/>
+        <rdfs:label xml:lang="en">C44 LE Tax Accounting Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">C44 Сведения Об Учете ЮЛ В Налоговом Органе</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C45_LE_Pension_Fund_Registration_Entity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C45_LE_Pension_Fund_Registration_Entity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C12_EGRUL_Reg_Entity"/>
+        <rdfs:comment xml:lang="ru">Сведения о регистрации юридического лица в качестве страхователя в территориальном органе Пенсионного фонда Российской Федерации (СвРегПФ)</rdfs:comment>
+        <rdfs:label xml:lang="en">C45 LE Pension Fund Registration Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">C45 Сведения О Регистрации ЮЛ В ПФР</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C46_LE_Social_Insurance_Fund_Registration_Entity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C46_LE_Social_Insurance_Fund_Registration_Entity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C12_EGRUL_Reg_Entity"/>
+        <rdfs:comment xml:lang="ru">Сведения о регистрации юридического лица в качестве страхователя в исполнительном органе Фонда социального страхования Российской Федерации (СвРегФСС)</rdfs:comment>
+        <rdfs:label xml:lang="en">C46 LE Social Insurance Fund Registration Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">C46 Сведения О Регистрации ЮЛ В ФСС</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C47_Stated_Capital_Entity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C47_Stated_Capital_Entity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C12_EGRUL_Reg_Entity"/>
+        <rdfs:comment xml:lang="ru">Сведения о размере указанного в учредительных документах коммерческой организации уставного капитала (складочного капитала, уставного фонда, паевого фонда) (СвУстКап)</rdfs:comment>
+        <rdfs:label xml:lang="en">C47 Stated Capital Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">C47 Сведения Об Уставном Капитале</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C48_Capital_Decreasing_Entity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C48_Capital_Decreasing_Entity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C12_EGRUL_Reg_Entity"/>
+        <rdfs:comment xml:lang="ru">Сведения о нахождении хозяйственного общества в процессе уменьшения уставного капитала (СведУмУК)</rdfs:comment>
+        <rdfs:label xml:lang="en">C48 Capital Decreasing Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">C48 Сведения Об Уменьшении Уставного Капитала</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C49_Management_Organization_Entity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C49_Management_Organization_Entity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C12_EGRUL_Reg_Entity"/>
+        <rdfs:label xml:lang="en">C49 Management Organization Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">C49 Сведения Об Управляющей Организации</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C4_Legal_Entity_Details -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C4_Legal_Entity_Details">
+        <rdfs:label xml:lang="en">C4 Legal Entity Details</rdfs:label>
+        <rdfs:label xml:lang="ru">C4 Выписка О Юридическом Лице</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C50_Branch_Of_Foreign_Legal_Entity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C50_Branch_Of_Foreign_Legal_Entity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C12_EGRUL_Reg_Entity"/>
+        <rdfs:comment xml:lang="ru">Сведения о наименовании представительства или филиала в Российской Федерации, через которое иностранное ЮЛ осуществляет полномочия управляющей организации (СвПредЮЛ)</rdfs:comment>
+        <rdfs:label xml:lang="en">C50 Branch Of Foreign Legal Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">C50 Сведения О Наименовании Представительства Или Филиала Иностранного ЮЛ</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C51_Person_Acting_Without_Power_Of_Auttorney_Entity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C51_Person_Acting_Without_Power_Of_Auttorney_Entity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C12_EGRUL_Reg_Entity"/>
+        <rdfs:comment xml:lang="ru">Сведения о лице, имеющем право без доверенности действовать от имени юридического лица (СведДолжнФЛ)</rdfs:comment>
+        <rdfs:label xml:lang="en">C51 Person Acting Without Power Of Auttorney Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">C51 Сведения О Лице, Действующем Без Доверенности</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C52_Job_Entity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C52_Job_Entity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C12_EGRUL_Reg_Entity"/>
+        <rdfs:label xml:lang="en">C52 Job Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">C52 Сведения О Должности Физического Лица</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C53_Disqualification_Entity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C53_Disqualification_Entity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C12_EGRUL_Reg_Entity"/>
+        <rdfs:label xml:lang="en">C53 Disqualification Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">C53 Сведения О Дисквалификации</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C54_Founder_Entity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C54_Founder_Entity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C12_EGRUL_Reg_Entity"/>
+        <rdfs:label xml:lang="en">C54 Founder Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">C54 Сведения Об Учредителе</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C55_Share_In_Stated_Capital_Entity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C55_Share_In_Stated_Capital_Entity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C12_EGRUL_Reg_Entity"/>
+        <rdfs:comment xml:lang="ru">Доля в уставном капитале (складочном капитале, уставном фонде, паевом фонде), внесенная в ЕГРЮЛ (ДоляУстКапЕГРЮЛТип)</rdfs:comment>
+        <rdfs:label xml:lang="en">C55 Share In Stated Capital Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">С55 Доля В Уставном Капитале</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C56_Old_Registration_Entity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C56_Old_Registration_Entity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C12_EGRUL_Reg_Entity"/>
+        <rdfs:comment xml:lang="ru">Сведения о регистрации учредителя (участника) до 01.07.2002 г (СвРегСтарые)</rdfs:comment>
+        <rdfs:label xml:lang="en">C56 Old Registration Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">C56 Сведения О Регистрации ЮЛ До 01.07.2002</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C57_LE_Activity_Entity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C57_LE_Activity_Entity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C12_EGRUL_Reg_Entity"/>
+        <rdfs:comment xml:lang="ru">Сведения о видах экономической деятельности по Общероссийскому классификатору видов экономической деятельности (СвОКВЭД)</rdfs:comment>
+        <rdfs:label xml:lang="en">C57 LE Activity Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">C57 Сведения О Виде Экономической Деятельности ЮЛ</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C58_Separate_Business_Unit_Tax_Registration_Entity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C58_Separate_Business_Unit_Tax_Registration_Entity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C12_EGRUL_Reg_Entity"/>
+        <rdfs:comment xml:lang="ru">Сведения об учете в налоговом органе по месту нахождения обособленного подразделения (филиала/представительства) (СвУчетНОПодраздТип)</rdfs:comment>
+        <rdfs:label xml:lang="en">C58 Separate Business Unit Tax Registration Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">C58 Сведения Об Учете В Налоговом Органе По Месту Нахождения Обособленного Подразделения</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C59_Applicant_Entity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C59_Applicant_Entity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C12_EGRUL_Reg_Entity"/>
+        <rdfs:label xml:lang="en">C59 Applicant Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">C59 Сведения О Заявителе</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C5_Individual_Entrepreneur_Details -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C5_Individual_Entrepreneur_Details">
+        <rdfs:label xml:lang="en">C5 Individual Entrepreneur Details</rdfs:label>
+        <rdfs:label xml:lang="ru">C5 Выписка Об Индивидуальном Предпринимателе</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C60_LE_License_Entity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C60_LE_License_Entity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C12_EGRUL_Reg_Entity"/>
+        <rdfs:label xml:lang="en">C60 LE License Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">C60 Сведения О Лицензиях, Выданных ЮЛ</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C61_LE_License_Suspension_Entity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C61_LE_License_Suspension_Entity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C12_EGRUL_Reg_Entity"/>
+        <rdfs:label xml:lang="en">C61 LE License Suspension Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">C61 Сведения О Приостановлении Действия Лицензии ЮЛ</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C62_Contact_Number_Entity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C62_Contact_Number_Entity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C12_EGRUL_Reg_Entity"/>
+        <rdfs:label xml:lang="en">C62 Contact Number Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">C62 Сведения О Контактном Телефоне</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C63_Person_Entity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C63_Person_Entity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C12_EGRUL_Reg_Entity"/>
+        <rdfs:label xml:lang="en">C63 Person Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">C63 Сведения О Физическом Лице</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C64_Peasant_Farm_Entity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C64_Peasant_Farm_Entity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C12_EGRUL_Reg_Entity"/>
+        <rdfs:comment xml:lang="ru">Сведения о крестьянском (фермерском) хозяйстве, на базе имущества которого создано юридическое лицо (СвКФХПредш)</rdfs:comment>
+        <rdfs:label xml:lang="en">C64 Peasant Farm Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">C64 Сведения О КФХ</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C65_Encumbrance_Of_Participant_Share_Entity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C65_Encumbrance_Of_Participant_Share_Entity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C12_EGRUL_Reg_Entity"/>
+        <rdfs:comment xml:lang="ru">Сведения об обременении доли участника, внесенные в ЕГРЮЛ (СвОбремТип)</rdfs:comment>
+        <rdfs:label xml:lang="en">C65 Encumbrance Of Participant Share Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">C65 Сведения Об Обременении Доли Участника</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C66_Reorganization_Entity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C66_Reorganization_Entity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C12_EGRUL_Reg_Entity"/>
+        <rdfs:label xml:lang="en">C66 Reorganization Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">C67 Сведения Об Участии В Реорганизации</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C67_Holder_Of_Register_Of_Shareholders_Entity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C67_Holder_Of_Register_Of_Shareholders_Entity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C12_EGRUL_Reg_Entity"/>
+        <rdfs:comment xml:lang="ru">Сведения о держателе реестра акционеров акционерного общества</rdfs:comment>
+        <rdfs:label xml:lang="en">C67 Holder Of Register Of Shareholders Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">C67 Сведения О Держателе Реестра Акционеров АО</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C68_Separate_Business_Unit_Name_Entity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C68_Separate_Business_Unit_Name_Entity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C12_EGRUL_Reg_Entity"/>
+        <rdfs:comment xml:lang="ru">Сведения о наименовании обособленного подразделения (филиала/представительства) (СвНаимПодраздТип)</rdfs:comment>
+        <rdfs:label xml:lang="en">C68 Separate Business Unit Name Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">C68 Сведения О Наименовании Обособленного Подразделения</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C69_Separate_Business_Unit_Entity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C69_Separate_Business_Unit_Entity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C12_EGRUL_Reg_Entity"/>
+        <rdfs:comment xml:lang="ru">Сведения об обособленных подразделениях юридического лица (СвПодразд)</rdfs:comment>
+        <rdfs:label xml:lang="en">C69 Separate Business Unit Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">C69 Сведения Об Обособленных Подразделениях ЮЛ</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C6_Document -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C6_Document">
+        <rdfs:label xml:lang="en">C6 Document</rdfs:label>
+        <rdfs:label xml:lang="ru">C6 Документ</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C70_Address_Abroad_Entity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C70_Address_Abroad_Entity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C12_EGRUL_Reg_Entity"/>
+        <rdfs:comment xml:lang="ru">Сведения об адресе за пределами территории РФ, внесенные в ЕГРЮЛ (АдрИнЕГРЮЛТип)</rdfs:comment>
+        <rdfs:label xml:lang="en">C70 Address Abroad Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">C70 Сведения Об Адресе За Пределами Территории РФ</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C71_Mortgagee_Entity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C71_Mortgagee_Entity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C12_EGRUL_Reg_Entity"/>
+        <rdfs:comment xml:lang="ru">Сведения об обременении доли участника, внесенные в ЕГРЮЛ (СвОбремТип)</rdfs:comment>
+        <rdfs:label xml:lang="en">C71 Mortgagee Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">C71 Сведения Об Обременении</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C72_Participant_Entity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C72_Participant_Entity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C12_EGRUL_Reg_Entity"/>
+        <rdfs:comment xml:lang="ru">Сведения о наименовании и (при наличии) ИНН и ОГРН ЮЛ - учредителя (участника), управляющей организации, залогодержателя, управляющего долей участника, внесенные в ЕГРЮЛ (СвЮЛЕГРЮЛТип)</rdfs:comment>
+        <rdfs:label xml:lang="en">C72 Participant Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">C72 Сведения Об Организации</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C73_Management_Company_Entity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C73_Management_Company_Entity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C12_EGRUL_Reg_Entity"/>
+        <rdfs:comment xml:lang="ru">Сведения об управляющей компании паевого инвестиционного фонда (СвУпрКомпПИФ)</rdfs:comment>
+        <rdfs:label xml:lang="en">C73 Management Company Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">C73 Сведения Об Управляющей Компании ПИФ</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C74_Public_Body_Exercising_Founders_Fights_Entity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C74_Public_Body_Exercising_Founders_Fights_Entity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C12_EGRUL_Reg_Entity"/>
+        <rdfs:comment xml:lang="ru">Сведения об органе государственной власти, органе местного самоуправления или о юридическом лице, осуществляющем права учредителя (участника)</rdfs:comment>
+        <rdfs:label xml:lang="en">C74 Public Body Exercising Founders Fights Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">C74 Сведения О Госоргане, Органе Местного Самоуправления Или О ЮЛ Осуществляющем Права Учредителя</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C75_Trustee_Entity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C75_Trustee_Entity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C12_EGRUL_Reg_Entity"/>
+        <rdfs:label xml:lang="ru">75 Сведения О Доверительном Управляющем</rdfs:label>
+        <rdfs:label xml:lang="en">C75 Trustee Entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C76_Inheritance_Manager_Entity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C76_Inheritance_Manager_Entity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C12_EGRUL_Reg_Entity"/>
+        <rdfs:comment xml:lang="ru">Сведения о лице, осуществляющем управление долей, переходящей в порядке наследования (ЛицоУпрНасл)</rdfs:comment>
+        <rdfs:label xml:lang="en">C76 Inheritance Manager Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">C76 Сведения О Лице, Управляющем Долей, Переходящей В Порядке Наследования</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C77_Mutual_Investment_Fund_Name_Entity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C77_Mutual_Investment_Fund_Name_Entity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C12_EGRUL_Reg_Entity"/>
+        <rdfs:comment xml:lang="ru">Сведения о названии (индивидуальном обозначении) паевого инвестиционного фонда (СвНаимПИФ)</rdfs:comment>
+        <rdfs:label xml:lang="en">C77 Mutual Investment Fund Name Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">C77 Сведения О Наименовании ПИФ</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C78_LE_Changes_Confirmation_Entity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C78_LE_Changes_Confirmation_Entity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C12_EGRUL_Reg_Entity"/>
+        <rdfs:comment xml:lang="ru">Сведения о свидетельстве, подтверждающем факт внесения записи в ЕГРЮЛ (СвСвид)</rdfs:comment>
+        <rdfs:label xml:lang="en">C78 LE Changes Confirmation Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">C78 Сведения О Свидетельстве, Подтверждающем Данные О ЮЛ</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C79_Name_And_Gender_Entity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C79_Name_And_Gender_Entity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C13_EGRIP_Reg_Entity"/>
+        <rdfs:label xml:lang="en">C79 Name And Gender Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">C79 Сведения о ФИО и Поле ИП</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C7_FTS_Type_List -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C7_FTS_Type_List">
+        <rdfs:comment xml:lang="ru">Классификаторы, справочники и типы, встречающиеся в данных ФНС</rdfs:comment>
+        <rdfs:label xml:lang="en">C7 FTS Type List</rdfs:label>
+        <rdfs:label xml:lang="ru">C7 Классификаторы ФНС</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C80_Citizenship_Entity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C80_Citizenship_Entity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C13_EGRIP_Reg_Entity"/>
+        <rdfs:label xml:lang="en">C80 Citizenship Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">C80 Сведения О Гражданстве ИП</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C81_IE_Email_Entity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C81_IE_Email_Entity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C13_EGRIP_Reg_Entity"/>
+        <rdfs:label xml:lang="en">C81 IE Email Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">C81 Сведения Об Адресе Электронной Почты ИП</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C82_IE_Tax_Registrator_Entity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C82_IE_Tax_Registrator_Entity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C13_EGRIP_Reg_Entity"/>
+        <rdfs:comment xml:lang="ru">Сведения о регистрирующем органе по месту жительства ИП или главы КФХ (СвРегОрг)</rdfs:comment>
+        <rdfs:label xml:lang="en">C82 IE Tax Registrator Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">C82 Сведения О Региструющем Органе По Месту Жительства</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C83_IE_Status_Entity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C83_IE_Status_Entity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C13_EGRIP_Reg_Entity"/>
+        <rdfs:label xml:lang="en">C83 IE Status Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">C83 Сведения О Состоянии (Статусе) ИП</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C84_Legal_Entity_Registration -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C84_Legal_Entity_Registration">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C13_EGRIP_Reg_Entity"/>
+        <rdfs:comment xml:lang="ru">Сведения о юридическом лице, созданном на базе крестьянского (фермерского) хозяйства (СвНовЮЛ)</rdfs:comment>
+        <rdfs:label xml:lang="en">C84 Legal Entity Registration</rdfs:label>
+        <rdfs:label xml:lang="ru">C84 Сведения О ЮЛ, Созданном На Базе КФХ</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C85_IE_Tax_Accounting_Entity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C85_IE_Tax_Accounting_Entity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C13_EGRIP_Reg_Entity"/>
+        <rdfs:label xml:lang="en">C85 IE Tax Accounting Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">C85 Сведения Об Учете ИП В Налоговом Органе</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C86_IE_Social_Insurance_Fund_Registration_Entity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C86_IE_Social_Insurance_Fund_Registration_Entity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C13_EGRIP_Reg_Entity"/>
+        <rdfs:comment xml:lang="ru">Сведения о регистрации в качестве страхователя в исполнительном органе Фонда социального страхования Российской Федерации (СвРегФСС)</rdfs:comment>
+        <rdfs:label xml:lang="en">C86 IE Social Insurance Fund Registration Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">C86 Сведения О Регистрации ИП В ФСС</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C87_IE_Activity_Entity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C87_IE_Activity_Entity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C13_EGRIP_Reg_Entity"/>
+        <rdfs:comment xml:lang="ru">Сведения о видах экономической деятельности по Общероссийскому классификатору видов экономической деятельности (СвОКВЭД)</rdfs:comment>
+        <rdfs:label xml:lang="en">C87 IE Activity Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">C87 Сведения О Виде Экономической Деятельности ИП</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C88_IE_License_Entity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C88_IE_License_Entity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C13_EGRIP_Reg_Entity"/>
+        <rdfs:label xml:lang="en">C88 IE License Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">C88 Сведения О Лицензиях, Выданных ИП</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C89_IE_License_Suspension_Entity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C89_IE_License_Suspension_Entity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C13_EGRIP_Reg_Entity"/>
+        <rdfs:label xml:lang="en">C89 IE License Suspension Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">C89 Сведения О Приостановлении Действия Лицензии ИП</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C8_Error -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C8_Error">
+        <rdfs:comment xml:lang="ru">Класс для обозначения сомнительных и ошибочных сведений</rdfs:comment>
+        <rdfs:label xml:lang="en">C8 Error</rdfs:label>
+        <rdfs:label xml:lang="ru">C8 Ошибка</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C90_IE_Registration_Entity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C90_IE_Registration_Entity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C13_EGRIP_Reg_Entity"/>
+        <rdfs:comment xml:lang="ru">Сведения о регистрации индивидуального предпринимателя или крестьянского (фермерского) хозяйства (СвРегИП)</rdfs:comment>
+        <rdfs:label xml:lang="en">C90 IE Registration Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">C90 Сведения О Регистрации ИП Или КФХ</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C91_IE_Pension_Fund_Registration_Entity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C91_IE_Pension_Fund_Registration_Entity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C13_EGRIP_Reg_Entity"/>
+        <rdfs:comment xml:lang="ru">Сведения о регистрации в качестве страхователя в территориальном органе Пенсионного фонда Российской Федерации (СвРегПФ)</rdfs:comment>
+        <rdfs:label xml:lang="en">C91 IE Pension Fund Registration Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">C91 Сведения О Регистрации ИП В ПФР</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C92_IE_Changes_Confirmation_Entity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C92_IE_Changes_Confirmation_Entity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C13_EGRIP_Reg_Entity"/>
+        <rdfs:comment xml:lang="ru">Сведения о свидетельстве, подтверждающем факт внесения записи в ЕГРИП</rdfs:comment>
+        <rdfs:label xml:lang="en">C92 IE Changes Confirmation Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">C92 Сведения О Свидетельстве, Подтверждающем Данные О ИП</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C93_Tax_Authority -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C93_Tax_Authority">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C17_Territorial_State_Bodies"/>
+        <rdfs:label xml:lang="en">C93 Tax Authority</rdfs:label>
+        <rdfs:label xml:lang="ru">C93 Налоговый Орган</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C94_Executive_Bodies_Of_Social_Insurance_Fund -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C94_Executive_Bodies_Of_Social_Insurance_Fund">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C17_Territorial_State_Bodies"/>
+        <rdfs:comment xml:lang="ru">Исполнительный орган Фонда социального страхования Российской Федерации (СвОргФСС)</rdfs:comment>
+        <rdfs:label xml:lang="en">C94 Executive Bodies Of Social Insurance Fund</rdfs:label>
+        <rdfs:label xml:lang="ru">C94 Исполнительный Орган ФСС</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C95_Territorial_Bodies_Of_Pension_Fund -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C95_Territorial_Bodies_Of_Pension_Fund">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C17_Territorial_State_Bodies"/>
+        <rdfs:comment xml:lang="ru">Территориальный орган Пенсионного фонда Российской Федерации (СвОргПФ)</rdfs:comment>
+        <rdfs:label xml:lang="en">C95 Territorial Bodies Of Pension Fund</rdfs:label>
+        <rdfs:label xml:lang="ru">C95 Территориальный Орган ПФР</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C96_Region_Element -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C96_Region_Element">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C26_KLADR_Element"/>
+        <rdfs:label xml:lang="en">C96 Region Element</rdfs:label>
+        <rdfs:label xml:lang="ru">C96 Адресообразующий Элемент Регион</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C97_District_Element -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C97_District_Element">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C26_KLADR_Element"/>
+        <rdfs:label xml:lang="en">C97 District Element</rdfs:label>
+        <rdfs:label xml:lang="ru">C97 Адресообразующий Элемент Район</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C98_City_Element -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C98_City_Element">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C26_KLADR_Element"/>
+        <rdfs:label xml:lang="en">C98 City Element</rdfs:label>
+        <rdfs:label xml:lang="ru">C98 Адресообразующий Элемент Город</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C99_Locality_Element -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C99_Locality_Element">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C26_KLADR_Element"/>
+        <rdfs:label xml:lang="en">C99 Locality Element</rdfs:label>
+        <rdfs:label xml:lang="ru">C99 Адресообразующий Элемент Населенный Пункт</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ontology/owl#C9_Legal_Entity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fts-ontology/owl#C9_Legal_Entity">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/org#FormalOrganization"/>
+        <rdfs:label xml:lang="en">C9 Legal Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">C9 Юридическое Лицо</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/org#FormalOrganization -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/org#FormalOrganization"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Person -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi -->
+

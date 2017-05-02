@@ -1,0 +1,403 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/fts-ie-example#"
+     xml:base="http://www.semanticweb.org/fts-ie-example"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:owl1="http://www.semanticweb.org/fts-ontology/owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/fts-ie-example">
+        <owl:imports rdf:resource="http://www.semanticweb.org/fts-ontology/owl#"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ie-example#CitizenshipEntity-231212971850 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fts-ie-example#CitizenshipEntity-231212971850">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C80_Citizenship_Entity"/>
+        <owl1:p76_entered_on_registry_with rdf:resource="http://www.semanticweb.org/fts-ie-example#RegNumberDate-314231209000042"/>
+        <owl1:p79_has_type rdf:resource="http://www.semanticweb.org/fts-ie-example#Country-643"/>
+        <owl1:p85_refers_to_ie rdf:resource="http://www.semanticweb.org/fts-ie-example#IE-231212971850"/>
+        <owl1:p73_citizenship_type xml:lang="ru">1</owl1:p73_citizenship_type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ie-example#Country-643 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fts-ie-example#Country-643">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C21_Country"/>
+        <owl1:p5_code xml:lang="ru">643</owl1:p5_code>
+        <owl1:p6_name xml:lang="ru">РОССИЯ</owl1:p6_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ie-example#Document-231212971850-0 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fts-ie-example#Document-231212971850-0">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C6_Document"/>
+        <owl1:p86_was_submitted rdf:resource="http://www.semanticweb.org/fts-ie-example#EGRIP-Record-231212971850-0"/>
+        <owl1:p9_doc_name>ПАСПОРТ</owl1:p9_doc_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ie-example#Document-231212971850-1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fts-ie-example#Document-231212971850-1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C6_Document"/>
+        <owl1:p86_was_submitted rdf:resource="http://www.semanticweb.org/fts-ie-example#EGRIP-Record-231212971850-0"/>
+        <owl1:p11_doc_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">882</owl1:p11_doc_number>
+        <owl1:p12_doc_date>2014-03-24</owl1:p12_doc_date>
+        <owl1:p9_doc_name>ЗАЯВЛЕНИЕ О ГОСУДАРСТВЕННОЙ РЕГИСТРАЦИИ ФИЗИЧЕСКОГО ЛИЦА В КАЧЕСТВЕ ИНДИВИДУАЛЬНОГО ПРЕДПРИНИМАТЕЛЯ</owl1:p9_doc_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ie-example#EGRIP-Record-231212971850-0 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fts-ie-example#EGRIP-Record-231212971850-0">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C15_EGRIP_Record"/>
+        <owl1:p85_refers_to_ie rdf:resource="http://www.semanticweb.org/fts-ie-example#IE-231212971850"/>
+        <owl1:p88_added_by rdf:resource="http://www.semanticweb.org/fts-ie-example#TaxAuthority-2312"/>
+        <owl1:p89_reason_for_making_entry rdf:resource="http://www.semanticweb.org/fts-ie-example#RecordType-21211"/>
+        <owl1:p95_le_record_confirmed_by rdf:resource="http://www.semanticweb.org/fts-ie-example#IE_ChangesConfirmationEntity-231212971850"/>
+        <owl1:p1_state_registration_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">314231209000042</owl1:p1_state_registration_number>
+        <owl1:p7_record_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">314231209000042</owl1:p7_record_id>
+        <owl1:p8_recording_date>2014-03-31</owl1:p8_recording_date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ie-example#EGRIP-Record-231212971850-1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fts-ie-example#EGRIP-Record-231212971850-1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C15_EGRIP_Record"/>
+        <owl1:p85_refers_to_ie rdf:resource="http://www.semanticweb.org/fts-ie-example#IE-231212971850"/>
+        <owl1:p88_added_by rdf:resource="http://www.semanticweb.org/fts-ie-example#TaxAuthority-2312"/>
+        <owl1:p89_reason_for_making_entry rdf:resource="http://www.semanticweb.org/fts-ie-example#RecordType-23200"/>
+        <owl1:p1_state_registration_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">414231210500090</owl1:p1_state_registration_number>
+        <owl1:p7_record_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">414231210500090</owl1:p7_record_id>
+        <owl1:p8_recording_date>2014-04-15</owl1:p8_recording_date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ie-example#EconomicActivityType-74.13.1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fts-ie-example#EconomicActivityType-74.13.1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C18_Economic_Activity_Type"/>
+        <owl1:p5_code>74.13.1</owl1:p5_code>
+        <owl1:p6_name>ИССЛЕДОВАНИЕ КОНЪЮНКТУРЫ РЫНКА</owl1:p6_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ie-example#EconomicActivityType-74.13.2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fts-ie-example#EconomicActivityType-74.13.2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C18_Economic_Activity_Type"/>
+        <owl1:p5_code>74.13.2</owl1:p5_code>
+        <owl1:p6_name>ДЕЯТЕЛЬНОСТЬ ПО ИЗУЧЕНИЮ ОБЩЕСТВЕННОГО МНЕНИЯ</owl1:p6_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ie-example#EconomicActivityType-74.14 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fts-ie-example#EconomicActivityType-74.14">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C18_Economic_Activity_Type"/>
+        <owl1:p5_code rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">74.14</owl1:p5_code>
+        <owl1:p6_name>КОНСУЛЬТИРОВАНИЕ ПО ВОПРОСАМ КОММЕРЧЕСКОЙ ДЕЯТЕЛЬНОСТИ И УПРАВЛЕНИЯ</owl1:p6_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ie-example#EconomicActivityType-74.40 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fts-ie-example#EconomicActivityType-74.40">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C18_Economic_Activity_Type"/>
+        <owl1:p5_code rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">74.40</owl1:p5_code>
+        <owl1:p6_name>РЕКЛАМНАЯ ДЕЯТЕЛЬНОСТЬ</owl1:p6_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ie-example#EconomicActivityType-74.50 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fts-ie-example#EconomicActivityType-74.50">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C18_Economic_Activity_Type"/>
+        <owl1:p5_code rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">74.50</owl1:p5_code>
+        <owl1:p6_name>НАЙМ РАБОЧЕЙ СИЛЫ И ПОДБОР ПЕРСОНАЛА</owl1:p6_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ie-example#EconomicActivityType-74.84 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fts-ie-example#EconomicActivityType-74.84">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C18_Economic_Activity_Type"/>
+        <owl1:p5_code rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">74.84</owl1:p5_code>
+        <owl1:p6_name>ПРЕДОСТАВЛЕНИЕ ПРОЧИХ УСЛУГ</owl1:p6_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ie-example#IE-231212971850 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fts-ie-example#IE-231212971850">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C10_Individual_Entrepreneur"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ie-example#IEType-1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fts-ie-example#IEType-1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C33_IE_Type"/>
+        <owl1:p5_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl1:p5_code>
+        <owl1:p6_name>ИНДИВИДУАЛЬНЫЙ ПРЕДПРИНИМАТЕЛЬ</owl1:p6_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ie-example#IE_ActivityEntity-Add-231212971850-0 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fts-ie-example#IE_ActivityEntity-Add-231212971850-0">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C87_IE_Activity_Entity"/>
+        <owl1:p108_is_additional_activity rdf:resource="http://www.semanticweb.org/fts-ie-example#EconomicActivityType-74.84"/>
+        <owl1:p76_entered_on_registry_with rdf:resource="http://www.semanticweb.org/fts-ie-example#RegNumberDate-314231209000042"/>
+        <owl1:p85_refers_to_ie rdf:resource="http://www.semanticweb.org/fts-ie-example#IE-231212971850"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ie-example#IE_ActivityEntity-Add-231212971850-1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fts-ie-example#IE_ActivityEntity-Add-231212971850-1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C87_IE_Activity_Entity"/>
+        <owl1:p108_is_additional_activity rdf:resource="http://www.semanticweb.org/fts-ie-example#EconomicActivityType-74.13.2"/>
+        <owl1:p76_entered_on_registry_with rdf:resource="http://www.semanticweb.org/fts-ie-example#RegNumberDate-314231209000042"/>
+        <owl1:p85_refers_to_ie rdf:resource="http://www.semanticweb.org/fts-ie-example#IE-231212971850"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ie-example#IE_ActivityEntity-Add-231212971850-2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fts-ie-example#IE_ActivityEntity-Add-231212971850-2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C87_IE_Activity_Entity"/>
+        <owl1:p108_is_additional_activity rdf:resource="http://www.semanticweb.org/fts-ie-example#EconomicActivityType-74.40"/>
+        <owl1:p76_entered_on_registry_with rdf:resource="http://www.semanticweb.org/fts-ie-example#RegNumberDate-314231209000042"/>
+        <owl1:p85_refers_to_ie rdf:resource="http://www.semanticweb.org/fts-ie-example#IE-231212971850"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ie-example#IE_ActivityEntity-Add-231212971850-3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fts-ie-example#IE_ActivityEntity-Add-231212971850-3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C87_IE_Activity_Entity"/>
+        <owl1:p108_is_additional_activity rdf:resource="http://www.semanticweb.org/fts-ie-example#EconomicActivityType-74.14"/>
+        <owl1:p76_entered_on_registry_with rdf:resource="http://www.semanticweb.org/fts-ie-example#RegNumberDate-314231209000042"/>
+        <owl1:p85_refers_to_ie rdf:resource="http://www.semanticweb.org/fts-ie-example#IE-231212971850"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ie-example#IE_ActivityEntity-Add-231212971850-4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fts-ie-example#IE_ActivityEntity-Add-231212971850-4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C87_IE_Activity_Entity"/>
+        <owl1:p108_is_additional_activity rdf:resource="http://www.semanticweb.org/fts-ie-example#EconomicActivityType-74.13.1"/>
+        <owl1:p76_entered_on_registry_with rdf:resource="http://www.semanticweb.org/fts-ie-example#RegNumberDate-314231209000042"/>
+        <owl1:p85_refers_to_ie rdf:resource="http://www.semanticweb.org/fts-ie-example#IE-231212971850"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ie-example#IE_ActivityEntity-Main-231212971850 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fts-ie-example#IE_ActivityEntity-Main-231212971850">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C87_IE_Activity_Entity"/>
+        <owl1:p107_is_main_activity rdf:resource="http://www.semanticweb.org/fts-ie-example#EconomicActivityType-74.50"/>
+        <owl1:p76_entered_on_registry_with rdf:resource="http://www.semanticweb.org/fts-ie-example#RegNumberDate-314231209000042"/>
+        <owl1:p85_refers_to_ie rdf:resource="http://www.semanticweb.org/fts-ie-example#IE-231212971850"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ie-example#IE_ChangesConfirmationEntity-231212971850 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fts-ie-example#IE_ChangesConfirmationEntity-231212971850">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C92_IE_Changes_Confirmation_Entity"/>
+        <owl1:p69_certificate_ceries rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23</owl1:p69_certificate_ceries>
+        <owl1:p70_certificate_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">008810754</owl1:p70_certificate_number>
+        <owl1:p71_certificate_date>2014-03-31</owl1:p71_certificate_date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ie-example#IE_RegistrationEntity-231212971850 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fts-ie-example#IE_RegistrationEntity-231212971850">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C90_IE_Registration_Entity"/>
+        <owl1:p85_refers_to_ie rdf:resource="http://www.semanticweb.org/fts-ie-example#IE-231212971850"/>
+        <owl1:p29_psrn_assignment_date>2014-03-31</owl1:p29_psrn_assignment_date>
+        <owl1:p33_registered_by>ИНСПЕКЦИЯ ФЕДЕРАЛЬНОЙ НАЛОГОВОЙ СЛУЖБЫ № 5 ПО Г. КРАСНОДАРУ</owl1:p33_registered_by>
+        <owl1:p46_ie_primary_state_registration_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">314231209000042</owl1:p46_ie_primary_state_registration_number>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ie-example#IE_TaxAccountingEntity-231212971850 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fts-ie-example#IE_TaxAccountingEntity-231212971850">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C85_IE_Tax_Accounting_Entity"/>
+        <owl1:p109_was_put_on_record rdf:resource="http://www.semanticweb.org/fts-ie-example#TaxAuthority-2312"/>
+        <owl1:p76_entered_on_registry_with rdf:resource="http://www.semanticweb.org/fts-ie-example#RegNumberDate-414231210500090"/>
+        <owl1:p85_refers_to_ie rdf:resource="http://www.semanticweb.org/fts-ie-example#IE-231212971850"/>
+        <owl1:p56_registration_date>2014-04-15</owl1:p56_registration_date>
+        <owl1:p75_ie_individual_tax_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">231212971850</owl1:p75_ie_individual_tax_number>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ie-example#IE_TaxRegistratorEntity-231212971850 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fts-ie-example#IE_TaxRegistratorEntity-231212971850">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C82_IE_Tax_Registrator_Entity"/>
+        <owl1:p76_entered_on_registry_with rdf:resource="http://www.semanticweb.org/fts-ie-example#RegNumberDate-416237501205328"/>
+        <owl1:p85_refers_to_ie rdf:resource="http://www.semanticweb.org/fts-ie-example#IE-231212971850"/>
+        <owl1:p15_address>,350020,,, КРАСНОДАР Г,, КОММУНАРОВ УЛ, Д 235,,</owl1:p15_address>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ie-example#IndividualEntrepreneursDetails-231212971850 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fts-ie-example#IndividualEntrepreneursDetails-231212971850">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C5_Individual_Entrepreneur_Details"/>
+        <owl1:p137_includes_egrip_record rdf:resource="http://www.semanticweb.org/fts-ie-example#EGRIP-Record-231212971850-0"/>
+        <owl1:p137_includes_egrip_record rdf:resource="http://www.semanticweb.org/fts-ie-example#EGRIP-Record-231212971850-1"/>
+        <owl1:p79_has_type rdf:resource="http://www.semanticweb.org/fts-ie-example#IEType-1"/>
+        <owl1:p83_describes_ie rdf:resource="http://www.semanticweb.org/fts-ie-example#IE-231212971850"/>
+        <owl1:p84_includes_ie_reg_entity rdf:resource="http://www.semanticweb.org/fts-ie-example#CitizenshipEntity-231212971850"/>
+        <owl1:p84_includes_ie_reg_entity rdf:resource="http://www.semanticweb.org/fts-ie-example#IE_ActivityEntity-Add-231212971850-0"/>
+        <owl1:p84_includes_ie_reg_entity rdf:resource="http://www.semanticweb.org/fts-ie-example#IE_ActivityEntity-Add-231212971850-1"/>
+        <owl1:p84_includes_ie_reg_entity rdf:resource="http://www.semanticweb.org/fts-ie-example#IE_ActivityEntity-Add-231212971850-2"/>
+        <owl1:p84_includes_ie_reg_entity rdf:resource="http://www.semanticweb.org/fts-ie-example#IE_ActivityEntity-Add-231212971850-3"/>
+        <owl1:p84_includes_ie_reg_entity rdf:resource="http://www.semanticweb.org/fts-ie-example#IE_ActivityEntity-Add-231212971850-4"/>
+        <owl1:p84_includes_ie_reg_entity rdf:resource="http://www.semanticweb.org/fts-ie-example#IE_ActivityEntity-Main-231212971850"/>
+        <owl1:p84_includes_ie_reg_entity rdf:resource="http://www.semanticweb.org/fts-ie-example#IE_ChangesConfirmationEntity-231212971850"/>
+        <owl1:p84_includes_ie_reg_entity rdf:resource="http://www.semanticweb.org/fts-ie-example#IE_RegistrationEntity-231212971850"/>
+        <owl1:p84_includes_ie_reg_entity rdf:resource="http://www.semanticweb.org/fts-ie-example#IE_TaxAccountingEntity-231212971850"/>
+        <owl1:p84_includes_ie_reg_entity rdf:resource="http://www.semanticweb.org/fts-ie-example#IE_TaxRegistratorEntity-231212971850"/>
+        <owl1:p84_includes_ie_reg_entity rdf:resource="http://www.semanticweb.org/fts-ie-example#NameAndGenderEntity-231212971850"/>
+        <owl1:p3_formation_date>2016-02-22</owl1:p3_formation_date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ie-example#NameAndGenderEntity-231212971850 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fts-ie-example#NameAndGenderEntity-231212971850">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C79_Name_And_Gender_Entity"/>
+        <owl1:p76_entered_on_registry_with rdf:resource="http://www.semanticweb.org/fts-ie-example#RegNumberDate-314231209000042"/>
+        <owl1:p85_refers_to_ie rdf:resource="http://www.semanticweb.org/fts-ie-example#IE-231212971850"/>
+        <owl1:p42_first_name xml:lang="ru">ЮЛИЯ</owl1:p42_first_name>
+        <owl1:p43_last_name xml:lang="ru">САМОХВАЛОВА</owl1:p43_last_name>
+        <owl1:p44_middle_name xml:lang="ru">ПЕТРОВНА</owl1:p44_middle_name>
+        <owl1:p72_gender xml:lang="ru">2</owl1:p72_gender>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ie-example#RecordType-21211 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fts-ie-example#RecordType-21211">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C20_Record_Type"/>
+        <owl1:p5_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21211</owl1:p5_code>
+        <owl1:p6_name>(Р21001) РЕГИСТРАЦИЯ ФЛ В КАЧЕСТВЕ ИП</owl1:p6_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ie-example#RecordType-23200 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fts-ie-example#RecordType-23200">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C20_Record_Type"/>
+        <owl1:p5_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23200</owl1:p5_code>
+        <owl1:p6_name>ВНЕСЕНИЕ СВЕДЕНИЙ ОБ УЧЕТЕ В НАЛОГОВОМ ОРГАНЕ</owl1:p6_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ie-example#RegNumberDate-314231209000042 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fts-ie-example#RegNumberDate-314231209000042">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C1_Reg_Number_Date"/>
+        <owl1:p1_state_registration_number xml:lang="ru">314231209000042</owl1:p1_state_registration_number>
+        <owl1:p2_date xml:lang="ru">2014-03-31</owl1:p2_date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ie-example#RegNumberDate-414231210500090 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fts-ie-example#RegNumberDate-414231210500090">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C1_Reg_Number_Date"/>
+        <owl1:p1_state_registration_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">414231210500090</owl1:p1_state_registration_number>
+        <owl1:p2_date>2014-04-15</owl1:p2_date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ie-example#RegNumberDate-416237501205328 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fts-ie-example#RegNumberDate-416237501205328">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C1_Reg_Number_Date"/>
+        <owl1:p1_state_registration_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">416237501205328</owl1:p1_state_registration_number>
+        <owl1:p2_date>2016-02-22</owl1:p2_date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ie-example#TaxAuthority-2312 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fts-ie-example#TaxAuthority-2312">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C93_Tax_Authority"/>
+        <owl1:p5_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2312</owl1:p5_code>
+        <owl1:p6_name>ИНСПЕКЦИЯ ФЕДЕРАЛЬНОЙ НАЛОГОВОЙ СЛУЖБЫ №5 ПО Г. КРАСНОДАРУ</owl1:p6_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fts-ie-example#TaxAuthority-2375 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fts-ie-example#TaxAuthority-2375">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fts-ontology/owl#C93_Tax_Authority"/>
+        <owl1:p15_address>,350020,,, КРАСНОДАР Г,, КОММУНАРОВ УЛ, Д 235,,</owl1:p15_address>
+        <owl1:p5_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2375</owl1:p5_code>
+        <owl1:p6_name>МЕЖРАЙОННАЯ ИНСПЕКЦИЯ ФЕДЕРАЛЬНОЙ НАЛОГОВОЙ СЛУЖБЫ № 16 ПО КРАСНОДАРСКОМУ КРАЮ</owl1:p6_name>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi -->
+

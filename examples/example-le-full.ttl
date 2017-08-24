@@ -1,0 +1,438 @@
+@prefix : <http://example.com/resources/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix fts: <https://w3id.org/datafabric.cc/ontologies/fts#> .
+
+:AddressEntity-5246042472 a fts:C39_Address_Entity ;
+                          fts:p76_entered_on_registry_with :RegNumberDate-1125246001715 ;
+                          fts:p82_refers_to_company :LE-5246042472 ;
+                          fts:p98_located_at :KLADR-city-5200000500000 ,
+                                            :KLADR-region-52 ,
+                                            :KLADR-street-52000005000021200 ;
+                          fts:p18_postcode "606440" ;
+                          fts:p19_region_code "52" ;
+                          fts:p20_address_code "520000050000212" ;
+                          fts:p22_building_number "26" ;
+                          fts:p23_office_number "ОФИС 501" .
+
+:BusinessCessationEntity-5246042472 a fts:C43_Business_Cessation_Entity ;
+                                    fts:p34_le_cessation_date "2015-11-23"^^xsd:date .
+
+:CapitalType-Ust a fts:C24_Capital_Type ;
+                 fts:p6_name "УСТАВНЫЙ КАПИТАЛ" .
+
+:ContactNumberEntity-5246042472 a fts:C62_Contact_Number_Entity ;
+                                fts:p76_entered_on_registry_with :RegNumberDate-2135246011426 ;
+                                fts:p82_refers_to_company :LE-5246042472 ;
+                                fts:p41_phone_number "+7(908)7320288" .
+
+:Document-5246042472-0 a fts:C6_Document ;
+                       fts:p86_was_submitted :EGRUL_Record-5246042472-0 ;
+                       fts:p11_doc_number 936 ;
+                       fts:p12_doc_date "2012-11-20" ;
+                       fts:p9_doc_name "ЗАЯВЛЕНИЕ О ГОСУДАРСТВЕННОЙ РЕГИСТРАЦИИ ЮРИДИЧЕСКОГО ЛИЦА ПРИ СОЗДАНИИ" .
+
+:Document-5246042472-1 a fts:C6_Document ;
+                       fts:p86_was_submitted :EGRUL_Record-5246042472-0 ;
+                       fts:p12_doc_date "2012-11-17" ;
+                       fts:p9_doc_name "УСТАВ" .
+
+:Document-5246042472-2 a fts:C6_Document ;
+                       fts:p86_was_submitted :EGRUL_Record-5246042472-0 ;
+                       fts:p12_doc_date "2012-11-17" ;
+                       fts:p9_doc_name "РЕШЕНИЕ О СОЗДАНИИ ЮРИДИЧЕСКОГО ЛИЦА" .
+
+:Document-5246042472-3 a fts:C6_Document ;
+                       fts:p86_was_submitted :EGRUL_Record-5246042472-0 ;
+                       fts:p9_doc_name "АКТ ОЦЕНКИ И ПЕРЕДАЧИ ИМУЩЕСТВА" .
+
+:Document-5246042472-4 a fts:C6_Document ;
+                       fts:p86_was_submitted :EGRUL_Record-5246042472-0 ;
+                       fts:p12_doc_date "2012-11-20" ;
+                       fts:p9_doc_name "ДОКУМЕНТ ОБ УПЛАТЕ ГОСУДАРСТВЕННОЙ ПОШЛИНЫ" .
+
+:Document-5246042472-5 a fts:C6_Document ;
+                       fts:p86_was_submitted :EGRUL_Record-5246042472-4 ;
+                       fts:p11_doc_number 504 ;
+                       fts:p12_doc_date "2013-07-11" ;
+                       fts:p9_doc_name "ЗАЯВЛЕНИЕ О ВНЕСЕНИИ В ЕДИНЫЙ ГОСУДАРСТВЕННЫЙ РЕЕСТР ЮРИДИЧЕСКИХ ЛИЦ ИЗМЕНЕНИЙ В СВЕДЕНИЯ О ЮРИДИЧЕСКОМ ЛИЦЕ, НЕ СВЯЗАННЫХ С ВНЕСЕНИЕМ ИЗМЕНЕНИЙ В УЧРЕДИТЕЛЬНЫЕ ДОКУМЕНТЫ" .
+
+:Document-5246042472-6 a fts:C6_Document ;
+                       fts:p86_was_submitted :EGRUL_Record-5246042472-5, :EGRUL_Record-5246042472-6 ;
+                       fts:p11_doc_number 22 ;
+                       fts:p12_doc_date "2015-07-31" ;
+                       fts:p9_doc_name "РЕШЕНИЕ О ПРЕДСТОЯЩЕМ ИСКЛЮЧЕНИИ НЕДЕЙСТВУЮЩЕГО ЮРИДИЧЕСКОГО ЛИЦА ИЗ ЕДИНОГО ГОСУДАРСТВЕННОГО РЕЕСТРА ЮРИДИЧЕСКИХ ЛИЦ" .
+
+:Document-5246042472-7 a fts:C6_Document ;
+                       fts:p86_was_submitted :EGRUL_Record-5246042472-6 ;
+                       fts:p11_doc_number "21-С" ;
+                       fts:p12_doc_date "2015-07-28" ;
+                       fts:p9_doc_name "СПРАВКА ОБ ОТСУТСТВИИ В ТЕЧЕНИЕ ПОСЛЕДНИХ 12 МЕСЯЦЕВ ДВИЖЕНИЯ ДЕНЕЖНЫХ СРЕДСТВ ПО БАНКОВСКИМ СЧЕТАМ ИЛИ ОБ ОТСУТСТВИИ У ЮРИДИЧЕСКОГО ЛИЦА ОТКРЫТЫХ БАНКОВСКИХ СЧЕТОВ" .
+
+:Document-5246042472-8 a fts:C6_Document ;
+                       fts:p86_was_submitted :EGRUL_Record-5246042472-6 ;
+                       fts:p11_doc_number "21-О" ;
+                       fts:p12_doc_date "2015-07-28" ;
+                       fts:p9_doc_name "СПРАВКА О НЕПРЕДСТАВЛЕНИИ ЮРИДИЧЕСКИМ ЛИЦОМ В ТЕЧЕНИЕ ПОСЛЕДНИХ 12 МЕСЯЦЕВ ДОКУМЕНТОВ ОТЧЕТНОСТИ, ПРЕДУСМОТРЕННЫХ ЗАКОНОДАТЕЛЬСТВОМ РОССИЙСКОЙ ФЕДЕРАЦИИ О НАЛОГАХ И СБОРАХ" .
+
+:EGRUL_Record-5246042472-0 a fts:C14_EGRUL_Record ;
+                           fts:p82_refers_to_company :LE-5246042472 ;
+                           fts:p88_added_by :TaxAuthority-5246 ;
+                           fts:p89_reason_for_making_entry :RecordType-11201 ;
+                           fts:p95_le_record_confirmed_by :LE_ChangesConfirmationEntity-5246042472 ;
+                           fts:p1_state_registration_number 1125246001715 ;
+                           fts:p7_record_id 1125246001715 ;
+                           fts:p8_recording_date "2012-11-28" .
+
+:EGRUL_Record-5246042472-1 a fts:C14_EGRUL_Record ;
+                           fts:p82_refers_to_company :LE-5246042472 ;
+                           fts:p88_added_by :TaxAuthority-5246 ;
+                           fts:p89_reason_for_making_entry :RecordType-13200 ;
+                           fts:p1_state_registration_number 2125246022636 ;
+                           fts:p7_record_id 2125246022636 ;
+                           fts:p8_recording_date "2012-11-28" .
+                           
+:EGRUL_Record-5246042472-2 a fts:C14_EGRUL_Record ;
+                           fts:p82_refers_to_company :LE-5246042472 ;
+                           fts:p88_added_by :TaxAuthority-5246 ;
+                           fts:p89_reason_for_making_entry :RecordType-13300 ;
+                           fts:p1_state_registration_number 2125246023131 ;
+                           fts:p7_record_id 2125246023131 ;
+                           fts:p8_recording_date "2012-12-05" .
+
+:EGRUL_Record-5246042472-3 a fts:C14_EGRUL_Record ;
+                           fts:p82_refers_to_company :LE-5246042472 ;
+                           fts:p88_added_by :TaxAuthority-5246 ;
+                           fts:p89_reason_for_making_entry :RecordType-13400 ;
+                           fts:p1_state_registration_number 2125246023736 ;
+                           fts:p7_record_id 2125246023736 ;
+                           fts:p8_recording_date "2012-12-14" .
+
+:EGRUL_Record-5246042472-4 a fts:C14_EGRUL_Record ;
+                           fts:p82_refers_to_company :LE-5246042472 ;
+                           fts:p88_added_by :TaxAuthority-5246 ;
+                           fts:p89_reason_for_making_entry :RecordType-12201 ;
+                           fts:p1_state_registration_number 2135246011426 ;
+                           fts:p7_record_id 2135246011426 ;
+                           fts:p8_recording_date "2013-07-18" .
+
+:EGRUL_Record-5246042472-5 a fts:C14_EGRUL_Record ;
+                           fts:p82_refers_to_company :LE-5246042472 ;
+                           fts:p88_added_by :TaxAuthority-5246 ;
+                           fts:p89_reason_for_making_entry :RecordType-14109 ;
+                           fts:p1_state_registration_number 2155246041212 ;
+                           fts:p7_record_id 2155246041212 ;
+                           fts:p8_recording_date "2015-07-31" .
+
+:EGRUL_Record-5246042472-6 a fts:C14_EGRUL_Record ;
+                           fts:p82_refers_to_company :LE-5246042472 ;
+                           fts:p88_added_by :TaxAuthority-5246 ;
+                           fts:p89_reason_for_making_entry :RecordType-14404 ;
+                           fts:p1_state_registration_number 2155246052223 ;
+                           fts:p7_record_id 2155246052223 ;
+                           fts:p8_recording_date "2015-11-23" .
+
+:EGRUL_Record-5246042472-7 a fts:C14_EGRUL_Record ;
+                           fts:p82_refers_to_company :LE-5246042472 ;
+                           fts:p88_added_by :TaxAuthority-5246 ;
+                           fts:p89_reason_for_making_entry :RecordType-13200 ;
+                           fts:p1_state_registration_number 2155246052289 ;
+                           fts:p7_record_id 2155246052289 ;
+                           fts:p8_recording_date "2015-11-23" .
+
+:EconomicActivityType-55.21 a fts:C18_Economic_Activity_Type ;
+                            fts:p5_code 55.21 ;
+                            fts:p6_name "ДЕЯТЕЛЬНОСТЬ МОЛОДЕЖНЫХ ТУРИСТСКИХ ЛАГЕРЕЙ И ГОРНЫХ ТУРИСТСКИХ БАЗ" .
+
+:EconomicActivityType-55.30 a fts:C18_Economic_Activity_Type ;
+                            fts:p5_code 55.30 ;
+                            fts:p6_name "ДЕЯТЕЛЬНОСТЬ РЕСТОРАНОВ И КАФЕ" .
+
+
+
+:EconomicActivityType-63.30 a fts:C18_Economic_Activity_Type ;
+                            fts:p5_code 63.30 ;
+                            fts:p6_name "ДЕЯТЕЛЬНОСТЬ ТУРИСТИЧЕСКИХ АГЕНТСТВ" .
+
+
+
+:EconomicActivityType-63.30.1 a fts:C18_Economic_Activity_Type ;
+                              fts:p5_code "63.30.1" ;
+                              fts:p6_name "ОРГАНИЗАЦИЯ КОМПЛЕКСНОГО ТУРИСТИЧЕСКОГО ОБСЛУЖИВАНИЯ" .
+
+
+
+:EconomicActivityType-63.30.3 a fts:C18_Economic_Activity_Type ;
+                              fts:p5_code "63.30.3" ;
+                              fts:p6_name "ПРЕДОСТАВЛЕНИЕ ТУРИСТИЧЕСКИХ ИНФОРМАЦИОННЫХ УСЛУГ" .
+
+
+
+:EconomicActivityType-63.30.4 a fts:C18_Economic_Activity_Type ;
+                              fts:p5_code "63.30.4" ;
+                              fts:p6_name "ПРЕДОСТАВЛЕНИЕ ТУРИСТИЧЕСКИХ ЭКСКУРСИОННЫХ УСЛУГ" .
+
+:EconomicActivityType-93.04 a fts:C18_Economic_Activity_Type ;
+                            fts:p5_code 93.04 ;
+                            fts:p6_name "ФИЗКУЛЬТУРНО-ОЗДОРОВИТЕЛЬНАЯ ДЕЯТЕЛЬНОСТЬ" .
+
+:ExecutiveBodiesOfSocialInsuranceFund-5213 a fts:C94_Executive_Bodies_Of_Social_Insurance_Fund ;
+                                           fts:p5_code 5213 ;
+                                           fts:p6_name "ФИЛИАЛ №13 ГОСУДАРСТВЕННОГО УЧРЕЖДЕНИЯ - НИЖЕГОРОДСКОГО РЕГИОНАЛЬНОГО ОТДЕЛЕНИЯ ФОНДА СОЦИАЛЬНОГО СТРАХОВАНИЯ РФ" .
+
+:JobEntity-5246042472 a fts:C52_Job_Entity ;
+                      fts:p76_entered_on_registry_with :RegNumberDate-2135246011426 ;
+                      fts:p79_has_type :OfficialType-02-CEO ;
+                      fts:p82_refers_to_company :LE-5246042472 ;
+                      fts:p47_job_title "ДИРЕКТОР" .
+
+:KLADR-city-5200000500000 a fts:C98_City_Element ;
+                          fts:p113_part_of :KLADR-region-52 ;
+                          fts:p25_element_type "ГОРОД" ;
+                          fts:p6_name "БОР" .
+
+:KLADR-region-52 a fts:C96_Region_Element ;
+                 fts:p25_element_type "ОБЛАСТЬ" ;
+                 fts:p6_name "НИЖЕГОРОДСКАЯ" .
+
+:KLADR-street-52000005000021200 a fts:C100_Street_Element ;
+                                fts:p113_part_of :KLADR-city-5200000500000 ;
+                                fts:p25_element_type "УЛИЦА" ;
+                                fts:p6_name "ИНТЕРНАЦИОНАЛЬНАЯ" .
+
+:LE-5246042472 a fts:C9_Legal_Entity .
+
+:LE-TaxRegistratorEntity-5246042472 a fts:C37_LE_Tax_Registrator_Entity ;
+                                    fts:p76_entered_on_registry_with :RegNumberDate-6165275496336 ;
+                                    fts:p78_registered_in :TaxAuthority-5275 ;
+                                    fts:p82_refers_to_company :LE-5246042472 .
+
+:LEFormationMethod-11 a fts:C31_LE_Formation_Method ;
+                      fts:p5_code 11 ;
+                      fts:p6_name "СОЗДАНИЕ ЮРИДИЧЕСКОГО ЛИЦА" .
+
+:LE_ActivityEntity-Add-5246042472-0 a fts:C57_LE_Activity_Entity ;
+                                    fts:p108_is_additional_activity :EconomicActivityType-63.30.3 ;
+                                    fts:p76_entered_on_registry_with :RegNumberDate-1125246001715 ;
+                                    fts:p82_refers_to_company :LE-5246042472 .
+
+:LE_ActivityEntity-Add-5246042472-1 a fts:C57_LE_Activity_Entity ;
+                                    fts:p108_is_additional_activity :EconomicActivityType-63.30.4 ;
+                                    fts:p76_entered_on_registry_with :RegNumberDate-1125246001715 ;
+                                    fts:p82_refers_to_company :LE-5246042472 .
+
+:LE_ActivityEntity-Add-5246042472-2 a fts:C57_LE_Activity_Entity ;
+                                    fts:p108_is_additional_activity :EconomicActivityType-93.04 ;
+                                    fts:p76_entered_on_registry_with :RegNumberDate-1125246001715 ;
+                                    fts:p82_refers_to_company :LE-5246042472 .
+
+:LE_ActivityEntity-Add-5246042472-3 a fts:C57_LE_Activity_Entity ;
+                                    fts:p108_is_additional_activity :EconomicActivityType-55.21 ;
+                                    fts:p76_entered_on_registry_with :RegNumberDate-1125246001715 ;
+                                    fts:p82_refers_to_company :LE-5246042472 .
+
+:LE_ActivityEntity-Add-5246042472-4 a fts:C57_LE_Activity_Entity ;
+                                    fts:p108_is_additional_activity :EconomicActivityType-55.30 ;
+                                    fts:p76_entered_on_registry_with :RegNumberDate-1125246001715 ;
+                                    fts:p82_refers_to_company :LE-5246042472 .
+
+:LE_ActivityEntity-Add-5246042472-5 a fts:C57_LE_Activity_Entity ;
+                                    fts:p108_is_additional_activity :EconomicActivityType-63.30 ;
+                                    fts:p76_entered_on_registry_with :RegNumberDate-1125246001715 ;
+                                    fts:p82_refers_to_company :LE-5246042472 .
+
+:LE_ActivityEntity-Main-5246042472 rdf:type owl:NamedIndividual ;
+                                   fts:p107_is_main_activity :EconomicActivityType-63.30.1 ;
+                                   fts:p76_entered_on_registry_with :RegNumberDate-1125246001715 ;
+                                   fts:p82_refers_to_company :LE-5246042472 .
+
+:LE_ChangesConfirmationEntity-5246042472 a fts:C78_LE_Changes_Confirmation_Entity ;
+                                         fts:p69_certificate_ceries 52 ;
+                                         fts:p70_certificate_number 005033018 ;
+                                         fts:p71_certificate_date "2012-11-28" .
+
+:LE_PensionFundRegistrationEntity-5246042472 a fts:C45_LE_Pension_Fund_Registration_Entity ;
+                                             fts:p109_was_put_on_record :TerritorialBodiesOfRussianPensionFund-062043 ;
+                                             fts:p76_entered_on_registry_with :RegNumberDate-2125246023131 ;
+                                             fts:p82_refers_to_company :LE-5246042472 ;
+                                             fts:p31_le_registration_number 062043023333 ;
+                                             fts:p32_le_registration_date "2012-11-29" .
+
+:LE_SocialInsuranceFundRegistrationEntity-5246042472 a fts:C46_LE_Social_Insurance_Fund_Registration_Entity ;
+                                                     fts:p109_was_put_on_record :ExecutiveBodiesOfSocialInsuranceFund-5213 ;
+                                                     fts:p76_entered_on_registry_with :RegNumberDate-2125246023736 ;
+                                                     fts:p82_refers_to_company :LE-5246042472 ;
+                                                     fts:p31_le_registration_number 521300454352131 ;
+                                                     fts:p32_le_registration_date "2012-12-04" .
+
+:LE_TaxAccountingEntity-5246042472 a fts:C58_Separate_Business_Unit_Tax_Registration_Entity ;
+                                   fts:p109_was_put_on_record :TaxAuthority-5246 ;
+                                   fts:p76_entered_on_registry_with :RegNumberDate-2155246052289 ;
+                                   fts:p82_refers_to_company :LE-5246042472 ;
+                                   fts:p32_le_registration_date "2012-11-28" ;
+                                   fts:p35_le_individual_tax_number 5246042472 ;
+                                   fts:p36_tax_reason_code 524601001 .
+
+:LegalEntityDetails-5246042472 a fts:C4_Legal_Entity_Details ;
+                               :p136_includes_egrul_record :EGRUL_Record-5246042472-0 ,
+                                                           :EGRUL_Record-5246042472-2 ,
+                                                           :EGRUL_Record-5246042472-3 ,
+                                                           :EGRUL_Record-5246042472-4 ,
+                                                           :EGRUL_Record-5246042472-5 ,
+                                                           :EGRUL_Record-5246042472-6 ,
+                                                           :EGRUL_Record-5246042472-7 ;
+                               :p137_includes_egrip_record :EGRUL_Record-5246042472-1 ;
+                               fts:p79_has_type :OrganizationAndLegalFormType-12300 ;
+                               fts:p80_describes_company :LE-5246042472 ;
+                               fts:p81_includes_le_reg_entity :AddressEntity-5246042472 ,
+                                                                                                        :BusinessCessationEntity-5246042472 ,
+                                                                                                        :ContactNumberEntity-5246042472 ,
+                                                                                                        :JobEntity-5246042472 ,
+                                                                                                        :LE-TaxRegistratorEntity-5246042472 ,
+                                                                                                        :LE_ActivityEntity-Add-5246042472-0 ,
+                                                                                                        :LE_ActivityEntity-Add-5246042472-1 ,
+                                                                                                        :LE_ActivityEntity-Add-5246042472-2 ,
+                                                                                                        :LE_ActivityEntity-Add-5246042472-3 ,
+                                                                                                        :LE_ActivityEntity-Add-5246042472-4 ,
+                                                                                                        :LE_ActivityEntity-Add-5246042472-5 ,
+                                                                                                        :LE_ActivityEntity-Main-5246042472 ,
+                                                                                                        :LE_ChangesConfirmationEntity-5246042472 ,
+                                                                                                        :LE_PensionFundRegistrationEntity-5246042472 ,
+                                                                                                        :LE_SocialInsuranceFundRegistrationEntity-5246042472 ,
+                                                                                                        :LE_TaxAccountingEntity-5246042472 ,
+                                                                                                        :NameEntity-5246042472 ,
+                                                                                                        :PersonActingWithoutPowerOfAttorneyEntity-5246042472 ,
+                                                                                                        :PersonEntity-132811055768 ,
+                                                                                                        :PersonEntity-524610880342 ,
+                                                                                                        :PersonFounderEntity-5246042472 ,
+                                                                                                        :RussianLegalEntity-5246042472 ,
+                                                                                                        :ShareInStatedCapitalEntity-5246042472 ,
+                                                                                                        :StatedCapitalEntity-5246042472 ;
+                               fts:p3_formation_date "2016-05-21" ;
+                               fts:p4_classifier_of_organization_and_legal_form "ОКОПФ" .
+
+:NameEntity-5246042472 a fts:C38_Name_Entity ;
+                       fts:p76_entered_on_registry_with :RegNumberDate-1125246001715 ;
+                       fts:p82_refers_to_company :LE-5246042472 ;
+                       fts:p16_full_name "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПАНДОРА\"" ;
+                       fts:p17_short_name "ООО \"ПАНДОРА\"" .
+
+:OfficialType-02-CEO a :С28_Type_Of_Official ;
+                     fts:p5_code 02 ;
+                     fts:p6_name "РУКОВОДИТЕЛЬ ЮРИДИЧЕСКОГО ЛИЦА" .
+
+:OrganizationAndLegalFormType-12300 a fts:C19_Organization_And_Legal_Form_Type ;
+                                    fts:p5_code 12300 ;
+                                    fts:p6_name "ОБЩЕСТВА С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ" .
+
+:PersonActingWithoutPowerOfAttorneyEntity-5246042472 a fts:C51_Person_Acting_Without_Power_Of_Auttorney_Entity ;
+                                                     fts:p101_relates_to_person :PersonEntity-524610880342 ;
+                                                     fts:p121_holds_position :JobEntity-5246042472 ;
+                                                     fts:p82_refers_to_company :LE-5246042472 .
+
+:PersonEntity-132811055768 a fts:C63_Person_Entity ;
+                           fts:p76_entered_on_registry_with :RegNumberDate-1125246001715 ;
+                           fts:p82_refers_to_company :LE-5246042472 ;
+                           fts:p42_first_name "ЛИЛИЯ" ;
+                           fts:p43_last_name "КАНДРИНА" ;
+                           fts:p44_middle_name "ИВАНОВНА" ;
+                           fts:p75_ie_individual_tax_number 132811055768 .
+
+:PersonEntity-524610880342 a fts:C63_Person_Entity ;
+                           fts:p117_has_contact_number :PersonEntity-524610880342 ;
+                           fts:p76_entered_on_registry_with :RegNumberDate-2135246011426 ;
+                           fts:p82_refers_to_company :LE-5246042472 ;
+                           fts:p42_first_name "АЛЕКСАНДР" ;
+                           fts:p43_last_name "ЩЕННИКОВ" ;
+                           fts:p44_middle_name "ГЕРМАНОВИЧ" ;
+                           fts:p75_ie_individual_tax_number "524610880342" .
+
+:PersonFounderEntity-5246042472 rdf:type owl:NamedIndividual ;
+                                fts:p101_relates_to_person :PersonEntity-132811055768 ;
+                                fts:p82_refers_to_company :LE-5246042472 .
+
+:RecordType-11201 a fts:C20_Record_Type ;
+                  fts:p5_code 11201 ;
+                  fts:p6_name "ГОСУДАРСТВЕННАЯ РЕГИСТРАЦИЯ ЮРИДИЧЕСКОГО ЛИЦА ПРИ СОЗДАНИИ" .
+
+:RecordType-12201 a fts:C20_Record_Type ;
+                  fts:p5_code 12201 ;
+                  fts:p6_name "ВНЕСЕНИЕ ИЗМЕНЕНИЙ В СВЕДЕНИЯ О ЮРИДИЧЕСКОМ ЛИЦЕ, СОДЕРЖАЩИЕСЯ В ЕДИНОМ ГОСУДАРСТВЕННОМ РЕЕСТРЕ ЮРИДИЧЕСКИХ ЛИЦ, НЕ СВЯЗАННЫХ С ВНЕСЕНИЕМ ИЗМЕНЕНИЙ В УЧРЕДИТЕЛЬНЫЕ ДОКУМЕНТЫ" .
+
+:RecordType-13200 a fts:C20_Record_Type ;
+                fts:p5_code "13200" ;
+                fts:p6_name "ВНЕСЕНИЕ В ЕДИНЫЙ ГОСУДАРСТВЕННЫЙ РЕЕСТР ЮРИДИЧЕСКИХ ЛИЦ СВЕДЕНИЙ ОБ УЧЕТЕ ЮРИДИЧЕСКОГО ЛИЦА В НАЛОГОВОМ ОРГАНЕ" .
+
+:RecordType-13300 a fts:C20_Record_Type ;
+                  fts:p5_code 13300 ;
+                  fts:p6_name "ВНЕСЕНИЕ В ЕДИНЫЙ ГОСУДАРСТВЕННЫЙ РЕЕСТР ЮРИДИЧЕСКИХ ЛИЦ СВЕДЕНИЙ О РЕГИСТРАЦИИ ЮРИДИЧЕСКОГО ЛИЦА В КАЧЕСТВЕ СТРАХОВАТЕЛЯ В ТЕРРИТОРИАЛЬНОМ ОРГАНЕ ПЕНСИОННОГО ФОНДА РОССИЙСКОЙ ФЕДЕРАЦИИ" .
+
+:RecordType-13400 a fts:C20_Record_Type ;
+                  fts:p5_code 13400 ;
+                  fts:p6_name "ВНЕСЕНИЕ В ЕДИНЫЙ ГОСУДАРСТВЕННЫЙ РЕЕСТР ЮРИДИЧЕСКИХ ЛИЦ СВЕДЕНИЙ О РЕГИСТРАЦИИ ЮРИДИЧЕСКОГО ЛИЦА В КАЧЕСТВЕ СТРАХОВАТЕЛЯ В ИСПОЛНИТЕЛЬНОМ ОРГАНЕ ФОНДА СОЦИАЛЬНОГО СТРАХОВАНИЯ РОССИЙСКОЙ ФЕДЕРАЦИИ" .
+
+:RecordType-14109 a fts:C20_Record_Type ;
+                  fts:p5_code 14109 ;
+                  fts:p6_name "ВНЕСЕНИЕ В ЕДИНЫЙ ГОСУДАРСТВЕННЫЙ РЕЕСТР ЮРИДИЧЕСКИХ ЛИЦ СВЕДЕНИЙ О ПРИНЯТОМ РЕШЕНИИ О ПРЕДСТОЯЩЕМ ИСКЛЮЧЕНИИ ФАКТИЧЕСКИ НЕДЕЙСТВУЮЩЕГО ЮРИДИЧЕСКОГО ЛИЦА ИЗ ЕДИНОГО ГОСУДАРСТВЕННОГО РЕЕСТРА ЮРИДИЧЕСКИХ ЛИЦ" .
+
+:RecordType-14404 a fts:C20_Record_Type ;
+                  fts:p5_code 14404 ;
+                  fts:p6_name "ВНЕСЕНИЕ В ЕДИНЫЙ ГОСУДАРСТВЕННЫЙ РЕЕСТР ЮРИДИЧЕСКИХ ЛИЦ СВЕДЕНИЙ О ПРЕКРАЩЕНИИ ДЕЯТЕЛЬНОСТИ ЮРИДИЧЕСКОГО ЛИЦА В СВЯЗИ С ИСКЛЮЧЕНИЕМ ИЗ ЕДИНОГО ГОСУДАРСТВЕННОГО РЕЕСТРА ЮРИДИЧЕСКИХ ЛИЦ НА ОСНОВАНИИ П.2 СТ.21.1 ФЕДЕРАЛЬНОГО ЗАКОНА ОТ 08.08.2001 №129-ФЗ" .
+
+:RegNumberDate-1125246001715 a fts:C1_Reg_Number_Date ;
+                             fts:p1_state_registration_number 1125246001715 ;
+                             fts:p2_date "2012-11-28" .
+
+:RegNumberDate-2125246023131 a fts:C1_Reg_Number_Date ;
+                             fts:p1_state_registration_number 2125246023131 ;
+                             fts:p2_date "2012-12-05" .
+
+:RegNumberDate-2125246023736 a fts:C1_Reg_Number_Date ;
+                             fts:p1_state_registration_number 2125246023736 ;
+                             fts:p2_date "2012-12-14" .
+
+:RegNumberDate-2135246011426 a fts:C1_Reg_Number_Date ;
+                             fts:p1_state_registration_number 2135246011426 ;
+                             fts:p2_date "2013-07-18" .
+
+:RegNumberDate-2155246052289 a fts:C1_Reg_Number_Date ;
+                             fts:p1_state_registration_number 2155246052289 ;
+                             fts:p2_date "2015-11-23" .
+
+:RegNumberDate-6165275496336 a fts:C1_Reg_Number_Date ;
+                             fts:p1_state_registration_number 6165275496336 ;
+                             fts:p2_date "2016-05-14" .
+
+:RussianLegalEntity-5246042472 a fts:C101_Russian_Legal_Entity ;
+                               fts:p103_formed_by :LEFormationMethod-11 ;
+                               fts:p76_entered_on_registry_with :RegNumberDate-1125246001715 ;
+                               fts:p82_refers_to_company :LE-5246042472 ;
+                               fts:p28_le_primary_state_registration_number 1125246001715 ;
+                               fts:p29_psrn_assignment_date "2012-11-28" .
+
+:ShareInStatedCapitalEntity-5246042472 a fts:C55_Share_In_Stated_Capital_Entity ;
+                                       fts:p76_entered_on_registry_with :RegNumberDate-1125246001715 ;
+                                       fts:p82_refers_to_company :LE-5246042472 ;
+                                       fts:p51_nominal_share_of_value_in_ruble 10000.0000 ;
+                                       fts:p52_percentage_share 100 .
+
+:StatedCapitalEntity-5246042472 a fts:C47_Stated_Capital_Entity ;
+                                fts:p76_entered_on_registry_with :RegNumberDate-1125246001715 ;
+                                fts:p79_has_type :CapitalType-Ust ;
+                                fts:p82_refers_to_company :LE-5246042472 ;
+                                fts:p39_amount 10000.0000 .
+
+:TaxAuthority-5246 a fts:C93_Tax_Authority ;
+                   fts:p5_code 5246 ;
+                   fts:p6_name "ИНСПЕКЦИЯ ФЕДЕРАЛЬНОЙ НАЛОГОВОЙ СЛУЖБЫ ПО БОРСКОМУ РАЙОНУ НИЖЕГОРОДСКОЙ ОБЛАСТИ" .
+
+:TaxAuthority-5275 a fts:C93_Tax_Authority ;
+                   fts:p15_address ",603155,,, НИЖНИЙ НОВГОРОД Г,, ФРУНЗЕ УЛ, Д 7,," ;
+                   fts:p5_code "5275" ;
+                   fts:p6_name "МЕЖРАЙОННАЯ ИНСПЕКЦИЯ ФЕДЕРАЛЬНОЙ НАЛОГОВОЙ СЛУЖБЫ № 15 ПО НИЖЕГОРОДСКОЙ ОБЛАСТИ" .
+
+:TerritorialBodiesOfRussianPensionFund-062043 a fts:C95_Territorial_Bodies_Of_Pension_Fund ;
+                                              fts:p5_code 062043 ;
+                                              fts:p6_name "УПРАВЛЕНИЕ ПЕНСИОННОГО ФОНДА РФ ПО БОРСКОМУ РАЙОНУ НИЖЕГОРОДСКОЙ ОБЛАСТИ" .

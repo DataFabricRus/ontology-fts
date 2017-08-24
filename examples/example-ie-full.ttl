@@ -1,0 +1,230 @@
+@prefix : <http://example.com/resources/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix fts: <https://w3id.org/datafabric.cc/ontologies/fts#> .
+
+
+:CitizenshipEntity-231212971850 a fts:C80_Citizenship_Entity ;
+                                fts:p76_entered_on_registry_with :RegNumberDate-314231209000042 ;
+                                fts:p79_has_type :Country-643 ;
+                                fts:p85_refers_to_ie :IE-231212971850 ;
+                                fts:p73_citizenship_type "1"@ru .
+
+
+
+:Country-643 a fts:C21_Country ;
+             fts:p5_code "643"@ru ;
+             fts:p6_name "РОССИЯ"@ru .
+
+
+
+:Document-231212971850-0 a fts:C6_Document ;
+                         fts:p86_was_submitted :EGRIP-Record-231212971850-0 ;
+                         fts:p9_doc_name "ПАСПОРТ" .
+
+
+
+:Document-231212971850-1 a fts:C6_Document ;
+                         fts:p86_was_submitted :EGRIP-Record-231212971850-0 ;
+                         fts:p11_doc_number 882 ;
+                         fts:p12_doc_date "2014-03-24" ;
+                         fts:p9_doc_name "ЗАЯВЛЕНИЕ О ГОСУДАРСТВЕННОЙ РЕГИСТРАЦИИ ФИЗИЧЕСКОГО ЛИЦА В КАЧЕСТВЕ ИНДИВИДУАЛЬНОГО ПРЕДПРИНИМАТЕЛЯ" .
+
+
+
+:EGRIP-Record-231212971850-0 a fts:C15_EGRIP_Record ;
+                             fts:p85_refers_to_ie :IE-231212971850 ;
+                             fts:p88_added_by :TaxAuthority-2312 ;
+                             fts:p89_reason_for_making_entry :RecordType-21211 ;
+                             fts:p95_le_record_confirmed_by :IE_ChangesConfirmationEntity-231212971850 ;
+                             fts:p1_state_registration_number 314231209000042 ;
+                             fts:p7_record_id 314231209000042 ;
+                             fts:p8_recording_date "2014-03-31" .
+
+
+
+:EGRIP-Record-231212971850-1 a fts:C15_EGRIP_Record ;
+                             fts:p85_refers_to_ie :IE-231212971850 ;
+                             fts:p88_added_by :TaxAuthority-2312 ;
+                             fts:p89_reason_for_making_entry :RecordType-23200 ;
+                             fts:p1_state_registration_number 414231210500090 ;
+                             fts:p7_record_id 414231210500090 ;
+                             fts:p8_recording_date "2014-04-15" .
+
+
+
+:EconomicActivityType-74.13.1 a fts:C18_Economic_Activity_Type ;
+                              fts:p5_code "74.13.1" ;
+                              fts:p6_name "ИССЛЕДОВАНИЕ КОНЪЮНКТУРЫ РЫНКА" .
+
+
+
+:EconomicActivityType-74.13.2 a fts:C18_Economic_Activity_Type ;
+                              fts:p5_code "74.13.2" ;
+                              fts:p6_name "ДЕЯТЕЛЬНОСТЬ ПО ИЗУЧЕНИЮ ОБЩЕСТВЕННОГО МНЕНИЯ" .
+
+
+
+:EconomicActivityType-74.14 a fts:C18_Economic_Activity_Type ;
+                            fts:p5_code 74.14 ;
+                            fts:p6_name "КОНСУЛЬТИРОВАНИЕ ПО ВОПРОСАМ КОММЕРЧЕСКОЙ ДЕЯТЕЛЬНОСТИ И УПРАВЛЕНИЯ" .
+
+
+
+:EconomicActivityType-74.40 a fts:C18_Economic_Activity_Type ;
+                            fts:p5_code 74.40 ;
+                            fts:p6_name "РЕКЛАМНАЯ ДЕЯТЕЛЬНОСТЬ" .
+
+
+
+:EconomicActivityType-74.50 a fts:C18_Economic_Activity_Type ;
+                            fts:p5_code 74.50 ;
+                            fts:p6_name "НАЙМ РАБОЧЕЙ СИЛЫ И ПОДБОР ПЕРСОНАЛА" .
+
+
+
+:EconomicActivityType-74.84 a fts:C18_Economic_Activity_Type ;
+                            fts:p5_code 74.84 ;
+                            fts:p6_name "ПРЕДОСТАВЛЕНИЕ ПРОЧИХ УСЛУГ" .
+
+
+
+:IE-231212971850 a fts:C10_Individual_Entrepreneur .
+
+
+
+:IEType-1 a fts:C33_IE_Type ;
+          fts:p5_code 1 ;
+          fts:p6_name "ИНДИВИДУАЛЬНЫЙ ПРЕДПРИНИМАТЕЛЬ" .
+
+
+
+:IE_ActivityEntity-Add-231212971850-0 a fts:C87_IE_Activity_Entity ;
+                                      fts:p108_is_additional_activity :EconomicActivityType-74.84 ;
+                                      fts:p76_entered_on_registry_with :RegNumberDate-314231209000042 ;
+                                      fts:p85_refers_to_ie :IE-231212971850 .
+
+
+
+:IE_ActivityEntity-Add-231212971850-1 a fts:C87_IE_Activity_Entity ;
+                                      fts:p108_is_additional_activity :EconomicActivityType-74.13.2 ;
+                                      fts:p76_entered_on_registry_with :RegNumberDate-314231209000042 ;
+                                      fts:p85_refers_to_ie :IE-231212971850 .
+
+
+
+:IE_ActivityEntity-Add-231212971850-2 a fts:C87_IE_Activity_Entity ;
+                                      fts:p108_is_additional_activity :EconomicActivityType-74.40 ;
+                                      fts:p76_entered_on_registry_with :RegNumberDate-314231209000042 ;
+                                      fts:p85_refers_to_ie :IE-231212971850 .
+
+
+
+:IE_ActivityEntity-Add-231212971850-3 a fts:C87_IE_Activity_Entity ;
+                                      fts:p108_is_additional_activity :EconomicActivityType-74.14 ;
+                                      fts:p76_entered_on_registry_with :RegNumberDate-314231209000042 ;
+                                      fts:p85_refers_to_ie :IE-231212971850 .
+
+
+
+:IE_ActivityEntity-Add-231212971850-4 a fts:C87_IE_Activity_Entity ;
+                                      fts:p108_is_additional_activity :EconomicActivityType-74.13.1 ;
+                                      fts:p76_entered_on_registry_with :RegNumberDate-314231209000042 ;
+                                      fts:p85_refers_to_ie :IE-231212971850 .
+
+
+
+:IE_ActivityEntity-Main-231212971850 a fts:C87_IE_Activity_Entity ;
+                                     fts:p107_is_main_activity :EconomicActivityType-74.50 ;
+                                     fts:p76_entered_on_registry_with :RegNumberDate-314231209000042 ;
+                                     fts:p85_refers_to_ie :IE-231212971850 .
+
+
+
+:IE_ChangesConfirmationEntity-231212971850 a fts:C92_IE_Changes_Confirmation_Entity ;
+                                           fts:p69_certificate_ceries 23 ;
+                                           fts:p70_certificate_number 008810754 ;
+                                           fts:p71_certificate_date "2014-03-31" .
+
+
+
+:IE_RegistrationEntity-231212971850 a fts:C90_IE_Registration_Entity ;
+                                    fts:p85_refers_to_ie :IE-231212971850 ;
+                                    fts:p29_psrn_assignment_date "2014-03-31" ;
+                                    fts:p33_registered_by "ИНСПЕКЦИЯ ФЕДЕРАЛЬНОЙ НАЛОГОВОЙ СЛУЖБЫ № 5 ПО Г. КРАСНОДАРУ" ;
+                                    fts:p46_ie_primary_state_registration_number 314231209000042 .
+
+
+
+:IE_TaxAccountingEntity-231212971850 a fts:C85_IE_Tax_Accounting_Entity ;
+                                     fts:p109_was_put_on_record :TaxAuthority-2312 ;
+                                     fts:p76_entered_on_registry_with :RegNumberDate-414231210500090 ;
+                                     fts:p85_refers_to_ie :IE-231212971850 ;
+                                     fts:p56_registration_date "2014-04-15" ;
+                                     fts:p75_ie_individual_tax_number 231212971850 .
+
+
+
+:IE_TaxRegistratorEntity-231212971850 a fts:C82_IE_Tax_Registrator_Entity ;
+                                      fts:p76_entered_on_registry_with :RegNumberDate-416237501205328 ;
+                                      fts:p85_refers_to_ie :IE-231212971850 ;
+                                      fts:p15_address ",350020,,, КРАСНОДАР Г,, КОММУНАРОВ УЛ, Д 235,," .
+
+
+
+:IndividualEntrepreneursDetails-231212971850 a fts:C5_Individual_Entrepreneur_Details ;
+                                             fts:p137_includes_egrip_record :EGRIP-Record-231212971850-0 ,
+                                                                             :EGRIP-Record-231212971850-1 ;
+                                             fts:p79_has_type :IEType-1 ;
+                                             fts:p83_describes_ie :IE-231212971850 ;
+                                             fts:p84_includes_ie_reg_entity :CitizenshipEntity-231212971850 ,
+                                                                             :IE_ActivityEntity-Add-231212971850-0 ,
+                                                                             :IE_ActivityEntity-Add-231212971850-1 ,
+                                                                             :IE_ActivityEntity-Add-231212971850-2 ,
+                                                                             :IE_ActivityEntity-Add-231212971850-3 ,
+                                                                             :IE_ActivityEntity-Add-231212971850-4 ,
+                                                                             :IE_ActivityEntity-Main-231212971850 ,
+                                                                             :IE_ChangesConfirmationEntity-231212971850 ,
+                                                                             :IE_RegistrationEntity-231212971850 ,
+                                                                             :IE_TaxAccountingEntity-231212971850 ,
+                                                                             :IE_TaxRegistratorEntity-231212971850 ,
+                                                                             :NameAndGenderEntity-231212971850 ;
+                                             fts:p3_formation_date "2016-02-22" .
+
+
+
+:NameAndGenderEntity-231212971850 a fts:C79_Name_And_Gender_Entity ;
+                                  fts:p76_entered_on_registry_with :RegNumberDate-314231209000042 ;
+                                  fts:p85_refers_to_ie :IE-231212971850 ;
+                                  fts:p42_first_name "ЮЛИЯ"@ru ;
+                                  fts:p43_last_name "САМОХВАЛОВА"@ru ;
+                                  fts:p44_middle_name "ПЕТРОВНА"@ru ;
+                                  fts:p72_gender "2"@ru .
+
+:RecordType-21211 a fts:C20_Record_Type ;
+                  fts:p5_code 21211 ;
+                  fts:p6_name "(Р21001) РЕГИСТРАЦИЯ ФЛ В КАЧЕСТВЕ ИП" .
+
+:RecordType-23200 a fts:C20_Record_Type ;
+                  fts:p5_code 23200 ;
+                  fts:p6_name "ВНЕСЕНИЕ СВЕДЕНИЙ ОБ УЧЕТЕ В НАЛОГОВОМ ОРГАНЕ" .
+
+:RegNumberDate-314231209000042 a fts:C1_Reg_Number_Date ;
+                               fts:p1_state_registration_number "314231209000042"@ru ;
+                               fts:p2_date "2014-03-31"@ru .
+
+:RegNumberDate-414231210500090 a fts:C1_Reg_Number_Date ;
+                               fts:p1_state_registration_number 414231210500090 ;
+                               fts:p2_date "2014-04-15" .
+
+:RegNumberDate-416237501205328 a fts:C1_Reg_Number_Date ;
+                               fts:p1_state_registration_number 416237501205328 ;
+                               fts:p2_date "2016-02-22" .
+
+:TaxAuthority-2312 a fts:C93_Tax_Authority ;
+                   fts:p5_code 2312 ;
+                   fts:p6_name "ИНСПЕКЦИЯ ФЕДЕРАЛЬНОЙ НАЛОГОВОЙ СЛУЖБЫ №5 ПО Г. КРАСНОДАРУ" .
+
+:TaxAuthority-2375 a fts:C93_Tax_Authority ;
+                   fts:p15_address ",350020,,, КРАСНОДАР Г,, КОММУНАРОВ УЛ, Д 235,," ;
+                   fts:p5_code 2375 ;
+                   fts:p6_name "МЕЖРАЙОННАЯ ИНСПЕКЦИЯ ФЕДЕРАЛЬНОЙ НАЛОГОВОЙ СЛУЖБЫ № 16 ПО КРАСНОДАРСКОМУ КРАЮ" .

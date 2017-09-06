@@ -1,0 +1,228 @@
+@prefix : <http://example.com/resources/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix fts: <https://w3id.org/datafabric.cc/ontologies/fts#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix okved: <http://example.com/okved/> .
+@prefix rov: <http://www.w3.org/ns/regorg#> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+:LE-1 a fts:C101_Russian_Legal_Entity, rov:RegisteredOrganization, org:FormalOrganization ;
+    rov:legalName "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ДАТАФАБРИК\""@ru ;
+    skos:altLabel "ООО \"ДАТАФАБРИК\"" ;
+    fts:p28_le_primary_state_registration_number [
+        a adms:Identifier ;
+        skos:notation "1157847449121" ;
+        dcterms:issued "25.12.2015"^^xsd:date
+    ] ;
+    fts:p35_tax_number [
+        a adms:Identifier ;
+        skos:notation "7811269044" ;
+        fts:p36_tax_reason_code "781101001" ;
+        dcterms:issued "25.12.2015"^^xsd:date
+    ] ;
+    fts:hasShareholding :Shareholding-1 ;
+    fts:hasShareholding :Shareholding-2 ;
+    fts:hasShareholding :Shareholding-3 ;
+    fts:hasShareholding :Shareholding-4 .
+
+:Shareholding-1 a fts:Shareholding, org:Membership ;
+    org:member :smirnovsv ;
+    org:organization :LE-1 ;
+    fts:p124_has_share [
+        a fts:C55_Share_In_Stated_Capital_Entity ;
+        fts:p52_percentage_share "51.0"^^xsd:double ;
+        fts:p51_nominal_share_of_value_in_ruble "5100"^^xsd:double
+    ] .
+
+:Shareholding-2 a fts:Shareholding, org:Membership ;
+    org:member :martinovap ;
+    org:organization :LE-1 ;
+    fts:p124_has_share [
+        a fts:C55_Share_In_Stated_Capital_Entity ;
+        fts:p52_percentage_share "10.0"^^xsd:double ;
+        fts:p51_nominal_share_of_value_in_ruble "1000"^^xsd:double
+    ] .
+
+:Shareholding-3 a fts:Shareholding, org:Membership ;
+    org:member :hlyzoveo ;
+    org:organization :LE-1 ;
+    fts:p124_has_share [
+        a fts:C55_Share_In_Stated_Capital_Entity ;
+        fts:p52_percentage_share "9.0"^^xsd:double ;
+        fts:p51_nominal_share_of_value_in_ruble "900"^^xsd:double
+    ] .
+
+:Shareholding-4 a fts:Shareholding, org:Membership ;
+    org:member :isaevsa ;
+    org:organization :LE-1 ;
+    fts:p124_has_share [
+        a fts:C55_Share_In_Stated_Capital_Entity ;
+        fts:p52_percentage_share "30.0"^^xsd:double ;
+        fts:p51_nominal_share_of_value_in_ruble "3000"^^xsd:double
+    ] .
+
+:Shareholding-5 a fts:Shareholding, org:Membership ;
+    org:member :pupkinvv ;
+    org:organization :LE-1 ;
+    fts:p124_has_share [
+        a fts:C55_Share_In_Stated_Capital_Entity ;
+        fts:p52_percentage_share "10.0"^^xsd:double ;
+        fts:p51_nominal_share_of_value_in_ruble "1000"^^xsd:double
+    ] .
+
+:Representation-1 a fts:RepresentativePost, org:Post ;
+    org:heldBy :isaevsa ;
+    org:postIn :LE-1 ;
+    org:role fts:CEO .
+
+:smirnovsv a foaf:Person ;
+    foaf:name "СМИРНОВ СЕРГЕЙ ВИТАЛЬЕВИЧ"@ru ;
+    fts:p35_tax_number [
+        a adms:Identifier ;
+        skos:notation "781110960005"
+    ] ;
+    fts:hasShareholding :Shareholding-1 ;
+    fts:hasShareholding :LE-2-Shareholding-1 .
+
+:martinovap a foaf:Person ;
+    foaf:name "МАРТЫНОВ АЛЕКСЕЙ ПЕТРОВИЧ"@ru ;
+    fts:p35_tax_number [
+        a adms:Identifier ;
+        skos:notation "510207134699"
+    ] ;
+    fts:hasShareholding :Shareholding-2 .
+
+:hlyzoveo a foaf:Person ;
+    foaf:name "ХЛЫЗОВ ЕВГЕНИЙ ОЛЕГОВИЧ"@ru ;
+    fts:p35_tax_number [
+        a adms:Identifier ;
+        skos:notation "550505936460"
+    ] ;
+    fts:hasShareholding :Shareholding-3 .
+
+:isaevsa a foaf:Person ;
+    foaf:name "ИСАЕВ СЕРГЕЙ АЛЕКСАНДРОВИЧ"@ru ;
+    fts:p35_tax_number [
+        a adms:Identifier ;
+        skos:notation "781133781387"
+    ] ;
+    fts:represents :Representation-1 ;
+    fts:hasShareholding :Shareholding-4 ;
+    fts:hasShareholding :LE-2-Shareholding-2 ;
+    fts:represents :LE-2-Representation-1 .
+
+:pupkinvv a foaf:Person ;
+    foaf:name "ПУПКИН ВАСИЛИЙ ВАСИЛЬЕВИЧ"@ru ;
+    fts:hasShareholding :LE-3-Shareholding-1 .
+
+:st-1 a rdf:Statement ;
+    rdf:subject :LE-1 ;
+    rdf:predicate rov:legalName ;
+    rdf:subject "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ДАТАФАБРИК\""@ru ;
+    fts:p76_entered_on_registry_with :RegNum-1157847449121 .
+
+:st-2 a rdf:Statement ;
+    rdf:subject :LE-1 ;
+    rdf:predicate skos:altLabel ;
+    rdf:object "ООО \"ДАТАФАБРИК\"" ;
+    fts:p76_entered_on_registry_with :RegNum-1157847449121 .
+
+:st-3 a rdf:Statement ;
+    rdf:subject :LE-1 ;
+    rdf:predicate fts:hasShareholding ;
+    rdf:object :Shareholding-2 ;
+    fts:p76_entered_on_registry_with :RegNum-1157847449121 .
+
+:st-4 a rdf:Statement ;
+    rdf:subject :LE-1 ;
+    rdf:predicate fts:hasShareholding ;
+    rdf:object :Shareholding-5 ;
+    fts:p76_entered_on_registry_with :RegNum-1157847449121 ;
+    fts:invalidated_at "25.12.2015"^^xsd:date .
+
+:st-5 a rdf:Statement ;
+    rdf:subject :pupkinvv ;
+    rdf:predicate fts:hasShareholding ;
+    rdf:object :Shareholding-5 ;
+    fts:p76_entered_on_registry_with :RegNum-1157847449121 ;
+    fts:invalidated_at "25.12.2015"^^xsd:date .
+
+:st-6 a rdf:Statement ;
+    rdf:subject :LE-1 ;
+    rdf:predicate fts:hasShareholding ;
+    rdf:object :Shareholding-5 ;
+    fts:p76_entered_on_registry_with :RegNum-1157847449121 ;
+    fts:invalidated_at "25.12.2015"^^xsd:date .
+
+:RegNum-1157847449121 a fts:C1_Reg_Number_Date ;
+    fts:p1_state_registration_number "1157847449121" ;
+    fts:p2_date "25.12.2015"^^xsd:date .
+
+:LE-2 a fts:C101_Russian_Legal_Entity, rov:RegisteredOrganization, org:FormalOrganization ;
+    rov:legalName "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"Т1000\""@ru ;
+    skos:altLabel "ООО \"Т1000\"" ;
+    fts:p28_le_primary_state_registration_number [
+        a adms:Identifier ;
+        skos:notation "1167847489028" ;
+        dcterms:issued "21.12.2016"^^xsd:date
+    ] ;
+    fts:p35_tax_number [
+        a adms:Identifier ;
+        skos:notation "7842124419" ;
+        fts:p36_tax_reason_code "784201001" ;
+        dcterms:issued "21.12.2016"^^xsd:date
+    ] ;
+    fts:hasShareholding :LE-2-Shareholding-1 ;
+    fts:hasShareholding :LE-2-Shareholding-2 .
+
+:LE-2-Shareholding-1 a fts:Shareholding, org:Membership ;
+    org:member :smirnovsv ;
+    org:organization :LE-2 ;
+    fts:p124_has_share [
+        a fts:C55_Share_In_Stated_Capital_Entity ;
+        fts:p52_percentage_share "74.0"^^xsd:double ;
+        fts:p51_nominal_share_of_value_in_ruble "7400"^^xsd:double
+    ] .
+
+:LE-2-Shareholding-2 a fts:Shareholding, org:Membership ;
+    org:member :isaevsa ;
+    org:organization :LE-2 ;
+    fts:p124_has_share [
+        a fts:C55_Share_In_Stated_Capital_Entity ;
+        fts:p52_percentage_share "26.0"^^xsd:double ;
+        fts:p51_nominal_share_of_value_in_ruble "2600"^^xsd:double
+    ] .
+
+:LE-2-Representation-1 a fts:RepresentativePost, org:Post ;
+    org:heldBy :isaevsa ;
+    org:postIn :LE-2 ;
+    org:role fts:CEO .
+
+:LE-3 a fts:C101_Russian_Legal_Entity, rov:RegisteredOrganization, org:FormalOrganization ;
+    rov:legalName "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ТЕСТ\""@ru ;
+    skos:altLabel "ООО \"ТЕСТ\"" ;
+    fts:p28_le_primary_state_registration_number [
+        a adms:Identifier ;
+        skos:notation "123123123123" ;
+        dcterms:issued "21.12.2016"^^xsd:date
+    ] ;
+    fts:p35_tax_number [
+        a adms:Identifier ;
+        skos:notation "11111111111" ;
+        fts:p36_tax_reason_code "784201001" ;
+        dcterms:issued "21.12.2016"^^xsd:date
+    ] ;
+    fts:hasShareholding :LE-3-Shareholding-1 .
+
+:LE-3-Shareholding-1 a fts:Shareholding, org:Membership ;
+    org:member :pupkinvv ;
+    org:organization :LE-3 ;
+    fts:p124_has_share [
+        a fts:C55_Share_In_Stated_Capital_Entity ;
+        fts:p52_percentage_share "26.0"^^xsd:double ;
+        fts:p51_nominal_share_of_value_in_ruble "2600"^^xsd:double
+    ] .

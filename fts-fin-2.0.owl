@@ -1,5 +1,4 @@
 @prefix : <https://w3id.org/datafabric.cc/ontologies/fts#> .
-@prefix fts: <http://www.semanticweb.org/fts-ontology/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
@@ -7,7 +6,13 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 <https://w3id.org/datafabric.cc/ontologies/fts#> a owl:Ontology ;
-	<http://purl.org/vocab/vann/preferredNamespacePrefix> "fts"^^xsd:string .
+	<http://purl.org/ontology/bibo/status> "Draft" ;
+	<http://purl.org/dc/terms/title> "Неофициальная онтология Российской налоговой службы"@ru ;
+	owl:versionIRI <https://w3id.org/datafabric.cc/ontologies/fts#> ;
+	<http://purl.org/vocab/vann/preferredNamespacePrefix> "fts"^^xsd:string ;
+	owl:versionInfo "1.0.0" ;
+	<http://purl.org/dc/terms/title> "Unofficial Russian Federal Tax Service ontology"@en ;
+	<http://purl.org/vocab/vann/preferredNamespaceUri> <https://w3id.org/datafabric.cc/ontologies/fts#> .
 # 
 # 
 # #################################################################
@@ -17,9 +22,25 @@
 # #################################################################
 # 
 # 
+# http://purl.org/dc/terms/title
+
+<http://purl.org/dc/terms/title> a owl:AnnotationProperty .
+# 
+# http://purl.org/ontology/bibo/status
+
+<http://purl.org/ontology/bibo/status> a owl:AnnotationProperty .
+# 
 # http://purl.org/vocab/vann/preferredNamespacePrefix
 
 <http://purl.org/vocab/vann/preferredNamespacePrefix> a owl:AnnotationProperty .
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+
+<http://purl.org/vocab/vann/preferredNamespaceUri> a owl:AnnotationProperty .
+# 
+# http://www.w3.org/2002/07/owl#versionIRI
+
+owl:versionIRI a owl:AnnotationProperty .
 # 
 # 
 # 

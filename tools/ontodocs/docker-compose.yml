@@ -1,0 +1,8 @@
+version: '2'
+services:
+  ontodocs:
+    build: ./
+    image: gcr.io/core-datafabric/ontodocs
+    volumes:
+      - "../../docs:/ontodocs/docs"
+      - "../../fts-fin-2.0.owl:/ontodocs/docs/source.ttl"

@@ -1,7 +1,0 @@
-@prefix prov: <http://www.w3.org/ns/prov#> .
-@prefix dc: <http://purl.org/dc/terms/> .
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-<https://w3id.org/datafabric.cc/ontologies/fts#> a prov:Entity;
-	 dc:title "Неофициальная онтология Российской налоговой службы";
-	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
-.

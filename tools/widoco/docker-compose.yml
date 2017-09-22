@@ -1,9 +1,0 @@
-version: '2'
-services:
-  widoco:
-    build: ./
-    image: gcr.io/core-datafabric/widoco
-    volumes:
-      - "../../fts-fin-2.0.owl:/widoco/ontology.ttl"
-      - "../../docs:/widoco/docs"
-      - "./config.properties:/widoco/config.properties"

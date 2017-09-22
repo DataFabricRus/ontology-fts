@@ -1,0 +1,79 @@
+<h2 id="intro" class="list">Введение</h2>
+
+<p>
+    Онтология спроектирована для записи данных из реестров ЕГРЮЛ и ЕГРИП в графовую структуру в соответствии со
+    стандартом RDF. Её целью является сохранение структуры представления данных, которая используется в реестрах,
+    по этой причине данная онтология не переиспользует в полной мере существующие онтологии, такие как
+    <a href="https://www.w3.org/TR/vocab-org/">The Organization Ontology</a>,
+    <a href="https://spec.edmcouncil.org/fibo/">FIBO (Financial Industry Business Ontology)</a> и т.д.
+</p>
+
+<p>
+Структура онтологии организована вокруг следующих базовых классов:
+</p>
+
+<ul>
+    <li>выписка ЕГРЮЛ/ЕГРИП,</li>
+    <li>секция выписки,</li>
+    <li>ГРН и дата внесения записи в секцию выписки,</li>
+    <li>и справочники, например ОКВЕДы, отделения ФНС, страны и т.д.</li>
+</ul>
+
+<p>
+Кроме того онтология реализует простую концепцию для описания текущих и исторических данных.
+</p>
+
+<p>
+Все концепты онтологии находятся в пространстве имен <code>https://w3id.org/datafabric.cc/ontologies/fts#</code>.
+</p>
+
+<div id="namespacedeclarations">
+    <h3 id="ns" class="list">Определения пространства имен</h3>
+    <div id="ns" align="center">
+        <table>
+            <caption><a href="#ns"> Таблица 1</a>: Используемые в документе пространства имен</caption>
+            <tbody>
+            <tr>
+                <td><b>foaf</b></td>
+                <td>&lt;http://xmlns.com/foaf/0.1/></td>
+            </tr>
+            <tr>
+                <td><b>org</b></td>
+                <td>&lt;http://www.w3.org/ns/org#&gt;</td>
+            </tr>
+            <tr>
+                <td><b>owl</b></td>
+                <td>&lt;http://www.w3.org/2002/07/owl#&gt;</td>
+            </tr>
+            <tr>
+                <td><b>rdf</b></td>
+                <td>&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;</td>
+            </tr>
+            <tr>
+                <td><b>terms</b></td>
+                <td>&lt;http://purl.org/dc/terms/&gt;</td>
+            </tr>
+            <tr>
+                <td><b>xsd</b></td>
+                <td>&lt;http://www.w3.org/2001/XMLSchema#&gt;</td>
+            </tr>
+            <tr>
+                <td><b>bibo</b></td>
+                <td>&lt;http://purl.org/ontology/bibo/&gt;</td>
+            </tr>
+            <tr>
+                <td><b>rdfs</b></td>
+                <td>&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</td>
+            </tr>
+            <tr>
+                <td><b>vann</b></td>
+                <td>&lt;http://purl.org/vocab/vann/&gt;</td>
+            </tr>
+            <tr>
+                <td><b>fts</b></td>
+                <td>&lt;https://w3id.org/datafabric.cc/ontologies/fts#&gt;</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

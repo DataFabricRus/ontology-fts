@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="resources/rec.css" media="screen"/>
     <link rel="stylesheet" href="resources/extra.css" media="screen"/>
     <link rel="stylesheet" href="resources/owl.css" media="screen"/>
+    <link rel="stylesheet" href="resources/ontodia.css" media="screen"/>
 
     <!-- SCHEMA.ORG METADATA -->
     <script type="application/ld+json">
@@ -17,6 +18,14 @@
     </script>
 
     <script src="resources/jquery.js"></script>
+
+    <script type="text/javascript" src="https://library-ontodia-org.herokuapp.com/assets/v0.6.1-dev.20171002-3/ontodia-full.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.0/react.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.0/react-dom.min.js"></script>
+    <script src="http://cdn.jsdelivr.net/g/es6-promise@1.0.0"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jsonld/0.4.12/jsonld.min.js"></script>
+    <script src="http://rdf-ext.bergnet.org/dist/rdf-ext-all-0.3.0.min.js"></script>
+
     <script src="resources/marked.min.js"></script>
     <script>
         function loadHash() {
@@ -57,13 +66,99 @@
             $("#toc").html(t);
         }
 
+        var prefixes = '@prefix fts: <https://w3id.org/datafabric.cc/ontologies/fts#> .\n' +
+            '@prefix owl: <http://www.w3.org/2002/07/owl#> .\n' +
+            '@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n' +
+            '@prefix xml: <http://www.w3.org/XML/1998/namespace> .\n' +
+            '@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n' +
+            '@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n' +
+            '@prefix ex: <http://example.com/> .\n';
+
+        function getOntology() {
+            var elements = document.getElementsByTagName('pre');
+            var ontology = prefixes;
+
+            for (var i = 0; i < elements.length; i++) {
+                ontology += elements[i].innerHTML + '\n';
+            }
+
+            return ontology;
+        }
+
+        function initExamples() {
+            var ontology = getOntology();
+            var provider = new Ontodia.RDFDataProvider({
+                data: [
+                    {
+                        content: ontology,
+                        type: 'text/turtle'
+                    }
+                ],
+                dataFetching: false,
+                parsers: {
+                    'text/turtle': new window.N3Parser(),
+                    'application/rdf+xml': new window.RdfXmlParser(),
+                    'application/ld+json': new window.JsonLdParser()
+                }
+            });
+            var graphBuilder = new Ontodia.GraphBuilder(provider);
+
+            $('pre').each(function() {
+                var example = prefixes + $(this).html();
+
+                function onWorkspaceMounted(workspace) {
+                    if (!workspace) { return; }
+
+                    var loadingGraph = graphBuilder.getGraphFromTurtleGraph(example);
+                    workspace.showWaitIndicatorWhile(loadingGraph);
+
+                    loadingGraph.then(function(graph) {
+                        var model = workspace.getModel();
+                        var layout = {
+                            layoutData: graph.layoutData,
+                            preloadedElements: graph.preloadedElements,
+                            dataProvider: provider
+                        };
+                        return model.importLayout(layout);
+                    }).then(function() {
+                        workspace.forceLayout();
+                        workspace.zoomToFit();
+                    });
+                }
+
+                var props = {
+                    ref: onWorkspaceMounted,
+                    isViewOnly: true
+                };
+                var container = $('<div style="height: 500px;"/>').insertAfter(this)[0];
+                ReactDOM.render(React.createElement(Ontodia.Workspace, props), container);
+            });
+        }
+
         $(function () {
+            var sections = [
+                'sections/abstract-ru.html',
+                'sections/introduction-ru.html',
+                'sections/overview-ru.html',
+                'sections/description-ru.html',
+                'sections/references-ru.html',
+                'sections/crossref-ru.html'
+            ];
+            var count = sections.length;
+
             $("#abstract").load("sections/abstract-ru.html");
             $("#introduction").load("sections/introduction-ru.html");
             $("#overview").load("sections/overview-ru.html");
             $("#description").load("sections/description-ru.html");
             $("#references").load("sections/references-ru.html");
             $("#crossref").load("sections/crossref-ru.html", null, loadHash);
+
+            $(document).ajaxComplete(function (event, xhr, settings) {
+                if (sections.indexOf(settings.url) !== -1) {
+                    count--;
+                    if (count === 0) { initExamples(); }
+                }
+            });
         });
     </script>
 </head>

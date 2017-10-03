@@ -17,11 +17,11 @@
 Далее представлен пример описания выписки о ООО "Датафабрик" от <a href="resources/le-details-datafabric.pdf">26.09.2017</a> с помощью Онтологии ФНС.
 
 <pre>
-    _:LED-1 a fts:C4_Legal_Entity_Details ;
-        fts:p80_describes_company _:LE-1 ;
-        fts:p81_includes_le_reg_entity _:LE-1-NameEntity-1157847449121,
-                                        _:LE-1-Address-1157847449121,
-                                        _:LE-1-RegInfo-1157847449121 .
+    ex:LED-1 a fts:C4_Legal_Entity_Details ;
+        fts:p80_describes_company ex:LE-1 ;
+        fts:p81_includes_le_reg_entity ex:LE-1-NameEntity-1157847449121,
+                                        ex:LE-1-Address-1157847449121,
+                                        ex:LE-1-RegInfo-1157847449121 .
 </pre>
 
 <h3>Секции выписки</h3>
@@ -29,9 +29,9 @@
 Секция "Наименование":
 
 <pre>
-    _:LE-1-NameEntity-1157847449121 a fts:C38_Name_Entity ;
-        fts:p82_refers_to_company _:LE-1 ;
-        fts:p76_entered_on_registry_with _:RND-1157847449121 ;
+    ex:LE-1-NameEntity-1157847449121 a fts:C38_Name_Entity ;
+        fts:p82_refers_to_company ex:LE-1 ;
+        fts:p76_entered_on_registry_with ex:RND-1157847449121 ;
         fts:p16_full_name "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ДАТАФАБРИК\""@ru ;
         fts:p17_short_name "ООО \"ДАТАФАБРИК\""@ru .
 </pre>
@@ -39,24 +39,24 @@
 Секция "Адрес (место нахождения)":
 
 <pre>
-    _:LE-1-Address-1157847449121 a fts:C39_Address_Entity ;
-        fts:p82_refers_to_company _:LE-1 ;
-        fts:p76_entered_on_registry_with _:RND-1157847449121 ;
+    ex:LE-1-Address-1157847449121 a fts:C39_Address_Entity ;
+        fts:p82_refers_to_company ex:LE-1 ;
+        fts:p76_entered_on_registry_with ex:RND-1157847449121 ;
         fts:p18_postcode "193231" ;
         fts:p21_block "КОРПУС 2" ;
         fts:p23_office_number "КВАРТИРА 83" ;
         fts:p20_address_code "780000000000684" ;
         fts:p22_building_number "ДОМ 11" ;
-        fts:p98_located_at _:Region-78 ;
-        fts:p98_located_at _:Street-1 .
+        fts:p98_located_at ex:Region-78 ;
+        fts:p98_located_at ex:Street-1 .
 </pre>
 
 Секция "Сведения о регистрации":
 
 <pre>
-    _:LE-1-RegInfo-1157847449121 a fts:C41_LE_Registration_Entity ;
-        fts:p82_refers_to_company _:LE-1 ;
-        fts:p76_entered_on_registry_with _:RND-1157847449121 ;
+    ex:LE-1-RegInfo-1157847449121 a fts:C41_LE_Registration_Entity ;
+        fts:p82_refers_to_company ex:LE-1 ;
+        fts:p76_entered_on_registry_with ex:RND-1157847449121 ;
         fts:p28_le_primary_state_registration_number "1157847449121" ;
         fts:p29_psrn_assignment_date "25-12-2015"^^xsd:date .
 </pre>
@@ -71,7 +71,7 @@
 Следующим образом записывается номер версии и дата записи в секции:
 
 <pre>
-    _:RND-1157847449121 a fts:C1_Reg_Number_Date ;
+    ex:RND-1157847449121 a fts:C1_Reg_Number_Date ;
         fts:p1_state_registration_number "1157847449121" ;
         fts:p2_date "25-12-2015"^^xsd:date .
 </pre>
@@ -84,12 +84,12 @@
 от какой-либо секции, но используется в них. Примерами справочников, могут быть ОКВЕДы, регионы, улицы и т.д.
 
 <pre>
-    _:Region-78 a fts:C96_Region_Element ;
+    ex:Region-78 a fts:C96_Region_Element ;
     fts:p25_element_type "ГОРОД" ;
     fts:p19_region_code "78" ;
     fts:p6_name "САНКТ-ПЕТЕРБУРГ" .
 
-    _:Street-1 a fts:C100_Street_Element ;
+    ex:Street-1 a fts:C100_Street_Element ;
     fts:p25_element_type "УЛИЦА" ;
     fts:p6_name "ЛАТЫШСКИХ СТРЕЛКОВ" .
 </pre>
@@ -100,11 +100,11 @@
 явного указания актуальности секции, к секции добавляется следующий трипл:
 
 <pre>
-    _:LE-1-NameEntity-1157847449121 fts:isLatestEntity "true"^^xsd:boolean .
+    ex:LE-1-NameEntity-1157847449121 fts:isLatestEntity "true"^^xsd:boolean .
 </pre>
 
 А устаревшие секции включают следующий трипл с датой, когда секция стала неактуальна:
 
 <pre>
-    _:LE-1-NameEntity-1157847449121 fts:invalidated_at "25-12-2015"^^xsd:date .
+    ex:LE-1-NameEntity-1157847449121 fts:invalidated_at "25-12-2015"^^xsd:date .
 </pre>

@@ -1,3 +1,10 @@
 .ontodia__header {
     display: none !important;
 }
+
+.ontodia-container {
+    border: 1px solid #000;
+    height: 600px;
+    margin: 13px 0 13px 26px;
+    max-width: 900px;
+}

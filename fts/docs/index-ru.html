@@ -17,7 +17,7 @@
 
     </script>
 
-    <script src="resources/jquery.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
 
     <script type="text/javascript" src="https://library-ontodia-org.herokuapp.com/assets/v0.6.1-dev.20171002-3/ontodia-full.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.0/react.min.js"></script>
@@ -25,6 +25,7 @@
     <script src="https://cdn.jsdelivr.net/g/es6-promise@1.0.0"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jsonld/0.4.12/jsonld.min.js"></script>
     <script src="resources/rdf-ext-all-0.3.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
 
     <script src="resources/marked.min.js"></script>
     <script>
@@ -73,6 +74,8 @@
             '@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n' +
             '@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n' +
             '@prefix ex: <http://example.com/> .\n';
+        var provider;
+        var graphBuilder;
 
         function getOntology() {
             var elements = document.getElementsByTagName('pre');
@@ -85,12 +88,48 @@
             return ontology;
         }
 
+        function onWorkspaceMounted(workspace, graph) {
+            var loadingGraph = graphBuilder.getGraphFromTurtleGraph(graph);
+            workspace.showWaitIndicatorWhile(loadingGraph);
+
+            loadingGraph.then(function(graph) {
+                var model = workspace.getModel();
+                var layoutData = {
+                    cells: graph.layoutData.cells.map(function(cell) {
+                        if (cell.type === 'element') {
+                            cell.isExpanded = true;
+                        }
+                        return cell;
+                    })
+                };
+                var layout = {
+                    layoutData: layoutData,
+                    preloadedElements: graph.preloadedElements,
+                    dataProvider: provider
+                };
+                return model.importLayout(layout);
+            }).then(function() {
+                workspace.forceLayout();
+                workspace.zoomToFit();
+            });
+        }
+
+        function initOntodia(graph, container) {
+            var props = {
+                ref: function (workspace) {
+                    if (!workspace) { return; }
+                    onWorkspaceMounted(workspace, graph);
+                },
+                isViewOnly: true
+            };
+            ReactDOM.render(React.createElement(Ontodia.Workspace, props), container);
+        }
+
         function initExamples() {
-            var ontology = getOntology();
-            var provider = new Ontodia.RDFDataProvider({
+            provider = new Ontodia.RDFDataProvider({
                 data: [
                     {
-                        content: ontology,
+                        content: getOntology(),
                         type: 'text/turtle'
                     }
                 ],
@@ -101,37 +140,20 @@
                     'application/ld+json': new window.JsonLdParser()
                 }
             });
-            var graphBuilder = new Ontodia.GraphBuilder(provider);
+            graphBuilder = new Ontodia.GraphBuilder(provider);
 
             $('pre').each(function() {
-                var example = prefixes + $(this).html();
+                var graph = prefixes + this.innerHTML;
+                var container = $('<div class="ontodia-container"/>').insertAfter(this)[0];
 
-                function onWorkspaceMounted(workspace) {
-                    if (!workspace) { return; }
-
-                    var loadingGraph = graphBuilder.getGraphFromTurtleGraph(example);
-                    workspace.showWaitIndicatorWhile(loadingGraph);
-
-                    loadingGraph.then(function(graph) {
-                        var model = workspace.getModel();
-                        var layout = {
-                            layoutData: graph.layoutData,
-                            preloadedElements: graph.preloadedElements,
-                            dataProvider: provider
-                        };
-                        return model.importLayout(layout);
-                    }).then(function() {
-                        workspace.forceLayout();
-                        workspace.zoomToFit();
-                    });
-                }
-
-                var props = {
-                    ref: onWorkspaceMounted,
-                    isViewOnly: true
-                };
-                var container = $('<div style="height: 500px;"/>').insertAfter(this)[0];
-                ReactDOM.render(React.createElement(Ontodia.Workspace, props), container);
+                new Waypoint({
+                    element: this,
+                    offset: 'bottom-in-view',
+                    handler: function () {
+                        initOntodia(graph, container);
+                        this.destroy();
+                    }
+                });
             });
         }
 

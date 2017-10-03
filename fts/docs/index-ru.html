@@ -114,8 +114,16 @@
 
                     loadingGraph.then(function(graph) {
                         var model = workspace.getModel();
+                        var layoutData = {
+                            cells: graph.layoutData.cells.map(function(cell) {
+                                if (cell.type === 'element') {
+                                    cell.isExpanded = true;
+                                }
+                                return cell;
+                            })
+                        };
                         var layout = {
-                            layoutData: graph.layoutData,
+                            layoutData: layoutData,
                             preloadedElements: graph.preloadedElements,
                             dataProvider: provider
                         };

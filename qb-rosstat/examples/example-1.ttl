@@ -1,0 +1,51 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix qb-rosstat: <https://w3id.org/datafabric.cc/ontologies/qb-rosstat#> .
+@prefix qb-rosstat-dimension: <https://w3id.org/datafabric.cc/ontologies/qb-rosstat/dimension#> .
+@prefix qb-rosstat-measure: <https://w3id.org/datafabric.cc/ontologies/qb-rosstat/measure#> .
+@prefix : <http://example.com/resource/> .
+
+###
+# Генерируется один раз для всего датасета
+###
+
+# URI: dataset + <Год>
+:dataset-2012 a qb:DataSet ;
+    dct:issued "2013-07-24"^^xsd:date ;
+    qb:structure qb-rosstat:RosstatDSD ;
+    .
+
+###
+# Генерируется для каждого датасета + ЮЛ
+###
+
+:dataset-2012 qb:slice :dataset-2012-ecd5cd1b-1073-5272-af69-f9ca52956c48 .
+
+# URI: <URI датасета> + <ID ЮЛ>
+:dataset-2012-ecd5cd1b-1073-5272-af69-f9ca52956c48 a qb:Slice ;
+    qb:sliceStructure qb-rosstat:SliceByYearAndOrg ;
+    qb-rosstat-dimension:refPeriod "2012"^^xsd:gYear ;
+    qb-rosstat-dimension:refOrganization <http://example.com/legalentity/ecd5cd1b-1073-5272-af69-f9ca52956c48> ;
+    .
+
+# Дальше идут уже значения по данному ЮЛ в данном году
+# URI: obs + <Год> + <ID ЮЛ> + <ID типа значения>
+:obs-2012-ecd5cd1b-1073-5272-af69-f9ca52956c48-of a qb:Observation ;
+    qb:dataset :dataset-2012 ;
+    qb:measureType qb-rosstat-measure:of ;
+    qb-rosstat-measure:of "0"^^xsd:decimal ;
+    .
+:dataset-2012-ecd5cd1b-1073-5272-af69-f9ca52956c48 qb:observation :obs-2012-ecd5cd1b-1073-5272-af69-f9ca52956c48-of .
+
+:obs-2012-ecd5cd1b-1073-5272-af69-f9ca52956c48-ta_fix a qb:Observation ;
+    qb:dataset :dataset-2012 ;
+    qb:measureType qb-rosstat-measure:ta_fix ;
+    qb-rosstat-measure:ta_fix "0"^^xsd:decimal ;
+    .
+:dataset-2012-ecd5cd1b-1073-5272-af69-f9ca52956c48 qb:observation :obs-2012-ecd5cd1b-1073-5272-af69-f9ca52956c48-ta_fix .

@@ -1,0 +1,59 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+@prefix fibo-fnd-org-fm: <https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/FormalOrganizations/> .
+@prefix sdmx-concept: <http://purl.org/linked-data/sdmx/2009/concept#> .
+@prefix sdmx-dimension:	<http://purl.org/linked-data/sdmx/2009/dimension#> .
+@prefix sdmx-measure: <http://purl.org/linked-data/sdmx/2009/measure#> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix qb-rosstat: <https://w3id.org/datafabric.cc/ontologies/qb-rosstat#> .
+@prefix qb-rosstat-dimension: <https://w3id.org/datafabric.cc/ontologies/qb-rosstat/dimension#> .
+@prefix qb-rosstat-measure: <https://w3id.org/datafabric.cc/ontologies/qb-rosstat/measure#> .
+
+qb-rosstat:RosstatDSD a qb:DataStructureDefinition ;
+    qb:component
+        [ qb:dimension qb-rosstat-dimension:refPeriod; qb:componentAttachment qb:Slice ],
+        [ qb:dimension qb-rosstat-dimension:refOrganization; qb:componentAttachment qb:Slice ],
+        [ qb:dimension qb:measureType ],
+        [ qb:measure qb-rosstat-measure:of ],
+        [ qb:measure qb-rosstat-measure:ta_fix ];
+
+    # slices
+    qb:sliceKey qb-rosstat:SliceByYearAndOrg ;
+    .
+
+qb-rosstat:SliceByYearAndOrg a qb:SliceKey ;
+    qb:componentProperty qb-rosstat-dimension:refPeriod, qb-rosstat-dimension:refOrganization ;
+    .
+
+###
+# Dimensions
+###
+
+qb-rosstat-dimension:refPeriod a rdf:Property, qb:DimensionProperty ;
+    rdfs:label "reference period"@en ;
+    rdfs:subPropertyOf sdmx-dimension:refPeriod ;
+    rdfs:range xsd:gYear ;
+    qb:concept sdmx-concept:refPeriod ;
+    .
+
+qb-rosstat-dimension:refOrganization a rdf:Property, qb:DimensionProperty ;
+    rdfs:range fibo-fnd-org-fm:FormalOrganization ;
+    .
+
+###
+# Measures
+###
+
+qb-rosstat-measure:of a rdf:Propery, qb:MeasureProperty ;
+    rdfs:subPropertyOf sdmx-measure:obsValue ;
+    rdfs:range xsd:decimal ;
+    .
+
+qb-rosstat-measure:ta_fix a rdf:Propery, qb:MeasureProperty ;
+    rdfs:subPropertyOf sdmx-measure:obsValue ;
+    rdfs:range xsd:decimal ;
+    .

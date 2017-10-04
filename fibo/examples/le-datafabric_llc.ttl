@@ -13,6 +13,7 @@
 @prefix fibo-fnd-arr-id: <https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/IdentifiersAndIndices/> .
 @prefix fibo-fnd-arr-doc: <https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Documents/> .
 @prefix fibo-fnd-dt-fd: <https://spec.edmcouncil.org/fibo/ontology/FND/DatesAndTimes/FinancialDates/> .
+@prefix fibo-fnd-law-lcap: <https://spec.edmcouncil.org/fibo/ontology/FND/Law/LegalCapacity/> .
 @prefix fibo-fnd-rel-rel: <https://spec.edmcouncil.org/fibo/ontology/FND/Relations/Relations/> .
 @prefix fibo-fnd-plc-adr: <https://spec.edmcouncil.org/fibo/ontology/FND/Places/Addresses/> .
 @prefix fibo-fnd-plc-cty: <https://spec.edmcouncil.org/fibo/ontology/FND/Places/Countries/> .
@@ -24,6 +25,8 @@
 @prefix fibo-fnd-org-lg: <https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/LegitimateOrganizations/> .
 @prefix fibo-fnd-org-org: <https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/Organizations/> .
 @prefix fibo-fnd-qt-qtu: <https://spec.edmcouncil.org/fibo/ontology/FND/Quantities/QuantitiesAndUnits/> .
+@prefix fibo-ru: <https://w3id.org/datafabric.cc/ontologies/fibo-ru#> .
+@prefix lcc-3166-1: <http://www.omg.org/spec/LCC/Countries/ISO3166-1-CountryCodes/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix : <http://example.com/resources/> .
 
@@ -38,55 +41,80 @@
                 fibo-fnd-org-lg:LegitimateOrganization,
                 fibo-fnd-org-org:Organization,
                 fibo-fnd-aap-agt:AutonomousAgent ;
+    ##
+    # Наименование
+    ##
+    fibo-fnd-rel-rel:hasLegalName "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ДАТАФАБРИК\"" ;
+    fibo-fnd-rel-rel:hasAlias "ООО \"ДАТАФАБРИК\"" ;
+
+    ##
+    # Адрес (место нахождения)
+    ##
+    fibo-fnd-plc-adr:hasAddress :Datafabric-Address ;
+    fibo-be-le-fbo:hasOperatingAddress :Datafabric-Address ;
+    fibo-be-le-fbo:hasPrimaryAddress :Datafabric-Address ;
+    fibo-be-le-fbo:hasRegisteredAddress :Datafabric-Address ;
+
+    ##
+    # Сведения о регистрации
+    ##
     fibo-fnd-aap-agt:isIdentifiedBy [ # ОГРН
         a fibo-be-corp-corp:RegistrationIdentifier,
             fibo-be-le-fbo:OrganizationIdentifier,
             fibo-fnd-arr-id:Identifier ;
         fibo-fnd-aap-agt:identifies :Datafabric ;
         fibo-fnd-rel-rel:hasUniqueIdentifier "1157847449121" ;
-        fibo-fnd-rel-rel:hasAcquisitionDate "2015-12-25"^^xsd:date ;
-        fibo-fnd-rel-rel:isGovernedBy [
-            #TODO: Сведения о регистрирующем органе по месту нахождения юридического лица
-        ]
+        fibo-fnd-rel-rel:hasDateOfIssuance "2015-12-25"^^xsd:date
     ] ;
     fibo-be-corp-corp:hasDateOfRegistration [ # ОГРН Дата
         a fibo-fnd-dt-fd:ExplicitDate, fibo-fnd-dt-fd:Date ;
         fibo-fnd-dt-fd:hasDateValue "2015-12-25"^^xsd:date
     ] ;
+    fibo-be-corp-corp:hasDateOfIncorporation [ # ОГРН Дата
+        a fibo-fnd-dt-fd:ExplicitDate, fibo-fnd-dt-fd:Date ;
+        fibo-fnd-dt-fd:hasDateValue "2015-12-25"^^xsd:date
+    ] ;
+
+    ##
+    # Сведения об учете в налоговом органе
+    ##
     fibo-fnd-aap-agt:isIdentifiedBy [ # ИНН
-            a fibo-be-le-fbo:OrganizationIdentifier, fibo-fnd-arr-id:Identifier ;
-            fibo-fnd-aap-agt:identifies :Datafabric ;
-            fibo-fnd-rel-rel:hasUniqueIdentifier "7811269044" ;
-            #TODO: КПП
-            fibo-fnd-rel-rel:hasAcquisitionDate "2015-12-25"^^xsd:date
-        ] ;
-    fibo-fnd-rel-rel:hasLegalName "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ДАТАФАБРИК\"" ;
-    fibo-fnd-rel-rel:hasAlias "ООО \"ДАТАФАБРИК\"" ;
-    fibo-fnd-org-fm:isDomiciledIn [
-        a fibo-fnd-plc-cty:Country, fibo-fnd-org-fm:GeopoliticalEntity
-        # Нужно использовать другую онтологию для описания страны
+        a fibo-ru:VATIN, fibo-fnd-arr-id:Identifier ;
+        fibo-fnd-aap-agt:identifies :Datafabric ;
+        fibo-fnd-rel-rel:hasUniqueIdentifier "7811269044" ;
+        fibo-ru:hasReasonCodeOfIssuance "781101001" ;
+        fibo-fnd-arr-doc:hasDateOfIssuance "2015-12-25"^^xsd:date
     ] ;
-    fibo-fnd-plc-adr:hasAddress :Datafabric-Address ;
-    fibo-be-le-fbo:hasOperatingAddress :Datafabric-Address ;
-    fibo-be-le-fbo:hasPrimaryAddress :Datafabric-Address ;
-    fibo-be-le-fbo:hasRegisteredAddress :Datafabric-Address ;
-    fibo-be-le-fbo:hasSignatory [ # Сведения о лице, имеющем право без доверенности действовать от имени юридического лица
-        a fibo-be-le-lp:Signatory,
-            fibo-fnd-pty-pty:PartyInRole,
-            fibo-fnd-pty-rl:AgentInRole,
-            fibo-fnd-pty-rl:ThingInRole;
-        fibo-fnd-rel-rel:hasIdentity :Isaev-SA ;
-        fibo-fnd-pty-rl:hasRole [
-            a fibo-fnd-pty-rl:Role ;
-            # Нужно использовать другую онтологию для описания ролей
-        ]
-    ] ;
-    fibo-be-corp-corp:hasIssuedCapital [ # Сведения об уставном капитале
+
+    ##
+    # Сведения о лице, имеющем право без доверенности действовать от имени юридического лица
+    ##
+    fibo-be-le-fbo:hasSignatory :Datafabric-Signatory-Isaev-AS ;
+
+    ##
+    # Сведения об уставном капитале
+    ##
+    fibo-be-corp-corp:hasIssuedCapital [
         a fibo-fnd-acc-cur:AmountOfMoney ;
         fibo-fnd-acc-cur:hasBaseMoneyUnit fibo-fnd-acc-4217:RussianRuble ;
         fibo-fnd-qt-qtu:hasNumericValue "10000.0"^^xsd:decimal
     ] ;
-    fibo-be-oac-opty:isPartiallyOwnedBy :Isaev-SA ;
+
+    ##
+    # Сведения об учредителях (участниках) юридического лица
+    ##
+    fibo-be-oac-opty:hasConstitutionalOwner :Datafabric-Share-Isaev-SA-as-Owner ;
+    fibo-be-le-fbo:hasEquity :Datafabric-Share-Isaev-AS ;
+
+    fibo-fnd-org-fm:isDomiciledIn lcc-3166-1:RussianFederation ;
+    .
+
+:Datafabric-Signatory-Isaev-AS a fibo-be-le-lp:Signatory,
+                                 fibo-fnd-pty-pty:PartyInRole,
+                                 fibo-fnd-pty-rl:AgentInRole,
+                                 fibo-fnd-pty-rl:ThingInRole;
+    fibo-fnd-pty-rl:isPlayedBy :Isaev-SA ;
+    fibo-fnd-pty-rl:hasRole fibo-ru:SignatoryRoleInRFJ-02 ; # ген.директор
     .
 
 :Datafabric-Share-Isaev-AS a fibo-be-oac-cown:Shareholding,
@@ -100,11 +128,14 @@
         fibo-fnd-acc-cur:hasAmount "3000.0"^^xsd:decimal
     ] ;
     fibo-fnd-acc-aeq:representsAnInterestIn :Datafabric ;
-    fibo-fnd-oac-own:isOwnedBy [
-        a fibo-fnd-oac-own:Owner, fibo-fnd-pty-pty:PartyInRole  ;
-        fibo-fnd-pty-rl:isPlayedBy :Isaev-SA
-    ] ;
+    fibo-be-oac-opty:isEquityHeldBy :Datafabric-Share-Isaev-AS-as-Owner ;
     .
+
+:Datafabric-Share-Isaev-AS-as-Owner a fibo-be-oac-opty:ConstitutionalOwner,
+                                        fibo-be-oac-opty:EntityOwner,
+                                        fibo-fnd-oac-own:Owner,
+                                        fibo-fnd-pty-pty:PartyInRole  ;
+    fibo-fnd-pty-rl:isPlayedBy :Isaev-SA .
 
 :Isaev-SA a fibo-be-le-lp:NaturalPerson,
                 fibo-be-le-lp:LegalPerson,
@@ -112,37 +143,21 @@
                 fibo-fnd-aap-ppl:Adult,
                 fibo-fnd-aap-ppl:Person ;
     fibo-fnd-aap-agt:hasName "ИСАЕВ СЕРГЕЙ АЛЕКСАНДРОВИЧ" ;
-    fibo-fnd-aap-ppl:hasCitizenship [
-        a fibo-fnd-plc-cty:Country, fibo-fnd-org-fm:GeopoliticalEntity
-        # Нужно использовать другую онтологию для описания страны
-    ];
+    fibo-fnd-aap-ppl:hasCitizenship lcc-3166-1:RussianFederation ;
     fibo-fnd-aap-agt:isIdentifiedBy [ # ИНН
-        a fibo-fnd-aap-ppl:IdentityDocument, fibo-fnd-arr-doc:LegalDocument, fibo-fnd-arr-doc:Document ;
+        a fibo-ru:VATIN, fibo-fnd-aap-ppl:IdentityDocument, fibo-fnd-arr-doc:LegalDocument, fibo-fnd-arr-doc:Document ;
         fibo-fnd-aap-agt:identifies :Isaev-SA ;
         fibo-fnd-rel-rel:hasUniqueIdentifier "781133781387"
     ] ;
-    fibo-fnd-oac-own:owns :Datafabric-Share-Isaev-AS ;
+    fibo-be-oac-opty:holdsEquityIn :Datafabric-Share-Isaev-AS ;
+    fibo-fnd-pty-rl:playsRole :Datafabric-Signatory-Isaev-AS ;
     .
 
 :Datafabric-Address a fibo-be-le-fbo:RegisteredAddress,
-                        fibo-fnd-plc-adr:PostalAddress,
-                        fibo-fnd-plc-adr:PhysicalAddress,
-                        fibo-fnd-plc-adr:Address ;
+                            fibo-fnd-plc-adr:PostalAddress,
+                            fibo-fnd-plc-adr:PhysicalAddress,
+                            fibo-fnd-plc-adr:Address ;
     fibo-fnd-rel-rel:appliesTo [
         a fibo-fnd-plc-loc:PhysicalLocation, fibo-fnd-plc-loc:Location
         # Нужно использовать другую онтологию для описания адреса
     ] .
-
-## Если бы у ЮЛ был зарегистрирован LEI
-
-:C-1 a fibo-be-le-lei:ContractuallyCapableEntity ;
-    fibo-fnd-rel-rel:hasIdentity :LE-1 .
-
-:LE-1 a fibo-be-le-lp:LegalEntity ;
-    fibo-fnd-aap-agt:isIdentifiedBy [
-        a fibo-be-le-lei:LegalEntityIdentifier, fibo-be-le-fbo:OrganizationIdentifier, fibo-fnd-arr-id:Identifier ;
-        fibo-fnd-aap-agt:identifies :LE-1 ;
-        fibo-fnd-rel-rel:hasUniqueIdentifier "..."
-    ] ;
-    fibo-be-le-lei:hasAddressOfLegalFormation :Datafabric-Address ;
-    .

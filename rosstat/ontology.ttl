@@ -10,21 +10,28 @@
 @prefix sdmx-dimension:	<http://purl.org/linked-data/sdmx/2009/dimension#> .
 @prefix sdmx-measure: <http://purl.org/linked-data/sdmx/2009/measure#> .
 @prefix qb: <http://purl.org/linked-data/cube#> .
-@prefix qb-rosstat: <https://w3id.org/datafabric.cc/ontologies/qb-rosstat#> .
+@prefix rosstat: <https://w3id.org/datafabric.cc/ontologies/rosstat#> .
 
-qb-rosstat:RosstatDSD a qb:DataStructureDefinition ;
+<https://w3id.org/datafabric.cc/ontologies/rosstat#> rdf:type owl:Ontology ;
+    owl:versionIRI <https://w3id.org/datafabric.cc/ontologies/rosstat#> ;
+    <http://purl.org/vocab/vann/preferredNamespacePrefix> "rosstat"^^xsd:string ;
+    <http://purl.org/dc/terms/title> "Онтология Бухгалтерской отчетности организаций и ИП (Росстат)"@ru ;
+    .
+
+rosstat:RosstatAccountingReportDSD a qb:DataStructureDefinition, owl:NamedIndividual ;
+    rdfs:label "RDF Data Cube схема данных бухгалтерской отчетности организаций и ИП"@ru ;
     qb:component
-        [ qb:dimension qb-rosstat:refPeriod; qb:componentAttachment qb:Slice ],
-        [ qb:dimension qb-rosstat:refOrganization; qb:componentAttachment qb:Slice ],
+        [ qb:dimension rosstat:refPeriod; qb:componentAttachment qb:Slice ],
+        [ qb:dimension rosstat:refOrganization; qb:componentAttachment qb:Slice ],
         [ qb:dimension qb:measureType ],
-        [ qb:measure qb-rosstat:measure-1210 ],
-        [ qb:measure qb-rosstat:measure-1230 ],
-        [ qb:measure qb-rosstat:measure-1520 ],
-        [ qb:measure qb-rosstat:measure-1250 ],
-        [ qb:measure qb-rosstat:measure-1370 ],
-        [ qb:measure qb-rosstat:measure-2400 ],
-        [ qb:measure qb-rosstat:measure-2110 ],
-        [ qb:measure qb-rosstat:measure-2410 ] ;
+        [ qb:measure rosstat:measure-1210 ],
+        [ qb:measure rosstat:measure-1230 ],
+        [ qb:measure rosstat:measure-1520 ],
+        [ qb:measure rosstat:measure-1250 ],
+        [ qb:measure rosstat:measure-1370 ],
+        [ qb:measure rosstat:measure-2400 ],
+        [ qb:measure rosstat:measure-2110 ],
+        [ qb:measure rosstat:measure-2410 ] ;
 
     qb:component [
         qb:attribute sdmx-attribute:currency ;
@@ -33,25 +40,26 @@ qb-rosstat:RosstatDSD a qb:DataStructureDefinition ;
     ] ;
 
     # slices
-    qb:sliceKey qb-rosstat:SliceByYearAndOrg ;
+    qb:sliceKey rosstat:SliceByYearAndOrg ;
     .
 
-qb-rosstat:SliceByYearAndOrg a qb:SliceKey ;
-    qb:componentProperty qb-rosstat:refPeriod, qb-rosstat:refOrganization ;
+rosstat:SliceByYearAndOrg a qb:SliceKey, owl:NamedIndividual ;
+    rdfs:label "Бухгалтерская отчетность организации или ИП за отчетный период"@ru ;
+    qb:componentProperty rosstat:refPeriod, rosstat:refOrganization ;
     .
 
 ###
 # Dimensions
 ###
 
-qb-rosstat:refPeriod a rdf:Property, owl:DatatypeProperty, qb:DimensionProperty ;
+rosstat:refPeriod a rdf:Property, owl:DatatypeProperty, qb:DimensionProperty ;
     rdfs:label "Период"@ru ;
     rdfs:subPropertyOf sdmx-dimension:refPeriod ;
     rdfs:range xsd:gYear ;
     qb:concept sdmx-concept:refPeriod ;
     .
 
-qb-rosstat:refOrganization a rdf:Property, owl:ObjectProperty, qb:DimensionProperty ;
+rosstat:refOrganization a rdf:Property, owl:ObjectProperty, qb:DimensionProperty ;
     rdfs:label "Организация"@ru ;
     rdfs:range fibo-fnd-org-fm:FormalOrganization ;
     .
@@ -60,48 +68,48 @@ qb-rosstat:refOrganization a rdf:Property, owl:ObjectProperty, qb:DimensionPrope
 # Measures
 ###
 
-qb-rosstat:measure-1210 a rdf:Property, owl:DatatypeProperty, qb:MeasureProperty ;
+rosstat:measure-1210 a rdf:Property, owl:DatatypeProperty, qb:MeasureProperty ;
     rdfs:label "Запасы"@ru ;
     rdfs:subPropertyOf sdmx-measure:obsValue ;
     rdfs:range xsd:decimal ;
     .
 
-qb-rosstat:measure-1230 a rdf:Property, owl:DatatypeProperty, qb:MeasureProperty ;
+rosstat:measure-1230 a rdf:Property, owl:DatatypeProperty, qb:MeasureProperty ;
     rdfs:label "Дебиторская задолженность"@ru ;
     rdfs:subPropertyOf sdmx-measure:obsValue ;
     rdfs:range xsd:decimal ;
     .
 
-qb-rosstat:measure-1520 a rdf:Property, owl:DatatypeProperty, qb:MeasureProperty ;
+rosstat:measure-1520 a rdf:Property, owl:DatatypeProperty, qb:MeasureProperty ;
     rdfs:label "Кредиторская задолжность"@ru ;
     rdfs:subPropertyOf sdmx-measure:obsValue ;
     rdfs:range xsd:decimal ;
     .
-qb-rosstat:measure-1250 a rdf:Property, owl:DatatypeProperty, qb:MeasureProperty ;
+rosstat:measure-1250 a rdf:Property, owl:DatatypeProperty, qb:MeasureProperty ;
     rdfs:label "Денежные средства"@ru ;
     rdfs:subPropertyOf sdmx-measure:obsValue ;
     rdfs:range xsd:decimal ;
     .
 
-qb-rosstat:measure-1370 a rdf:Property, owl:DatatypeProperty, qb:MeasureProperty ;
+rosstat:measure-1370 a rdf:Property, owl:DatatypeProperty, qb:MeasureProperty ;
     rdfs:label "Нераспределенная прибыль (непокрытый убыток)"@ru ;
     rdfs:subPropertyOf sdmx-measure:obsValue ;
     rdfs:range xsd:decimal ;
     .
 
-qb-rosstat:measure-2400 a rdf:Property, owl:DatatypeProperty, qb:MeasureProperty ;
+rosstat:measure-2400 a rdf:Property, owl:DatatypeProperty, qb:MeasureProperty ;
     rdfs:label "Чистая прибыль (убыток)"@ru ;
     rdfs:subPropertyOf sdmx-measure:obsValue ;
     rdfs:range xsd:decimal ;
     .
 
-qb-rosstat:measure-2110 a rdf:Property, owl:DatatypeProperty, qb:MeasureProperty ;
+rosstat:measure-2110 a rdf:Property, owl:DatatypeProperty, qb:MeasureProperty ;
     rdfs:label "Выручка"@ru ;
     rdfs:subPropertyOf sdmx-measure:obsValue ;
     rdfs:range xsd:decimal ;
     .
 
-qb-rosstat:measure-2410 a rdf:Property, owl:DatatypeProperty, qb:MeasureProperty ;
+rosstat:measure-2410 a rdf:Property, owl:DatatypeProperty, qb:MeasureProperty ;
     rdfs:label "Налог на прибыль"@ru ;
     rdfs:subPropertyOf sdmx-measure:obsValue ;
     rdfs:range xsd:decimal ;

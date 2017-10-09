@@ -7,7 +7,7 @@
 
 @prefix fibo-fnd-acc-4217: <https://spec.edmcouncil.org/fibo/ontology/FND/Accounting/ISO4217-CurrencyCodes/> .
 @prefix qb: <http://purl.org/linked-data/cube#> .
-@prefix qb-rosstat: <https://w3id.org/datafabric.cc/ontologies/qb-rosstat#> .
+@prefix rosstat: <https://w3id.org/datafabric.cc/ontologies/rosstat#> .
 @prefix sdmx-attribute:	<http://purl.org/linked-data/sdmx/2009/attribute#> .
 @prefix : <http://example.com/resource/> .
 
@@ -17,7 +17,7 @@
 
 # URI: dataset + <Год>
 :dataset-2012 a qb:DataSet ;
-    qb:structure qb-rosstat:RosstatDSD ;
+    qb:structure rosstat:RosstatAccountingReportDSD ;
     sdmx-attribute:currency fibo-fnd-acc-4217:RussianRuble ;
     .
 
@@ -29,24 +29,24 @@
 
 # URI: <URI датасета> + <ID ЮЛ>
 :dataset-2012-ecd5cd1b-1073-5272-af69-f9ca52956c48 a qb:Slice ;
-    qb:sliceStructure qb-rosstat:SliceByYearAndOrg ;
+    qb:sliceStructure rosstat:SliceByYearAndOrg ;
     dct:issued "2013-07-24"^^xsd:gYear ;
-    qb-rosstat:refPeriod "2012"^^xsd:gYear ;
-    qb-rosstat:refOrganization <http://example.com/legalentity/ecd5cd1b-1073-5272-af69-f9ca52956c48> ;
+    rosstat:refPeriod "2012"^^xsd:gYear ;
+    rosstat:refOrganization <http://example.com/legalentity/ecd5cd1b-1073-5272-af69-f9ca52956c48> ;
     .
 
 # Дальше идут уже значения по данному ЮЛ в данном году
 # URI: obs + <Год> + <ID ЮЛ> + <ID типа значения>
 :obs-2012-ecd5cd1b-1073-5272-af69-f9ca52956c48-measure-1210 a qb:Observation ;
     qb:dataset :dataset-2012 ;
-    qb:measureType qb-rosstat:measure-1210 ;
-    qb-rosstat:measure-1210 "0"^^xsd:decimal ; # Надо записывать число в рублях, а не в тыс. рублях, как в исходных данных
+    qb:measureType rosstat:measure-1210 ;
+    rosstat:measure-1210 "0"^^xsd:decimal ; # Надо записывать число в рублях, а не в тыс. рублях, как в исходных данных
     .
 :dataset-2012-ecd5cd1b-1073-5272-af69-f9ca52956c48 qb:observation :obs-2012-ecd5cd1b-1073-5272-af69-f9ca52956c48-measure-1210 .
 
 :obs-2012-ecd5cd1b-1073-5272-af69-f9ca52956c48-measure-1230 a qb:Observation ;
     qb:dataset :dataset-2012 ;
-    qb:measureType qb-rosstat:measure-1230 ;
-    qb-rosstat:measure-1230 "0"^^xsd:decimal ;
+    qb:measureType rosstat:measure-1230 ;
+    rosstat:measure-1230 "0"^^xsd:decimal ;
     .
 :dataset-2012-ecd5cd1b-1073-5272-af69-f9ca52956c48 qb:observation :obs-2012-ecd5cd1b-1073-5272-af69-f9ca52956c48-measure-1230 .

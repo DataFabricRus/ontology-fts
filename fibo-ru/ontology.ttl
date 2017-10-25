@@ -17,6 +17,20 @@
                                                                   <http://www.omg.org/spec/LCC/20151101/Countries/ISO3166-1-CountryCodes/> .
 
 #################################################################
+#    Object Properties
+#################################################################
+
+###  https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/BusinessFacingTypes/isPercentageOf
+<https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/BusinessFacingTypes/isPercentageOf> owl:inverseOf fibo-ru:asPercentage .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fibo-ru#asPercentage
+fibo-ru:asPercentage rdf:type owl:ObjectProperty ;
+                     rdfs:range <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/BusinessFacingTypes/Percentage> ;
+                     rdfs:label "as percentage amount"@en .
+
+
+#################################################################
 #    Data properties
 #################################################################
 

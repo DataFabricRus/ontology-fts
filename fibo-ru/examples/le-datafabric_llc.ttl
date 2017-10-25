@@ -25,6 +25,7 @@
 @prefix fibo-fnd-org-lg: <https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/LegitimateOrganizations/> .
 @prefix fibo-fnd-org-org: <https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/Organizations/> .
 @prefix fibo-fnd-qt-qtu: <https://spec.edmcouncil.org/fibo/ontology/FND/Quantities/QuantitiesAndUnits/> .
+@prefix fibo-fnd-utl-bt: <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/BusinessFacingTypes/> .
 @prefix fibo-ru: <https://w3id.org/datafabric.cc/ontologies/fibo-ru#> .
 @prefix lcc-3166-1: <http://www.omg.org/spec/LCC/Countries/ISO3166-1-CountryCodes/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -106,6 +107,9 @@
     fibo-be-oac-opty:hasConstitutionalOwner :Datafabric-Share-Isaev-AS-as-Owner ;
     fibo-be-le-fbo:hasEquity :Datafabric-Share-Isaev-AS ;
 
+    ##
+    # Юрисдикция ЮЛ
+    ##
     fibo-fnd-org-fm:isDomiciledIn lcc-3166-1:RussianFederation ;
     .
 
@@ -125,7 +129,11 @@
     fibo-fnd-acc-aeq:takesForm [
         a fibo-fnd-acc-cur:MonetaryAmount ;
         fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:RussianRuble ;
-        fibo-fnd-acc-cur:hasAmount "3000.0"^^xsd:decimal
+        fibo-fnd-acc-cur:hasAmount "3000.0"^^xsd:decimal ;
+        fibo-ru:asPercentage [
+            a fibo-fnd-acc-cur:PercentageMonetaryAmount, fibo-fnd-utl-bt:Percentage ;
+            fibo-fnd-utl-bt:hasPercentageValue "30.0"^^xsd:decimal
+        ]
     ] ;
     fibo-fnd-acc-aeq:representsAnInterestIn :Datafabric ;
     fibo-be-oac-opty:isEquityHeldBy :Datafabric-Share-Isaev-AS-as-Owner ;

@@ -103,7 +103,7 @@
     ##
     # Сведения об учредителях (участниках) юридического лица
     ##
-    fibo-be-oac-opty:hasConstitutionalOwner :Datafabric-Share-Isaev-SA-as-Owner ;
+    fibo-be-oac-opty:hasConstitutionalOwner :Datafabric-Share-Isaev-AS-as-Owner ;
     fibo-be-le-fbo:hasEquity :Datafabric-Share-Isaev-AS ;
 
     fibo-fnd-org-fm:isDomiciledIn lcc-3166-1:RussianFederation ;

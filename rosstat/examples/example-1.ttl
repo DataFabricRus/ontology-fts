@@ -30,7 +30,7 @@
 # URI: <URI датасета> + <ID ЮЛ>
 :dataset-2012-ecd5cd1b-1073-5272-af69-f9ca52956c48 a qb:Slice ;
     qb:sliceStructure rosstat:SliceByYearAndOrg ;
-    dct:issued "2013-07-24"^^xsd:gYear ;
+    dct:issued "2013-07-24"^^xsd:date ;
     rosstat:refPeriod "2012"^^xsd:gYear ;
     rosstat:refOrganization <http://example.com/legalentity/ecd5cd1b-1073-5272-af69-f9ca52956c48> ;
     .

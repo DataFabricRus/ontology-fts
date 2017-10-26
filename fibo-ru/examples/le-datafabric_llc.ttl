@@ -35,6 +35,7 @@
                 fibo-be-plc-plc:PrivateCompanyWithLimitedLiability,
                 fibo-be-le-fbo:FormallyConstitutedOrganization,
                 fibo-be-le-lp:BusinessEntity,
+                fibo-be-fct-fct:Business,
                 fibo-be-le-lp:JuridicalPerson,
                 fibo-be-le-lp:LegalEntity,
                 fibo-be-le-lp:LegalPerson,
@@ -111,6 +112,15 @@
     # Юрисдикция ЮЛ
     ##
     fibo-fnd-org-fm:isDomiciledIn lcc-3166-1:RussianFederation ;
+
+    ##
+    # Сведения о видах экономической деятельности по Общероссийскому классификатору видов экономической деятельности
+    ##
+    # Сведения об основном виде деятельности
+    fibo-ru:hasPrimaryCommercialActivity fibo-ru-activities:OKVED-2014-63.11.1 ;
+
+    # Сведения о дополнительных видах деятельности
+    fibo-ru:hasCommercialActivity fibo-ru-activities:OKVED-2014-46.90 ;
     .
 
 :Datafabric-Signatory-Isaev-AS a fibo-be-le-lp:Signatory,

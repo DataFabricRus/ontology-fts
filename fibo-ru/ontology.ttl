@@ -30,6 +30,19 @@ fibo-ru:asPercentage rdf:type owl:ObjectProperty ;
                      rdfs:label "as percentage amount"@en .
 
 
+###  https://w3id.org/datafabric.cc/ontologies/fibo-ru#hasCommercialActivity
+fibo-ru:hasCommercialActivity rdf:type owl:ObjectProperty ;
+                              rdfs:subPropertyOf <https://spec.edmcouncil.org/fibo/ontology/BE/FunctionalEntities/FunctionalEntities/isCharacterizedBy> ;
+                              rdfs:range <https://spec.edmcouncil.org/fibo/ontology/BE/FunctionalEntities/FunctionalEntities/CommercialActivity> ;
+                              rdfs:label "has commercial activity"@en .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fibo-ru#hasPrimaryCommercialActivity
+fibo-ru:hasPrimaryCommercialActivity rdf:type owl:ObjectProperty ;
+                                     rdfs:subPropertyOf fibo-ru:hasCommercialActivity ;
+                                     rdfs:label "has primary commercial activity"@en .
+
+
 #################################################################
 #    Data properties
 #################################################################

@@ -1,4 +1,6 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix fibo-be-corp-corp: <https://spec.edmcouncil.org/fibo/ontology/BE/Corporations/Corporations/> .
+@prefix fibo-be-fct-fct: <https://spec.edmcouncil.org/fibo/ontology/BE/FunctionalEntities/FunctionalEntities/> .
 @prefix fibo-be-le-lp: <https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/LegalPersons/> .
 @prefix fibo-be-le-lei: <https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/LEIEntities/> .
 @prefix fibo-be-le-fbo: <https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/FormalBusinessOrganizations/> .
@@ -27,7 +29,10 @@
 @prefix fibo-fnd-qt-qtu: <https://spec.edmcouncil.org/fibo/ontology/FND/Quantities/QuantitiesAndUnits/> .
 @prefix fibo-fnd-utl-bt: <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/BusinessFacingTypes/> .
 @prefix fibo-ru: <https://w3id.org/datafabric.cc/ontologies/fibo-ru#> .
+@prefix fibo-ru-activities: <https://w3id.org/datafabric.cc/ontologies/fibo-ru-activities#> .
+@prefix fts: <https://w3id.org/datafabric.cc/ontologies/fts#> .
 @prefix lcc-3166-1: <http://www.omg.org/spec/LCC/Countries/ISO3166-1-CountryCodes/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix : <http://example.com/resources/> .
 
@@ -179,8 +184,8 @@
         fts:p23_office_number "КВАРТИРА 83" ;
         fts:p20_address_code "780000000000684" ;
         fts:p22_building_number "ДОМ 11" ;
-        fts:p98_located_at ex:Region-78 ;
-        fts:p98_located_at ex:Street-1
+        fts:p98_located_at :Region-78 ;
+        fts:p98_located_at :Street-1
     ] .
 
 ##

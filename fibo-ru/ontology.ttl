@@ -40,6 +40,7 @@ fibo-ru:hasCommercialActivity rdf:type owl:ObjectProperty ;
 ###  https://w3id.org/datafabric.cc/ontologies/fibo-ru#hasPrimaryCommercialActivity
 fibo-ru:hasPrimaryCommercialActivity rdf:type owl:ObjectProperty ;
                                      rdfs:subPropertyOf fibo-ru:hasCommercialActivity ;
+                                     rdf:type owl:FunctionalProperty ;
                                      rdfs:label "has primary commercial activity"@en .
 
 

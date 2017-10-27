@@ -130,6 +130,14 @@
     fibo-fnd-pty-rl:hasRole fibo-ru:SignatoryRoleInRFJ-02 ; # ген.директор
     .
 
+:Datafabric-Signatory-Faked-Isaev-AS a fibo-be-le-lp:Signatory,
+                                  fibo-fnd-pty-pty:PartyInRole,
+                                  fibo-fnd-pty-rl:AgentInRole,
+                                  fibo-fnd-pty-rl:ThingInRole;
+        fibo-fnd-pty-rl:isPlayedBy :Isaev-Faked-SA ;
+        fibo-fnd-pty-rl:hasRole fibo-ru:SignatoryRoleInRFJ-02 ; # ген.директор
+        .
+
 :Datafabric-Share-Isaev-AS a fibo-be-oac-cown:Shareholding,
                                 fibo-fnd-acc-aeq:StockholdersEquity,
                                 fibo-fnd-acc-aeq:Equity,
@@ -170,6 +178,22 @@
     fibo-fnd-pty-rl:playsRole :Datafabric-Signatory-Isaev-AS ;
     .
 
+:Isaev-Faked-SA a fibo-be-le-lp:NaturalPerson,
+                fibo-be-le-lp:LegalPerson,
+                fibo-fnd-aap-agt:AutonomousAgent,
+                fibo-fnd-aap-ppl:Adult,
+                fibo-fnd-aap-ppl:Person ;
+    fibo-fnd-aap-agt:hasName "Faked ИСАЕВ СЕРГЕЙ АЛЕКСАНДРОВИЧ" ;
+    fibo-fnd-aap-ppl:hasCitizenship lcc-3166-1:RussianFederation ;
+    fibo-fnd-aap-agt:isIdentifiedBy [ # ИНН
+        a fibo-ru:VATIN, fibo-fnd-aap-ppl:IdentityDocument, fibo-fnd-arr-doc:LegalDocument, fibo-fnd-arr-doc:Document ;
+        fibo-fnd-aap-agt:identifies :Isaev-Faked-SA ;
+        fibo-fnd-rel-rel:hasUniqueIdentifier "Faked 781133781387"
+    ] ;
+    fibo-be-oac-opty:holdsEquityIn :Datafabric-Share-Isaev-AS ;
+    fibo-fnd-pty-rl:playsRole :Datafabric-Signatory-Isaev-AS ;
+    .
+
 :Datafabric-Address a fibo-be-le-fbo:RegisteredAddress,
                             fibo-fnd-plc-adr:PostalAddress,
                             fibo-fnd-plc-adr:PhysicalAddress,
@@ -192,5 +216,16 @@
 :st-2 rdf:subject :Datafabric ;
     rdf:predicate fibo-fnd-rel-rel:hasLegalName ;
     rdf:object "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ДАТАФАБРИК\"" ;
-    dcterms:isVersionOf :st-2 ;
+    dcterms:isVersionOf :st-1 ;
+    dcterms:issued "2015-12-25"^^xsd:date .
+
+:st-4 rdf:subject :Datafabric ;
+    rdf:predicate fibo-be-le-fbo:hasSignatory ;
+    rdf:object :Datafabric-Signatory-Isaev-AS ;
+    dcterms:isVersionOf :st-3 ;
+    dcterms:issued "2015-12-25"^^xsd:date .
+
+:st-3 rdf:subject :Datafabric ;
+    rdf:predicate fibo-be-le-fbo:hasSignatory ;
+    rdf:object :Datafabric-Signatory-Faked-Isaev-AS ;
     dcterms:issued "2015-12-25"^^xsd:date .

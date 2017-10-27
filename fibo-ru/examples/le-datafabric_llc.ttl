@@ -33,6 +33,7 @@
 @prefix fts: <https://w3id.org/datafabric.cc/ontologies/fts#> .
 @prefix lcc-3166-1: <http://www.omg.org/spec/LCC/Countries/ISO3166-1-CountryCodes/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix : <http://example.com/resources/> .
 
@@ -71,10 +72,6 @@
         fibo-fnd-rel-rel:hasDateOfIssuance "2015-12-25"^^xsd:date
     ] ;
     fibo-be-corp-corp:hasDateOfRegistration [ # ОГРН Дата
-        a fibo-fnd-dt-fd:ExplicitDate, fibo-fnd-dt-fd:Date ;
-        fibo-fnd-dt-fd:hasDateValue "2015-12-25"^^xsd:date
-    ] ;
-    fibo-be-corp-corp:hasDateOfIncorporation [ # ОГРН Дата
         a fibo-fnd-dt-fd:ExplicitDate, fibo-fnd-dt-fd:Date ;
         fibo-fnd-dt-fd:hasDateValue "2015-12-25"^^xsd:date
     ] ;
@@ -179,6 +176,7 @@
                             fibo-fnd-plc-adr:Address ;
     fibo-fnd-rel-rel:appliesTo [
         a fts:C39_Address_Entity, fibo-fnd-plc-loc:PhysicalLocation, fibo-fnd-plc-loc:Location ;
+        rdfs:label "193231, ГОРОД САНКТ-ПЕТЕРБУРГ, улица Латышских стрелков, ДОМ 11, КОРПУС 2, КВАРТИРА 83" ;
         fts:p18_postcode "193231" ;
         fts:p21_block "КОРПУС 2" ;
         fts:p23_office_number "КВАРТИРА 83" ;

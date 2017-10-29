@@ -34,6 +34,7 @@
 @prefix lcc-3166-1: <http://www.omg.org/spec/LCC/Countries/ISO3166-1-CountryCodes/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rov: <http://www.w3.org/ns/regorg#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix : <http://example.com/resources/> .
 
@@ -86,6 +87,11 @@
         fibo-ru:hasReasonCodeOfIssuance "781101001" ;
         fibo-fnd-arr-doc:hasDateOfIssuance "2015-12-25"^^xsd:date
     ] ;
+
+    ##
+    # Сведения о статусе организации
+    ##
+    rov:orgStatus fibo-ru:RUOrgStatus-1 ;
 
     ##
     # Сведения о лице, имеющем право без доверенности действовать от имени юридического лица
@@ -160,7 +166,8 @@
                                         fibo-be-oac-opty:EntityOwner,
                                         fibo-fnd-oac-own:Owner,
                                         fibo-fnd-pty-pty:PartyInRole  ;
-    fibo-fnd-pty-rl:isPlayedBy :Isaev-SA .
+    fibo-fnd-pty-rl:isPlayedBy :Isaev-SA ;
+    fibo-be-oac-opty:holdsEquityIn :Datafabric-Share-Isaev-AS-as-Owner .
 
 :Isaev-SA a fibo-be-le-lp:NaturalPerson,
                 fibo-be-le-lp:LegalPerson,
@@ -174,7 +181,7 @@
         fibo-fnd-aap-agt:identifies :Isaev-SA ;
         fibo-fnd-rel-rel:hasUniqueIdentifier "781133781387"
     ] ;
-    fibo-be-oac-opty:holdsEquityIn :Datafabric-Share-Isaev-AS ;
+    fibo-fnd-pty-rl:playsRole :Datafabric-Share-Isaev-AS ;
     fibo-fnd-pty-rl:playsRole :Datafabric-Signatory-Isaev-AS ;
     .
 

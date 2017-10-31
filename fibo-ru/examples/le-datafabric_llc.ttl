@@ -132,6 +132,7 @@
                                  fibo-fnd-pty-pty:PartyInRole,
                                  fibo-fnd-pty-rl:AgentInRole,
                                  fibo-fnd-pty-rl:ThingInRole;
+    fibo-fnd-rel-rel:hasFormalName "Генеральный директор"@ru ;
     fibo-fnd-pty-rl:isPlayedBy :Isaev-SA ;
     fibo-fnd-pty-rl:hasRole fibo-ru:SignatoryRoleInRFJ-02 ; # ген.директор
     .
@@ -140,9 +141,10 @@
                                   fibo-fnd-pty-pty:PartyInRole,
                                   fibo-fnd-pty-rl:AgentInRole,
                                   fibo-fnd-pty-rl:ThingInRole;
-        fibo-fnd-pty-rl:isPlayedBy :Isaev-Faked-SA ;
-        fibo-fnd-pty-rl:hasRole fibo-ru:SignatoryRoleInRFJ-02 ; # ген.директор
-        .
+    fibo-fnd-rel-rel:hasFormalName "Генеральный директор"@ru ;
+    fibo-fnd-pty-rl:isPlayedBy :Isaev-Faked-SA ;
+    fibo-fnd-pty-rl:hasRole fibo-ru:SignatoryRoleInRFJ-02 ; # ген.директор
+    .
 
 :Datafabric-Share-Isaev-AS a fibo-be-oac-cown:Shareholding,
                                 fibo-fnd-acc-aeq:StockholdersEquity,

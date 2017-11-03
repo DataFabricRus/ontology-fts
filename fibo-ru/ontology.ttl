@@ -11,7 +11,6 @@
 @prefix fibo-be-ge-ge: <https://spec.edmcouncil.org/fibo/ontology/BE/GovernmentEntities/GovernmentEntities/> .
 @prefix fibo-fnd-aap-ppl: <https://spec.edmcouncil.org/fibo/ontology/FND/AgentsAndPeople/People/> .
 @prefix fibo-fnd-law-jur: <https://spec.edmcouncil.org/fibo/ontology/FND/Law/Jurisdiction/> .
-@base <https://w3id.org/datafabric.cc/ontologies/fibo-ru#> .
 
 <https://w3id.org/datafabric.cc/ontologies/fibo-ru#> rdf:type owl:Ontology ;
                                                       owl:imports <https://spec.edmcouncil.org/fibo/ontology/master/latest/BE/GovernmentEntities/GovernmentEntities/> ,
@@ -89,7 +88,6 @@ fibo-ru:RussianFederationEntity rdf:type owl:NamedIndividual ,
 ###  https://w3id.org/datafabric.cc/ontologies/fibo-ru#RussianFederationJurisdiction
 fibo-ru:RussianFederationJurisdiction rdf:type owl:NamedIndividual ,
                                                fibo-fnd-law-jur:Jurisdiction .
-
 
 ###  https://w3id.org/datafabric.cc/ontologies/fibo-ru#Russian_Organization_Status_Classification_System
 fibo-ru:RUOrgStatusClassificationSystem rdf:type owl:NamedIndividual ,
@@ -199,6 +197,31 @@ fibo-ru:RUOrgStatus-0 a owl:NamedIndividual, skos:Concept ;
 fibo-ru:RUOrgStatus-1 a owl:NamedIndividual, skos:Concept ;
     skos:prefLabel "ДЕЙСТВУЮЩАЯ"@ru ;
     skos:notation "1" ;
+    skos:inScheme fibo-ru:RUOrgStatusClassificationSystem .
+
+fibo-ru:RUOrgStatus-201 a owl:NamedIndividual, skos:Concept ;
+    skos:prefLabel "Индивидуальный предприниматель прекратил деятельность в связи с принятием им соответствующего решения"@ru ;
+    skos:notation "201" ;
+    skos:inScheme fibo-ru:RUOrgStatusClassificationSystem .
+
+fibo-ru:RUOrgStatus-202 a owl:NamedIndividual, skos:Concept ;
+    skos:prefLabel "Индивидуальный предприниматель прекратил деятельность в связи со смертью"@ru ;
+    skos:notation "202" ;
+    skos:inScheme fibo-ru:RUOrgStatusClassificationSystem .
+
+fibo-ru:RUOrgStatus-301 a owl:NamedIndividual, skos:Concept ;
+    skos:prefLabel "Крестьянское (фермерское) хозяйство прекратило деятельность по решению членов крестьянского (фермерского) хозяйства"@ru ;
+    skos:notation "301" ;
+    skos:inScheme fibo-ru:RUOrgStatusClassificationSystem .
+
+fibo-ru:RUOrgStatus-801 a owl:NamedIndividual, skos:Concept ;
+    skos:prefLabel "Регистрация индивидуального предпринимателя признана недействительной (ошибочной) на основании решения регистрирующего органа"@ru ;
+    skos:notation "801" ;
+    skos:inScheme fibo-ru:RUOrgStatusClassificationSystem .
+
+fibo-ru:RUOrgStatus-501 a owl:NamedIndividual, skos:Concept ;
+    skos:prefLabel "ФИЗИЧЕСКОЕ ЛИЦО УТРАТИЛО ГОСУДАРСТВЕННУЮ РЕГИСТРАЦИЮ В КАЧЕСТВЕ ИНДИВИДУАЛЬНОГО ПРЕДПРИНИМАТЕЛЯ НА ОСНОВАНИИ СТ.3 ФЕДЕРАЛЬНОГО ЗАКОНА ОТ 23.06.2003 №76-ФЗ"@ru ;
+    skos:notation "501" ;
     skos:inScheme fibo-ru:RUOrgStatusClassificationSystem .
 
 fibo-ru:RUSignatoryRolesClassificationSystem a owl:NamedIndividual,

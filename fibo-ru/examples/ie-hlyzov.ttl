@@ -1,0 +1,103 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix fibo-be-corp-corp: <https://spec.edmcouncil.org/fibo/ontology/BE/Corporations/Corporations/> .
+@prefix fibo-be-fct-fct: <https://spec.edmcouncil.org/fibo/ontology/BE/FunctionalEntities/FunctionalEntities/> .
+@prefix fibo-be-le-lp: <https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/LegalPersons/> .
+@prefix fibo-be-le-lei: <https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/LEIEntities/> .
+@prefix fibo-be-le-fbo: <https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/FormalBusinessOrganizations/> .
+@prefix fibo-be-plc-plc: <https://spec.edmcouncil.org/fibo/ontology/BE/PrivateLimitedCompanies/PrivateLimitedCompanies/> .
+@prefix fibo-be-oac-cown: <https://spec.edmcouncil.org/fibo/ontology/BE/OwnershipAndControl/CorporateOwnership/> .
+@prefix fibo-be-oac-opty: <https://spec.edmcouncil.org/fibo/ontology/BE/OwnershipAndControl/OwnershipParties/> .
+@prefix fibo-be-sps-sps: <https://spec.edmcouncil.org/fibo/ontology/BE/SoleProprietorships/SoleProprietorships/> .
+@prefix fibo-fnd-aap-agt: <https://spec.edmcouncil.org/fibo/ontology/FND/AgentsAndPeople/Agents/> .
+@prefix fibo-fnd-aap-ppl: <https://spec.edmcouncil.org/fibo/ontology/FND/AgentsAndPeople/Agents/People/> .
+@prefix fibo-fnd-acc-aeq: <https://spec.edmcouncil.org/fibo/ontology/FND/Accounting/AccountingEquity/> .
+@prefix fibo-fnd-acc-cur: <https://spec.edmcouncil.org/fibo/ontology/FND/Accounting/CurrencyAmount/> .
+@prefix fibo-fnd-acc-4217: <https://spec.edmcouncil.org/fibo/ontology/FND/Accounting/ISO4217-CurrencyCodes/> .
+@prefix fibo-fnd-arr-id: <https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/IdentifiersAndIndices/> .
+@prefix fibo-fnd-arr-doc: <https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Documents/> .
+@prefix fibo-fnd-dt-fd: <https://spec.edmcouncil.org/fibo/ontology/FND/DatesAndTimes/FinancialDates/> .
+@prefix fibo-fnd-law-lcap: <https://spec.edmcouncil.org/fibo/ontology/FND/Law/LegalCapacity/> .
+@prefix fibo-fnd-rel-rel: <https://spec.edmcouncil.org/fibo/ontology/FND/Relations/Relations/> .
+@prefix fibo-fnd-plc-adr: <https://spec.edmcouncil.org/fibo/ontology/FND/Places/Addresses/> .
+@prefix fibo-fnd-plc-cty: <https://spec.edmcouncil.org/fibo/ontology/FND/Places/Countries/> .
+@prefix fibo-fnd-plc-loc: <https://spec.edmcouncil.org/fibo/ontology/FND/Places/Locations/> .
+@prefix fibo-fnd-pty-rl: <https://spec.edmcouncil.org/fibo/ontology/FND/Parties/Roles/> .
+@prefix fibo-fnd-pty-pty: <https://spec.edmcouncil.org/fibo/ontology/FND/Parties/Parties/> .
+@prefix fibo-fnd-oac-own: <https://spec.edmcouncil.org/fibo/ontology/FND/OwnershipAndControl/Ownership/> .
+@prefix fibo-fnd-org-fm: <https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/> .
+@prefix fibo-fnd-org-lg: <https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/LegitimateOrganizations/> .
+@prefix fibo-fnd-org-org: <https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/Organizations/> .
+@prefix fibo-fnd-qt-qtu: <https://spec.edmcouncil.org/fibo/ontology/FND/Quantities/QuantitiesAndUnits/> .
+@prefix fibo-fnd-utl-bt: <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/BusinessFacingTypes/> .
+@prefix fibo-ru: <https://w3id.org/datafabric.cc/ontologies/fibo-ru#> .
+@prefix fibo-ru-activities: <https://w3id.org/datafabric.cc/ontologies/fibo-ru-activities#> .
+@prefix fts: <https://w3id.org/datafabric.cc/ontologies/fts#> .
+@prefix lcc-3166-1: <http://www.omg.org/spec/LCC/Countries/ISO3166-1-CountryCodes/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rov: <http://www.w3.org/ns/regorg#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://example.com/resources/> .
+
+:IE-Hlyzov a fibo-be-sps-sps:SoleProprietorship ;
+
+    ##
+    # Наименование
+    ##
+    fibo-fnd-rel-rel:hasLegalName "ХЛЫЗОВ ЕВГЕНИЙ ОЛЕГОВИЧ"@ru ;
+
+    ##
+    # Сведения о регистрации
+    ##
+    fibo-fnd-aap-agt:isIdentifiedBy [ # ОГРНИП
+        a fibo-be-corp-corp:RegistrationIdentifier,
+            fibo-be-le-fbo:OrganizationIdentifier,
+            fibo-fnd-arr-id:Identifier ;
+        fibo-fnd-aap-agt:identifies :IE-Hlyzov ;
+        fibo-fnd-rel-rel:hasUniqueIdentifier "314784721100136" ;
+        fibo-fnd-rel-rel:hasDateOfIssuance "2014-07-30"^^xsd:date
+    ] ;
+    fibo-be-corp-corp:hasDateOfRegistration [ # ОГРНИП Дата
+        a fibo-fnd-dt-fd:ExplicitDate, fibo-fnd-dt-fd:Date ;
+        fibo-fnd-dt-fd:hasDateValue "2014-07-30"^^xsd:date
+    ] ;
+
+    ##
+    # Сведения об учете в налоговом органе
+    ##
+    fibo-fnd-aap-agt:isIdentifiedBy [ # ИНН
+        a fibo-ru:VATIN, fibo-fnd-arr-id:Identifier ;
+        fibo-fnd-aap-agt:identifies :IE-Hlyzov ;
+        fibo-fnd-rel-rel:hasUniqueIdentifier "5505055936460" ;
+        fibo-fnd-arr-doc:hasDateOfIssuance "2014-07-30"^^xsd:date
+    ] ;
+
+    ###
+    # Сведения о владельце
+    ###
+    fibo-fnd-oac-oac:isOwnedAndControlledBy :Hlyzov-EO ;
+
+    ##
+    # Сведения о статусе организации
+    ##
+    rov:orgStatus fibo-ru:RUOrgStatus-0 ;
+
+    ##
+    # Юрисдикция ЮЛ
+    ##
+    fibo-fnd-org-fm:isDomiciledIn lcc-3166-1:RussianFederation ;
+
+    ##
+    # Сведения о видах экономической деятельности по Общероссийскому классификатору видов экономической деятельности
+    ##
+    # Сведения об основном виде деятельности
+    fibo-ru:hasPrimaryCommercialActivity fibo-ru-activities:OKVED-2014-63.11.1 ;
+
+    # Сведения о дополнительных видах деятельности
+    fibo-ru:hasCommercialActivity fibo-ru-activities:OKVED-2014-46.90 ;
+    .
+
+:Hlyzov-EO a fibo-be-le-lp:NaturalPerson ;
+    fibo-fnd-aap-agt:hasName "ХЛЫЗОВ ЕВГЕНИЙ ОЛЕГОВИЧ" ;
+    fibo-fnd-oac-oac:ownsAndControls :IE-Hlyzov ;
+    .

@@ -1,0 +1,71 @@
+# baseURI: https://w3id.org/datafabric.cc/ontologies/addresses
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/latest/FND/Places/Addresses/
+# imports: https://w3id.org/datafabric.cc/ontologies/fts#
+
+@prefix : <https://w3id.org/datafabric.cc/ontologies/addresses#> .
+@prefix fts: <https://w3id.org/datafabric.cc/ontologies/fts#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/datafabric.cc/ontologies/addresses>
+  rdf:type owl:Ontology ;
+  owl:imports <https://spec.edmcouncil.org/fibo/ontology/master/latest/FND/Places/Addresses/> ;
+  owl:imports fts: ;
+  owl:versionInfo "Created with TopBraid Composer" ;
+.
+:FIASCityCodeElement
+  rdf:type owl:Class ;
+  rdfs:subClassOf :FIASCodeElement ;
+.
+:FIASCode
+  rdf:type owl:Class ;
+  rdfs:subClassOf owl:Thing ;
+  rdfs:subClassOf <https://spec.edmcouncil.org/fibo/ontology/FND/Places/Addresses/Address> ;
+.
+:FIASCodeElement
+  rdf:type owl:Class ;
+  rdfs:subClassOf owl:Thing ;
+.
+:FIASDistrictCodeElement
+  rdf:type owl:Class ;
+  rdfs:subClassOf :FIASCodeElement ;
+.
+:FIASHouseCodeElement
+  rdf:type owl:Class ;
+  rdfs:subClassOf :FIASCodeElement ;
+.
+:FIASLocalityCodeElement
+  rdf:type owl:Class ;
+  rdfs:subClassOf :FIASCodeElement ;
+.
+:FIASPlanningStructureCodeElement
+  rdf:type owl:Class ;
+  rdfs:subClassOf :FIASCodeElement ;
+.
+:FIASRFRegionCodeElement
+  rdf:type owl:Class ;
+  rdfs:subClassOf :FIASCodeElement ;
+.
+:FIASRoomCodeElement
+  rdf:type owl:Class ;
+  rdfs:subClassOf :FIASCodeElement ;
+.
+:FIASSteadCodeElement
+  rdf:type owl:Class ;
+  rdfs:subClassOf :FIASCodeElement ;
+.
+:FIASStreetCodeElement
+  rdf:type owl:Class ;
+  rdfs:subClassOf :FIASCodeElement ;
+.
+:preceededByFIASCodeElement
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain :FIASCodeElement ;
+  rdfs:range :FIASCodeElement ;
+.
+fts:p113_part_of
+  rdfs:domain :FIASCode ;
+  rdfs:range :FIASCodeElement ;
+.

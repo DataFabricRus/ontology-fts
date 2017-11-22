@@ -38,30 +38,31 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix : <http://example.com/resources/> .
 
-:Datafabric a fibo-fnd-org-fm:FormalOrganization ;
+:ITMO a fibo-fnd-org-fm:FormalOrganization ;
 
     ##
     # Наименование
     ##
-    fibo-fnd-rel-rel:hasLegalName "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ДАТАФАБРИК\""@ru ;
-    fibo-fnd-rel-rel:hasAlias "ООО \"ДАТАФАБРИК\""@ru ;
+    fibo-fnd-rel-rel:hasLegalName "ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ АВТОНОМНОЕ ОБРАЗОВАТЕЛЬНОЕ УЧРЕЖДЕНИЕ ВЫСШЕГО ОБРАЗОВАНИЯ
+        \"САНКТ-ПЕТЕРБУРГСКИЙ НАЦИОНАЛЬНЫЙ ИССЛЕДОВАТЕЛЬСКИЙ УНИВЕРСИТЕТ ИНФОРМАЦИОННЫХ ТЕХНОЛОГИЙ, МЕХАНИКИ И ОПТИКИ\""@ru ;
+    fibo-fnd-rel-rel:hasAlias "УНИВЕРСИТЕТ ИТМО"@ru ;
 
     ##
     # Адрес (место нахождения)
     ##
-    fibo-be-le-fbo:hasRegisteredAddress :Datafabric-Address ;
+    fibo-be-le-fbo:hasRegisteredAddress :ITMO-Address ;
 
     ##
     # Сведения о регистрации
     ##
     fibo-fnd-aap-agt:isIdentifiedBy [ # ОГРН
         a fibo-be-corp-corp:RegistrationIdentifier ;
-        fibo-fnd-aap-agt:identifies :Datafabric ;
-        fibo-fnd-rel-rel:hasUniqueIdentifier "1157847449121" ;
-        fibo-fnd-rel-rel:hasDateOfIssuance "2015-12-25"^^xsd:date
+        fibo-fnd-aap-agt:identifies :ITMO ;
+        fibo-fnd-rel-rel:hasUniqueIdentifier "1027806868154" ;
+        fibo-fnd-rel-rel:hasDateOfIssuance "2002-10-24"^^xsd:date
     ] ;
     fibo-be-corp-corp:hasDateOfRegistration [ # ОГРН Дата
-        fibo-fnd-dt-fd:hasDateValue "2015-12-25"^^xsd:date
+        fibo-fnd-dt-fd:hasDateValue "2002-10-24"^^xsd:date
     ] ;
 
     ##
@@ -69,10 +70,10 @@
     ##
     fibo-fnd-aap-agt:isIdentifiedBy [ # ИНН
         a fibo-ru:VATIN ;
-        fibo-fnd-aap-agt:identifies :Datafabric ;
-        fibo-fnd-rel-rel:hasUniqueIdentifier "7811269044" ;
-        fibo-ru:hasReasonCodeOfIssuance "781101001" ;
-        fibo-fnd-arr-doc:hasDateOfIssuance "2015-12-25"^^xsd:date
+        fibo-fnd-aap-agt:identifies :ITMO ;
+        fibo-fnd-rel-rel:hasUniqueIdentifier "7813045547" ;
+        fibo-ru:hasReasonCodeOfIssuance "781301001" ;
+        fibo-fnd-arr-doc:hasDateOfIssuance "1990-07-02"^^xsd:date
     ] ;
 
     ##
@@ -83,22 +84,13 @@
     ##
     # Сведения о лице, имеющем право без доверенности действовать от имени юридического лица
     ##
-    fibo-be-le-fbo:hasSignatory :Datafabric-Signatory-Isaev-AS ;
-
-    ##
-    # Сведения об уставном капитале
-    ##
-    fibo-be-corp-corp:hasIssuedCapital [
-        a fibo-fnd-acc-cur:AmountOfMoney ;
-        fibo-fnd-acc-cur:hasBaseMoneyUnit fibo-fnd-acc-4217:RussianRuble ;
-        fibo-fnd-qt-qtu:hasNumericValue "10000.0"^^xsd:decimal
-    ] ;
+    fibo-be-le-fbo:hasSignatory :ITMO-Signatory-Vasiliev-VN ;
 
     ##
     # Сведения об учредителях (участниках) юридического лица
     ##
-    fibo-be-oac-opty:hasConstitutionalOwner :Datafabric-Share-Isaev-AS-as-Owner ;
-    fibo-be-le-fbo:hasEquity :Datafabric-Share-Isaev-AS ;
+    fibo-be-oac-opty:hasConstitutionalOwner :ITMO-Share-RF-as-Owner ;
+    fibo-be-le-fbo:hasEquity :ITMO-Share-RF ;
 
     ##
     # Юрисдикция ЮЛ
@@ -109,94 +101,53 @@
     # Сведения о видах экономической деятельности по Общероссийскому классификатору видов экономической деятельности
     ##
     # Сведения об основном виде деятельности
-    fibo-ru:hasPrimaryCommercialActivity fibo-ru-activities:OKVED-2014-63.11.1 ;
+    fibo-ru:hasPrimaryCommercialActivity fibo-ru-activities:OKVED-2014-85.22 ;
 
     # Сведения о дополнительных видах деятельности
-    fibo-ru:hasCommercialActivity fibo-ru-activities:OKVED-2014-46.90 ;
+    fibo-ru:hasCommercialActivity fibo-ru-activities:OKVED-2014-41.20 ;
     .
 
-:Datafabric-Signatory-Isaev-AS a fibo-be-le-lp:Signatory ;
-    fibo-fnd-rel-rel:hasFormalName "Генеральный директор"@ru ;
-    fibo-fnd-pty-rl:isPlayedBy :Isaev-SA ;
+:ITMO-Signatory-Vasiliev-VN a fibo-be-le-lp:Signatory ;
+    fibo-fnd-rel-rel:hasFormalName "Ректор"@ru ;
+    fibo-fnd-pty-rl:isPlayedBy :Vasiliev-VN ;
     fibo-fnd-pty-rl:hasRole fibo-ru:SignatoryRoleInRFJ-02 ; # ген.директор
     .
 
-:Datafabric-Signatory-Faked-Isaev-AS a fibo-be-le-lp:Signatory ;
-    fibo-fnd-rel-rel:hasFormalName "Генеральный директор"@ru ;
-    fibo-fnd-pty-rl:isPlayedBy :Isaev-Faked-SA ;
-    fibo-fnd-pty-rl:hasRole fibo-ru:SignatoryRoleInRFJ-02 ; # ген.директор
-    .
-
-:Datafabric-Share-Isaev-AS a fibo-be-oac-cown:Shareholding ;
-    fibo-fnd-acc-aeq:takesForm [
-        a fibo-fnd-acc-cur:MonetaryAmount ;
-        fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:RussianRuble ;
-        fibo-fnd-acc-cur:hasAmount "3000.0"^^xsd:decimal ;
-        fibo-ru:asPercentage [
-            fibo-fnd-utl-bt:hasPercentageValue "30.0"^^xsd:decimal
-        ]
-    ] ;
-    fibo-fnd-acc-aeq:representsAnInterestIn :Datafabric ;
-    fibo-be-oac-opty:isEquityHeldBy :Datafabric-Share-Isaev-AS-as-Owner ;
-    .
-
-:Datafabric-Share-Isaev-AS-as-Owner a fibo-be-oac-opty:ConstitutionalOwner ;
-    fibo-fnd-pty-rl:isPlayedBy :Isaev-SA ;
-    fibo-be-oac-opty:holdsEquityIn :Datafabric-Share-Isaev-AS-as-Owner .
-
-:Isaev-SA a fibo-be-le-lp:NaturalPerson ;
-    fibo-fnd-aap-agt:hasName "ИСАЕВ СЕРГЕЙ АЛЕКСАНДРОВИЧ" ;
+:Vasiliev-VN a fibo-be-le-lp:NaturalPerson ;
+    fibo-fnd-aap-agt:hasName "ВАСИЛЬЕВ ВЛАДИМИР НИКОЛАЕВИЧ" ;
     fibo-fnd-aap-ppl:hasCitizenship lcc-3166-1:RussianFederation ;
     fibo-fnd-aap-agt:isIdentifiedBy [ # ИНН
         a fibo-ru:VATIN ;
-        fibo-fnd-aap-agt:identifies :Isaev-SA ;
-        fibo-fnd-rel-rel:hasUniqueIdentifier "781133781387"
+        fibo-fnd-aap-agt:identifies :Vasiliev-VN ;
+        fibo-fnd-rel-rel:hasUniqueIdentifier "782570622166"
     ] ;
-    fibo-fnd-pty-rl:playsRole :Datafabric-Share-Isaev-AS ;
-    fibo-fnd-pty-rl:playsRole :Datafabric-Signatory-Isaev-AS ;
+    fibo-fnd-pty-rl:playsRole :ITMO-Signatory-Vasiliev-VN ;
     .
 
-:Isaev-Faked-SA a fibo-be-le-lp:NaturalPerson ;
-    fibo-fnd-aap-agt:hasName "Faked ИСАЕВ СЕРГЕЙ АЛЕКСАНДРОВИЧ" ;
-    fibo-fnd-aap-ppl:hasCitizenship lcc-3166-1:RussianFederation ;
-    fibo-fnd-aap-agt:isIdentifiedBy [ # ИНН
-        a fibo-ru:VATIN ;
-        fibo-fnd-aap-agt:identifies :Isaev-Faked-SA ;
-        fibo-fnd-rel-rel:hasUniqueIdentifier "Faked 781133781387"
-    ] ;
-    fibo-be-oac-opty:holdsEquityIn :Datafabric-Share-Isaev-AS ;
-    fibo-fnd-pty-rl:playsRole :Datafabric-Signatory-Isaev-AS ;
-    .
+:ITMO-Share-RF a fibo-be-oac-cown:Shareholding ;
+    fibo-fnd-acc-aeq:representsAnInterestIn :ITMO ;
+    fibo-be-oac-opty:isEquityHeldBy :ITMO-Share-RF-as-Owner ;
+    fibo-fnd-rel-rel:isManagedBy :ITMO-Share-RF-isManagedBy-MINOBR .
 
-:Datafabric-Address a fibo-be-le-fbo:RegisteredAddress ;
+:ITMO-Share-RF-isManagedBy-MINOBR a fibo-ru:Attorney ;
+        fibo-fnd-pty-rl:isPlayedBy :MINOBR ;
+        fibo-fnd-rel-rel:manages :ITMO-Share-RF .
+
+:ITMO-Share-RF-as-Owner a fibo-be-oac-opty:ConstitutionalOwner ;
+    fibo-fnd-pty-rl:isPlayedBy :PublicBody-RF ;
+    fibo-be-oac-opty:holdsEquityIn :ITMO-Share-RF .
+
+:MINOBR a fibo-fnd-org-fm:FormalOrganization ;
+    fibo-fnd-rel-rel:hasLegalName "МИНИСТЕРСТВО ОБРАЗОВАНИЯ И НАУКИ РОССИЙСКОЙ ФЕДЕРАЦИИ"@ru ;
+    fibo-fnd-pty-rl:playsRole :ITMO-Share-RF-isManagedBy-MINOBR .
+
+:ITMO-Address a fibo-be-le-fbo:RegisteredAddress ;
     fibo-fnd-rel-rel:appliesTo [
         a fts:C39_Address_Entity, fibo-fnd-plc-loc:PhysicalLocation ;
-        rdfs:label "193231, ГОРОД САНКТ-ПЕТЕРБУРГ, улица Латышских стрелков, ДОМ 11, КОРПУС 2, КВАРТИРА 83" ;
-        fts:p18_postcode "193231" ;
-        fts:p21_block "КОРПУС 2" ;
-        fts:p23_office_number "КВАРТИРА 83" ;
+        rdfs:label "197101, ГОРОД САНКТ-ПЕТЕРБУРГ, проспект Кронверкский, 49" ;
+        fts:p18_postcode "197101" ;
         fts:p20_address_code "780000000000684" ;
-        fts:p22_building_number "ДОМ 11" ;
+        fts:p22_building_number "49" ;
         fts:p98_located_at :Region-78 ;
         fts:p98_located_at :Street-1
     ] .
-
-##
-# Предыдущие версии (исторические связи) данных
-##
-:st-2 rdf:subject :Datafabric ;
-    rdf:predicate fibo-fnd-rel-rel:hasLegalName ;
-    rdf:object "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ДАТАФАБРИК\"" ;
-    dcterms:isVersionOf :st-1 ;
-    dcterms:issued "2015-12-25"^^xsd:date .
-
-:st-4 rdf:subject :Datafabric ;
-    rdf:predicate fibo-be-le-fbo:hasSignatory ;
-    rdf:object :Datafabric-Signatory-Isaev-AS ;
-    dcterms:isVersionOf :st-3 ;
-    dcterms:issued "2015-12-25"^^xsd:date .
-
-:st-3 rdf:subject :Datafabric ;
-    rdf:predicate fibo-be-le-fbo:hasSignatory ;
-    rdf:object :Datafabric-Signatory-Faked-Isaev-AS ;
-    dcterms:issued "2015-12-25"^^xsd:date .

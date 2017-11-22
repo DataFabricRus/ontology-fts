@@ -11,6 +11,7 @@
 @prefix fibo-be-ge-ge: <https://spec.edmcouncil.org/fibo/ontology/BE/GovernmentEntities/GovernmentEntities/> .
 @prefix fibo-fnd-aap-ppl: <https://spec.edmcouncil.org/fibo/ontology/FND/AgentsAndPeople/People/> .
 @prefix fibo-fnd-law-jur: <https://spec.edmcouncil.org/fibo/ontology/FND/Law/Jurisdiction/> .
+@base <https://w3id.org/datafabric.cc/ontologies/fibo-ru#> .
 
 <https://w3id.org/datafabric.cc/ontologies/fibo-ru#> rdf:type owl:Ontology ;
                                                       owl:imports <https://spec.edmcouncil.org/fibo/ontology/master/latest/BE/GovernmentEntities/GovernmentEntities/> ,
@@ -59,6 +60,14 @@ fibo-ru:hasReasonCodeOfIssuance rdf:type owl:DatatypeProperty ;
 #    Classes
 #################################################################
 
+###  https://w3id.org/datafabric.cc/ontologies/fibo-ru#Attorney
+fibo-ru:Attorney rdf:type owl:Class ;
+                 rdfs:subClassOf <https://spec.edmcouncil.org/fibo/ontology/FND/Parties/Parties/PartyInRole> ;
+                 rdfs:isDefinedBy <https://w3id.org/datafabric.cc/ontologies/fibo-ru#> ;
+                 rdfs:label "attorney"@en ;
+                 skos:definition "In general, an agent authorized to act in legal capacity for a principal, such as an attorney-in-fact. In specific, a lawyer properly called an attorney-at-law."@en .
+
+
 ###  https://w3id.org/datafabric.cc/ontologies/fibo-ru#SignatoryRoleInRFJ
 fibo-ru:SignatoryRoleInRFJ rdf:type owl:Class ;
                            rdfs:subClassOf <https://spec.edmcouncil.org/fibo/ontology/FND/Parties/Roles/Role> .
@@ -79,6 +88,218 @@ fibo-ru:VATIN rdf:type owl:Class ;
 #    Individuals
 #################################################################
 
+###  https://w3id.org/datafabric.cc/ontologies/fibo-ru#RUOrgStatus-0
+fibo-ru:RUOrgStatus-0 rdf:type owl:NamedIndividual ,
+                               skos:Concept ;
+                      skos:inScheme fibo-ru:RUOrgStatusClassificationSystem ;
+                      skos:notation "0" ;
+                      skos:prefLabel "ЛИКВИДИРОВАНА"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fibo-ru#RUOrgStatus-1
+fibo-ru:RUOrgStatus-1 rdf:type owl:NamedIndividual ,
+                               skos:Concept ;
+                      skos:inScheme fibo-ru:RUOrgStatusClassificationSystem ;
+                      skos:notation "1" ;
+                      skos:prefLabel "ДЕЙСТВУЮЩАЯ"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fibo-ru#RUOrgStatus-101
+fibo-ru:RUOrgStatus-101 rdf:type owl:NamedIndividual ,
+                                 skos:Concept ;
+                        skos:inScheme fibo-ru:RUOrgStatusClassificationSystem ;
+                        skos:notation "101" ;
+                        skos:prefLabel "НАХОДИТСЯ В СТАДИИ ЛИКВИДАЦИИ"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fibo-ru#RUOrgStatus-105
+fibo-ru:RUOrgStatus-105 rdf:type owl:NamedIndividual ,
+                                 skos:Concept ;
+                        skos:inScheme fibo-ru:RUOrgStatusClassificationSystem ;
+                        skos:notation "105" ;
+                        skos:prefLabel "ПРИНЯТО РЕШЕНИЕ О ПРЕДСТОЯЩЕМ ИСКЛЮЧЕНИИ НЕДЕЙСТВУЮЩЕГО ЮЛ ИЗ ЕГРЮЛ"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fibo-ru#RUOrgStatus-121
+fibo-ru:RUOrgStatus-121 rdf:type owl:NamedIndividual ,
+                                 skos:Concept ;
+                        skos:inScheme fibo-ru:RUOrgStatusClassificationSystem ;
+                        skos:notation "121" ;
+                        skos:prefLabel "НАХОДИТСЯ В ПРОЦЕССЕ РЕОРГАНИЗАЦИИ В ФОРМЕ ПРЕОБРАЗОВАНИЯ"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fibo-ru#RUOrgStatus-122
+fibo-ru:RUOrgStatus-122 rdf:type owl:NamedIndividual ,
+                                 skos:Concept ;
+                        skos:inScheme fibo-ru:RUOrgStatusClassificationSystem ;
+                        skos:notation "122" ;
+                        skos:prefLabel "НАХОДИТСЯ В ПРОЦЕССЕ РЕОРГАНИЗАЦИИ В ФОРМЕ СЛИЯНИЯ"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fibo-ru#RUOrgStatus-123
+fibo-ru:RUOrgStatus-123 rdf:type owl:NamedIndividual ,
+                                 skos:Concept ;
+                        skos:inScheme fibo-ru:RUOrgStatusClassificationSystem ;
+                        skos:notation "123" ;
+                        skos:prefLabel "НАХОДИТСЯ В ПРОЦЕССЕ РЕОРГАНИЗАЦИИ В ФОРМЕ РАЗДЕЛЕНИЯ"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fibo-ru#RUOrgStatus-124
+fibo-ru:RUOrgStatus-124 rdf:type owl:NamedIndividual ,
+                                 skos:Concept ;
+                        skos:inScheme fibo-ru:RUOrgStatusClassificationSystem ;
+                        skos:notation "124" ;
+                        skos:prefLabel "НАХОДИТСЯ В ПРОЦЕССЕ РЕОРГАНИЗАЦИИ В ФОРМЕ ПРИСОЕДИНЕНИЯ К ДРУГОМУ"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fibo-ru#RUOrgStatus-125
+fibo-ru:RUOrgStatus-125 rdf:type owl:NamedIndividual ,
+                                 skos:Concept ;
+                        skos:inScheme fibo-ru:RUOrgStatusClassificationSystem ;
+                        skos:notation "125" ;
+                        skos:prefLabel "НАХОДИТСЯ В ПРОЦЕССЕ РЕОРГАНИЗАЦИИ В ФОРМЕ РАЗДЕЛЕНИЯ, ОСУЩЕСТВЛЯЕМОЙ ОДНОВРЕМЕННО С ПРИСОЕДИНЕНИЕМ"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fibo-ru#RUOrgStatus-126
+fibo-ru:RUOrgStatus-126 rdf:type owl:NamedIndividual ,
+                                 skos:Concept ;
+                        skos:inScheme fibo-ru:RUOrgStatusClassificationSystem ;
+                        skos:notation "126" ;
+                        skos:prefLabel "НАХОДИТСЯ В ПРОЦЕССЕ РЕОРГАНИЗАЦИИ В ФОРМЕ РАЗДЕЛЕНИЯ, ОСУЩЕСТВЛЯЕМОЙ ОДНОВРЕМЕННО СО СЛИЯНИЕМ"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fibo-ru#RUOrgStatus-127
+fibo-ru:RUOrgStatus-127 rdf:type owl:NamedIndividual ,
+                                 skos:Concept ;
+                        skos:inScheme fibo-ru:RUOrgStatusClassificationSystem ;
+                        skos:notation "127" ;
+                        skos:prefLabel "НАХОДИТСЯ В ПРОЦЕССЕ РЕОРГАНИЗАЦИИ В ФОРМЕ СЛИЯНИЯ, ОСУЩЕСТВЛЯЕМОЙ ОДНОВРЕМЕННО С РАЗДЕЛЕНИЕМ"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fibo-ru#RUOrgStatus-128
+fibo-ru:RUOrgStatus-128 rdf:type owl:NamedIndividual ,
+                                 skos:Concept ;
+                        skos:inScheme fibo-ru:RUOrgStatusClassificationSystem ;
+                        skos:notation "128" ;
+                        skos:prefLabel "НАХОДИТСЯ В ПРОЦЕССЕ РЕОРГАНИЗАЦИИ В ФОРМЕ СЛИЯНИЯ, ОСУЩЕСТВЛЯЕМОЙ ОДНОВРЕМЕННО С ВЫДЕЛЕНИЕМ"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fibo-ru#RUOrgStatus-131
+fibo-ru:RUOrgStatus-131 rdf:type owl:NamedIndividual ,
+                                 skos:Concept ;
+                        skos:inScheme fibo-ru:RUOrgStatusClassificationSystem ;
+                        skos:notation "131" ;
+                        skos:prefLabel "НАХОДИТСЯ В ПРОЦЕССЕ РЕОРГАНИЗАЦИИ В ФОРМЕ ВЫДЕЛЕНИЯ"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fibo-ru#RUOrgStatus-132
+fibo-ru:RUOrgStatus-132 rdf:type owl:NamedIndividual ,
+                                 skos:Concept ;
+                        skos:inScheme fibo-ru:RUOrgStatusClassificationSystem ;
+                        skos:notation "132" ;
+                        skos:prefLabel "НАХОДИТСЯ В ПРОЦЕССЕ РЕОРГАНИЗАЦИИ В ФОРМЕ ПРИСОЕДИНЕНИЯ К НЕМУ ДРУГИХ ЮЛ"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fibo-ru#RUOrgStatus-133
+fibo-ru:RUOrgStatus-133 rdf:type owl:NamedIndividual ,
+                                 skos:Concept ;
+                        skos:inScheme fibo-ru:RUOrgStatusClassificationSystem ;
+                        skos:notation "133" ;
+                        skos:prefLabel "НАХОДИТСЯ В ПРОЦЕССЕ РЕОРГАНИЗАЦИИ В ФОРМЕ ПРИСОЕДИНЕНИЯ, ОСУЩЕСТВЛЯЕМОЙ ОДНОВРЕМЕННО С РАЗДЕЛЕНИЕМ"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fibo-ru#RUOrgStatus-134
+fibo-ru:RUOrgStatus-134 rdf:type owl:NamedIndividual ,
+                                 skos:Concept ;
+                        skos:inScheme fibo-ru:RUOrgStatusClassificationSystem ;
+                        skos:notation "134" ;
+                        skos:prefLabel "НАХОДИТСЯ В ПРОЦЕССЕ РЕОРГАНИЗАЦИИ В ФОРМЕ ПРИСОЕДИНЕНИЯ, ОСУЩЕСТВЛЯЕМОЙ ОДНОВРЕМЕННО С ВЫДЕЛЕНИЕМ"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fibo-ru#RUOrgStatus-135
+fibo-ru:RUOrgStatus-135 rdf:type owl:NamedIndividual ,
+                                 skos:Concept ;
+                        skos:inScheme fibo-ru:RUOrgStatusClassificationSystem ;
+                        skos:notation "135" ;
+                        skos:prefLabel "НАХОДИТСЯ В ПРОЦЕССЕ РЕОРГАНИЗАЦИИ В ФОРМЕ ВЫДЕЛЕНИЯ, ОСУЩЕСТВЛЯЕМОЙ ОДНОВРЕМЕННО СО СЛИЯНИЕМ"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fibo-ru#RUOrgStatus-136
+fibo-ru:RUOrgStatus-136 rdf:type owl:NamedIndividual ,
+                                 skos:Concept ;
+                        skos:inScheme fibo-ru:RUOrgStatusClassificationSystem ;
+                        skos:notation "136" ;
+                        skos:prefLabel "НАХОДИТСЯ В ПРОЦЕССЕ РЕОРГАНИЗАЦИИ В ФОРМЕ ВЫДЕЛЕНИЯ, ОСУЩЕСТВЛЯЕМОЙ ОДНОВРЕМЕННО С ПРИСОЕДИНЕНИЕМ"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fibo-ru#RUOrgStatus-201
+fibo-ru:RUOrgStatus-201 rdf:type owl:NamedIndividual ,
+                                 skos:Concept ;
+                        skos:inScheme fibo-ru:RUOrgStatusClassificationSystem ;
+                        skos:notation "201" ;
+                        skos:prefLabel "Индивидуальный предприниматель прекратил деятельность в связи с принятием им соответствующего решения"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fibo-ru#RUOrgStatus-202
+fibo-ru:RUOrgStatus-202 rdf:type owl:NamedIndividual ,
+                                 skos:Concept ;
+                        skos:inScheme fibo-ru:RUOrgStatusClassificationSystem ;
+                        skos:notation "202" ;
+                        skos:prefLabel "Индивидуальный предприниматель прекратил деятельность в связи со смертью"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fibo-ru#RUOrgStatus-301
+fibo-ru:RUOrgStatus-301 rdf:type owl:NamedIndividual ,
+                                 skos:Concept ;
+                        skos:inScheme fibo-ru:RUOrgStatusClassificationSystem ;
+                        skos:notation "301" ;
+                        skos:prefLabel "Крестьянское (фермерское) хозяйство прекратило деятельность по решению членов крестьянского (фермерского) хозяйства"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fibo-ru#RUOrgStatus-501
+fibo-ru:RUOrgStatus-501 rdf:type owl:NamedIndividual ,
+                                 skos:Concept ;
+                        skos:inScheme fibo-ru:RUOrgStatusClassificationSystem ;
+                        skos:notation "501" ;
+                        skos:prefLabel "ФИЗИЧЕСКОЕ ЛИЦО УТРАТИЛО ГОСУДАРСТВЕННУЮ РЕГИСТРАЦИЮ В КАЧЕСТВЕ ИНДИВИДУАЛЬНОГО ПРЕДПРИНИМАТЕЛЯ НА ОСНОВАНИИ СТ.3 ФЕДЕРАЛЬНОГО ЗАКОНА ОТ 23.06.2003 №76-ФЗ"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fibo-ru#RUOrgStatus-701
+fibo-ru:RUOrgStatus-701 rdf:type owl:NamedIndividual ,
+                                 skos:Concept ;
+                        skos:inScheme fibo-ru:RUOrgStatusClassificationSystem ;
+                        skos:notation "701" ;
+                        skos:prefLabel "РЕГИСТРАЦИЯ ПРИЗНАНА НЕДЕЙСТВИТЕЛЬНОЙ ПО РЕШЕНИЮ СУДА"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fibo-ru#RUOrgStatus-702
+fibo-ru:RUOrgStatus-702 rdf:type owl:NamedIndividual ,
+                                 skos:Concept ;
+                        skos:inScheme fibo-ru:RUOrgStatusClassificationSystem ;
+                        skos:notation "702" ;
+                        skos:prefLabel "ВНЕСЕНИЕ В ЕГРЮЛ СВЕДЕНИЙ О ЮЛ, СОЗДАННОМ ДО 01.07.2002, ПРИЗНАНО НЕДЕЙСТВИТЕЛЬНЫМ ПО РЕШЕНИЮ СУДА"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fibo-ru#RUOrgStatus-801
+fibo-ru:RUOrgStatus-801 rdf:type owl:NamedIndividual ,
+                                 skos:Concept ;
+                        skos:inScheme fibo-ru:RUOrgStatusClassificationSystem ;
+                        skos:notation "801" ;
+                        skos:prefLabel "РЕГИСТРАЦИЯ ПРИЗНАНА ОШИБОЧНОЙ ПО РЕШЕНИЮ РЕГОРГАНА"@ru ,
+                                       "Регистрация индивидуального предпринимателя признана недействительной (ошибочной) на основании решения регистрирующего органа"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fibo-ru#RUOrgStatusClassificationSystem
+fibo-ru:RUOrgStatusClassificationSystem rdf:type owl:NamedIndividual ,
+                                                 skos:ConceptScheme ;
+                                        rdfs:label "Russian Organization Status Classification System"@en .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fibo-ru#RUSignatoryRolesClassificationSystem
+fibo-ru:RUSignatoryRolesClassificationSystem rdf:type owl:NamedIndividual ,
+                                                      skos:ConceptScheme .
+
+
 ###  https://w3id.org/datafabric.cc/ontologies/fibo-ru#RussianFederationEntity
 fibo-ru:RussianFederationEntity rdf:type owl:NamedIndividual ,
                                          fibo-be-ge-ge:FederatedSovereignty ;
@@ -89,213 +310,95 @@ fibo-ru:RussianFederationEntity rdf:type owl:NamedIndividual ,
 fibo-ru:RussianFederationJurisdiction rdf:type owl:NamedIndividual ,
                                                fibo-fnd-law-jur:Jurisdiction .
 
-###  https://w3id.org/datafabric.cc/ontologies/fibo-ru#Russian_Organization_Status_Classification_System
-fibo-ru:RUOrgStatusClassificationSystem rdf:type owl:NamedIndividual ,
-                                                                   skos:ConceptScheme ;
-                                                          rdfs:label "Russian Organization Status Classification System"@en .
-
-fibo-ru:RUOrgStatus-133 a owl:NamedIndividual, skos:Concept ;
-    skos:prefLabel "НАХОДИТСЯ В ПРОЦЕССЕ РЕОРГАНИЗАЦИИ В ФОРМЕ ПРИСОЕДИНЕНИЯ, ОСУЩЕСТВЛЯЕМОЙ ОДНОВРЕМЕННО С РАЗДЕЛЕНИЕМ"@ru ;
-    skos:notation "133" ;
-    skos:inScheme fibo-ru:RUOrgStatusClassificationSystem .
-
-fibo-ru:RUOrgStatus-125 a owl:NamedIndividual, skos:Concept ;
-    skos:prefLabel "НАХОДИТСЯ В ПРОЦЕССЕ РЕОРГАНИЗАЦИИ В ФОРМЕ РАЗДЕЛЕНИЯ, ОСУЩЕСТВЛЯЕМОЙ ОДНОВРЕМЕННО С ПРИСОЕДИНЕНИЕМ"@ru ;
-    skos:notation "125" ;
-    skos:inScheme fibo-ru:RUOrgStatusClassificationSystem .
-
-fibo-ru:RUOrgStatus-126 a owl:NamedIndividual, skos:Concept ;
-    skos:prefLabel "НАХОДИТСЯ В ПРОЦЕССЕ РЕОРГАНИЗАЦИИ В ФОРМЕ РАЗДЕЛЕНИЯ, ОСУЩЕСТВЛЯЕМОЙ ОДНОВРЕМЕННО СО СЛИЯНИЕМ"@ru ;
-    skos:notation "126" ;
-    skos:inScheme fibo-ru:RUOrgStatusClassificationSystem .
-
-fibo-ru:RUOrgStatus-135 a owl:NamedIndividual, skos:Concept ;
-    skos:prefLabel "НАХОДИТСЯ В ПРОЦЕССЕ РЕОРГАНИЗАЦИИ В ФОРМЕ ВЫДЕЛЕНИЯ, ОСУЩЕСТВЛЯЕМОЙ ОДНОВРЕМЕННО СО СЛИЯНИЕМ"@ru ;
-    skos:notation "135" ;
-    skos:inScheme fibo-ru:RUOrgStatusClassificationSystem .
-
-fibo-ru:RUOrgStatus-128 a owl:NamedIndividual, skos:Concept ;
-    skos:prefLabel "НАХОДИТСЯ В ПРОЦЕССЕ РЕОРГАНИЗАЦИИ В ФОРМЕ СЛИЯНИЯ, ОСУЩЕСТВЛЯЕМОЙ ОДНОВРЕМЕННО С ВЫДЕЛЕНИЕМ"@ru ;
-    skos:notation "128" ;
-    skos:inScheme fibo-ru:RUOrgStatusClassificationSystem .
-
-fibo-ru:RUOrgStatus-127 a owl:NamedIndividual, skos:Concept ;
-    skos:prefLabel "НАХОДИТСЯ В ПРОЦЕССЕ РЕОРГАНИЗАЦИИ В ФОРМЕ СЛИЯНИЯ, ОСУЩЕСТВЛЯЕМОЙ ОДНОВРЕМЕННО С РАЗДЕЛЕНИЕМ"@ru ;
-    skos:notation "127" ;
-    skos:inScheme fibo-ru:RUOrgStatusClassificationSystem .
-
-fibo-ru:RUOrgStatus-702 a owl:NamedIndividual, skos:Concept ;
-    skos:prefLabel "ВНЕСЕНИЕ В ЕГРЮЛ СВЕДЕНИЙ О ЮЛ, СОЗДАННОМ ДО 01.07.2002, ПРИЗНАНО НЕДЕЙСТВИТЕЛЬНЫМ ПО РЕШЕНИЮ СУДА"@ru ;
-    skos:notation "702" ;
-    skos:inScheme fibo-ru:RUOrgStatusClassificationSystem .
-
-fibo-ru:RUOrgStatus-134 a owl:NamedIndividual, skos:Concept ;
-    skos:prefLabel "НАХОДИТСЯ В ПРОЦЕССЕ РЕОРГАНИЗАЦИИ В ФОРМЕ ПРИСОЕДИНЕНИЯ, ОСУЩЕСТВЛЯЕМОЙ ОДНОВРЕМЕННО С ВЫДЕЛЕНИЕМ"@ru ;
-    skos:notation "134" ;
-    skos:inScheme fibo-ru:RUOrgStatusClassificationSystem .
-
-fibo-ru:RUOrgStatus-136 a owl:NamedIndividual, skos:Concept ;
-    skos:prefLabel "НАХОДИТСЯ В ПРОЦЕССЕ РЕОРГАНИЗАЦИИ В ФОРМЕ ВЫДЕЛЕНИЯ, ОСУЩЕСТВЛЯЕМОЙ ОДНОВРЕМЕННО С ПРИСОЕДИНЕНИЕМ"@ru ;
-    skos:notation "136" ;
-    skos:inScheme fibo-ru:RUOrgStatusClassificationSystem .
-
-fibo-ru:RUOrgStatus-701 a owl:NamedIndividual, skos:Concept ;
-    skos:prefLabel "РЕГИСТРАЦИЯ ПРИЗНАНА НЕДЕЙСТВИТЕЛЬНОЙ ПО РЕШЕНИЮ СУДА"@ru ;
-    skos:notation "701" ;
-    skos:inScheme fibo-ru:RUOrgStatusClassificationSystem .
-
-fibo-ru:RUOrgStatus-801 a owl:NamedIndividual, skos:Concept ;
-    skos:prefLabel "РЕГИСТРАЦИЯ ПРИЗНАНА ОШИБОЧНОЙ ПО РЕШЕНИЮ РЕГОРГАНА"@ru ;
-    skos:notation "801" ;
-    skos:inScheme fibo-ru:RUOrgStatusClassificationSystem .
-
-fibo-ru:RUOrgStatus-121 a owl:NamedIndividual, skos:Concept ;
-    skos:prefLabel "НАХОДИТСЯ В ПРОЦЕССЕ РЕОРГАНИЗАЦИИ В ФОРМЕ ПРЕОБРАЗОВАНИЯ"@ru ;
-    skos:notation "121" ;
-    skos:inScheme fibo-ru:RUOrgStatusClassificationSystem .
-
-fibo-ru:RUOrgStatus-123 a owl:NamedIndividual, skos:Concept ;
-    skos:prefLabel "НАХОДИТСЯ В ПРОЦЕССЕ РЕОРГАНИЗАЦИИ В ФОРМЕ РАЗДЕЛЕНИЯ"@ru ;
-    skos:notation "123" ;
-    skos:inScheme fibo-ru:RUOrgStatusClassificationSystem .
-
-fibo-ru:RUOrgStatus-131 a owl:NamedIndividual, skos:Concept ;
-    skos:prefLabel "НАХОДИТСЯ В ПРОЦЕССЕ РЕОРГАНИЗАЦИИ В ФОРМЕ ВЫДЕЛЕНИЯ"@ru ;
-    skos:notation "131" ;
-    skos:inScheme fibo-ru:RUOrgStatusClassificationSystem .
-
-fibo-ru:RUOrgStatus-101 a owl:NamedIndividual, skos:Concept ;
-    skos:prefLabel "НАХОДИТСЯ В СТАДИИ ЛИКВИДАЦИИ"@ru ;
-    skos:notation "101" ;
-    skos:inScheme fibo-ru:RUOrgStatusClassificationSystem .
-
-fibo-ru:RUOrgStatus-124 a owl:NamedIndividual, skos:Concept ;
-    skos:prefLabel "НАХОДИТСЯ В ПРОЦЕССЕ РЕОРГАНИЗАЦИИ В ФОРМЕ ПРИСОЕДИНЕНИЯ К ДРУГОМУ"@ru ;
-    skos:notation "124" ;
-    skos:inScheme fibo-ru:RUOrgStatusClassificationSystem .
-
-fibo-ru:RUOrgStatus-105 a owl:NamedIndividual, skos:Concept ;
-    skos:prefLabel "ПРИНЯТО РЕШЕНИЕ О ПРЕДСТОЯЩЕМ ИСКЛЮЧЕНИИ НЕДЕЙСТВУЮЩЕГО ЮЛ ИЗ ЕГРЮЛ"@ru ;
-    skos:notation "105" ;
-    skos:inScheme fibo-ru:RUOrgStatusClassificationSystem .
-
-fibo-ru:RUOrgStatus-122 a owl:NamedIndividual, skos:Concept ;
-    skos:prefLabel "НАХОДИТСЯ В ПРОЦЕССЕ РЕОРГАНИЗАЦИИ В ФОРМЕ СЛИЯНИЯ"@ru ;
-    skos:notation "122" ;
-    skos:inScheme fibo-ru:RUOrgStatusClassificationSystem .
-
-fibo-ru:RUOrgStatus-132 a owl:NamedIndividual, skos:Concept ;
-    skos:prefLabel "НАХОДИТСЯ В ПРОЦЕССЕ РЕОРГАНИЗАЦИИ В ФОРМЕ ПРИСОЕДИНЕНИЯ К НЕМУ ДРУГИХ ЮЛ"@ru ;
-    skos:notation "132" ;
-    skos:inScheme fibo-ru:RUOrgStatusClassificationSystem .
-
-fibo-ru:RUOrgStatus-0 a owl:NamedIndividual, skos:Concept ;
-    skos:prefLabel "ЛИКВИДИРОВАНА"@ru ;
-    skos:notation "0" ;
-    skos:inScheme fibo-ru:RUOrgStatusClassificationSystem .
-
-fibo-ru:RUOrgStatus-1 a owl:NamedIndividual, skos:Concept ;
-    skos:prefLabel "ДЕЙСТВУЮЩАЯ"@ru ;
-    skos:notation "1" ;
-    skos:inScheme fibo-ru:RUOrgStatusClassificationSystem .
-
-fibo-ru:RUOrgStatus-201 a owl:NamedIndividual, skos:Concept ;
-    skos:prefLabel "Индивидуальный предприниматель прекратил деятельность в связи с принятием им соответствующего решения"@ru ;
-    skos:notation "201" ;
-    skos:inScheme fibo-ru:RUOrgStatusClassificationSystem .
-
-fibo-ru:RUOrgStatus-202 a owl:NamedIndividual, skos:Concept ;
-    skos:prefLabel "Индивидуальный предприниматель прекратил деятельность в связи со смертью"@ru ;
-    skos:notation "202" ;
-    skos:inScheme fibo-ru:RUOrgStatusClassificationSystem .
-
-fibo-ru:RUOrgStatus-301 a owl:NamedIndividual, skos:Concept ;
-    skos:prefLabel "Крестьянское (фермерское) хозяйство прекратило деятельность по решению членов крестьянского (фермерского) хозяйства"@ru ;
-    skos:notation "301" ;
-    skos:inScheme fibo-ru:RUOrgStatusClassificationSystem .
-
-fibo-ru:RUOrgStatus-801 a owl:NamedIndividual, skos:Concept ;
-    skos:prefLabel "Регистрация индивидуального предпринимателя признана недействительной (ошибочной) на основании решения регистрирующего органа"@ru ;
-    skos:notation "801" ;
-    skos:inScheme fibo-ru:RUOrgStatusClassificationSystem .
-
-fibo-ru:RUOrgStatus-501 a owl:NamedIndividual, skos:Concept ;
-    skos:prefLabel "ФИЗИЧЕСКОЕ ЛИЦО УТРАТИЛО ГОСУДАРСТВЕННУЮ РЕГИСТРАЦИЮ В КАЧЕСТВЕ ИНДИВИДУАЛЬНОГО ПРЕДПРИНИМАТЕЛЯ НА ОСНОВАНИИ СТ.3 ФЕДЕРАЛЬНОГО ЗАКОНА ОТ 23.06.2003 №76-ФЗ"@ru ;
-    skos:notation "501" ;
-    skos:inScheme fibo-ru:RUOrgStatusClassificationSystem .
-
-fibo-ru:RUSignatoryRolesClassificationSystem a owl:NamedIndividual,
-                            skos:ConceptScheme .
 
 ###  https://w3id.org/datafabric.cc/ontologies/fibo-ru#SignatoryRoleInRFJ-02
 fibo-ru:SignatoryRoleInRFJ-02 rdf:type owl:NamedIndividual ,
-                                        skos:Concept,
-                                        fibo-ru:SignatoryRoleInRFJ ;
-                              skos:prefLabel "Руководитель юридического лица"@ru ;
+                                       skos:Concept ,
+                                       fibo-ru:SignatoryRoleInRFJ ;
+                              skos:inScheme fibo-ru:RUSignatoryRolesClassificationSystem ;
                               skos:notation "02" ;
-                              skos:inScheme fibo-ru:RUSignatoryRolesClassificationSystem .
+                              skos:prefLabel "Руководитель юридического лица"@ru .
 
+
+###  https://w3id.org/datafabric.cc/ontologies/fibo-ru#SignatoryRoleInRFJ-03
 fibo-ru:SignatoryRoleInRFJ-03 rdf:type owl:NamedIndividual ,
-                                        skos:Concept,
-                                        fibo-ru:SignatoryRoleInRFJ ;
-                              skos:prefLabel "Главный (старший) бухгалтер"@ru ;
+                                       skos:Concept ,
+                                       fibo-ru:SignatoryRoleInRFJ ;
+                              skos:inScheme fibo-ru:RUSignatoryRolesClassificationSystem ;
                               skos:notation "03" ;
-                              skos:inScheme fibo-ru:RUSignatoryRolesClassificationSystem .
+                              skos:prefLabel "Главный (старший) бухгалтер"@ru .
 
+
+###  https://w3id.org/datafabric.cc/ontologies/fibo-ru#SignatoryRoleInRFJ-04
 fibo-ru:SignatoryRoleInRFJ-04 rdf:type owl:NamedIndividual ,
-                                        skos:Concept,
-                                        fibo-ru:SignatoryRoleInRFJ ;
-                              skos:prefLabel "Руководитель ликвидационной комиссии"@ru ;
+                                       skos:Concept ,
+                                       fibo-ru:SignatoryRoleInRFJ ;
+                              skos:inScheme fibo-ru:RUSignatoryRolesClassificationSystem ;
                               skos:notation "04" ;
-                              skos:inScheme fibo-ru:RUSignatoryRolesClassificationSystem .
+                              skos:prefLabel "Руководитель ликвидационной комиссии"@ru .
 
+
+###  https://w3id.org/datafabric.cc/ontologies/fibo-ru#SignatoryRoleInRFJ-05
 fibo-ru:SignatoryRoleInRFJ-05 rdf:type owl:NamedIndividual ,
-                                        skos:Concept,
-                                        fibo-ru:SignatoryRoleInRFJ ;
-                              skos:prefLabel "Ликвидатор"@ru ;
+                                       skos:Concept ,
+                                       fibo-ru:SignatoryRoleInRFJ ;
+                              skos:inScheme fibo-ru:RUSignatoryRolesClassificationSystem ;
                               skos:notation "05" ;
-                              skos:inScheme fibo-ru:RUSignatoryRolesClassificationSystem .
+                              skos:prefLabel "Ликвидатор"@ru .
 
+
+###  https://w3id.org/datafabric.cc/ontologies/fibo-ru#SignatoryRoleInRFJ-06
 fibo-ru:SignatoryRoleInRFJ-06 rdf:type owl:NamedIndividual ,
-                                        skos:Concept,
-                                        fibo-ru:SignatoryRoleInRFJ ;
-                              skos:prefLabel "Конкурсный управляющий"@ru ;
+                                       skos:Concept ,
+                                       fibo-ru:SignatoryRoleInRFJ ;
+                              skos:inScheme fibo-ru:RUSignatoryRolesClassificationSystem ;
                               skos:notation "06" ;
-                              skos:inScheme fibo-ru:RUSignatoryRolesClassificationSystem .
+                              skos:prefLabel "Конкурсный управляющий"@ru .
 
+
+###  https://w3id.org/datafabric.cc/ontologies/fibo-ru#SignatoryRoleInRFJ-07
 fibo-ru:SignatoryRoleInRFJ-07 rdf:type owl:NamedIndividual ,
-                                        skos:Concept,
-                                        fibo-ru:SignatoryRoleInRFJ ;
-                              skos:prefLabel "Внешний управляющий"@ru ;
+                                       skos:Concept ,
+                                       fibo-ru:SignatoryRoleInRFJ ;
+                              skos:inScheme fibo-ru:RUSignatoryRolesClassificationSystem ;
                               skos:notation "07" ;
-                              skos:inScheme fibo-ru:RUSignatoryRolesClassificationSystem .
+                              skos:prefLabel "Внешний управляющий"@ru .
 
+
+###  https://w3id.org/datafabric.cc/ontologies/fibo-ru#SignatoryRoleInRFJ-08
 fibo-ru:SignatoryRoleInRFJ-08 rdf:type owl:NamedIndividual ,
-                                        skos:Concept,
-                                        fibo-ru:SignatoryRoleInRFJ ;
-                              skos:prefLabel "Иное должностное лицо"@ru ;
+                                       skos:Concept ,
+                                       fibo-ru:SignatoryRoleInRFJ ;
+                              skos:inScheme fibo-ru:RUSignatoryRolesClassificationSystem ;
                               skos:notation "08" ;
-                              skos:inScheme fibo-ru:RUSignatoryRolesClassificationSystem .
+                              skos:prefLabel "Иное должностное лицо"@ru .
 
+
+###  https://w3id.org/datafabric.cc/ontologies/fibo-ru#SignatoryRoleInRFJ-09
 fibo-ru:SignatoryRoleInRFJ-09 rdf:type owl:NamedIndividual ,
-                                        skos:Concept,
-                                        fibo-ru:SignatoryRoleInRFJ ;
-                              skos:prefLabel "Представитель управляющей компании"@ru ;
+                                       skos:Concept ,
+                                       fibo-ru:SignatoryRoleInRFJ ;
+                              skos:inScheme fibo-ru:RUSignatoryRolesClassificationSystem ;
                               skos:notation "09" ;
-                              skos:inScheme fibo-ru:RUSignatoryRolesClassificationSystem .
+                              skos:prefLabel "Представитель управляющей компании"@ru .
 
+
+###  https://w3id.org/datafabric.cc/ontologies/fibo-ru#SignatoryRoleInRFJ-10
 fibo-ru:SignatoryRoleInRFJ-10 rdf:type owl:NamedIndividual ,
-                                        skos:Concept,
-                                        fibo-ru:SignatoryRoleInRFJ ;
-                              skos:prefLabel "Лицо уполномоченное подписать договор о присоединении"@ru ;
+                                       skos:Concept ,
+                                       fibo-ru:SignatoryRoleInRFJ ;
+                              skos:inScheme fibo-ru:RUSignatoryRolesClassificationSystem ;
                               skos:notation "10" ;
-                              skos:inScheme fibo-ru:RUSignatoryRolesClassificationSystem .
+                              skos:prefLabel "Лицо уполномоченное подписать договор о присоединении"@ru .
 
+
+###  https://w3id.org/datafabric.cc/ontologies/fibo-ru#SignatoryRoleInRFJ-11
 fibo-ru:SignatoryRoleInRFJ-11 rdf:type owl:NamedIndividual ,
-                                        skos:Concept,
-                                        fibo-ru:SignatoryRoleInRFJ ;
-                              skos:prefLabel "Управляющий - индивидуальный предприниматель"@ru ;
+                                       skos:Concept ,
+                                       fibo-ru:SignatoryRoleInRFJ ;
+                              skos:inScheme fibo-ru:RUSignatoryRolesClassificationSystem ;
                               skos:notation "1" ;
-                              skos:inScheme fibo-ru:RUSignatoryRolesClassificationSystem .
+                              skos:prefLabel "Управляющий - индивидуальный предприниматель"@ru .
+
 
 ###  Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi

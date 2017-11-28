@@ -1,6 +1,6 @@
 # baseURI: https://w3id.org/datafabric.cc/ontologies/addresses
-# imports: https://spec.edmcouncil.org/fibo/ontology/master/latest/FND/Places/Addresses/
-# imports: https://w3id.org/datafabric.cc/ontologies/fts#
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/latest/BE/LegalEntities/FormalBusinessOrganizations/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/latest/FND/Places/Locations/
 
 @prefix : <https://w3id.org/datafabric.cc/ontologies/addresses#> .
 @prefix fts: <https://w3id.org/datafabric.cc/ontologies/fts#> .
@@ -11,61 +11,77 @@
 
 <https://w3id.org/datafabric.cc/ontologies/addresses>
   rdf:type owl:Ontology ;
-  owl:imports <https://spec.edmcouncil.org/fibo/ontology/master/latest/FND/Places/Addresses/> ;
-  owl:imports fts: ;
+  owl:imports <https://spec.edmcouncil.org/fibo/ontology/master/latest/BE/LegalEntities/FormalBusinessOrganizations/> ;
+  owl:imports <https://spec.edmcouncil.org/fibo/ontology/master/latest/FND/Places/Locations/> ;
   owl:versionInfo "Created with TopBraid Composer" ;
 .
-:FIASCityCodeElement
-  rdf:type owl:Class ;
-  rdfs:subClassOf :FIASCodeElement ;
-.
-:FIASCode
-  rdf:type owl:Class ;
-  rdfs:subClassOf owl:Thing ;
-  rdfs:subClassOf <https://spec.edmcouncil.org/fibo/ontology/FND/Places/Addresses/Address> ;
-.
-:FIASCodeElement
+:AddressAlias
   rdf:type owl:Class ;
   rdfs:subClassOf owl:Thing ;
 .
-:FIASDistrictCodeElement
+:FIASAddressFormationElement
   rdf:type owl:Class ;
-  rdfs:subClassOf :FIASCodeElement ;
+  rdfs:subClassOf :FIASElement ;
 .
-:FIASHouseCodeElement
+:FIASAddressingElement
   rdf:type owl:Class ;
-  rdfs:subClassOf :FIASCodeElement ;
+  rdfs:subClassOf <https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/FormalBusinessOrganizations/RegisteredAddress> ;
+  rdfs:subClassOf :FIASElement ;
 .
-:FIASLocalityCodeElement
+:FIASCityElement
   rdf:type owl:Class ;
-  rdfs:subClassOf :FIASCodeElement ;
+  rdfs:subClassOf :FIASAddressFormationElement ;
 .
-:FIASPlanningStructureCodeElement
+:FIASDistrictElement
   rdf:type owl:Class ;
-  rdfs:subClassOf :FIASCodeElement ;
+  rdfs:subClassOf :FIASAddressFormationElement ;
 .
-:FIASRFRegionCodeElement
+:FIASElement
   rdf:type owl:Class ;
-  rdfs:subClassOf :FIASCodeElement ;
+  rdfs:subClassOf owl:Thing ;
 .
-:FIASRoomCodeElement
+:FIASHouseElement
   rdf:type owl:Class ;
-  rdfs:subClassOf :FIASCodeElement ;
+  rdfs:subClassOf :FIASAddressingElement ;
 .
-:FIASSteadCodeElement
+:FIASLocalityElement
   rdf:type owl:Class ;
-  rdfs:subClassOf :FIASCodeElement ;
+  rdfs:subClassOf :FIASAddressFormationElement ;
 .
-:FIASStreetCodeElement
+:FIASPlanningStructureElement
   rdf:type owl:Class ;
-  rdfs:subClassOf :FIASCodeElement ;
+  rdfs:subClassOf :FIASAddressFormationElement ;
 .
-:preceededByFIASCodeElement
+:FIASRFRegionElement
+  rdf:type owl:Class ;
+  rdfs:subClassOf :FIASAddressFormationElement ;
+.
+:FIASRoomElement
+  rdf:type owl:Class ;
+  rdfs:subClassOf :FIASAddressingElement ;
+.
+:FIASSteadElement
+  rdf:type owl:Class ;
+  rdfs:subClassOf :FIASAddressingElement ;
+.
+:FIASStreetElement
+  rdf:type owl:Class ;
+  rdfs:subClassOf :FIASAddressFormationElement ;
+.
+:hasAddressAlias
   rdf:type owl:ObjectProperty ;
-  rdfs:domain :FIASCodeElement ;
-  rdfs:range :FIASCodeElement ;
 .
-fts:p113_part_of
-  rdfs:domain :FIASCode ;
-  rdfs:range :FIASCodeElement ;
+:hasFIASCode
+  rdf:type owl:DatatypeProperty ;
+  rdfs:range xsd:integer ;
+.
+:hasFIASParentElement
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain :FIASAddressingElement ;
+  rdfs:range :FIASAddressFormationElement ;
+.
+:precededByFIASElement
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain :FIASAddressFormationElement ;
+  rdfs:range :FIASAddressFormationElement ;
 .

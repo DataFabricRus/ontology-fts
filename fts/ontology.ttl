@@ -591,11 +591,11 @@ owl:versionIRI rdf:type owl:AnnotationProperty .
                          "p18 индекс"@ru .
 
 
-###  https://w3id.org/datafabric.cc/ontologies/fts#p19_region_code
-:p19_region_code rdf:type owl:DatatypeProperty ;
+###  https://w3id.org/datafabric.cc/ontologies/fts#p19_kladr_code
+:p19_kladr_code rdf:type owl:DatatypeProperty ;
                  rdfs:range xsd:string ;
-                 rdfs:label "p19 region code"@en ,
-                            "p19 код субъекта РФ"@ru .
+                 rdfs:label "p19 address KLADR code"@en ,
+                            "p19 КЛАДР код адреса"@ru .
 
 
 ###  https://w3id.org/datafabric.cc/ontologies/fts#p1_state_registration_number
@@ -603,13 +603,6 @@ owl:versionIRI rdf:type owl:AnnotationProperty .
                               rdfs:range xsd:string ;
                               rdfs:label "p1 state registration number"@en ,
                                          "p1 государственный регистрационный номер"@ru .
-
-
-###  https://w3id.org/datafabric.cc/ontologies/fts#p20_address_code
-:p20_address_code rdf:type owl:DatatypeProperty ;
-                  rdfs:range xsd:string ;
-                  rdfs:label "p20 address code"@en ,
-                             "p20 код адреса по кладр"@ru .
 
 
 ###  https://w3id.org/datafabric.cc/ontologies/fts#p21_block
@@ -1925,6 +1918,12 @@ owl:versionIRI rdf:type owl:AnnotationProperty .
                       rdfs:subClassOf :C26_KLADR_Element ;
                       rdfs:label "C99 Locality Element"@en ,
                                  "C99 Адресообразующий Элемент Населенный Пункт"@ru .
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C117_House_Element
+:C117_House_Element rdf:type owl:Class ;
+                      rdfs:subClassOf :C26_KLADR_Element ;
+                      rdfs:label "C117 House Element"@en ,
+                                 "C117 Адресообразующий Элемент Здание"@ru .
 
 
 ###  https://w3id.org/datafabric.cc/ontologies/fts#C9_Legal_Entity

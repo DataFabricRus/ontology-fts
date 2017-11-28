@@ -1,1661 +1,1937 @@
-# baseURI: https://w3id.org/datafabric.cc/ontologies/fts#
-
 @prefix : <https://w3id.org/datafabric.cc/ontologies/fts#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/datafabric.cc/ontologies/fts#> .
 
-<http://purl.org/dc/terms/title>
-  rdf:type owl:AnnotationProperty ;
-.
-<http://purl.org/ontology/bibo/status>
-  rdf:type owl:AnnotationProperty ;
-.
-<http://purl.org/vocab/vann/example>
-  rdf:type owl:AnnotationProperty ;
-.
-<http://purl.org/vocab/vann/preferredNamespacePrefix>
-  rdf:type owl:AnnotationProperty ;
-.
-<http://purl.org/vocab/vann/preferredNamespaceUri>
-  rdf:type owl:AnnotationProperty ;
-.
-owl:versionIRI
-  rdf:type owl:AnnotationProperty ;
-.
-<http://www.w3.org/ns/org#FormalOrganization>
-  rdf:type owl:Class ;
-.
-<http://xmlns.com/foaf/0.1/Person>
-  rdf:type owl:Class ;
-.
-:
-  rdf:type owl:Ontology ;
-  <http://purl.org/dc/terms/title> "Онтология ФНС (Федеральная налоговая служба)"@ru ;
-  <http://purl.org/vocab/vann/preferredNamespacePrefix> "fts" ;
-  <http://purl.org/vocab/vann/preferredNamespaceUri> : ;
-  owl:versionIRI : ;
-  owl:versionInfo "1.0.0" ;
-.
-:C100_Street_Element
-  rdf:type owl:Class ;
-  rdfs:label "C100 Street Element"@en ;
-  rdfs:label "C100 Адресообразующий Элемент Улица"@ru ;
-  rdfs:subClassOf :C26_KLADR_Element ;
-.
-:C101_Russian_Legal_Entity
-  rdf:type owl:Class ;
-  rdfs:label "C101 Russian Legal Entity"@en ;
-  rdfs:label "C101 Российское Юридическое Лицо"@ru ;
-  rdfs:subClassOf :C41_LE_Registration_Entity ;
-.
-:C102_Foreign_Legal_Entity
-  rdf:type owl:Class ;
-  rdfs:label "C102 Foreign Legal Entity"@en ;
-  rdfs:label "C102 Иностранное Юридическое Лицо"@ru ;
-  rdfs:subClassOf :C41_LE_Registration_Entity ;
-.
-:C103_Russian_Organization_Founder_Entity
-  rdf:type owl:Class ;
-  rdfs:comment "Сведения об учредителе (участнике) - российском юридическом лице (УчрЮЛРос)"@ru ;
-  rdfs:label "C103 Russian Organization Founder Entity"@en ;
-  rdfs:label "C103 Сведения Об Учредителе - Российском ЮЛ"@ru ;
-  rdfs:subClassOf :C54_Founder_Entity ;
-.
-:C104_Foreign_Organization_Founder_Entity
-  rdf:type owl:Class ;
-  rdfs:comment "Сведения об учредителе (участнике) - иностранном юридическом лице (УчрЮЛИн)"@ru ;
-  rdfs:label "C104 Foreign Organization Founder Entity"@en ;
-  rdfs:label "C104 Сведения Об Учредителе - Иностранном ЮЛ"@ru ;
-  rdfs:subClassOf :C54_Founder_Entity ;
-.
-:C105_Public_Authority_Founder_Entity
-  rdf:type owl:Class ;
-  rdfs:comment "Сведения об учредителе (участнике) - Российской Федерации, субъекте Российской Федерации, муниципальном образовании (УчрРФСубМО)"@ru ;
-  rdfs:label "C105 Public Authority Founder Entity"@en ;
-  rdfs:label "C105 Сведения Об Учредителе - РФ, Субъекте РФ Или Муниципальном Образовании РФ"@ru ;
-  rdfs:subClassOf :C54_Founder_Entity ;
-.
-:C106_Person_Founder_Entity
-  rdf:type owl:Class ;
-  rdfs:comment "Сведения об учредителе (участнике) - физическом лице (УчрФЛ)"@ru ;
-  rdfs:label "C106 Person Founder Entity"@en ;
-  rdfs:label "C106 Сведения Об Учредителе - Физическом Лице"@ru ;
-  rdfs:subClassOf :C54_Founder_Entity ;
-.
-:C107_Mutual_Investment_Fund_Founder_Entity
-  rdf:type owl:Class ;
-  rdfs:comment "Сведения о паевом инвестиционном фонде, в состав имущества которого включена доля в уставном капитале (УчрПИФ)"@ru ;
-  rdfs:label "C107 Mutual Investment Fund Founder Entity"@en ;
-  rdfs:label "C107 Сведения Об Учредителе - ПИФ"@ru ;
-  rdfs:subClassOf :C54_Founder_Entity ;
-.
-:C108_Peasant_Farm_Data_Added_To_EFGRIP
-  rdf:type owl:Class ;
-  rdfs:comment "Сведения о крестьянском (фермерском) хозяйстве, которые внесены в ЕГРИП в связи с приведением правового статуса крестьянского (фермерского) хозяйства в соответствие с нормами части первой Гражданского кодекса Российской Федерации (СвКФХПреем)"@ru ;
-  rdfs:label "C108 Peasant Farm Data Added To EFGRIP"@en ;
-  rdfs:label "C108 Сведения О КФХ, Которые Внесены В ЕГРИП"@ru ;
-  rdfs:subClassOf :C64_Peasant_Farm_Entity ;
-.
-:C109_Peasant_Farm_Base_For_LE_Entity
-  rdf:type owl:Class ;
-  rdfs:comment "Сведения о крестьянском (фермерском) хозяйстве, на базе имущества которого создано юридическое лицо (СвКФХПредш)"@ru ;
-  rdfs:label "C109 Peasant Farm Base For LE Entity"@en ;
-  rdfs:label "C109 Сведения О КФХ, На Базе Которого Создано ЮЛ"@ru ;
-  rdfs:subClassOf :C64_Peasant_Farm_Entity ;
-.
-:C10_Individual_Entrepreneur
-  rdf:type owl:Class ;
-  rdfs:label "C10 Individual Entrepreneur"@en ;
-  rdfs:label "C10 Индивидуальный Предприниматель"@ru ;
-  rdfs:subClassOf <http://xmlns.com/foaf/0.1/Person> ;
-.
-:C110_Reorganization_Participant
-  rdf:type owl:Class ;
-  rdfs:comment "Сведения о юридических лицах, участвующих в реорганизации (СвРеоргЮЛ)"@ru ;
-  rdfs:label "C110 Reorganization Participant"@en ;
-  rdfs:label "C110 Сведения О ЮЛ, Участвующем В Реорганизации"@ru ;
-  rdfs:subClassOf :C72_Participant_Entity ;
-.
-:C111_Legal_Predecessor_Entity
-  rdf:type owl:Class ;
-  rdfs:label "C111 Legal Predecessor Entity"@en ;
-  rdfs:label "C111 Сведения О Правопредшественнике"@ru ;
-  rdfs:subClassOf :C72_Participant_Entity ;
-.
-:C112_Legal_Successor_Entity
-  rdf:type owl:Class ;
-  rdfs:label "C112 Legal Successor Entity"@en ;
-  rdfs:label "C112 Сведения О Правопреемнике"@ru ;
-  rdfs:subClassOf :C72_Participant_Entity ;
-.
-:C113_Representative_Office_Entity
-  rdf:type owl:Class ;
-  rdfs:comment "Сведения об обособленных подразделениях юридического лица (СвПодразд)"@ru ;
-  rdfs:label "C113 Representative Office Entity"@en ;
-  rdfs:label "C113 Сведения Об Обособленных Подразделениях ЮЛ"@ru ;
-  rdfs:subClassOf :C69_Separate_Business_Unit_Entity ;
-.
-:C114_Branch_Office_Entity
-  rdf:type owl:Class ;
-  rdfs:comment "Сведения о филиалах юридического лица"@ru ;
-  rdfs:label "C114 Branch Office Entity"@en ;
-  rdfs:label "C114 Сведения О Филиалах ЮЛ"@ru ;
-  rdfs:subClassOf :C69_Separate_Business_Unit_Entity ;
-.
-:C115_LE_Mortgagee_Entity
-  rdf:type owl:Class ;
-  rdfs:label "C115 LE Mortgagee Entity"@en ;
-  rdfs:label "C115 Сведения О Залогодержателе - ЮЛ"@ru ;
-  rdfs:subClassOf :C71_Mortgagee_Entity ;
-.
-:C116_Person_Mortgagee_Entity
-  rdf:type owl:Class ;
-  rdfs:label "C116 Person Mortgagee Entity"@en ;
-  rdfs:label "C116 Сведения О Залогодержателе - ФЛ"@ru ;
-  rdfs:subClassOf :C71_Mortgagee_Entity ;
-.
-:C117_House_Element
-  rdf:type owl:Class ;
-  rdfs:subClassOf :C26_KLADR_Element ;
-.
-:C11_Changed_Reg_Number_Date
-  rdf:type owl:Class ;
-  rdfs:comment "ГРН и дата измененной записи: исправленной или признанной недействительной."@ru ;
-  rdfs:label "C11 Changed Reg Number Date"@en ;
-  rdfs:label "C11 ИдГРНДатаТип"@ru ;
-  rdfs:subClassOf :C1_Reg_Number_Date ;
-.
-:C12_EGRUL_Reg_Entity
-  rdf:type owl:Class ;
-  rdfs:label "C12 EGRUL Reg Entity"@en ;
-  rdfs:label "C12 Сведения, Внесенные В ЕГРЮЛ"@ru ;
-  rdfs:subClassOf :C2_Reg_Entity ;
-.
-:C13_EGRIP_Reg_Entity
-  rdf:type owl:Class ;
-  rdfs:label "C13 EGRIP Reg Entity"@en ;
-  rdfs:label "C13 Сведения, Внесенные В ЕГРИП"@ru ;
-  rdfs:subClassOf :C2_Reg_Entity ;
-.
-:C14_EGRUL_Record
-  rdf:type owl:Class ;
-  rdfs:label "C14 EGRUL Record"@en ;
-  rdfs:label "C14 Сведения О Записи, Внесенной В ЕГРЮЛ"@ru ;
-  rdfs:subClassOf :C3_Record ;
-.
-:C15_EGRIP_Record
-  rdf:type owl:Class ;
-  rdfs:label "C15 EGRIP Record"@en ;
-  rdfs:label "C15 Сведения О Записи, Внесенной В ЕГРИП"@ru ;
-  rdfs:subClassOf :C3_Record ;
-.
-:C16_Exclusion_Decision
-  rdf:type owl:Class ;
-  rdfs:comment "Сведения о решении о предстоящем исключении недействующего ЮЛ из ЕГРЮЛ и его публикации (СвРешИсклЮЛ)"@ru ;
-  rdfs:label "C16 Exclusion Decision"@en ;
-  rdfs:label "C16 Решение Об Исключении Недействующего ЮЛ Из ЕГРЮЛ"@ru ;
-  rdfs:subClassOf :C6_Document ;
-.
-:C17_Territorial_State_Bodies
-  rdf:type owl:Class ;
-  rdfs:label "C17 Territorial State Bodies"@en ;
-  rdfs:label "C17 Регистрирующие Госорганы"@ru ;
-  rdfs:subClassOf :C7_FTS_Type_List ;
-.
-:C18_Economic_Activity_Type
-  rdf:type owl:Class ;
-  rdfs:comment "ОКВЭД"@ru ;
-  rdfs:label "C18 Economic Activity Type"@en ;
-  rdfs:label "C18 Вид Экономической Деятельности"@ru ;
-  rdfs:subClassOf :C7_FTS_Type_List ;
-.
-:C19_Organization_And_Legal_Form_Type
-  rdf:type owl:Class ;
-  rdfs:label "C19 Organization And Legal Form Type"@en ;
-  rdfs:label "C19 Организационно-Правовая Форма"@ru ;
-  rdfs:label "ОКОПФ"@ru ;
-  rdfs:subClassOf :C7_FTS_Type_List ;
-.
-:C1_Reg_Number_Date
-  rdf:type owl:Class ;
-  rdfs:comment "Класс для хранения государственного регистрационного номера и даты внесения записи в ЕГРЮЛ. Через свойство entered on registry with связывается с Reg Entity."@ru ;
-  rdfs:label "C1 Reg Number Date"@en ;
-  rdfs:label "C1 ГРНДатаТип"@ru ;
-.
-:C20_Record_Type
-  rdf:type owl:Class ;
-  rdfs:comment "Вид записи, внесенной в ЕГРЮЛ (ВидЗапТип)"@ru ;
-  rdfs:label "C20 Record Type"@en ;
-  rdfs:label "C20 Вид Записи"@ru ;
-  rdfs:subClassOf :C7_FTS_Type_List ;
-.
-:C21_Country
-  rdf:type owl:Class ;
-  rdfs:label "C21 Country"@en ;
-  rdfs:label "C21 Страна"@ru ;
-  rdfs:subClassOf :C7_FTS_Type_List ;
-.
-:C22_Region
-  rdf:type owl:Class ;
-  rdfs:label "C22 Region"@en ;
-  rdfs:label "C22 Регион"@ru ;
-  rdfs:subClassOf :C7_FTS_Type_List ;
-.
-:C23_Founder_Type
-  rdf:type owl:Class ;
-  rdfs:label "C23 Founder Type"@en ;
-  rdfs:label "C23 Вид Учредителя"@ru ;
-  rdfs:subClassOf :C7_FTS_Type_List ;
-.
-:C24_Capital_Type
-  rdf:type owl:Class ;
-  rdfs:comment "Принимает значение: УСТАВНЫЙ КАПИТАЛ | СКЛАДОЧНЫЙ КАПИТАЛ | УСТАВНЫЙ ФОНД | ПАЕВЫЕ ВЗНОСЫ | ПАЕВОЙ ФОНД"@ru ;
-  rdfs:label "C24 Capital Type"@en ;
-  rdfs:label "C24 Вид Капитала"@ru ;
-  rdfs:subClassOf :C7_FTS_Type_List ;
-.
-:C25_Applicant_Type
-  rdf:type owl:Class ;
-  rdfs:label "C25 Applicant Type"@en ;
-  rdfs:label "C25 Вид Заявителя"@ru ;
-  rdfs:subClassOf :C7_FTS_Type_List ;
-.
-:C26_KLADR_Element
-  rdf:type owl:Class ;
-  rdfs:label "C26 KLADR Element"@en ;
-  rdfs:label "C26 КЛАДР"@ru ;
-  rdfs:subClassOf :C7_FTS_Type_List ;
-.
-:C27_Type_Of_Reorganization_Form
-  rdf:type owl:Class ;
-  rdfs:comment "Форма реорганизации (статус) юридического лица (СвСтатус), СЮЛСТ"@ru ;
-  rdfs:label "C27 Type Of Reorganization Form"@en ;
-  rdfs:label "C27 Форма Реорганизации"@ru ;
-  rdfs:subClassOf :C7_FTS_Type_List ;
-.
-:C28_Type_Of_Official
-  rdf:type owl:Class ;
-  rdfs:label "C28 Type Of Official"@en ;
-  rdfs:label "C28 Вид Должностного Лица"@ru ;
-  rdfs:subClassOf :C7_FTS_Type_List ;
-.
-:C29_Encumbrance_Type
-  rdf:type owl:Class ;
-  rdfs:label "C29 Encumbrance Type"@en ;
-  rdfs:label "C29 Вид Обременения"@ru ;
-  rdfs:subClassOf :C7_FTS_Type_List ;
-.
-:C2_Reg_Entity
-  rdf:type owl:Class ;
-  rdfs:comment "Класс для хранения любых сведений, внесенных в реестры"@ru ;
-  rdfs:label "C2 Reg Entity"@en ;
-  rdfs:label "C2 Сведения (Информационный Объект)"@ru ;
-.
-:C30_LE_State
-  rdf:type owl:Class ;
-  rdfs:comment "Правоспособность (статус) юридического лица"@ru ;
-  rdfs:label "C30 LE State"@en ;
-  rdfs:label "C30 Статус ЮЛ"@ru ;
-  rdfs:subClassOf :C7_FTS_Type_List ;
-.
-:C31_LE_Formation_Method
-  rdf:type owl:Class ;
-  rdfs:comment "Способ образования юридического лица"@ru ;
-  rdfs:label "C31 LE Formation Method"@en ;
-  rdfs:label "C31 Способ Образования ЮЛ"@ru ;
-  rdfs:subClassOf :C7_FTS_Type_List ;
-.
-:C32_Cessation_Method
-  rdf:type owl:Class ;
-  rdfs:comment "Способ прекращения юридического лица"@ru ;
-  rdfs:label "C32 Cessation Method"@en ;
-  rdfs:label "C32 Способ Прекращения ЮЛ"@ru ;
-  rdfs:subClassOf :C7_FTS_Type_List ;
-.
-:C33_IE_Type
-  rdf:type owl:Class ;
-  rdfs:comment "Индивидуальный предприниматель/глава крестьянского (фермерского) хозяйства"@ru ;
-  rdfs:label "C33 IE Type"@en ;
-  rdfs:label "C33 Вид Предпринимательства"@ru ;
-  rdfs:subClassOf :C7_FTS_Type_List ;
-.
-:C34_IE_Status
-  rdf:type owl:Class ;
-  rdfs:comment "Правоспособность (статус) индивидуального предпринимателя"@ru ;
-  rdfs:label "C34 IE Status"@en ;
-  rdfs:label "C34 Статус ИП"@ru ;
-  rdfs:subClassOf :C7_FTS_Type_List ;
-.
-:C35_Type_Of_Reorganization_Form
-  rdf:type owl:Class ;
-  rdfs:comment "Сведения о форме реорганизации (статусе) юридического лица (СвСтатус)"@ru ;
-  rdfs:label "C35 Type Of Reorganization Form"@en ;
-  rdfs:label "C35 Форма Реорганизации"@ru ;
-  rdfs:subClassOf :C7_FTS_Type_List ;
-.
-:C36_Public_Body
-  rdf:type owl:Class ;
-  rdfs:label "C36 Public Body"@en ;
-  rdfs:label "C36 Госорган"@ru ;
-  rdfs:subClassOf :C9_Legal_Entity ;
-.
-:C37_LE_Tax_Registrator_Entity
-  rdf:type owl:Class ;
-  rdfs:comment "Сведения о регистрирующем органе по месту нахождения юридического лица (СвРегОрг)"@ru ;
-  rdfs:label "C37 LE Tax Registrator Entity"@en ;
-  rdfs:label "C37 Сведения О Региструющем ЮЛ Налоговом Органе"@ru ;
-  rdfs:subClassOf :C12_EGRUL_Reg_Entity ;
-.
-:C38_Name_Entity
-  rdf:type owl:Class ;
-  rdfs:comment "Сведения о наименовании юридического лица, паевого инвестиционного фонда и других"@ru ;
-  rdfs:label "C38 Name Entity"@en ;
-  rdfs:label "C38 Сведения о наименовании"@ru ;
-  rdfs:subClassOf :C12_EGRUL_Reg_Entity ;
-.
-:C39_Address_Entity
-  rdf:type owl:Class ;
-  rdfs:label "C39 Address Entity"@en ;
-  rdfs:label "C39 Сведения Об Адресе ЮЛ"@ru ;
-  rdfs:label "Сведения об адресе (месте нахождения) юридического лица"@ru ;
-  rdfs:subClassOf :C12_EGRUL_Reg_Entity ;
-.
-:C3_Record
-  rdf:type owl:Class ;
-  rdfs:label "C3 Record"@en ;
-  rdfs:label "C3 Запись, Внесенная В Реестр"@ru ;
-.
-:C40_LE_Email_Entity
-  rdf:type owl:Class ;
-  rdfs:comment "Сведения об адресе электронной почты юридического лица"@ru ;
-  rdfs:label "C40 LE Email Entity"@en ;
-  rdfs:label "C40 Сведения Об Адресе Электронной Почты ЮЛ"@ru ;
-  rdfs:subClassOf :C12_EGRUL_Reg_Entity ;
-.
-:C41_LE_Registration_Entity
-  rdf:type owl:Class ;
-  rdfs:comment "Сведения о регистрации (образовании) юридического лица"@ru ;
-  rdfs:label "C41 LE Registration Entity"@en ;
-  rdfs:label "C41 Сведения О Регистрации ЮЛ"@ru ;
-  rdfs:subClassOf :C12_EGRUL_Reg_Entity ;
-.
-:C42_LE_State_Entity
-  rdf:type owl:Class ;
-  rdfs:comment "Сведения о состоянии (статусе) юридического лица"@ru ;
-  rdfs:label "C42 LE State Entity"@en ;
-  rdfs:label "C42 Сведения О Состоянии ЮЛ"@ru ;
-  rdfs:subClassOf :C12_EGRUL_Reg_Entity ;
-.
-:C43_Business_Cessation_Entity
-  rdf:type owl:Class ;
-  rdfs:comment "Сведения о прекращении юридического лица (СвПрекрЮЛ)"@ru ;
-  rdfs:label "C43 Business Cessation Entity"@en ;
-  rdfs:label "C43 Сведения О Прекращении ЮЛ"@ru ;
-  rdfs:subClassOf :C12_EGRUL_Reg_Entity ;
-.
-:C44_LE_Tax_Accounting_Entity
-  rdf:type owl:Class ;
-  rdfs:label "C44 LE Tax Accounting Entity"@en ;
-  rdfs:label "C44 Сведения Об Учете ЮЛ В Налоговом Органе"@ru ;
-  rdfs:subClassOf :C12_EGRUL_Reg_Entity ;
-.
-:C45_LE_Pension_Fund_Registration_Entity
-  rdf:type owl:Class ;
-  rdfs:comment "Сведения о регистрации юридического лица в качестве страхователя в территориальном органе Пенсионного фонда Российской Федерации (СвРегПФ)"@ru ;
-  rdfs:label "C45 LE Pension Fund Registration Entity"@en ;
-  rdfs:label "C45 Сведения О Регистрации ЮЛ В ПФР"@ru ;
-  rdfs:subClassOf :C12_EGRUL_Reg_Entity ;
-.
-:C46_LE_Social_Insurance_Fund_Registration_Entity
-  rdf:type owl:Class ;
-  rdfs:comment "Сведения о регистрации юридического лица в качестве страхователя в исполнительном органе Фонда социального страхования Российской Федерации (СвРегФСС)"@ru ;
-  rdfs:label "C46 LE Social Insurance Fund Registration Entity"@en ;
-  rdfs:label "C46 Сведения О Регистрации ЮЛ В ФСС"@ru ;
-  rdfs:subClassOf :C12_EGRUL_Reg_Entity ;
-.
-:C47_Stated_Capital_Entity
-  rdf:type owl:Class ;
-  rdfs:comment "Сведения о размере указанного в учредительных документах коммерческой организации уставного капитала (складочного капитала, уставного фонда, паевого фонда) (СвУстКап)"@ru ;
-  rdfs:label "C47 Stated Capital Entity"@en ;
-  rdfs:label "C47 Сведения Об Уставном Капитале"@ru ;
-  rdfs:subClassOf :C12_EGRUL_Reg_Entity ;
-.
-:C48_Capital_Decreasing_Entity
-  rdf:type owl:Class ;
-  rdfs:comment "Сведения о нахождении хозяйственного общества в процессе уменьшения уставного капитала (СведУмУК)"@ru ;
-  rdfs:label "C48 Capital Decreasing Entity"@en ;
-  rdfs:label "C48 Сведения Об Уменьшении Уставного Капитала"@ru ;
-  rdfs:subClassOf :C12_EGRUL_Reg_Entity ;
-.
-:C49_Management_Organization_Entity
-  rdf:type owl:Class ;
-  rdfs:label "C49 Management Organization Entity"@en ;
-  rdfs:label "C49 Сведения Об Управляющей Организации"@ru ;
-  rdfs:subClassOf :C12_EGRUL_Reg_Entity ;
-.
-:C4_Legal_Entity_Details
-  rdf:type owl:Class ;
-  rdfs:label "C4 Legal Entity Details"@en ;
-  rdfs:label "C4 Выписка О Юридическом Лице"@ru ;
-.
-:C50_Branch_Of_Foreign_Legal_Entity
-  rdf:type owl:Class ;
-  rdfs:comment "Сведения о наименовании представительства или филиала в Российской Федерации, через которое иностранное ЮЛ осуществляет полномочия управляющей организации (СвПредЮЛ)"@ru ;
-  rdfs:label "C50 Branch Of Foreign Legal Entity"@en ;
-  rdfs:label "C50 Сведения О Наименовании Представительства Или Филиала Иностранного ЮЛ"@ru ;
-  rdfs:subClassOf :C12_EGRUL_Reg_Entity ;
-.
-:C51_Person_Acting_Without_Power_Of_Auttorney_Entity
-  rdf:type owl:Class ;
-  rdfs:comment "Сведения о лице, имеющем право без доверенности действовать от имени юридического лица (СведДолжнФЛ)"@ru ;
-  rdfs:label "C51 Person Acting Without Power Of Auttorney Entity"@en ;
-  rdfs:label "C51 Сведения О Лице, Действующем Без Доверенности"@ru ;
-  rdfs:subClassOf :C12_EGRUL_Reg_Entity ;
-.
-:C52_Job_Entity
-  rdf:type owl:Class ;
-  rdfs:label "C52 Job Entity"@en ;
-  rdfs:label "C52 Сведения О Должности Физического Лица"@ru ;
-  rdfs:subClassOf :C12_EGRUL_Reg_Entity ;
-.
-:C53_Disqualification_Entity
-  rdf:type owl:Class ;
-  rdfs:label "C53 Disqualification Entity"@en ;
-  rdfs:label "C53 Сведения О Дисквалификации"@ru ;
-  rdfs:subClassOf :C12_EGRUL_Reg_Entity ;
-.
-:C54_Founder_Entity
-  rdf:type owl:Class ;
-  rdfs:label "C54 Founder Entity"@en ;
-  rdfs:label "C54 Сведения Об Учредителе"@ru ;
-  rdfs:subClassOf :C12_EGRUL_Reg_Entity ;
-.
-:C55_Share_In_Stated_Capital_Entity
-  rdf:type owl:Class ;
-  rdfs:comment "Доля в уставном капитале (складочном капитале, уставном фонде, паевом фонде), внесенная в ЕГРЮЛ (ДоляУстКапЕГРЮЛТип)"@ru ;
-  rdfs:label "C55 Share In Stated Capital Entity"@en ;
-  rdfs:label "С55 Доля В Уставном Капитале"@ru ;
-  rdfs:subClassOf :C12_EGRUL_Reg_Entity ;
-.
-:C56_Old_Registration_Entity
-  rdf:type owl:Class ;
-  rdfs:comment "Сведения о регистрации учредителя (участника) до 01.07.2002 г (СвРегСтарые)"@ru ;
-  rdfs:label "C56 Old Registration Entity"@en ;
-  rdfs:label "C56 Сведения О Регистрации ЮЛ До 01.07.2002"@ru ;
-  rdfs:subClassOf :C12_EGRUL_Reg_Entity ;
-.
-:C57_LE_Activity_Entity
-  rdf:type owl:Class ;
-  rdfs:comment "Сведения о видах экономической деятельности по Общероссийскому классификатору видов экономической деятельности (СвОКВЭД)"@ru ;
-  rdfs:label "C57 LE Activity Entity"@en ;
-  rdfs:label "C57 Сведения О Виде Экономической Деятельности ЮЛ"@ru ;
-  rdfs:subClassOf :C12_EGRUL_Reg_Entity ;
-.
-:C58_Separate_Business_Unit_Tax_Registration_Entity
-  rdf:type owl:Class ;
-  rdfs:comment "Сведения об учете в налоговом органе по месту нахождения обособленного подразделения (филиала/представительства) (СвУчетНОПодраздТип)"@ru ;
-  rdfs:label "C58 Separate Business Unit Tax Registration Entity"@en ;
-  rdfs:label "C58 Сведения Об Учете В Налоговом Органе По Месту Нахождения Обособленного Подразделения"@ru ;
-  rdfs:subClassOf :C12_EGRUL_Reg_Entity ;
-.
-:C59_Applicant_Entity
-  rdf:type owl:Class ;
-  rdfs:label "C59 Applicant Entity"@en ;
-  rdfs:label "C59 Сведения О Заявителе"@ru ;
-  rdfs:subClassOf :C12_EGRUL_Reg_Entity ;
-.
-:C5_Individual_Entrepreneur_Details
-  rdf:type owl:Class ;
-  rdfs:label "C5 Individual Entrepreneur Details"@en ;
-  rdfs:label "C5 Выписка Об Индивидуальном Предпринимателе"@ru ;
-.
-:C60_LE_License_Entity
-  rdf:type owl:Class ;
-  rdfs:label "C60 LE License Entity"@en ;
-  rdfs:label "C60 Сведения О Лицензиях, Выданных ЮЛ"@ru ;
-  rdfs:subClassOf :C12_EGRUL_Reg_Entity ;
-.
-:C61_LE_License_Suspension_Entity
-  rdf:type owl:Class ;
-  rdfs:label "C61 LE License Suspension Entity"@en ;
-  rdfs:label "C61 Сведения О Приостановлении Действия Лицензии ЮЛ"@ru ;
-  rdfs:subClassOf :C12_EGRUL_Reg_Entity ;
-.
-:C62_Contact_Number_Entity
-  rdf:type owl:Class ;
-  rdfs:label "C62 Contact Number Entity"@en ;
-  rdfs:label "C62 Сведения О Контактном Телефоне"@ru ;
-  rdfs:subClassOf :C12_EGRUL_Reg_Entity ;
-.
-:C63_Person_Entity
-  rdf:type owl:Class ;
-  rdfs:label "C63 Person Entity"@en ;
-  rdfs:label "C63 Сведения О Физическом Лице"@ru ;
-  rdfs:subClassOf :C12_EGRUL_Reg_Entity ;
-.
-:C64_Peasant_Farm_Entity
-  rdf:type owl:Class ;
-  rdfs:comment "Сведения о крестьянском (фермерском) хозяйстве, на базе имущества которого создано юридическое лицо (СвКФХПредш)"@ru ;
-  rdfs:label "C64 Peasant Farm Entity"@en ;
-  rdfs:label "C64 Сведения О КФХ"@ru ;
-  rdfs:subClassOf :C12_EGRUL_Reg_Entity ;
-.
-:C65_Encumbrance_Of_Participant_Share_Entity
-  rdf:type owl:Class ;
-  rdfs:comment "Сведения об обременении доли участника, внесенные в ЕГРЮЛ (СвОбремТип)"@ru ;
-  rdfs:label "C65 Encumbrance Of Participant Share Entity"@en ;
-  rdfs:label "C65 Сведения Об Обременении Доли Участника"@ru ;
-  rdfs:subClassOf :C12_EGRUL_Reg_Entity ;
-.
-:C66_Reorganization_Entity
-  rdf:type owl:Class ;
-  rdfs:label "C66 Reorganization Entity"@en ;
-  rdfs:label "C67 Сведения Об Участии В Реорганизации"@ru ;
-  rdfs:subClassOf :C12_EGRUL_Reg_Entity ;
-.
-:C67_Holder_Of_Register_Of_Shareholders_Entity
-  rdf:type owl:Class ;
-  rdfs:comment "Сведения о держателе реестра акционеров акционерного общества"@ru ;
-  rdfs:label "C67 Holder Of Register Of Shareholders Entity"@en ;
-  rdfs:label "C67 Сведения О Держателе Реестра Акционеров АО"@ru ;
-  rdfs:subClassOf :C12_EGRUL_Reg_Entity ;
-.
-:C68_Separate_Business_Unit_Name_Entity
-  rdf:type owl:Class ;
-  rdfs:comment "Сведения о наименовании обособленного подразделения (филиала/представительства) (СвНаимПодраздТип)"@ru ;
-  rdfs:label "C68 Separate Business Unit Name Entity"@en ;
-  rdfs:label "C68 Сведения О Наименовании Обособленного Подразделения"@ru ;
-  rdfs:subClassOf :C12_EGRUL_Reg_Entity ;
-.
-:C69_Separate_Business_Unit_Entity
-  rdf:type owl:Class ;
-  rdfs:comment "Сведения об обособленных подразделениях юридического лица (СвПодразд)"@ru ;
-  rdfs:label "C69 Separate Business Unit Entity"@en ;
-  rdfs:label "C69 Сведения Об Обособленных Подразделениях ЮЛ"@ru ;
-  rdfs:subClassOf :C12_EGRUL_Reg_Entity ;
-.
-:C6_Document
-  rdf:type owl:Class ;
-  rdfs:label "C6 Document"@en ;
-  rdfs:label "C6 Документ"@ru ;
-.
-:C70_Address_Abroad_Entity
-  rdf:type owl:Class ;
-  rdfs:comment "Сведения об адресе за пределами территории РФ, внесенные в ЕГРЮЛ (АдрИнЕГРЮЛТип)"@ru ;
-  rdfs:label "C70 Address Abroad Entity"@en ;
-  rdfs:label "C70 Сведения Об Адресе За Пределами Территории РФ"@ru ;
-  rdfs:subClassOf :C12_EGRUL_Reg_Entity ;
-.
-:C71_Mortgagee_Entity
-  rdf:type owl:Class ;
-  rdfs:comment "Сведения об обременении доли участника, внесенные в ЕГРЮЛ (СвОбремТип)"@ru ;
-  rdfs:label "C71 Mortgagee Entity"@en ;
-  rdfs:label "C71 Сведения Об Обременении"@ru ;
-  rdfs:subClassOf :C12_EGRUL_Reg_Entity ;
-.
-:C72_Participant_Entity
-  rdf:type owl:Class ;
-  rdfs:comment "Сведения о наименовании и (при наличии) ИНН и ОГРН ЮЛ - учредителя (участника), управляющей организации, залогодержателя, управляющего долей участника, внесенные в ЕГРЮЛ (СвЮЛЕГРЮЛТип)"@ru ;
-  rdfs:label "C72 Participant Entity"@en ;
-  rdfs:label "C72 Сведения Об Организации"@ru ;
-  rdfs:subClassOf :C12_EGRUL_Reg_Entity ;
-.
-:C73_Management_Company_Entity
-  rdf:type owl:Class ;
-  rdfs:comment "Сведения об управляющей компании паевого инвестиционного фонда (СвУпрКомпПИФ)"@ru ;
-  rdfs:label "C73 Management Company Entity"@en ;
-  rdfs:label "C73 Сведения Об Управляющей Компании ПИФ"@ru ;
-  rdfs:subClassOf :C12_EGRUL_Reg_Entity ;
-.
-:C74_Public_Body_Exercising_Founders_Fights_Entity
-  rdf:type owl:Class ;
-  rdfs:comment "Сведения об органе государственной власти, органе местного самоуправления или о юридическом лице, осуществляющем права учредителя (участника)"@ru ;
-  rdfs:label "C74 Public Body Exercising Founders Fights Entity"@en ;
-  rdfs:label "C74 Сведения О Госоргане, Органе Местного Самоуправления Или О ЮЛ Осуществляющем Права Учредителя"@ru ;
-  rdfs:subClassOf :C12_EGRUL_Reg_Entity ;
-.
-:C75_Trustee_Entity
-  rdf:type owl:Class ;
-  rdfs:label "75 Сведения О Доверительном Управляющем"@ru ;
-  rdfs:label "C75 Trustee Entity"@en ;
-  rdfs:subClassOf :C12_EGRUL_Reg_Entity ;
-.
-:C76_Inheritance_Manager_Entity
-  rdf:type owl:Class ;
-  rdfs:comment "Сведения о лице, осуществляющем управление долей, переходящей в порядке наследования (ЛицоУпрНасл)"@ru ;
-  rdfs:label "C76 Inheritance Manager Entity"@en ;
-  rdfs:label "C76 Сведения О Лице, Управляющем Долей, Переходящей В Порядке Наследования"@ru ;
-  rdfs:subClassOf :C12_EGRUL_Reg_Entity ;
-.
-:C78_LE_Changes_Confirmation_Entity
-  rdf:type owl:Class ;
-  rdfs:comment "Сведения о свидетельстве, подтверждающем факт внесения записи в ЕГРЮЛ (СвСвид)"@ru ;
-  rdfs:label "C78 LE Changes Confirmation Entity"@en ;
-  rdfs:label "C78 Сведения О Свидетельстве, Подтверждающем Данные О ЮЛ"@ru ;
-  rdfs:subClassOf :C12_EGRUL_Reg_Entity ;
-.
-:C79_Name_And_Gender_Entity
-  rdf:type owl:Class ;
-  rdfs:label "C79 Name And Gender Entity"@en ;
-  rdfs:label "C79 Сведения о ФИО и Поле ИП"@ru ;
-  rdfs:subClassOf :C13_EGRIP_Reg_Entity ;
-.
-:C7_FTS_Type_List
-  rdf:type owl:Class ;
-  rdfs:comment "Классификаторы, справочники и типы, встречающиеся в данных ФНС"@ru ;
-  rdfs:label "C7 FTS Type List"@en ;
-  rdfs:label "C7 Классификаторы ФНС"@ru ;
-.
-:C80_Citizenship_Entity
-  rdf:type owl:Class ;
-  rdfs:label "C80 Citizenship Entity"@en ;
-  rdfs:label "C80 Сведения О Гражданстве ИП"@ru ;
-  rdfs:subClassOf :C13_EGRIP_Reg_Entity ;
-.
-:C81_IE_Email_Entity
-  rdf:type owl:Class ;
-  rdfs:label "C81 IE Email Entity"@en ;
-  rdfs:label "C81 Сведения Об Адресе Электронной Почты ИП"@ru ;
-  rdfs:subClassOf :C13_EGRIP_Reg_Entity ;
-.
-:C82_IE_Tax_Registrator_Entity
-  rdf:type owl:Class ;
-  rdfs:comment "Сведения о регистрирующем органе по месту жительства ИП или главы КФХ (СвРегОрг)"@ru ;
-  rdfs:label "C82 IE Tax Registrator Entity"@en ;
-  rdfs:label "C82 Сведения О Региструющем Органе По Месту Жительства"@ru ;
-  rdfs:subClassOf :C13_EGRIP_Reg_Entity ;
-.
-:C83_IE_Status_Entity
-  rdf:type owl:Class ;
-  rdfs:label "C83 IE Status Entity"@en ;
-  rdfs:label "C83 Сведения О Состоянии (Статусе) ИП"@ru ;
-  rdfs:subClassOf :C13_EGRIP_Reg_Entity ;
-.
-:C84_Legal_Entity_Registration
-  rdf:type owl:Class ;
-  rdfs:comment "Сведения о юридическом лице, созданном на базе крестьянского (фермерского) хозяйства (СвНовЮЛ)"@ru ;
-  rdfs:label "C84 Legal Entity Registration"@en ;
-  rdfs:label "C84 Сведения О ЮЛ, Созданном На Базе КФХ"@ru ;
-  rdfs:subClassOf :C13_EGRIP_Reg_Entity ;
-.
-:C85_IE_Tax_Accounting_Entity
-  rdf:type owl:Class ;
-  rdfs:label "C85 IE Tax Accounting Entity"@en ;
-  rdfs:label "C85 Сведения Об Учете ИП В Налоговом Органе"@ru ;
-  rdfs:subClassOf :C13_EGRIP_Reg_Entity ;
-.
-:C86_IE_Social_Insurance_Fund_Registration_Entity
-  rdf:type owl:Class ;
-  rdfs:comment "Сведения о регистрации в качестве страхователя в исполнительном органе Фонда социального страхования Российской Федерации (СвРегФСС)"@ru ;
-  rdfs:label "C86 IE Social Insurance Fund Registration Entity"@en ;
-  rdfs:label "C86 Сведения О Регистрации ИП В ФСС"@ru ;
-  rdfs:subClassOf :C13_EGRIP_Reg_Entity ;
-.
-:C87_IE_Activity_Entity
-  rdf:type owl:Class ;
-  rdfs:comment "Сведения о видах экономической деятельности по Общероссийскому классификатору видов экономической деятельности (СвОКВЭД)"@ru ;
-  rdfs:label "C87 IE Activity Entity"@en ;
-  rdfs:label "C87 Сведения О Виде Экономической Деятельности ИП"@ru ;
-  rdfs:subClassOf :C13_EGRIP_Reg_Entity ;
-.
-:C88_IE_License_Entity
-  rdf:type owl:Class ;
-  rdfs:label "C88 IE License Entity"@en ;
-  rdfs:label "C88 Сведения О Лицензиях, Выданных ИП"@ru ;
-  rdfs:subClassOf :C13_EGRIP_Reg_Entity ;
-.
-:C89_IE_License_Suspension_Entity
-  rdf:type owl:Class ;
-  rdfs:label "C89 IE License Suspension Entity"@en ;
-  rdfs:label "C89 Сведения О Приостановлении Действия Лицензии ИП"@ru ;
-  rdfs:subClassOf :C13_EGRIP_Reg_Entity ;
-.
-:C8_Error
-  rdf:type owl:Class ;
-  rdfs:comment "Класс для обозначения сомнительных и ошибочных сведений"@ru ;
-  rdfs:label "C8 Error"@en ;
-  rdfs:label "C8 Ошибка"@ru ;
-.
-:C90_IE_Registration_Entity
-  rdf:type owl:Class ;
-  rdfs:comment "Сведения о регистрации индивидуального предпринимателя или крестьянского (фермерского) хозяйства (СвРегИП)"@ru ;
-  rdfs:label "C90 IE Registration Entity"@en ;
-  rdfs:label "C90 Сведения О Регистрации ИП Или КФХ"@ru ;
-  rdfs:subClassOf :C13_EGRIP_Reg_Entity ;
-.
-:C91_IE_Pension_Fund_Registration_Entity
-  rdf:type owl:Class ;
-  rdfs:comment "Сведения о регистрации в качестве страхователя в территориальном органе Пенсионного фонда Российской Федерации (СвРегПФ)"@ru ;
-  rdfs:label "C91 IE Pension Fund Registration Entity"@en ;
-  rdfs:label "C91 Сведения О Регистрации ИП В ПФР"@ru ;
-  rdfs:subClassOf :C13_EGRIP_Reg_Entity ;
-.
-:C92_IE_Changes_Confirmation_Entity
-  rdf:type owl:Class ;
-  rdfs:comment "Сведения о свидетельстве, подтверждающем факт внесения записи в ЕГРИП"@ru ;
-  rdfs:label "C92 IE Changes Confirmation Entity"@en ;
-  rdfs:label "C92 Сведения О Свидетельстве, Подтверждающем Данные О ИП"@ru ;
-  rdfs:subClassOf :C13_EGRIP_Reg_Entity ;
-.
-:C93_Tax_Authority
-  rdf:type owl:Class ;
-  rdfs:label "C93 Tax Authority"@en ;
-  rdfs:label "C93 Налоговый Орган"@ru ;
-  rdfs:subClassOf :C17_Territorial_State_Bodies ;
-.
-:C94_Executive_Bodies_Of_Social_Insurance_Fund
-  rdf:type owl:Class ;
-  rdfs:comment "Исполнительный орган Фонда социального страхования Российской Федерации (СвОргФСС)"@ru ;
-  rdfs:label "C94 Executive Bodies Of Social Insurance Fund"@en ;
-  rdfs:label "C94 Исполнительный Орган ФСС"@ru ;
-  rdfs:subClassOf :C17_Territorial_State_Bodies ;
-.
-:C95_Territorial_Bodies_Of_Pension_Fund
-  rdf:type owl:Class ;
-  rdfs:comment "Территориальный орган Пенсионного фонда Российской Федерации (СвОргПФ)"@ru ;
-  rdfs:label "C95 Territorial Bodies Of Pension Fund"@en ;
-  rdfs:label "C95 Территориальный Орган ПФР"@ru ;
-  rdfs:subClassOf :C17_Territorial_State_Bodies ;
-.
-:C96_Region_Element
-  rdf:type owl:Class ;
-  rdfs:label "C96 Region Element"@en ;
-  rdfs:label "C96 Адресообразующий Элемент Регион"@ru ;
-  rdfs:subClassOf :C26_KLADR_Element ;
-.
-:C97_District_Element
-  rdf:type owl:Class ;
-  rdfs:label "C97 District Element"@en ;
-  rdfs:label "C97 Адресообразующий Элемент Район"@ru ;
-  rdfs:subClassOf :C26_KLADR_Element ;
-.
-:C98_City_Element
-  rdf:type owl:Class ;
-  rdfs:label "C98 City Element"@en ;
-  rdfs:label "C98 Адресообразующий Элемент Город"@ru ;
-  rdfs:subClassOf :C26_KLADR_Element ;
-.
-:C99_Locality_Element
-  rdf:type owl:Class ;
-  rdfs:label "C99 Locality Element"@en ;
-  rdfs:label "C99 Адресообразующий Элемент Населенный Пункт"@ru ;
-  rdfs:subClassOf :C26_KLADR_Element ;
-.
-:C9_Legal_Entity
-  rdf:type owl:Class ;
-  rdfs:label "C9 Legal Entity"@en ;
-  rdfs:label "C9 Юридическое Лицо"@ru ;
-  rdfs:subClassOf <http://www.w3.org/ns/org#FormalOrganization> ;
-.
-:p100_certified_by
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain :C6_Document ;
-  rdfs:label "p100 certified by"@en ;
-  rdfs:label "p100 удостоверено нотариусом"@ru ;
-  rdfs:range :C63_Person_Entity ;
-.
-:p101_relates_to_person
-  rdf:type owl:ObjectProperty ;
-  rdfs:label "p101 relates to person"@en ;
-  rdfs:label "p101 относится к физическому лицу"@ru ;
-  rdfs:range :C63_Person_Entity ;
-.
-:p102_relates_to_organization
-  rdf:type owl:ObjectProperty ;
-  rdfs:label "p102 relates to organization"@en ;
-  rdfs:label "p102 относится к организации"@ru ;
-  rdfs:range :C72_Participant_Entity ;
-.
-:p103_formed_by
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain :C41_LE_Registration_Entity ;
-  rdfs:label "p103 formed by"@en ;
-  rdfs:label "p103 сформировано способом"@ru ;
-  rdfs:range :C31_LE_Formation_Method ;
-.
-:p104_forthcoming_exception_based_on
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain :C42_LE_State_Entity ;
-  rdfs:label "p104 forthcoming exception based on"@en ;
-  rdfs:label "p104 будет исключено на основании"@ru ;
-  rdfs:range :C16_Exclusion_Decision ;
-.
-:p105_le_license_suspended_based_on
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain :C60_LE_License_Entity ;
-  rdfs:label "p105 le license suspended based on"@en ;
-  rdfs:label "p105 лицензия юл приостановлена на основании"@ru ;
-  rdfs:range :C61_LE_License_Suspension_Entity ;
-.
-:p106_ie_license_suspended_based_on
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain :C88_IE_License_Entity ;
-  rdfs:label "p106 ie license suspended based on"@en ;
-  rdfs:label "p106 лицензия ип приостановлена на основании"@ru ;
-  rdfs:range :C89_IE_License_Suspension_Entity ;
-.
-:p107_is_main_activity
-  rdf:type owl:ObjectProperty ;
-  rdfs:label "p107 is main activity"@en ;
-  rdfs:label "p107 есть основной вид деятельности"@ru ;
-  rdfs:range :C18_Economic_Activity_Type ;
-.
-:p108_is_additional_activity
-  rdf:type owl:ObjectProperty ;
-  rdfs:label "p108 is additional activity"@en ;
-  rdfs:label "p108 есть дополнительный вид деятельности"@ru ;
-  rdfs:range :C18_Economic_Activity_Type ;
-.
-:p109_was_put_on_record
-  rdf:type owl:ObjectProperty ;
-  rdfs:label "p109 was put on record"@en ;
-  rdfs:label "p109 поставлено на учет в"@ru ;
-  rdfs:range :C17_Territorial_State_Bodies ;
-.
-:p10_doc_type
-  rdf:type owl:DatatypeProperty ;
-  rdfs:label "p10 doc type"@en ;
-  rdfs:label "p10 тип документа"@ru ;
-  rdfs:range xsd:string ;
-.
-:p110_is_reduced_by
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain :C47_Stated_Capital_Entity ;
-  rdfs:label "p110 is reduced by"@en ;
-  rdfs:label "p110 уменьшено на"@ru ;
-  rdfs:range :C48_Capital_Decreasing_Entity ;
-.
-:p111_represents_organization
-  rdf:type owl:ObjectProperty ;
-  rdfs:label "p111 represents organization"@en ;
-  rdfs:label "p111 описывает юридическое лицо"@ru ;
-  rdfs:range :C9_Legal_Entity ;
-.
-:p112_has_citizenship_in
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain :C80_Citizenship_Entity ;
-  rdfs:label "p112 has citizenship in"@en ;
-  rdfs:label "p112 является гражданином"@ru ;
-  rdfs:range :C21_Country ;
-.
-:p113_part_of
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain :C26_KLADR_Element ;
-  rdfs:label "p113 part of"@en ;
-  rdfs:label "p113 является частью"@ru ;
-  rdfs:range :C26_KLADR_Element ;
-.
-:p114_is_head_of_peasant_farm
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain :C90_IE_Registration_Entity ;
-  rdfs:label "p114 is head of peasant farm"@en ;
-  rdfs:label "p114 является главой фермерского хозяйства"@ru ;
-  rdfs:range :C9_Legal_Entity ;
-.
-:p115_acts_on_behalf_of
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain :C59_Applicant_Entity ;
-  rdfs:label "p115 acts on behalf of"@en ;
-  rdfs:label "p115 действует от имени"@ru ;
-  rdfs:range :C72_Participant_Entity ;
-.
-:p116_relates_to_management_company
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain :C59_Applicant_Entity ;
-  rdfs:label "p116 relates to management company"@en ;
-  rdfs:label "p116 выступает от управляющей организации"@ru ;
-  rdfs:range :C72_Participant_Entity ;
-.
-:p117_has_contact_number
-  rdf:type owl:ObjectProperty ;
-  rdfs:label "p117 has contact number"@en ;
-  rdfs:label "p117 есть контактный телефон"@ru ;
-  rdfs:range :C62_Contact_Number_Entity ;
-.
-:p118_is_managed_by
-  rdf:type owl:ObjectProperty ;
-  rdfs:label "p118 is managed by"@en ;
-  rdfs:label "p118 управляется"@ru ;
-  rdfs:range :C63_Person_Entity ;
-.
-:p119_registered_in_country_of_origin_as
-  rdf:type owl:ObjectProperty ;
-  rdfs:label "p119 registered in country of origin as"@en ;
-  rdfs:label "p119 зарегистрировано в стране происхождения как"@ru ;
-  rdfs:range :C102_Foreign_Legal_Entity ;
-.
-:p11_doc_number
-  rdf:type owl:DatatypeProperty ;
-  rdfs:label "p11 doc number"@en ;
-  rdfs:label "p11 номер документа"@ru ;
-  rdfs:range xsd:string ;
-.
-:p120_exercise_of_authority_through
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain :C49_Management_Organization_Entity ;
-  rdfs:label "p120 exercise of authority through"@en ;
-  rdfs:label "p120 осуществляет полномочия управляющей организации через"@ru ;
-  rdfs:range :C50_Branch_Of_Foreign_Legal_Entity ;
-.
-:p121_holds_position
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain :C51_Person_Acting_Without_Power_Of_Auttorney_Entity ;
-  rdfs:label "p121 holds position"@en ;
-  rdfs:label "p121 занимает должность"@ru ;
-  rdfs:range :C52_Job_Entity ;
-.
-:p122_is_disqualified
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain :C51_Person_Acting_Without_Power_Of_Auttorney_Entity ;
-  rdfs:label "p122 is disqualified"@en ;
-  rdfs:label "p122 дисквалифицировано"@ru ;
-  rdfs:range :C53_Disqualification_Entity ;
-.
-:p123_has_old_registration_data
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain :C103_Russian_Organization_Founder_Entity ;
-  rdfs:label "p123 has old registration data"@en ;
-  rdfs:label "p123 есть данные о регистрации до 2002 года"@ru ;
-  rdfs:range :C56_Old_Registration_Entity ;
-.
-:p124_has_share
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain :C54_Founder_Entity ;
-  rdfs:label "p124 has share"@en ;
-  rdfs:label "p124 имеет долю в уставном капитале"@ru ;
-  rdfs:range :C55_Share_In_Stated_Capital_Entity ;
-.
-:p125_basis_for_imposing
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain :C65_Encumbrance_Of_Participant_Share_Entity ;
-  rdfs:label "p125 basis for imposing"@en ;
-  rdfs:label "p125 обременение наложено на основании"@ru ;
-  rdfs:range :C6_Document ;
-.
-:p126_has_reorganization_participant
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain :C66_Reorganization_Entity ;
-  rdfs:label "p126 has reorganization participant"@en ;
-  rdfs:label "p126 является участником реорганизации"@ru ;
-  rdfs:range :C110_Reorganization_Participant ;
-.
-:p127_exists_before_reorganization
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain :C111_Legal_Predecessor_Entity ;
-  rdfs:label "p127 exists before reorganization"@en ;
-  rdfs:label "p127 существовало до реорганизации"@ru ;
-  rdfs:range :C72_Participant_Entity ;
-.
-:p128_created_after_reorganization
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain :C112_Legal_Successor_Entity ;
-  rdfs:label "p128 created after reorganization"@en ;
-  rdfs:label "p128 создано после реорганизации"@ru ;
-  rdfs:range :C72_Participant_Entity ;
-.
-:p129_has_name
-  rdf:type owl:ObjectProperty ;
-  rdfs:label "p129 has name"@en ;
-  rdfs:label "p129 есть наименование"@ru ;
-.
-:p12_doc_date
-  rdf:type owl:DatatypeProperty ;
-  rdfs:label "p12 doc date"@en ;
-  rdfs:label "p12 дата документа"@ru ;
-  rdfs:range xsd:dateTime ;
-.
-:p130_separate_business_unit_registered_in
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain :C69_Separate_Business_Unit_Entity ;
-  rdfs:label "p130 separate business unit registered in"@en ;
-  rdfs:label "p130 обособленное подразделение состоит на учете в"@ru ;
-  rdfs:range :C58_Separate_Business_Unit_Tax_Registration_Entity ;
-.
-:p131_based_on_pledge_agreement
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain :C71_Mortgagee_Entity ;
-  rdfs:label "p131 based on pledge agreement"@en ;
-  rdfs:label "p131 есть нотариальное удостоверение договора залога"@ru ;
-  rdfs:range :C6_Document ;
-.
-:p132_has_trustee
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain :C106_Person_Founder_Entity ;
-  rdfs:label "p132 has trustee"@en ;
-  rdfs:label "p132 есть доверительный управляющий"@ru ;
-  rdfs:range :C75_Trustee_Entity ;
-.
-:p133_rights_are_exercised_by
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain :C105_Public_Authority_Founder_Entity ;
-  rdfs:label "p133 rights are exercised by"@en ;
-  rdfs:label "p133 права осуществляются"@ru ;
-  rdfs:range :C74_Public_Body_Exercising_Founders_Fights_Entity ;
-.
-:p134_acts_by_inheritance
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain :C75_Trustee_Entity ;
-  rdfs:label "p134 acts by inheritance"@en ;
-  rdfs:label "p134 действует на основании наследства"@ru ;
-  rdfs:range :C76_Inheritance_Manager_Entity ;
-.
-:p135_is_managed_by_company
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain :C107_Mutual_Investment_Fund_Founder_Entity ;
-  rdfs:label "p135 is managed by company"@en ;
-  rdfs:label "p135 управляется управляющей компанией"@ru ;
-  rdfs:range :C73_Management_Company_Entity ;
-.
-:p136_includes_egrul_record
-  rdf:type owl:ObjectProperty ;
-  rdfs:label "p136 includes egrul record"@en ;
-  rdfs:label "p136 включает запись, внесенную в егрюл"@ru ;
-.
-:p137_includes_egrip_record
-  rdf:type owl:ObjectProperty ;
-  rdfs:label "p137 includes egrip record"@en ;
-  rdfs:label "p137 включает запись, внесенную в егрип"@ru ;
-.
-:p13_publication_date
-  rdf:type owl:DatatypeProperty ;
-  rdfs:label "p13 publication date"@en ;
-  rdfs:label "p13 дата публикации"@ru ;
-  rdfs:range xsd:dateTime ;
-.
-:p14_volume_number
-  rdf:type owl:DatatypeProperty ;
-  rdfs:comment "Номер журнала, в котором опубликовано решение"@ru ;
-  rdfs:label "p14 volume number"@en ;
-  rdfs:label "p14 номер журнала"@ru ;
-  rdfs:range xsd:string ;
-.
-:p15_address
-  rdf:type owl:DatatypeProperty ;
-  rdfs:label "p15 address"@en ;
-  rdfs:label "p15 адрес"@ru ;
-  rdfs:range xsd:string ;
-.
-:p16_full_name
-  rdf:type owl:DatatypeProperty ;
-  rdfs:label "p16 full name"@en ;
-  rdfs:label "p16 полное наименование"@ru ;
-  rdfs:range xsd:string ;
-.
-:p17_short_name
-  rdf:type owl:DatatypeProperty ;
-  rdfs:label "p17 short name"@en ;
-  rdfs:label "p17 краткое наименование"@ru ;
-  rdfs:range xsd:string ;
-.
-:p18_postcode
-  rdf:type owl:DatatypeProperty ;
-  rdfs:label "p18 postcode"@en ;
-  rdfs:label "p18 индекс"@ru ;
-  rdfs:range xsd:string ;
-.
-:p19_kladr_code
-  rdf:type owl:DatatypeProperty ;
-  rdfs:label "p19 address KLADR code"@en ;
-  rdfs:label "p19 КЛАДР код адреса"@ru ;
-  rdfs:range xsd:string ;
-.
-:p1_state_registration_number
-  rdf:type owl:DatatypeProperty ;
-  rdfs:label "p1 state registration number"@en ;
-  rdfs:label "p1 государственный регистрационный номер"@ru ;
-  rdfs:range xsd:string ;
-.
-:p21_block
-  rdf:type owl:DatatypeProperty ;
-  rdfs:label "p21 block"@en ;
-  rdfs:label "p21 корпус"@ru ;
-  rdfs:range xsd:string ;
-.
-:p22_building_number
-  rdf:type owl:DatatypeProperty ;
-  rdfs:label "p22 building number"@en ;
-  rdfs:label "p22 дом"@ru ;
-  rdfs:range xsd:string ;
-.
-:p23_office_number
-  rdf:type owl:DatatypeProperty ;
-  rdfs:label "p23 office number"@en ;
-  rdfs:label "p23 офис (квартира)"@ru ;
-  rdfs:range xsd:string ;
-.
-:p24_reason_for_inability_to_interact
-  rdf:type owl:DatatypeProperty ;
-  rdfs:comment "Признак невозможности взаимодействия с юридическим лицом по содержащемуся в ЕГРЮЛ адресу"@ru ;
-  rdfs:label "p24 reason for inability to interact"@en ;
-  rdfs:label "p24 признак невозможности взаимодействия"@ru ;
-  rdfs:range xsd:string ;
-.
-:p25_element_type
-  rdf:type owl:DatatypeProperty ;
-  rdfs:label "p25 element type"@en ;
-  rdfs:label "p25 тип элемента"@ru ;
-  rdfs:range xsd:string ;
-.
-:p26_version
-  rdf:type owl:DatatypeProperty ;
-  rdfs:label "p26 version"@en ;
-  rdfs:label "p26 версия"@ru ;
-  rdfs:range xsd:string ;
-.
-:p27_email
-  rdf:type owl:DatatypeProperty ;
-  rdfs:label "p27 email"@en ;
-  rdfs:label "p27 адрес электронной почты"@ru ;
-  rdfs:range xsd:string ;
-.
-:p28_le_primary_state_registration_number
-  rdf:type owl:DatatypeProperty ;
-  rdfs:comment "Основной государственный регистрационный номер юридического лица"@ru ;
-  rdfs:label "p28 le primary state registration number"@en ;
-  rdfs:label "p28 огрн юл"@ru ;
-  rdfs:range xsd:string ;
-.
-:p29_psrn_assignment_date
-  rdf:type owl:DatatypeProperty ;
-  rdfs:label "p29 psrn assignment date"@en ;
-  rdfs:label "p29 дата присвоения огрн"@ru ;
-  rdfs:range xsd:dateTime ;
-.
-:p2_date
-  rdf:type owl:DatatypeProperty ;
-  rdfs:label "p2 date"@en ;
-  rdfs:label "p2 дата"@ru ;
-  rdfs:range xsd:dateTime ;
-.
-:p30_address_in_country_of_origin
-  rdf:type owl:DatatypeProperty ;
-  rdfs:comment "Адрес (место нахождения) в стране происхождения"@ru ;
-  rdfs:label "p30 address in country of origin"@en ;
-  rdfs:label "p30 адрес в стране происхождения"@ru ;
-  rdfs:range xsd:string ;
-.
-:p31_le_registration_number
-  rdf:type owl:DatatypeProperty ;
-  rdfs:comment "Регистрационный номер юридического лица"@ru ;
-  rdfs:label "p31 le registration number"@en ;
-  rdfs:label "p31 регистрационный номер юл"@ru ;
-  rdfs:range xsd:string ;
-.
-:p32_le_registration_date
-  rdf:type owl:DatatypeProperty ;
-  rdfs:comment "Дата регистрации юридического лица"@ru ;
-  rdfs:label "p32 le registration date"@en ;
-  rdfs:label "p32 дата регистрации юл"@ru ;
-  rdfs:range xsd:dateTime ;
-.
-:p33_registered_by
-  rdf:type owl:DatatypeProperty ;
-  rdfs:comment "Наименование органа, зарегистрировавшего юридическое лицо"@ru ;
-  rdfs:label "p33 registered by"@en ;
-  rdfs:label "p33 наименование органа, зарегистрировавшего юл"@ru ;
-  rdfs:range xsd:string ;
-.
-:p34_le_cessation_date
-  rdf:type owl:DatatypeProperty ;
-  rdfs:label "p34 le cessation date"@en ;
-  rdfs:label "p34 дата прекращения юридического лица"@ru ;
-  rdfs:range xsd:dateTime ;
-.
-:p35_le_individual_tax_number
-  rdf:type owl:DatatypeProperty ;
-  rdfs:comment "Идентификационный номер юридического лица"@ru ;
-  rdfs:label "p35 le individual tax number"@en ;
-  rdfs:label "p35 инн юл"@ru ;
-  rdfs:range xsd:string ;
-.
-:p36_tax_reason_code
-  rdf:type owl:DatatypeProperty ;
-  rdfs:comment "Код причины постановки на учет"@ru ;
-  rdfs:label "p36 tax reason code"@en ;
-  rdfs:label "p36 кпп"@ru ;
-  rdfs:range xsd:string ;
-.
-:p37_reduction_amount
-  rdf:type owl:DatatypeProperty ;
-  rdfs:comment "Величина, на которую уменьшается уставный капитал (в рублях)"@ru ;
-  rdfs:label "p37 reduction amount"@en ;
-  rdfs:label "p37 величина, на которую уменьшается уставный капитал"@ru ;
-  rdfs:range xsd:float ;
-.
-:p38_decision_date
-  rdf:type owl:DatatypeProperty ;
-  rdfs:label "p38 decision date"@en ;
-  rdfs:label "p38 дата решения"@ru ;
-  rdfs:range xsd:dateTime ;
-.
-:p39_amount
-  rdf:type owl:DatatypeProperty ;
-  rdfs:label "p39 amount"@en ;
-  rdfs:label "p39 размер в рублях"@ru ;
-.
-:p3_formation_date
-  rdf:type owl:DatatypeProperty ;
-  rdfs:comment "Дата формирования сведений из реестра в отношении юридического лица или индивидуального предпринимателя"@ru ;
-  rdfs:label "p3 formation date"@en ;
-  rdfs:label "p3 дата формирования сведений из реестра"@ru ;
-  rdfs:range xsd:dateTime ;
-.
-:p40_ruble_share
-  rdf:type owl:DatatypeProperty ;
-  rdfs:label "p40 ruble share"@en ;
-  rdfs:label "p40 доля рубля в капитале"@ru ;
-.
-:p41_phone_number
-  rdf:type owl:DatatypeProperty ;
-  rdfs:label "p41 phone number"@en ;
-  rdfs:label "p41 номер контактного телефона"@ru ;
-  rdfs:range xsd:string ;
-.
-:p42_first_name
-  rdf:type owl:DatatypeProperty ;
-  rdfs:label "p42 first name"@en ;
-  rdfs:label "p42 имя"@ru ;
-  rdfs:range xsd:string ;
-.
-:p43_last_name
-  rdf:type owl:DatatypeProperty ;
-  rdfs:label "p43 last name"@en ;
-  rdfs:label "p43 фамилия"@ru ;
-  rdfs:range xsd:string ;
-.
-:p44_middle_name
-  rdf:type owl:DatatypeProperty ;
-  rdfs:label "p44 middle name"@en ;
-  rdfs:label "p44 отчество"@ru ;
-  rdfs:range xsd:string ;
-.
-:p46_ie_primary_state_registration_number
-  rdf:type owl:DatatypeProperty ;
-  rdfs:comment "Основной государственный регистрационный номер индивидуального предпринимателя"@ru ;
-  rdfs:label "p46 ie primary state registration number"@en ;
-  rdfs:label "p46 огрн ип"@ru ;
-  rdfs:range xsd:string ;
-.
-:p47_job_title
-  rdf:type owl:DatatypeProperty ;
-  rdfs:comment "Наименование должности"@ru ;
-  rdfs:label "p47 job title"@en ;
-  rdfs:label "p47 должность"@ru ;
-  rdfs:range xsd:string ;
-.
-:p48_start_date
-  rdf:type owl:DatatypeProperty ;
-  rdfs:label "p48 start date"@en ;
-  rdfs:label "p48 дата начала"@ru ;
-  rdfs:range xsd:dateTime ;
-.
-:p49_end_date
-  rdf:type owl:DatatypeProperty ;
-  rdfs:label "p49 end date"@en ;
-  rdfs:label "p49 дата окончания"@ru ;
-  rdfs:range xsd:dateTime ;
-.
-:p4_classifier_of_organization_and_legal_form
-  rdf:type owl:DatatypeProperty ;
-  rdfs:comment "Наименование классификатора, по которому введены сведения об организационно-правовой форме: ОКОПФ, КОПФ"@ru ;
-  rdfs:label "p4 classifier of organization and legal form"@en ;
-  rdfs:label "p4 классификатор организационно-правовой формы"@ru ;
-  rdfs:range xsd:string ;
-.
-:p50_municipality_name
-  rdf:type owl:DatatypeProperty ;
-  rdfs:label "p50 municipality name"@en ;
-  rdfs:label "p50 наименование муниципального образования"@ru ;
-  rdfs:range xsd:string ;
-.
-:p51_nominal_share_of_value_in_ruble
-  rdf:type owl:DatatypeProperty ;
-  rdfs:label "p51 nominal share of value in ruble"@en ;
-  rdfs:label "p51 номинальная стоимость доли в рублях"@ru ;
-  rdfs:range xsd:float ;
-.
-:p52_percentage_share
-  rdf:type owl:DatatypeProperty ;
-  rdfs:label "p52 percentage share"@en ;
-  rdfs:label "p52 размер доли в процентах"@ru ;
-  rdfs:range xsd:int ;
-.
-:p53_share_in_decimal_fractions
-  rdf:type owl:DatatypeProperty ;
-  rdfs:label "p53 share in decimal fractions"@en ;
-  rdfs:label "p53 размер доли в десятичных дробях"@ru ;
-  rdfs:range xsd:decimal ;
-.
-:p54_nominator_of_share
-  rdf:type owl:DatatypeProperty ;
-  rdfs:label "p54 nominator of share"@en ;
-  rdfs:label "p54 числитель дроби размера доли"@ru ;
-  rdfs:range xsd:int ;
-.
-:p55_denominator_of_share
-  rdf:type owl:DatatypeProperty ;
-  rdfs:label "p55 denominator of share"@en ;
-  rdfs:label "p55 знаменатель дроби размера доли"@ru ;
-  rdfs:range xsd:int ;
-.
-:p56_registration_date
-  rdf:type owl:DatatypeProperty ;
-  rdfs:label "p56 registration date"@en ;
-  rdfs:label "p56 дата регистрации"@ru ;
-  rdfs:range xsd:dateTime ;
-.
-:p57_opening_inheritance_date
-  rdf:type owl:DatatypeProperty ;
-  rdfs:label "p57 opening inheritance date"@en ;
-  rdfs:label "p57 день открытия наследства"@ru ;
-.
-:p58_period_of_procedure
-  rdf:type owl:DatatypeProperty ;
-  rdfs:comment "Срок обременения или порядок определения срока"@ru ;
-  rdfs:label "p58 period of procedure"@en ;
-  rdfs:label "p58 срок обременения"@ru ;
-.
-:p59_state_after_reorganization
-  rdf:type owl:DatatypeProperty ;
-  rdfs:comment "Состояние юридического лица после завершения реорганизации"@ru ;
-  rdfs:label "p59 state after reorganization"@en ;
-  rdfs:label "p59 состояние юл после реорганизации"@ru ;
-.
-:p5_code
-  rdf:type owl:DatatypeProperty ;
-  rdfs:label "p5 code"@en ;
-  rdfs:label "p5 код"@ru ;
-  rdfs:range xsd:string ;
-.
-:p60_license_series
-  rdf:type owl:DatatypeProperty ;
-  rdfs:label "p60 license series"@en ;
-  rdfs:label "p60 серия лицензии"@ru ;
-  rdfs:range xsd:string ;
-.
-:p61_license_number
-  rdf:type owl:DatatypeProperty ;
-  rdfs:label "p61 license number"@en ;
-  rdfs:label "p61 номер лицензии"@ru ;
-  rdfs:range xsd:string ;
-.
-:p62_license_type
-  rdf:type owl:DatatypeProperty ;
-  rdfs:label "p62 license type"@en ;
-  rdfs:label "p62 вид лицензии"@ru ;
-  rdfs:range xsd:string ;
-.
-:p63_date_of_licensing
-  rdf:type owl:DatatypeProperty ;
-  rdfs:label "p63 date of licensing"@en ;
-  rdfs:label "p63 дата лицензии"@ru ;
-  rdfs:range xsd:dateTime ;
-.
-:p64_licensed_activity_name
-  rdf:type owl:DatatypeProperty ;
-  rdfs:comment "Наименование лицензируемого вида деятельности, на который выдана лицензия"@ru ;
-  rdfs:label "p64 licensed activity name"@en ;
-  rdfs:label "p64 лицензируемый вид деятельности"@ru ;
-  rdfs:range xsd:string ;
-.
-:p65_place_of_licensed_activity
-  rdf:type owl:DatatypeProperty ;
-  rdfs:comment "Сведения об адресе места осуществления лицензируемого вида деятельности"@ru ;
-  rdfs:label "p65 place of licensed activity"@en ;
-  rdfs:label "p65 место осуществления лицензируемого вида деятельности"@ru ;
-  rdfs:range xsd:string ;
-.
-:p66_licensing_authority_name
-  rdf:type owl:DatatypeProperty ;
-  rdfs:comment "Наименование лицензирующего органа, выдавшего или переоформившего лицензию"@ru ;
-  rdfs:label "p66 licensing authority name"@en ;
-  rdfs:label "p66 наименование лицензирующего органа, выдавшего лицензию"@ru ;
-  rdfs:range xsd:string ;
-.
-:p67_license_suspension_date
-  rdf:type owl:DatatypeProperty ;
-  rdfs:label "p67 license suspension date"@en ;
-  rdfs:label "p67 дата приостановления действия лицензии"@ru ;
-  rdfs:range xsd:dateTime ;
-.
-:p68_license_suspension_authority
-  rdf:type owl:DatatypeProperty ;
-  rdfs:comment "Наименование лицензирующего органа, приостановившего действие лицензии"@ru ;
-  rdfs:label "p68 license suspension authority"@en ;
-  rdfs:label "p68 наименование лицензирующего органа, приостановившего лицензию"@ru ;
-  rdfs:range xsd:string ;
-.
-:p69_certificate_ceries
-  rdf:type owl:DatatypeProperty ;
-  rdfs:label "p69 certificate ceries"@en ;
-  rdfs:label "p69 серия бланка свидетельства"@ru ;
-  rdfs:range xsd:string ;
-.
-:p6_name
-  rdf:type owl:DatatypeProperty ;
-  rdfs:label "p6 name"@en ;
-  rdfs:label "p6 наименование"@ru ;
-  rdfs:range xsd:string ;
-.
-:p70_certificate_number
-  rdf:type owl:DatatypeProperty ;
-  rdfs:label "p70 certificate number"@en ;
-  rdfs:label "p70 номер бланка свидетельства"@ru ;
-  rdfs:range xsd:string ;
-.
-:p71_certificate_date
-  rdf:type owl:DatatypeProperty ;
-  rdfs:label "p71 certificate date"@en ;
-  rdfs:label "p71 дата выдачи свидетельства"@ru ;
-  rdfs:range xsd:dateTime ;
-.
-:p72_gender
-  rdf:type owl:DatatypeProperty ;
-  rdfs:label "p72 gender"@en ;
-  rdfs:label "p72 пол"@ru ;
-  rdfs:range xsd:string ;
-.
-:p73_citizenship_type
-  rdf:type owl:DatatypeProperty ;
-  rdfs:label "p73 citizenship type"@en ;
-  rdfs:label "p73 вид гражданства"@ru ;
-  rdfs:range xsd:string ;
-.
-:p74_ie_business_interuption_date
-  rdf:type owl:DatatypeProperty ;
-  rdfs:label "p74 ie business interuption date"@en ;
-  rdfs:label "p74 дата прекращения ип"@ru ;
-  rdfs:range xsd:dateTime ;
-.
-:p75_ie_individual_tax_number
-  rdf:type owl:DatatypeProperty ;
-  rdfs:comment "Идентификационный номер физического лица"@ru ;
-  rdfs:label "p75 ie individual tax number"@en ;
-  rdfs:label "p75 инн фл"@ru ;
-.
-:p76_entered_on_registry_with
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain :C2_Reg_Entity ;
-  rdfs:label "p76 entered on registry with"@en ;
-  rdfs:label "p76 внесено в реестр с"@ru ;
-  rdfs:range :C1_Reg_Number_Date ;
-.
-:p77_recorded_by
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain :C2_Reg_Entity ;
-  rdfs:label "p77 recorded by"@en ;
-  rdfs:label "p77 запись внесена"@ru ;
-  rdfs:range :C17_Territorial_State_Bodies ;
-.
-:p78_registered_in
-  rdf:type owl:ObjectProperty ;
-  rdfs:label "p78 registered in"@en ;
-  rdfs:label "p78 зарегистрировано в"@ru ;
-.
-:p79_has_type
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain :C2_Reg_Entity ;
-  rdfs:label "p79 has type"@en ;
-  rdfs:label "p79 есть тип"@ru ;
-  rdfs:range :C7_FTS_Type_List ;
-.
-:p7_record_id
-  rdf:type owl:DatatypeProperty ;
-  rdfs:label "p7 record id"@en ;
-  rdfs:label "p7 системный идентификатор записи"@ru ;
-  rdfs:range xsd:string ;
-.
-:p80_describes_company
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain :C4_Legal_Entity_Details ;
-  rdfs:label "p80 describes company"@en ;
-  rdfs:label "p80 описывает организацию"@ru ;
-  rdfs:range :C9_Legal_Entity ;
-.
-:p81_includes_le_reg_entity
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain :C4_Legal_Entity_Details ;
-  rdfs:label "p81 includes le reg entity"@en ;
-  rdfs:label "p81 включает сведения о юл"@ru ;
-  rdfs:range :C12_EGRUL_Reg_Entity ;
-.
-:p82_refers_to_company
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain :C12_EGRUL_Reg_Entity ;
-  rdfs:label "p82 refers to company"@en ;
-  rdfs:label "p82 относится к юридическому лицу"@ru ;
-  rdfs:range :C9_Legal_Entity ;
-.
-:p83_describes_ie
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain :C5_Individual_Entrepreneur_Details ;
-  rdfs:label "p83 describes ie"@en ;
-  rdfs:label "p83 описывает ип"@ru ;
-  rdfs:range :C10_Individual_Entrepreneur ;
-.
-:p84_includes_ie_reg_entity
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain :C5_Individual_Entrepreneur_Details ;
-  rdfs:label "p84 includes ie reg entity"@en ;
-  rdfs:label "p84 включает сведения о ип"@ru ;
-  rdfs:range :C13_EGRIP_Reg_Entity ;
-.
-:p85_refers_to_ie
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain :C13_EGRIP_Reg_Entity ;
-  rdfs:label "p85 refers to ie"@en ;
-  rdfs:label "p85 относится к ип"@ru ;
-  rdfs:range :C10_Individual_Entrepreneur ;
-.
-:p86_was_submitted
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain :C6_Document ;
-  rdfs:label "p86 was submitted"@en ;
-  rdfs:label "p86 представлен при внесении записи"@ru ;
-  rdfs:range :C3_Record ;
-.
-:p87_created_by
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain :C6_Document ;
-  rdfs:label "p87 created by"@en ;
-  rdfs:label "p87 создан"@ru ;
-  rdfs:range :C9_Legal_Entity ;
-.
-:p88_added_by
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain :C3_Record ;
-  rdfs:label "p88 added by"@en ;
-  rdfs:label "p88 добавлено"@ru ;
-  rdfs:range :C93_Tax_Authority ;
-.
-:p89_reason_for_making_entry
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain :C3_Record ;
-  rdfs:label "p89 reason for making entry"@en ;
-  rdfs:label "p89 внесено по причине"@ru ;
-  rdfs:range :C20_Record_Type ;
-.
-:p8_recording_date
-  rdf:type owl:DatatypeProperty ;
-  rdfs:label "p8 recording date"@en ;
-  rdfs:label "p8 дата внесения записи в реестр"@ru ;
-  rdfs:range xsd:dateTime ;
-.
-:p90_invalidate_by
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain :C3_Record ;
-  rdfs:label "p90 invalidate by"@en ;
-  rdfs:label "p90 признает недействительной"@ru ;
-  rdfs:range :C11_Changed_Reg_Number_Date ;
-.
-:p91_invalidate
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain :C3_Record ;
-  rdfs:label "p91 invalidate"@en ;
-  rdfs:label "p91 признана недействительной"@ru ;
-  rdfs:range :C11_Changed_Reg_Number_Date ;
-.
-:p92_is_amending_for
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain :C3_Record ;
-  rdfs:label "p92 is amending for"@en ;
-  rdfs:label "p92 вносит исправления в"@ru ;
-  rdfs:range :C11_Changed_Reg_Number_Date ;
-.
-:p93_is_amending_by
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain :C3_Record ;
-  rdfs:label "p93 is amending by"@en ;
-  rdfs:label "p93 исправлена"@ru ;
-  rdfs:range :C11_Changed_Reg_Number_Date ;
-.
-:p94_ie_record_confirmed_by
-  rdf:type owl:ObjectProperty ;
-  rdfs:comment "Внесение записи об индивидуальном предпринимателе подтверждено"@ru ;
-  rdfs:domain :C15_EGRIP_Record ;
-  rdfs:label "p94 ie record confirmed by"@en ;
-  rdfs:label "p94 внесение записи о ип подтверждено"@ru ;
-  rdfs:range :C92_IE_Changes_Confirmation_Entity ;
-.
-:p95_le_record_confirmed_by
-  rdf:type owl:ObjectProperty ;
-  rdfs:comment "Внесение записи о юридическом лице подтверждено"@ru ;
-  rdfs:domain :C14_EGRUL_Record ;
-  rdfs:label "p95 le record confirmed by"@en ;
-  rdfs:label "p95 внесение записи о юл подтверждено"@ru ;
-  rdfs:range :C78_LE_Changes_Confirmation_Entity ;
-.
-:p96_declared_by
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain :C14_EGRUL_Record ;
-  rdfs:label "p96 declared by"@en ;
-  rdfs:label "p96 заявлено"@ru ;
-  rdfs:range :C59_Applicant_Entity ;
-.
-:p97_registered_by_public_body
-  rdf:type owl:ObjectProperty ;
-  rdfs:label "p97 registered by public body"@en ;
-  rdfs:label "p97 зарегистрирован в госоргане"@ru ;
-  rdfs:range :C36_Public_Body ;
-.
-:p98_located_at
-  rdf:type owl:ObjectProperty ;
-  rdfs:label "p98 located at"@en ;
-  rdfs:label "p98 расположен в"@ru ;
-.
-:p99_invalid_based_on
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain :C39_Address_Entity ;
-  rdfs:label "p99 invalid based on"@en ;
-  rdfs:label "p99 недостоверный на основании"@ru ;
-  rdfs:range :C6_Document ;
-.
-:p9_doc_name
-  rdf:type owl:DatatypeProperty ;
-  rdfs:label "p9 doc name"@en ;
-  rdfs:label "p9 наименование документа"@ru ;
-  rdfs:range xsd:string ;
-.
+<https://w3id.org/datafabric.cc/ontologies/fts#> rdf:type owl:Ontology ;
+                                                  owl:versionIRI <https://w3id.org/datafabric.cc/ontologies/fts#> ;
+                                                  <http://purl.org/vocab/vann/preferredNamespacePrefix> "fts"^^xsd:string ;
+                                                  owl:versionInfo "1.0.0" ;
+                                                  <http://purl.org/dc/terms/title> "Онтология ФНС (Федеральная налоговая служба)"@ru ;
+                                                  <http://purl.org/vocab/vann/preferredNamespaceUri> <https://w3id.org/datafabric.cc/ontologies/fts#> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/ontology/bibo/status
+<http://purl.org/ontology/bibo/status> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/example
+<http://purl.org/vocab/vann/example> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2002/07/owl#versionIRI
+owl:versionIRI rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p100_certified_by
+:p100_certified_by rdf:type owl:ObjectProperty ;
+                   rdfs:domain :C6_Document ;
+                   rdfs:range :C63_Person_Entity ;
+                   rdfs:label "p100 certified by"@en ,
+                              "p100 удостоверено нотариусом"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p101_relates_to_person
+:p101_relates_to_person rdf:type owl:ObjectProperty ;
+                        rdfs:range :C63_Person_Entity ;
+                        rdfs:label "p101 relates to person"@en ,
+                                   "p101 относится к физическому лицу"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p102_relates_to_organization
+:p102_relates_to_organization rdf:type owl:ObjectProperty ;
+                              rdfs:range :C72_Participant_Entity ;
+                              rdfs:label "p102 relates to organization"@en ,
+                                         "p102 относится к организации"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p103_formed_by
+:p103_formed_by rdf:type owl:ObjectProperty ;
+                rdfs:domain :C41_LE_Registration_Entity ;
+                rdfs:range :C31_LE_Formation_Method ;
+                rdfs:label "p103 formed by"@en ,
+                           "p103 сформировано способом"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p104_forthcoming_exception_based_on
+:p104_forthcoming_exception_based_on rdf:type owl:ObjectProperty ;
+                                     rdfs:domain :C42_LE_State_Entity ;
+                                     rdfs:range :C16_Exclusion_Decision ;
+                                     rdfs:label "p104 forthcoming exception based on"@en ,
+                                                "p104 будет исключено на основании"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p105_le_license_suspended_based_on
+:p105_le_license_suspended_based_on rdf:type owl:ObjectProperty ;
+                                    rdfs:domain :C60_LE_License_Entity ;
+                                    rdfs:range :C61_LE_License_Suspension_Entity ;
+                                    rdfs:label "p105 le license suspended based on"@en ,
+                                               "p105 лицензия юл приостановлена на основании"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p106_ie_license_suspended_based_on
+:p106_ie_license_suspended_based_on rdf:type owl:ObjectProperty ;
+                                    rdfs:domain :C88_IE_License_Entity ;
+                                    rdfs:range :C89_IE_License_Suspension_Entity ;
+                                    rdfs:label "p106 ie license suspended based on"@en ,
+                                               "p106 лицензия ип приостановлена на основании"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p107_is_main_activity
+:p107_is_main_activity rdf:type owl:ObjectProperty ;
+                       rdfs:range :C18_Economic_Activity_Type ;
+                       rdfs:label "p107 is main activity"@en ,
+                                  "p107 есть основной вид деятельности"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p108_is_additional_activity
+:p108_is_additional_activity rdf:type owl:ObjectProperty ;
+                             rdfs:range :C18_Economic_Activity_Type ;
+                             rdfs:label "p108 is additional activity"@en ,
+                                        "p108 есть дополнительный вид деятельности"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p109_was_put_on_record
+:p109_was_put_on_record rdf:type owl:ObjectProperty ;
+                        rdfs:range :C17_Territorial_State_Bodies ;
+                        rdfs:label "p109 was put on record"@en ,
+                                   "p109 поставлено на учет в"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p110_is_reduced_by
+:p110_is_reduced_by rdf:type owl:ObjectProperty ;
+                    rdfs:domain :C47_Stated_Capital_Entity ;
+                    rdfs:range :C48_Capital_Decreasing_Entity ;
+                    rdfs:label "p110 is reduced by"@en ,
+                               "p110 уменьшено на"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p111_represents_organization
+:p111_represents_organization rdf:type owl:ObjectProperty ;
+                              rdfs:range :C9_Legal_Entity ;
+                              rdfs:label "p111 represents organization"@en ,
+                                         "p111 описывает юридическое лицо"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p112_has_citizenship_in
+:p112_has_citizenship_in rdf:type owl:ObjectProperty ;
+                         rdfs:domain :C80_Citizenship_Entity ;
+                         rdfs:range :C21_Country ;
+                         rdfs:label "p112 has citizenship in"@en ,
+                                    "p112 является гражданином"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p113_part_of
+:p113_part_of rdf:type owl:ObjectProperty ;
+              rdfs:domain :C26_KLADR_Element ;
+              rdfs:range :C26_KLADR_Element ;
+              rdfs:label "p113 part of"@en ,
+                         "p113 является частью"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p114_is_head_of_peasant_farm
+:p114_is_head_of_peasant_farm rdf:type owl:ObjectProperty ;
+                              rdfs:domain :C90_IE_Registration_Entity ;
+                              rdfs:range :C9_Legal_Entity ;
+                              rdfs:label "p114 is head of peasant farm"@en ,
+                                         "p114 является главой фермерского хозяйства"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p115_acts_on_behalf_of
+:p115_acts_on_behalf_of rdf:type owl:ObjectProperty ;
+                        rdfs:domain :C59_Applicant_Entity ;
+                        rdfs:range :C72_Participant_Entity ;
+                        rdfs:label "p115 acts on behalf of"@en ,
+                                   "p115 действует от имени"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p116_relates_to_management_company
+:p116_relates_to_management_company rdf:type owl:ObjectProperty ;
+                                    rdfs:domain :C59_Applicant_Entity ;
+                                    rdfs:range :C72_Participant_Entity ;
+                                    rdfs:label "p116 relates to management company"@en ,
+                                               "p116 выступает от управляющей организации"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p117_has_contact_number
+:p117_has_contact_number rdf:type owl:ObjectProperty ;
+                         rdfs:range :C62_Contact_Number_Entity ;
+                         rdfs:label "p117 has contact number"@en ,
+                                    "p117 есть контактный телефон"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p118_is_managed_by
+:p118_is_managed_by rdf:type owl:ObjectProperty ;
+                    rdfs:range :C63_Person_Entity ;
+                    rdfs:label "p118 is managed by"@en ,
+                               "p118 управляется"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p119_registered_in_country_of_origin_as
+:p119_registered_in_country_of_origin_as rdf:type owl:ObjectProperty ;
+                                         rdfs:range :C102_Foreign_Legal_Entity ;
+                                         rdfs:label "p119 registered in country of origin as"@en ,
+                                                    "p119 зарегистрировано в стране происхождения как"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p120_exercise_of_authority_through
+:p120_exercise_of_authority_through rdf:type owl:ObjectProperty ;
+                                    rdfs:domain :C49_Management_Organization_Entity ;
+                                    rdfs:range :C50_Branch_Of_Foreign_Legal_Entity ;
+                                    rdfs:label "p120 exercise of authority through"@en ,
+                                               "p120 осуществляет полномочия управляющей организации через"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p121_holds_position
+:p121_holds_position rdf:type owl:ObjectProperty ;
+                     rdfs:domain :C51_Person_Acting_Without_Power_Of_Auttorney_Entity ;
+                     rdfs:range :C52_Job_Entity ;
+                     rdfs:label "p121 holds position"@en ,
+                                "p121 занимает должность"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p122_is_disqualified
+:p122_is_disqualified rdf:type owl:ObjectProperty ;
+                      rdfs:domain :C51_Person_Acting_Without_Power_Of_Auttorney_Entity ;
+                      rdfs:range :C53_Disqualification_Entity ;
+                      rdfs:label "p122 is disqualified"@en ,
+                                 "p122 дисквалифицировано"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p123_has_old_registration_data
+:p123_has_old_registration_data rdf:type owl:ObjectProperty ;
+                                rdfs:domain :C103_Russian_Organization_Founder_Entity ;
+                                rdfs:range :C56_Old_Registration_Entity ;
+                                rdfs:label "p123 has old registration data"@en ,
+                                           "p123 есть данные о регистрации до 2002 года"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p124_has_share
+:p124_has_share rdf:type owl:ObjectProperty ;
+                rdfs:domain :C54_Founder_Entity ;
+                rdfs:range :C55_Share_In_Stated_Capital_Entity ;
+                rdfs:label "p124 has share"@en ,
+                           "p124 имеет долю в уставном капитале"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p125_basis_for_imposing
+:p125_basis_for_imposing rdf:type owl:ObjectProperty ;
+                         rdfs:domain :C65_Encumbrance_Of_Participant_Share_Entity ;
+                         rdfs:range :C6_Document ;
+                         rdfs:label "p125 basis for imposing"@en ,
+                                    "p125 обременение наложено на основании"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p126_has_reorganization_participant
+:p126_has_reorganization_participant rdf:type owl:ObjectProperty ;
+                                     rdfs:domain :C66_Reorganization_Entity ;
+                                     rdfs:range :C110_Reorganization_Participant ;
+                                     rdfs:label "p126 has reorganization participant"@en ,
+                                                "p126 является участником реорганизации"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p127_exists_before_reorganization
+:p127_exists_before_reorganization rdf:type owl:ObjectProperty ;
+                                   rdfs:domain :C111_Legal_Predecessor_Entity ;
+                                   rdfs:range :C72_Participant_Entity ;
+                                   rdfs:label "p127 exists before reorganization"@en ,
+                                              "p127 существовало до реорганизации"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p128_created_after_reorganization
+:p128_created_after_reorganization rdf:type owl:ObjectProperty ;
+                                   rdfs:domain :C112_Legal_Successor_Entity ;
+                                   rdfs:range :C72_Participant_Entity ;
+                                   rdfs:label "p128 created after reorganization"@en ,
+                                              "p128 создано после реорганизации"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p129_has_name
+:p129_has_name rdf:type owl:ObjectProperty ;
+               rdfs:label "p129 has name"@en ,
+                          "p129 есть наименование"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p130_separate_business_unit_registered_in
+:p130_separate_business_unit_registered_in rdf:type owl:ObjectProperty ;
+                                           rdfs:domain :C69_Separate_Business_Unit_Entity ;
+                                           rdfs:range :C58_Separate_Business_Unit_Tax_Registration_Entity ;
+                                           rdfs:label "p130 separate business unit registered in"@en ,
+                                                      "p130 обособленное подразделение состоит на учете в"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p131_based_on_pledge_agreement
+:p131_based_on_pledge_agreement rdf:type owl:ObjectProperty ;
+                                rdfs:domain :C71_Mortgagee_Entity ;
+                                rdfs:range :C6_Document ;
+                                rdfs:label "p131 based on pledge agreement"@en ,
+                                           "p131 есть нотариальное удостоверение договора залога"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p132_has_trustee
+:p132_has_trustee rdf:type owl:ObjectProperty ;
+                  rdfs:domain :C106_Person_Founder_Entity ;
+                  rdfs:range :C75_Trustee_Entity ;
+                  rdfs:label "p132 has trustee"@en ,
+                             "p132 есть доверительный управляющий"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p133_rights_are_exercised_by
+:p133_rights_are_exercised_by rdf:type owl:ObjectProperty ;
+                              rdfs:domain :C105_Public_Authority_Founder_Entity ;
+                              rdfs:range :C74_Public_Body_Exercising_Founders_Fights_Entity ;
+                              rdfs:label "p133 rights are exercised by"@en ,
+                                         "p133 права осуществляются"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p134_acts_by_inheritance
+:p134_acts_by_inheritance rdf:type owl:ObjectProperty ;
+                          rdfs:domain :C75_Trustee_Entity ;
+                          rdfs:range :C76_Inheritance_Manager_Entity ;
+                          rdfs:label "p134 acts by inheritance"@en ,
+                                     "p134 действует на основании наследства"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p135_is_managed_by_company
+:p135_is_managed_by_company rdf:type owl:ObjectProperty ;
+                            rdfs:domain :C107_Mutual_Investment_Fund_Founder_Entity ;
+                            rdfs:range :C73_Management_Company_Entity ;
+                            rdfs:label "p135 is managed by company"@en ,
+                                       "p135 управляется управляющей компанией"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p136_includes_egrul_record
+:p136_includes_egrul_record rdf:type owl:ObjectProperty ;
+                            rdfs:label "p136 includes egrul record"@en ,
+                                       "p136 включает запись, внесенную в егрюл"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p137_includes_egrip_record
+:p137_includes_egrip_record rdf:type owl:ObjectProperty ;
+                            rdfs:label "p137 includes egrip record"@en ,
+                                       "p137 включает запись, внесенную в егрип"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p76_entered_on_registry_with
+:p76_entered_on_registry_with rdf:type owl:ObjectProperty ;
+                              rdfs:domain :C2_Reg_Entity ;
+                              rdfs:range :C1_Reg_Number_Date ;
+                              rdfs:label "p76 entered on registry with"@en ,
+                                         "p76 внесено в реестр с"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p77_recorded_by
+:p77_recorded_by rdf:type owl:ObjectProperty ;
+                 rdfs:domain :C2_Reg_Entity ;
+                 rdfs:range :C17_Territorial_State_Bodies ;
+                 rdfs:label "p77 recorded by"@en ,
+                            "p77 запись внесена"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p78_registered_in
+:p78_registered_in rdf:type owl:ObjectProperty ;
+                   rdfs:label "p78 registered in"@en ,
+                              "p78 зарегистрировано в"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p79_has_type
+:p79_has_type rdf:type owl:ObjectProperty ;
+              rdfs:domain :C2_Reg_Entity ;
+              rdfs:range :C7_FTS_Type_List ;
+              rdfs:label "p79 has type"@en ,
+                         "p79 есть тип"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p80_describes_company
+:p80_describes_company rdf:type owl:ObjectProperty ;
+                       rdfs:domain :C4_Legal_Entity_Details ;
+                       rdfs:range :C9_Legal_Entity ;
+                       rdfs:label "p80 describes company"@en ,
+                                  "p80 описывает организацию"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p81_includes_le_reg_entity
+:p81_includes_le_reg_entity rdf:type owl:ObjectProperty ;
+                            rdfs:domain :C4_Legal_Entity_Details ;
+                            rdfs:range :C12_EGRUL_Reg_Entity ;
+                            rdfs:label "p81 includes le reg entity"@en ,
+                                       "p81 включает сведения о юл"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p82_refers_to_company
+:p82_refers_to_company rdf:type owl:ObjectProperty ;
+                       rdfs:domain :C12_EGRUL_Reg_Entity ;
+                       rdfs:range :C9_Legal_Entity ;
+                       rdfs:label "p82 refers to company"@en ,
+                                  "p82 относится к юридическому лицу"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p83_describes_ie
+:p83_describes_ie rdf:type owl:ObjectProperty ;
+                  rdfs:domain :C5_Individual_Entrepreneur_Details ;
+                  rdfs:range :C10_Individual_Entrepreneur ;
+                  rdfs:label "p83 describes ie"@en ,
+                             "p83 описывает ип"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p84_includes_ie_reg_entity
+:p84_includes_ie_reg_entity rdf:type owl:ObjectProperty ;
+                            rdfs:domain :C5_Individual_Entrepreneur_Details ;
+                            rdfs:range :C13_EGRIP_Reg_Entity ;
+                            rdfs:label "p84 includes ie reg entity"@en ,
+                                       "p84 включает сведения о ип"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p85_refers_to_ie
+:p85_refers_to_ie rdf:type owl:ObjectProperty ;
+                  rdfs:domain :C13_EGRIP_Reg_Entity ;
+                  rdfs:range :C10_Individual_Entrepreneur ;
+                  rdfs:label "p85 refers to ie"@en ,
+                             "p85 относится к ип"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p86_was_submitted
+:p86_was_submitted rdf:type owl:ObjectProperty ;
+                   rdfs:domain :C6_Document ;
+                   rdfs:range :C3_Record ;
+                   rdfs:label "p86 was submitted"@en ,
+                              "p86 представлен при внесении записи"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p87_created_by
+:p87_created_by rdf:type owl:ObjectProperty ;
+                rdfs:domain :C6_Document ;
+                rdfs:range :C9_Legal_Entity ;
+                rdfs:label "p87 created by"@en ,
+                           "p87 создан"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p88_added_by
+:p88_added_by rdf:type owl:ObjectProperty ;
+              rdfs:domain :C3_Record ;
+              rdfs:range :C93_Tax_Authority ;
+              rdfs:label "p88 added by"@en ,
+                         "p88 добавлено"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p89_reason_for_making_entry
+:p89_reason_for_making_entry rdf:type owl:ObjectProperty ;
+                             rdfs:domain :C3_Record ;
+                             rdfs:range :C20_Record_Type ;
+                             rdfs:label "p89 reason for making entry"@en ,
+                                        "p89 внесено по причине"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p90_invalidate_by
+:p90_invalidate_by rdf:type owl:ObjectProperty ;
+                   rdfs:domain :C3_Record ;
+                   rdfs:range :C11_Changed_Reg_Number_Date ;
+                   rdfs:label "p90 invalidate by"@en ,
+                              "p90 признает недействительной"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p91_invalidate
+:p91_invalidate rdf:type owl:ObjectProperty ;
+                rdfs:domain :C3_Record ;
+                rdfs:range :C11_Changed_Reg_Number_Date ;
+                rdfs:label "p91 invalidate"@en ,
+                           "p91 признана недействительной"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p92_is_amending_for
+:p92_is_amending_for rdf:type owl:ObjectProperty ;
+                     rdfs:domain :C3_Record ;
+                     rdfs:range :C11_Changed_Reg_Number_Date ;
+                     rdfs:label "p92 is amending for"@en ,
+                                "p92 вносит исправления в"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p93_is_amending_by
+:p93_is_amending_by rdf:type owl:ObjectProperty ;
+                    rdfs:domain :C3_Record ;
+                    rdfs:range :C11_Changed_Reg_Number_Date ;
+                    rdfs:label "p93 is amending by"@en ,
+                               "p93 исправлена"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p94_ie_record_confirmed_by
+:p94_ie_record_confirmed_by rdf:type owl:ObjectProperty ;
+                            rdfs:domain :C15_EGRIP_Record ;
+                            rdfs:range :C92_IE_Changes_Confirmation_Entity ;
+                            rdfs:comment "Внесение записи об индивидуальном предпринимателе подтверждено"@ru ;
+                            rdfs:label "p94 ie record confirmed by"@en ,
+                                       "p94 внесение записи о ип подтверждено"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p95_le_record_confirmed_by
+:p95_le_record_confirmed_by rdf:type owl:ObjectProperty ;
+                            rdfs:domain :C14_EGRUL_Record ;
+                            rdfs:range :C78_LE_Changes_Confirmation_Entity ;
+                            rdfs:comment "Внесение записи о юридическом лице подтверждено"@ru ;
+                            rdfs:label "p95 le record confirmed by"@en ,
+                                       "p95 внесение записи о юл подтверждено"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p96_declared_by
+:p96_declared_by rdf:type owl:ObjectProperty ;
+                 rdfs:domain :C14_EGRUL_Record ;
+                 rdfs:range :C59_Applicant_Entity ;
+                 rdfs:label "p96 declared by"@en ,
+                            "p96 заявлено"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p97_registered_by_public_body
+:p97_registered_by_public_body rdf:type owl:ObjectProperty ;
+                               rdfs:range :C36_Public_Body ;
+                               rdfs:label "p97 registered by public body"@en ,
+                                          "p97 зарегистрирован в госоргане"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p98_located_at
+:p98_located_at rdf:type owl:ObjectProperty ;
+                rdfs:label "p98 located at"@en ,
+                           "p98 расположен в"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p99_invalid_based_on
+:p99_invalid_based_on rdf:type owl:ObjectProperty ;
+                      rdfs:domain :C39_Address_Entity ;
+                      rdfs:range :C6_Document ;
+                      rdfs:label "p99 invalid based on"@en ,
+                                 "p99 недостоверный на основании"@ru .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p10_doc_type
+:p10_doc_type rdf:type owl:DatatypeProperty ;
+              rdfs:range xsd:string ;
+              rdfs:label "p10 doc type"@en ,
+                         "p10 тип документа"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p11_doc_number
+:p11_doc_number rdf:type owl:DatatypeProperty ;
+                rdfs:range xsd:string ;
+                rdfs:label "p11 doc number"@en ,
+                           "p11 номер документа"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p12_doc_date
+:p12_doc_date rdf:type owl:DatatypeProperty ;
+              rdfs:range xsd:dateTime ;
+              rdfs:label "p12 doc date"@en ,
+                         "p12 дата документа"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p13_publication_date
+:p13_publication_date rdf:type owl:DatatypeProperty ;
+                      rdfs:range xsd:dateTime ;
+                      rdfs:label "p13 publication date"@en ,
+                                 "p13 дата публикации"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p14_volume_number
+:p14_volume_number rdf:type owl:DatatypeProperty ;
+                   rdfs:range xsd:string ;
+                   rdfs:comment "Номер журнала, в котором опубликовано решение"@ru ;
+                   rdfs:label "p14 volume number"@en ,
+                              "p14 номер журнала"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p15_address
+:p15_address rdf:type owl:DatatypeProperty ;
+             rdfs:range xsd:string ;
+             rdfs:label "p15 address"@en ,
+                        "p15 адрес"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p16_full_name
+:p16_full_name rdf:type owl:DatatypeProperty ;
+               rdfs:range xsd:string ;
+               rdfs:label "p16 full name"@en ,
+                          "p16 полное наименование"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p17_short_name
+:p17_short_name rdf:type owl:DatatypeProperty ;
+                rdfs:range xsd:string ;
+                rdfs:label "p17 short name"@en ,
+                           "p17 краткое наименование"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p18_postcode
+:p18_postcode rdf:type owl:DatatypeProperty ;
+              rdfs:range xsd:string ;
+              rdfs:label "p18 postcode"@en ,
+                         "p18 индекс"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p19_region_code
+:p19_region_code rdf:type owl:DatatypeProperty ;
+                 rdfs:range xsd:string ;
+                 rdfs:label "p19 region code"@en ,
+                            "p19 код субъекта РФ"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p1_state_registration_number
+:p1_state_registration_number rdf:type owl:DatatypeProperty ;
+                              rdfs:range xsd:string ;
+                              rdfs:label "p1 state registration number"@en ,
+                                         "p1 государственный регистрационный номер"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p20_address_code
+:p20_address_code rdf:type owl:DatatypeProperty ;
+                  rdfs:range xsd:string ;
+                  rdfs:label "p20 address code"@en ,
+                             "p20 код адреса по кладр"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p21_block
+:p21_block rdf:type owl:DatatypeProperty ;
+           rdfs:range xsd:string ;
+           rdfs:label "p21 block"@en ,
+                      "p21 корпус"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p22_building_number
+:p22_building_number rdf:type owl:DatatypeProperty ;
+                     rdfs:range xsd:string ;
+                     rdfs:label "p22 building number"@en ,
+                                "p22 дом"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p23_office_number
+:p23_office_number rdf:type owl:DatatypeProperty ;
+                   rdfs:range xsd:string ;
+                   rdfs:label "p23 office number"@en ,
+                              "p23 офис (квартира)"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p24_reason_for_inability_to_interact
+:p24_reason_for_inability_to_interact rdf:type owl:DatatypeProperty ;
+                                      rdfs:range xsd:string ;
+                                      rdfs:comment "Признак невозможности взаимодействия с юридическим лицом по содержащемуся в ЕГРЮЛ адресу"@ru ;
+                                      rdfs:label "p24 reason for inability to interact"@en ,
+                                                 "p24 признак невозможности взаимодействия"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p25_element_type
+:p25_element_type rdf:type owl:DatatypeProperty ;
+                  rdfs:range xsd:string ;
+                  rdfs:label "p25 element type"@en ,
+                             "p25 тип элемента"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p26_version
+:p26_version rdf:type owl:DatatypeProperty ;
+             rdfs:range xsd:string ;
+             rdfs:label "p26 version"@en ,
+                        "p26 версия"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p27_email
+:p27_email rdf:type owl:DatatypeProperty ;
+           rdfs:range xsd:string ;
+           rdfs:label "p27 email"@en ,
+                      "p27 адрес электронной почты"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p28_le_primary_state_registration_number
+:p28_le_primary_state_registration_number rdf:type owl:DatatypeProperty ;
+                                          rdfs:range xsd:string ;
+                                          rdfs:comment "Основной государственный регистрационный номер юридического лица"@ru ;
+                                          rdfs:label "p28 le primary state registration number"@en ,
+                                                     "p28 огрн юл"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p29_psrn_assignment_date
+:p29_psrn_assignment_date rdf:type owl:DatatypeProperty ;
+                          rdfs:range xsd:dateTime ;
+                          rdfs:label "p29 psrn assignment date"@en ,
+                                     "p29 дата присвоения огрн"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p2_date
+:p2_date rdf:type owl:DatatypeProperty ;
+         rdfs:range xsd:dateTime ;
+         rdfs:label "p2 date"@en ,
+                    "p2 дата"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p30_address_in_country_of_origin
+:p30_address_in_country_of_origin rdf:type owl:DatatypeProperty ;
+                                  rdfs:range xsd:string ;
+                                  rdfs:comment "Адрес (место нахождения) в стране происхождения"@ru ;
+                                  rdfs:label "p30 address in country of origin"@en ,
+                                             "p30 адрес в стране происхождения"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p31_le_registration_number
+:p31_le_registration_number rdf:type owl:DatatypeProperty ;
+                            rdfs:range xsd:string ;
+                            rdfs:comment "Регистрационный номер юридического лица"@ru ;
+                            rdfs:label "p31 le registration number"@en ,
+                                       "p31 регистрационный номер юл"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p32_le_registration_date
+:p32_le_registration_date rdf:type owl:DatatypeProperty ;
+                          rdfs:range xsd:dateTime ;
+                          rdfs:comment "Дата регистрации юридического лица"@ru ;
+                          rdfs:label "p32 le registration date"@en ,
+                                     "p32 дата регистрации юл"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p33_registered_by
+:p33_registered_by rdf:type owl:DatatypeProperty ;
+                   rdfs:range xsd:string ;
+                   rdfs:comment "Наименование органа, зарегистрировавшего юридическое лицо"@ru ;
+                   rdfs:label "p33 registered by"@en ,
+                              "p33 наименование органа, зарегистрировавшего юл"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p34_le_cessation_date
+:p34_le_cessation_date rdf:type owl:DatatypeProperty ;
+                       rdfs:range xsd:dateTime ;
+                       rdfs:label "p34 le cessation date"@en ,
+                                  "p34 дата прекращения юридического лица"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p35_le_individual_tax_number
+:p35_le_individual_tax_number rdf:type owl:DatatypeProperty ;
+                              rdfs:range xsd:string ;
+                              rdfs:comment "Идентификационный номер юридического лица"@ru ;
+                              rdfs:label "p35 le individual tax number"@en ,
+                                         "p35 инн юл"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p36_tax_reason_code
+:p36_tax_reason_code rdf:type owl:DatatypeProperty ;
+                     rdfs:range xsd:string ;
+                     rdfs:comment "Код причины постановки на учет"@ru ;
+                     rdfs:label "p36 tax reason code"@en ,
+                                "p36 кпп"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p37_reduction_amount
+:p37_reduction_amount rdf:type owl:DatatypeProperty ;
+                      rdfs:range xsd:float ;
+                      rdfs:comment "Величина, на которую уменьшается уставный капитал (в рублях)"@ru ;
+                      rdfs:label "p37 reduction amount"@en ,
+                                 "p37 величина, на которую уменьшается уставный капитал"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p38_decision_date
+:p38_decision_date rdf:type owl:DatatypeProperty ;
+                   rdfs:range xsd:dateTime ;
+                   rdfs:label "p38 decision date"@en ,
+                              "p38 дата решения"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p39_amount
+:p39_amount rdf:type owl:DatatypeProperty ;
+            rdfs:label "p39 amount"@en ,
+                       "p39 размер в рублях"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p3_formation_date
+:p3_formation_date rdf:type owl:DatatypeProperty ;
+                   rdfs:range xsd:dateTime ;
+                   rdfs:comment "Дата формирования сведений из реестра в отношении юридического лица или индивидуального предпринимателя"@ru ;
+                   rdfs:label "p3 formation date"@en ,
+                              "p3 дата формирования сведений из реестра"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p40_ruble_share
+:p40_ruble_share rdf:type owl:DatatypeProperty ;
+                 rdfs:label "p40 ruble share"@en ,
+                            "p40 доля рубля в капитале"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p41_phone_number
+:p41_phone_number rdf:type owl:DatatypeProperty ;
+                  rdfs:range xsd:string ;
+                  rdfs:label "p41 phone number"@en ,
+                             "p41 номер контактного телефона"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p42_first_name
+:p42_first_name rdf:type owl:DatatypeProperty ;
+                rdfs:range xsd:string ;
+                rdfs:label "p42 first name"@en ,
+                           "p42 имя"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p43_last_name
+:p43_last_name rdf:type owl:DatatypeProperty ;
+               rdfs:range xsd:string ;
+               rdfs:label "p43 last name"@en ,
+                          "p43 фамилия"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p44_middle_name
+:p44_middle_name rdf:type owl:DatatypeProperty ;
+                 rdfs:range xsd:string ;
+                 rdfs:label "p44 middle name"@en ,
+                            "p44 отчество"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p46_ie_primary_state_registration_number
+:p46_ie_primary_state_registration_number rdf:type owl:DatatypeProperty ;
+                                          rdfs:range xsd:string ;
+                                          rdfs:comment "Основной государственный регистрационный номер индивидуального предпринимателя"@ru ;
+                                          rdfs:label "p46 ie primary state registration number"@en ,
+                                                     "p46 огрн ип"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p47_job_title
+:p47_job_title rdf:type owl:DatatypeProperty ;
+               rdfs:range xsd:string ;
+               rdfs:comment "Наименование должности"@ru ;
+               rdfs:label "p47 job title"@en ,
+                          "p47 должность"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p48_start_date
+:p48_start_date rdf:type owl:DatatypeProperty ;
+                rdfs:range xsd:dateTime ;
+                rdfs:label "p48 start date"@en ,
+                           "p48 дата начала"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p49_end_date
+:p49_end_date rdf:type owl:DatatypeProperty ;
+              rdfs:range xsd:dateTime ;
+              rdfs:label "p49 end date"@en ,
+                         "p49 дата окончания"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p4_classifier_of_organization_and_legal_form
+:p4_classifier_of_organization_and_legal_form rdf:type owl:DatatypeProperty ;
+                                              rdfs:range xsd:string ;
+                                              rdfs:comment "Наименование классификатора, по которому введены сведения об организационно-правовой форме: ОКОПФ, КОПФ"@ru ;
+                                              rdfs:label "p4 classifier of organization and legal form"@en ,
+                                                         "p4 классификатор организационно-правовой формы"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p50_municipality_name
+:p50_municipality_name rdf:type owl:DatatypeProperty ;
+                       rdfs:range xsd:string ;
+                       rdfs:label "p50 municipality name"@en ,
+                                  "p50 наименование муниципального образования"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p51_nominal_share_of_value_in_ruble
+:p51_nominal_share_of_value_in_ruble rdf:type owl:DatatypeProperty ;
+                                     rdfs:range xsd:float ;
+                                     rdfs:label "p51 nominal share of value in ruble"@en ,
+                                                "p51 номинальная стоимость доли в рублях"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p52_percentage_share
+:p52_percentage_share rdf:type owl:DatatypeProperty ;
+                      rdfs:range xsd:int ;
+                      rdfs:label "p52 percentage share"@en ,
+                                 "p52 размер доли в процентах"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p53_share_in_decimal_fractions
+:p53_share_in_decimal_fractions rdf:type owl:DatatypeProperty ;
+                                rdfs:range xsd:decimal ;
+                                rdfs:label "p53 share in decimal fractions"@en ,
+                                           "p53 размер доли в десятичных дробях"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p54_nominator_of_share
+:p54_nominator_of_share rdf:type owl:DatatypeProperty ;
+                        rdfs:range xsd:int ;
+                        rdfs:label "p54 nominator of share"@en ,
+                                   "p54 числитель дроби размера доли"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p55_denominator_of_share
+:p55_denominator_of_share rdf:type owl:DatatypeProperty ;
+                          rdfs:range xsd:int ;
+                          rdfs:label "p55 denominator of share"@en ,
+                                     "p55 знаменатель дроби размера доли"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p56_registration_date
+:p56_registration_date rdf:type owl:DatatypeProperty ;
+                       rdfs:range xsd:dateTime ;
+                       rdfs:label "p56 registration date"@en ,
+                                  "p56 дата регистрации"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p57_opening_inheritance_date
+:p57_opening_inheritance_date rdf:type owl:DatatypeProperty ;
+                              rdfs:label "p57 opening inheritance date"@en ,
+                                         "p57 день открытия наследства"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p58_period_of_procedure
+:p58_period_of_procedure rdf:type owl:DatatypeProperty ;
+                         rdfs:comment "Срок обременения или порядок определения срока"@ru ;
+                         rdfs:label "p58 period of procedure"@en ,
+                                    "p58 срок обременения"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p59_state_after_reorganization
+:p59_state_after_reorganization rdf:type owl:DatatypeProperty ;
+                                rdfs:comment "Состояние юридического лица после завершения реорганизации"@ru ;
+                                rdfs:label "p59 state after reorganization"@en ,
+                                           "p59 состояние юл после реорганизации"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p5_code
+:p5_code rdf:type owl:DatatypeProperty ;
+         rdfs:range xsd:string ;
+         rdfs:label "p5 code"@en ,
+                    "p5 код"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p60_license_series
+:p60_license_series rdf:type owl:DatatypeProperty ;
+                    rdfs:range xsd:string ;
+                    rdfs:label "p60 license series"@en ,
+                               "p60 серия лицензии"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p61_license_number
+:p61_license_number rdf:type owl:DatatypeProperty ;
+                    rdfs:range xsd:string ;
+                    rdfs:label "p61 license number"@en ,
+                               "p61 номер лицензии"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p62_license_type
+:p62_license_type rdf:type owl:DatatypeProperty ;
+                  rdfs:range xsd:string ;
+                  rdfs:label "p62 license type"@en ,
+                             "p62 вид лицензии"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p63_date_of_licensing
+:p63_date_of_licensing rdf:type owl:DatatypeProperty ;
+                       rdfs:range xsd:dateTime ;
+                       rdfs:label "p63 date of licensing"@en ,
+                                  "p63 дата лицензии"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p64_licensed_activity_name
+:p64_licensed_activity_name rdf:type owl:DatatypeProperty ;
+                            rdfs:range xsd:string ;
+                            rdfs:comment "Наименование лицензируемого вида деятельности, на который выдана лицензия"@ru ;
+                            rdfs:label "p64 licensed activity name"@en ,
+                                       "p64 лицензируемый вид деятельности"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p65_place_of_licensed_activity
+:p65_place_of_licensed_activity rdf:type owl:DatatypeProperty ;
+                                rdfs:range xsd:string ;
+                                rdfs:comment "Сведения об адресе места осуществления лицензируемого вида деятельности"@ru ;
+                                rdfs:label "p65 place of licensed activity"@en ,
+                                           "p65 место осуществления лицензируемого вида деятельности"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p66_licensing_authority_name
+:p66_licensing_authority_name rdf:type owl:DatatypeProperty ;
+                              rdfs:range xsd:string ;
+                              rdfs:comment "Наименование лицензирующего органа, выдавшего или переоформившего лицензию"@ru ;
+                              rdfs:label "p66 licensing authority name"@en ,
+                                         "p66 наименование лицензирующего органа, выдавшего лицензию"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p67_license_suspension_date
+:p67_license_suspension_date rdf:type owl:DatatypeProperty ;
+                             rdfs:range xsd:dateTime ;
+                             rdfs:label "p67 license suspension date"@en ,
+                                        "p67 дата приостановления действия лицензии"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p68_license_suspension_authority
+:p68_license_suspension_authority rdf:type owl:DatatypeProperty ;
+                                  rdfs:range xsd:string ;
+                                  rdfs:comment "Наименование лицензирующего органа, приостановившего действие лицензии"@ru ;
+                                  rdfs:label "p68 license suspension authority"@en ,
+                                             "p68 наименование лицензирующего органа, приостановившего лицензию"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p69_certificate_ceries
+:p69_certificate_ceries rdf:type owl:DatatypeProperty ;
+                        rdfs:range xsd:string ;
+                        rdfs:label "p69 certificate ceries"@en ,
+                                   "p69 серия бланка свидетельства"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p6_name
+:p6_name rdf:type owl:DatatypeProperty ;
+         rdfs:range xsd:string ;
+         rdfs:label "p6 name"@en ,
+                    "p6 наименование"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p70_certificate_number
+:p70_certificate_number rdf:type owl:DatatypeProperty ;
+                        rdfs:range xsd:string ;
+                        rdfs:label "p70 certificate number"@en ,
+                                   "p70 номер бланка свидетельства"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p71_certificate_date
+:p71_certificate_date rdf:type owl:DatatypeProperty ;
+                      rdfs:range xsd:dateTime ;
+                      rdfs:label "p71 certificate date"@en ,
+                                 "p71 дата выдачи свидетельства"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p72_gender
+:p72_gender rdf:type owl:DatatypeProperty ;
+            rdfs:range xsd:string ;
+            rdfs:label "p72 gender"@en ,
+                       "p72 пол"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p73_citizenship_type
+:p73_citizenship_type rdf:type owl:DatatypeProperty ;
+                      rdfs:range xsd:string ;
+                      rdfs:label "p73 citizenship type"@en ,
+                                 "p73 вид гражданства"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p74_ie_business_interuption_date
+:p74_ie_business_interuption_date rdf:type owl:DatatypeProperty ;
+                                  rdfs:range xsd:dateTime ;
+                                  rdfs:label "p74 ie business interuption date"@en ,
+                                             "p74 дата прекращения ип"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p75_ie_individual_tax_number
+:p75_ie_individual_tax_number rdf:type owl:DatatypeProperty ;
+                              rdfs:comment "Идентификационный номер физического лица"@ru ;
+                              rdfs:label "p75 ie individual tax number"@en ,
+                                         "p75 инн фл"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p7_record_id
+:p7_record_id rdf:type owl:DatatypeProperty ;
+              rdfs:range xsd:string ;
+              rdfs:label "p7 record id"@en ,
+                         "p7 системный идентификатор записи"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p8_recording_date
+:p8_recording_date rdf:type owl:DatatypeProperty ;
+                   rdfs:range xsd:dateTime ;
+                   rdfs:label "p8 recording date"@en ,
+                              "p8 дата внесения записи в реестр"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#p9_doc_name
+:p9_doc_name rdf:type owl:DatatypeProperty ;
+             rdfs:range xsd:string ;
+             rdfs:label "p9 doc name"@en ,
+                        "p9 наименование документа"@ru .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.w3.org/ns/org#FormalOrganization
+<http://www.w3.org/ns/org#FormalOrganization> rdf:type owl:Class .
+
+
+###  http://xmlns.com/foaf/0.1/Person
+<http://xmlns.com/foaf/0.1/Person> rdf:type owl:Class .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C100_Street_Element
+:C100_Street_Element rdf:type owl:Class ;
+                     rdfs:subClassOf :C26_KLADR_Element ;
+                     rdfs:label "C100 Street Element"@en ,
+                                "C100 Адресообразующий Элемент Улица"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C101_Russian_Legal_Entity
+:C101_Russian_Legal_Entity rdf:type owl:Class ;
+                           rdfs:subClassOf :C41_LE_Registration_Entity ;
+                           rdfs:label "C101 Russian Legal Entity"@en ,
+                                      "C101 Российское Юридическое Лицо"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C102_Foreign_Legal_Entity
+:C102_Foreign_Legal_Entity rdf:type owl:Class ;
+                           rdfs:subClassOf :C41_LE_Registration_Entity ;
+                           rdfs:label "C102 Foreign Legal Entity"@en ,
+                                      "C102 Иностранное Юридическое Лицо"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C103_Russian_Organization_Founder_Entity
+:C103_Russian_Organization_Founder_Entity rdf:type owl:Class ;
+                                          rdfs:subClassOf :C54_Founder_Entity ;
+                                          rdfs:comment "Сведения об учредителе (участнике) - российском юридическом лице (УчрЮЛРос)"@ru ;
+                                          rdfs:label "C103 Russian Organization Founder Entity"@en ,
+                                                     "C103 Сведения Об Учредителе - Российском ЮЛ"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C104_Foreign_Organization_Founder_Entity
+:C104_Foreign_Organization_Founder_Entity rdf:type owl:Class ;
+                                          rdfs:subClassOf :C54_Founder_Entity ;
+                                          rdfs:comment "Сведения об учредителе (участнике) - иностранном юридическом лице (УчрЮЛИн)"@ru ;
+                                          rdfs:label "C104 Foreign Organization Founder Entity"@en ,
+                                                     "C104 Сведения Об Учредителе - Иностранном ЮЛ"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C105_Public_Authority_Founder_Entity
+:C105_Public_Authority_Founder_Entity rdf:type owl:Class ;
+                                      rdfs:subClassOf :C54_Founder_Entity ;
+                                      rdfs:comment "Сведения об учредителе (участнике) - Российской Федерации, субъекте Российской Федерации, муниципальном образовании (УчрРФСубМО)"@ru ;
+                                      rdfs:label "C105 Public Authority Founder Entity"@en ,
+                                                 "C105 Сведения Об Учредителе - РФ, Субъекте РФ Или Муниципальном Образовании РФ"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C106_Person_Founder_Entity
+:C106_Person_Founder_Entity rdf:type owl:Class ;
+                            rdfs:subClassOf :C54_Founder_Entity ;
+                            rdfs:comment "Сведения об учредителе (участнике) - физическом лице (УчрФЛ)"@ru ;
+                            rdfs:label "C106 Person Founder Entity"@en ,
+                                       "C106 Сведения Об Учредителе - Физическом Лице"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C107_Mutual_Investment_Fund_Founder_Entity
+:C107_Mutual_Investment_Fund_Founder_Entity rdf:type owl:Class ;
+                                            rdfs:subClassOf :C54_Founder_Entity ;
+                                            rdfs:comment "Сведения о паевом инвестиционном фонде, в состав имущества которого включена доля в уставном капитале (УчрПИФ)"@ru ;
+                                            rdfs:label "C107 Mutual Investment Fund Founder Entity"@en ,
+                                                       "C107 Сведения Об Учредителе - ПИФ"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C108_Peasant_Farm_Data_Added_To_EFGRIP
+:C108_Peasant_Farm_Data_Added_To_EFGRIP rdf:type owl:Class ;
+                                        rdfs:subClassOf :C64_Peasant_Farm_Entity ;
+                                        rdfs:comment "Сведения о крестьянском (фермерском) хозяйстве, которые внесены в ЕГРИП в связи с приведением правового статуса крестьянского (фермерского) хозяйства в соответствие с нормами части первой Гражданского кодекса Российской Федерации (СвКФХПреем)"@ru ;
+                                        rdfs:label "C108 Peasant Farm Data Added To EFGRIP"@en ,
+                                                   "C108 Сведения О КФХ, Которые Внесены В ЕГРИП"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C109_Peasant_Farm_Base_For_LE_Entity
+:C109_Peasant_Farm_Base_For_LE_Entity rdf:type owl:Class ;
+                                      rdfs:subClassOf :C64_Peasant_Farm_Entity ;
+                                      rdfs:comment "Сведения о крестьянском (фермерском) хозяйстве, на базе имущества которого создано юридическое лицо (СвКФХПредш)"@ru ;
+                                      rdfs:label "C109 Peasant Farm Base For LE Entity"@en ,
+                                                 "C109 Сведения О КФХ, На Базе Которого Создано ЮЛ"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C10_Individual_Entrepreneur
+:C10_Individual_Entrepreneur rdf:type owl:Class ;
+                             rdfs:subClassOf <http://xmlns.com/foaf/0.1/Person> ;
+                             rdfs:label "C10 Individual Entrepreneur"@en ,
+                                        "C10 Индивидуальный Предприниматель"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C110_Reorganization_Participant
+:C110_Reorganization_Participant rdf:type owl:Class ;
+                                 rdfs:subClassOf :C72_Participant_Entity ;
+                                 rdfs:comment "Сведения о юридических лицах, участвующих в реорганизации (СвРеоргЮЛ)"@ru ;
+                                 rdfs:label "C110 Reorganization Participant"@en ,
+                                            "C110 Сведения О ЮЛ, Участвующем В Реорганизации"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C111_Legal_Predecessor_Entity
+:C111_Legal_Predecessor_Entity rdf:type owl:Class ;
+                               rdfs:subClassOf :C72_Participant_Entity ;
+                               rdfs:label "C111 Legal Predecessor Entity"@en ,
+                                          "C111 Сведения О Правопредшественнике"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C112_Legal_Successor_Entity
+:C112_Legal_Successor_Entity rdf:type owl:Class ;
+                             rdfs:subClassOf :C72_Participant_Entity ;
+                             rdfs:label "C112 Legal Successor Entity"@en ,
+                                        "C112 Сведения О Правопреемнике"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C113_Representative_Office_Entity
+:C113_Representative_Office_Entity rdf:type owl:Class ;
+                                   rdfs:subClassOf :C69_Separate_Business_Unit_Entity ;
+                                   rdfs:comment "Сведения об обособленных подразделениях юридического лица (СвПодразд)"@ru ;
+                                   rdfs:label "C113 Representative Office Entity"@en ,
+                                              "C113 Сведения Об Обособленных Подразделениях ЮЛ"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C114_Branch_Office_Entity
+:C114_Branch_Office_Entity rdf:type owl:Class ;
+                           rdfs:subClassOf :C69_Separate_Business_Unit_Entity ;
+                           rdfs:comment "Сведения о филиалах юридического лица"@ru ;
+                           rdfs:label "C114 Branch Office Entity"@en ,
+                                      "C114 Сведения О Филиалах ЮЛ"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C115_LE_Mortgagee_Entity
+:C115_LE_Mortgagee_Entity rdf:type owl:Class ;
+                          rdfs:subClassOf :C71_Mortgagee_Entity ;
+                          rdfs:label "C115 LE Mortgagee Entity"@en ,
+                                     "C115 Сведения О Залогодержателе - ЮЛ"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C116_Person_Mortgagee_Entity
+:C116_Person_Mortgagee_Entity rdf:type owl:Class ;
+                              rdfs:subClassOf :C71_Mortgagee_Entity ;
+                              rdfs:label "C116 Person Mortgagee Entity"@en ,
+                                         "C116 Сведения О Залогодержателе - ФЛ"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C11_Changed_Reg_Number_Date
+:C11_Changed_Reg_Number_Date rdf:type owl:Class ;
+                             rdfs:subClassOf :C1_Reg_Number_Date ;
+                             rdfs:comment "ГРН и дата измененной записи: исправленной или признанной недействительной."@ru ;
+                             rdfs:label "C11 Changed Reg Number Date"@en ,
+                                        "C11 ИдГРНДатаТип"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C12_EGRUL_Reg_Entity
+:C12_EGRUL_Reg_Entity rdf:type owl:Class ;
+                      rdfs:subClassOf :C2_Reg_Entity ;
+                      rdfs:label "C12 EGRUL Reg Entity"@en ,
+                                 "C12 Сведения, Внесенные В ЕГРЮЛ"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C13_EGRIP_Reg_Entity
+:C13_EGRIP_Reg_Entity rdf:type owl:Class ;
+                      rdfs:subClassOf :C2_Reg_Entity ;
+                      rdfs:label "C13 EGRIP Reg Entity"@en ,
+                                 "C13 Сведения, Внесенные В ЕГРИП"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C14_EGRUL_Record
+:C14_EGRUL_Record rdf:type owl:Class ;
+                  rdfs:subClassOf :C3_Record ;
+                  rdfs:label "C14 EGRUL Record"@en ,
+                             "C14 Сведения О Записи, Внесенной В ЕГРЮЛ"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C15_EGRIP_Record
+:C15_EGRIP_Record rdf:type owl:Class ;
+                  rdfs:subClassOf :C3_Record ;
+                  rdfs:label "C15 EGRIP Record"@en ,
+                             "C15 Сведения О Записи, Внесенной В ЕГРИП"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C16_Exclusion_Decision
+:C16_Exclusion_Decision rdf:type owl:Class ;
+                        rdfs:subClassOf :C6_Document ;
+                        rdfs:comment "Сведения о решении о предстоящем исключении недействующего ЮЛ из ЕГРЮЛ и его публикации (СвРешИсклЮЛ)"@ru ;
+                        rdfs:label "C16 Exclusion Decision"@en ,
+                                   "C16 Решение Об Исключении Недействующего ЮЛ Из ЕГРЮЛ"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C17_Territorial_State_Bodies
+:C17_Territorial_State_Bodies rdf:type owl:Class ;
+                              rdfs:subClassOf :C7_FTS_Type_List ;
+                              rdfs:label "C17 Territorial State Bodies"@en ,
+                                         "C17 Регистрирующие Госорганы"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C18_Economic_Activity_Type
+:C18_Economic_Activity_Type rdf:type owl:Class ;
+                            rdfs:subClassOf :C7_FTS_Type_List ;
+                            rdfs:comment "ОКВЭД"@ru ;
+                            rdfs:label "C18 Economic Activity Type"@en ,
+                                       "C18 Вид Экономической Деятельности"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C19_Organization_And_Legal_Form_Type
+:C19_Organization_And_Legal_Form_Type rdf:type owl:Class ;
+                                      rdfs:subClassOf :C7_FTS_Type_List ;
+                                      rdfs:label "C19 Organization And Legal Form Type"@en ,
+                                                 "C19 Организационно-Правовая Форма"@ru ,
+                                                 "ОКОПФ"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C1_Reg_Number_Date
+:C1_Reg_Number_Date rdf:type owl:Class ;
+                    rdfs:comment "Класс для хранения государственного регистрационного номера и даты внесения записи в ЕГРЮЛ. Через свойство entered on registry with связывается с Reg Entity."@ru ;
+                    rdfs:label "C1 Reg Number Date"@en ,
+                               "C1 ГРНДатаТип"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C20_Record_Type
+:C20_Record_Type rdf:type owl:Class ;
+                 rdfs:subClassOf :C7_FTS_Type_List ;
+                 rdfs:comment "Вид записи, внесенной в ЕГРЮЛ (ВидЗапТип)"@ru ;
+                 rdfs:label "C20 Record Type"@en ,
+                            "C20 Вид Записи"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C21_Country
+:C21_Country rdf:type owl:Class ;
+             rdfs:subClassOf :C7_FTS_Type_List ;
+             rdfs:label "C21 Country"@en ,
+                        "C21 Страна"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C22_Region
+:C22_Region rdf:type owl:Class ;
+            rdfs:subClassOf :C7_FTS_Type_List ;
+            rdfs:label "C22 Region"@en ,
+                       "C22 Регион"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C23_Founder_Type
+:C23_Founder_Type rdf:type owl:Class ;
+                  rdfs:subClassOf :C7_FTS_Type_List ;
+                  rdfs:label "C23 Founder Type"@en ,
+                             "C23 Вид Учредителя"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C24_Capital_Type
+:C24_Capital_Type rdf:type owl:Class ;
+                  rdfs:subClassOf :C7_FTS_Type_List ;
+                  rdfs:comment "Принимает значение: УСТАВНЫЙ КАПИТАЛ | СКЛАДОЧНЫЙ КАПИТАЛ | УСТАВНЫЙ ФОНД | ПАЕВЫЕ ВЗНОСЫ | ПАЕВОЙ ФОНД"@ru ;
+                  rdfs:label "C24 Capital Type"@en ,
+                             "C24 Вид Капитала"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C25_Applicant_Type
+:C25_Applicant_Type rdf:type owl:Class ;
+                    rdfs:subClassOf :C7_FTS_Type_List ;
+                    rdfs:label "C25 Applicant Type"@en ,
+                               "C25 Вид Заявителя"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C26_KLADR_Element
+:C26_KLADR_Element rdf:type owl:Class ;
+                   rdfs:subClassOf :C7_FTS_Type_List ;
+                   rdfs:label "C26 KLADR Element"@en ,
+                              "C26 КЛАДР"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C27_Type_Of_Reorganization_Form
+:C27_Type_Of_Reorganization_Form rdf:type owl:Class ;
+                                 rdfs:subClassOf :C7_FTS_Type_List ;
+                                 rdfs:comment "Форма реорганизации (статус) юридического лица (СвСтатус), СЮЛСТ"@ru ;
+                                 rdfs:label "C27 Type Of Reorganization Form"@en ,
+                                            "C27 Форма Реорганизации"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C28_Type_Of_Official
+:C28_Type_Of_Official rdf:type owl:Class ;
+                      rdfs:subClassOf :C7_FTS_Type_List ;
+                      rdfs:label "C28 Type Of Official"@en ,
+                                 "C28 Вид Должностного Лица"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C29_Encumbrance_Type
+:C29_Encumbrance_Type rdf:type owl:Class ;
+                      rdfs:subClassOf :C7_FTS_Type_List ;
+                      rdfs:label "C29 Encumbrance Type"@en ,
+                                 "C29 Вид Обременения"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C2_Reg_Entity
+:C2_Reg_Entity rdf:type owl:Class ;
+               rdfs:comment "Класс для хранения любых сведений, внесенных в реестры"@ru ;
+               rdfs:label "C2 Reg Entity"@en ,
+                          "C2 Сведения (Информационный Объект)"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C30_LE_State
+:C30_LE_State rdf:type owl:Class ;
+              rdfs:subClassOf :C7_FTS_Type_List ;
+              rdfs:comment "Правоспособность (статус) юридического лица"@ru ;
+              rdfs:label "C30 LE State"@en ,
+                         "C30 Статус ЮЛ"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C31_LE_Formation_Method
+:C31_LE_Formation_Method rdf:type owl:Class ;
+                         rdfs:subClassOf :C7_FTS_Type_List ;
+                         rdfs:comment "Способ образования юридического лица"@ru ;
+                         rdfs:label "C31 LE Formation Method"@en ,
+                                    "C31 Способ Образования ЮЛ"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C32_Cessation_Method
+:C32_Cessation_Method rdf:type owl:Class ;
+                      rdfs:subClassOf :C7_FTS_Type_List ;
+                      rdfs:comment "Способ прекращения юридического лица"@ru ;
+                      rdfs:label "C32 Cessation Method"@en ,
+                                 "C32 Способ Прекращения ЮЛ"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C33_IE_Type
+:C33_IE_Type rdf:type owl:Class ;
+             rdfs:subClassOf :C7_FTS_Type_List ;
+             rdfs:comment "Индивидуальный предприниматель/глава крестьянского (фермерского) хозяйства"@ru ;
+             rdfs:label "C33 IE Type"@en ,
+                        "C33 Вид Предпринимательства"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C34_IE_Status
+:C34_IE_Status rdf:type owl:Class ;
+               rdfs:subClassOf :C7_FTS_Type_List ;
+               rdfs:comment "Правоспособность (статус) индивидуального предпринимателя"@ru ;
+               rdfs:label "C34 IE Status"@en ,
+                          "C34 Статус ИП"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C35_Type_Of_Reorganization_Form
+:C35_Type_Of_Reorganization_Form rdf:type owl:Class ;
+                                 rdfs:subClassOf :C7_FTS_Type_List ;
+                                 rdfs:comment "Сведения о форме реорганизации (статусе) юридического лица (СвСтатус)"@ru ;
+                                 rdfs:label "C35 Type Of Reorganization Form"@en ,
+                                            "C35 Форма Реорганизации"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C36_Public_Body
+:C36_Public_Body rdf:type owl:Class ;
+                 rdfs:subClassOf :C9_Legal_Entity ;
+                 rdfs:label "C36 Public Body"@en ,
+                            "C36 Госорган"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C37_LE_Tax_Registrator_Entity
+:C37_LE_Tax_Registrator_Entity rdf:type owl:Class ;
+                               rdfs:subClassOf :C12_EGRUL_Reg_Entity ;
+                               rdfs:comment "Сведения о регистрирующем органе по месту нахождения юридического лица (СвРегОрг)"@ru ;
+                               rdfs:label "C37 LE Tax Registrator Entity"@en ,
+                                          "C37 Сведения О Региструющем ЮЛ Налоговом Органе"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C38_Name_Entity
+:C38_Name_Entity rdf:type owl:Class ;
+                 rdfs:subClassOf :C12_EGRUL_Reg_Entity ;
+                 rdfs:comment "Сведения о наименовании юридического лица, паевого инвестиционного фонда и других"@ru ;
+                 rdfs:label "C38 Name Entity"@en ,
+                            "C38 Сведения о наименовании"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C39_Address_Entity
+:C39_Address_Entity rdf:type owl:Class ;
+                    rdfs:subClassOf :C12_EGRUL_Reg_Entity ;
+                    rdfs:label "C39 Address Entity"@en ,
+                               "C39 Сведения Об Адресе ЮЛ"@ru ,
+                               "Сведения об адресе (месте нахождения) юридического лица"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C3_Record
+:C3_Record rdf:type owl:Class ;
+           rdfs:label "C3 Record"@en ,
+                      "C3 Запись, Внесенная В Реестр"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C40_LE_Email_Entity
+:C40_LE_Email_Entity rdf:type owl:Class ;
+                     rdfs:subClassOf :C12_EGRUL_Reg_Entity ;
+                     rdfs:comment "Сведения об адресе электронной почты юридического лица"@ru ;
+                     rdfs:label "C40 LE Email Entity"@en ,
+                                "C40 Сведения Об Адресе Электронной Почты ЮЛ"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C41_LE_Registration_Entity
+:C41_LE_Registration_Entity rdf:type owl:Class ;
+                            rdfs:subClassOf :C12_EGRUL_Reg_Entity ;
+                            rdfs:comment "Сведения о регистрации (образовании) юридического лица"@ru ;
+                            rdfs:label "C41 LE Registration Entity"@en ,
+                                       "C41 Сведения О Регистрации ЮЛ"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C42_LE_State_Entity
+:C42_LE_State_Entity rdf:type owl:Class ;
+                     rdfs:subClassOf :C12_EGRUL_Reg_Entity ;
+                     rdfs:comment "Сведения о состоянии (статусе) юридического лица"@ru ;
+                     rdfs:label "C42 LE State Entity"@en ,
+                                "C42 Сведения О Состоянии ЮЛ"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C43_Business_Cessation_Entity
+:C43_Business_Cessation_Entity rdf:type owl:Class ;
+                               rdfs:subClassOf :C12_EGRUL_Reg_Entity ;
+                               rdfs:comment "Сведения о прекращении юридического лица (СвПрекрЮЛ)"@ru ;
+                               rdfs:label "C43 Business Cessation Entity"@en ,
+                                          "C43 Сведения О Прекращении ЮЛ"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C44_LE_Tax_Accounting_Entity
+:C44_LE_Tax_Accounting_Entity rdf:type owl:Class ;
+                              rdfs:subClassOf :C12_EGRUL_Reg_Entity ;
+                              rdfs:label "C44 LE Tax Accounting Entity"@en ,
+                                         "C44 Сведения Об Учете ЮЛ В Налоговом Органе"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C45_LE_Pension_Fund_Registration_Entity
+:C45_LE_Pension_Fund_Registration_Entity rdf:type owl:Class ;
+                                         rdfs:subClassOf :C12_EGRUL_Reg_Entity ;
+                                         rdfs:comment "Сведения о регистрации юридического лица в качестве страхователя в территориальном органе Пенсионного фонда Российской Федерации (СвРегПФ)"@ru ;
+                                         rdfs:label "C45 LE Pension Fund Registration Entity"@en ,
+                                                    "C45 Сведения О Регистрации ЮЛ В ПФР"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C46_LE_Social_Insurance_Fund_Registration_Entity
+:C46_LE_Social_Insurance_Fund_Registration_Entity rdf:type owl:Class ;
+                                                  rdfs:subClassOf :C12_EGRUL_Reg_Entity ;
+                                                  rdfs:comment "Сведения о регистрации юридического лица в качестве страхователя в исполнительном органе Фонда социального страхования Российской Федерации (СвРегФСС)"@ru ;
+                                                  rdfs:label "C46 LE Social Insurance Fund Registration Entity"@en ,
+                                                             "C46 Сведения О Регистрации ЮЛ В ФСС"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C47_Stated_Capital_Entity
+:C47_Stated_Capital_Entity rdf:type owl:Class ;
+                           rdfs:subClassOf :C12_EGRUL_Reg_Entity ;
+                           rdfs:comment "Сведения о размере указанного в учредительных документах коммерческой организации уставного капитала (складочного капитала, уставного фонда, паевого фонда) (СвУстКап)"@ru ;
+                           rdfs:label "C47 Stated Capital Entity"@en ,
+                                      "C47 Сведения Об Уставном Капитале"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C48_Capital_Decreasing_Entity
+:C48_Capital_Decreasing_Entity rdf:type owl:Class ;
+                               rdfs:subClassOf :C12_EGRUL_Reg_Entity ;
+                               rdfs:comment "Сведения о нахождении хозяйственного общества в процессе уменьшения уставного капитала (СведУмУК)"@ru ;
+                               rdfs:label "C48 Capital Decreasing Entity"@en ,
+                                          "C48 Сведения Об Уменьшении Уставного Капитала"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C49_Management_Organization_Entity
+:C49_Management_Organization_Entity rdf:type owl:Class ;
+                                    rdfs:subClassOf :C12_EGRUL_Reg_Entity ;
+                                    rdfs:label "C49 Management Organization Entity"@en ,
+                                               "C49 Сведения Об Управляющей Организации"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C4_Legal_Entity_Details
+:C4_Legal_Entity_Details rdf:type owl:Class ;
+                         rdfs:label "C4 Legal Entity Details"@en ,
+                                    "C4 Выписка О Юридическом Лице"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C50_Branch_Of_Foreign_Legal_Entity
+:C50_Branch_Of_Foreign_Legal_Entity rdf:type owl:Class ;
+                                    rdfs:subClassOf :C12_EGRUL_Reg_Entity ;
+                                    rdfs:comment "Сведения о наименовании представительства или филиала в Российской Федерации, через которое иностранное ЮЛ осуществляет полномочия управляющей организации (СвПредЮЛ)"@ru ;
+                                    rdfs:label "C50 Branch Of Foreign Legal Entity"@en ,
+                                               "C50 Сведения О Наименовании Представительства Или Филиала Иностранного ЮЛ"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C51_Person_Acting_Without_Power_Of_Auttorney_Entity
+:C51_Person_Acting_Without_Power_Of_Auttorney_Entity rdf:type owl:Class ;
+                                                     rdfs:subClassOf :C12_EGRUL_Reg_Entity ;
+                                                     rdfs:comment "Сведения о лице, имеющем право без доверенности действовать от имени юридического лица (СведДолжнФЛ)"@ru ;
+                                                     rdfs:label "C51 Person Acting Without Power Of Auttorney Entity"@en ,
+                                                                "C51 Сведения О Лице, Действующем Без Доверенности"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C52_Job_Entity
+:C52_Job_Entity rdf:type owl:Class ;
+                rdfs:subClassOf :C12_EGRUL_Reg_Entity ;
+                rdfs:label "C52 Job Entity"@en ,
+                           "C52 Сведения О Должности Физического Лица"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C53_Disqualification_Entity
+:C53_Disqualification_Entity rdf:type owl:Class ;
+                             rdfs:subClassOf :C12_EGRUL_Reg_Entity ;
+                             rdfs:label "C53 Disqualification Entity"@en ,
+                                        "C53 Сведения О Дисквалификации"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C54_Founder_Entity
+:C54_Founder_Entity rdf:type owl:Class ;
+                    rdfs:subClassOf :C12_EGRUL_Reg_Entity ;
+                    rdfs:label "C54 Founder Entity"@en ,
+                               "C54 Сведения Об Учредителе"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C55_Share_In_Stated_Capital_Entity
+:C55_Share_In_Stated_Capital_Entity rdf:type owl:Class ;
+                                    rdfs:subClassOf :C12_EGRUL_Reg_Entity ;
+                                    rdfs:comment "Доля в уставном капитале (складочном капитале, уставном фонде, паевом фонде), внесенная в ЕГРЮЛ (ДоляУстКапЕГРЮЛТип)"@ru ;
+                                    rdfs:label "C55 Share In Stated Capital Entity"@en ,
+                                               "С55 Доля В Уставном Капитале"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C56_Old_Registration_Entity
+:C56_Old_Registration_Entity rdf:type owl:Class ;
+                             rdfs:subClassOf :C12_EGRUL_Reg_Entity ;
+                             rdfs:comment "Сведения о регистрации учредителя (участника) до 01.07.2002 г (СвРегСтарые)"@ru ;
+                             rdfs:label "C56 Old Registration Entity"@en ,
+                                        "C56 Сведения О Регистрации ЮЛ До 01.07.2002"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C57_LE_Activity_Entity
+:C57_LE_Activity_Entity rdf:type owl:Class ;
+                        rdfs:subClassOf :C12_EGRUL_Reg_Entity ;
+                        rdfs:comment "Сведения о видах экономической деятельности по Общероссийскому классификатору видов экономической деятельности (СвОКВЭД)"@ru ;
+                        rdfs:label "C57 LE Activity Entity"@en ,
+                                   "C57 Сведения О Виде Экономической Деятельности ЮЛ"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C58_Separate_Business_Unit_Tax_Registration_Entity
+:C58_Separate_Business_Unit_Tax_Registration_Entity rdf:type owl:Class ;
+                                                    rdfs:subClassOf :C12_EGRUL_Reg_Entity ;
+                                                    rdfs:comment "Сведения об учете в налоговом органе по месту нахождения обособленного подразделения (филиала/представительства) (СвУчетНОПодраздТип)"@ru ;
+                                                    rdfs:label "C58 Separate Business Unit Tax Registration Entity"@en ,
+                                                               "C58 Сведения Об Учете В Налоговом Органе По Месту Нахождения Обособленного Подразделения"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C59_Applicant_Entity
+:C59_Applicant_Entity rdf:type owl:Class ;
+                      rdfs:subClassOf :C12_EGRUL_Reg_Entity ;
+                      rdfs:label "C59 Applicant Entity"@en ,
+                                 "C59 Сведения О Заявителе"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C5_Individual_Entrepreneur_Details
+:C5_Individual_Entrepreneur_Details rdf:type owl:Class ;
+                                    rdfs:label "C5 Individual Entrepreneur Details"@en ,
+                                               "C5 Выписка Об Индивидуальном Предпринимателе"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C60_LE_License_Entity
+:C60_LE_License_Entity rdf:type owl:Class ;
+                       rdfs:subClassOf :C12_EGRUL_Reg_Entity ;
+                       rdfs:label "C60 LE License Entity"@en ,
+                                  "C60 Сведения О Лицензиях, Выданных ЮЛ"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C61_LE_License_Suspension_Entity
+:C61_LE_License_Suspension_Entity rdf:type owl:Class ;
+                                  rdfs:subClassOf :C12_EGRUL_Reg_Entity ;
+                                  rdfs:label "C61 LE License Suspension Entity"@en ,
+                                             "C61 Сведения О Приостановлении Действия Лицензии ЮЛ"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C62_Contact_Number_Entity
+:C62_Contact_Number_Entity rdf:type owl:Class ;
+                           rdfs:subClassOf :C12_EGRUL_Reg_Entity ;
+                           rdfs:label "C62 Contact Number Entity"@en ,
+                                      "C62 Сведения О Контактном Телефоне"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C63_Person_Entity
+:C63_Person_Entity rdf:type owl:Class ;
+                   rdfs:subClassOf :C12_EGRUL_Reg_Entity ;
+                   rdfs:label "C63 Person Entity"@en ,
+                              "C63 Сведения О Физическом Лице"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C64_Peasant_Farm_Entity
+:C64_Peasant_Farm_Entity rdf:type owl:Class ;
+                         rdfs:subClassOf :C12_EGRUL_Reg_Entity ;
+                         rdfs:comment "Сведения о крестьянском (фермерском) хозяйстве, на базе имущества которого создано юридическое лицо (СвКФХПредш)"@ru ;
+                         rdfs:label "C64 Peasant Farm Entity"@en ,
+                                    "C64 Сведения О КФХ"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C65_Encumbrance_Of_Participant_Share_Entity
+:C65_Encumbrance_Of_Participant_Share_Entity rdf:type owl:Class ;
+                                             rdfs:subClassOf :C12_EGRUL_Reg_Entity ;
+                                             rdfs:comment "Сведения об обременении доли участника, внесенные в ЕГРЮЛ (СвОбремТип)"@ru ;
+                                             rdfs:label "C65 Encumbrance Of Participant Share Entity"@en ,
+                                                        "C65 Сведения Об Обременении Доли Участника"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C66_Reorganization_Entity
+:C66_Reorganization_Entity rdf:type owl:Class ;
+                           rdfs:subClassOf :C12_EGRUL_Reg_Entity ;
+                           rdfs:label "C66 Reorganization Entity"@en ,
+                                      "C67 Сведения Об Участии В Реорганизации"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C67_Holder_Of_Register_Of_Shareholders_Entity
+:C67_Holder_Of_Register_Of_Shareholders_Entity rdf:type owl:Class ;
+                                               rdfs:subClassOf :C12_EGRUL_Reg_Entity ;
+                                               rdfs:comment "Сведения о держателе реестра акционеров акционерного общества"@ru ;
+                                               rdfs:label "C67 Holder Of Register Of Shareholders Entity"@en ,
+                                                          "C67 Сведения О Держателе Реестра Акционеров АО"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C68_Separate_Business_Unit_Name_Entity
+:C68_Separate_Business_Unit_Name_Entity rdf:type owl:Class ;
+                                        rdfs:subClassOf :C12_EGRUL_Reg_Entity ;
+                                        rdfs:comment "Сведения о наименовании обособленного подразделения (филиала/представительства) (СвНаимПодраздТип)"@ru ;
+                                        rdfs:label "C68 Separate Business Unit Name Entity"@en ,
+                                                   "C68 Сведения О Наименовании Обособленного Подразделения"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C69_Separate_Business_Unit_Entity
+:C69_Separate_Business_Unit_Entity rdf:type owl:Class ;
+                                   rdfs:subClassOf :C12_EGRUL_Reg_Entity ;
+                                   rdfs:comment "Сведения об обособленных подразделениях юридического лица (СвПодразд)"@ru ;
+                                   rdfs:label "C69 Separate Business Unit Entity"@en ,
+                                              "C69 Сведения Об Обособленных Подразделениях ЮЛ"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C6_Document
+:C6_Document rdf:type owl:Class ;
+             rdfs:label "C6 Document"@en ,
+                        "C6 Документ"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C70_Address_Abroad_Entity
+:C70_Address_Abroad_Entity rdf:type owl:Class ;
+                           rdfs:subClassOf :C12_EGRUL_Reg_Entity ;
+                           rdfs:comment "Сведения об адресе за пределами территории РФ, внесенные в ЕГРЮЛ (АдрИнЕГРЮЛТип)"@ru ;
+                           rdfs:label "C70 Address Abroad Entity"@en ,
+                                      "C70 Сведения Об Адресе За Пределами Территории РФ"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C71_Mortgagee_Entity
+:C71_Mortgagee_Entity rdf:type owl:Class ;
+                      rdfs:subClassOf :C12_EGRUL_Reg_Entity ;
+                      rdfs:comment "Сведения об обременении доли участника, внесенные в ЕГРЮЛ (СвОбремТип)"@ru ;
+                      rdfs:label "C71 Mortgagee Entity"@en ,
+                                 "C71 Сведения Об Обременении"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C72_Participant_Entity
+:C72_Participant_Entity rdf:type owl:Class ;
+                        rdfs:subClassOf :C12_EGRUL_Reg_Entity ;
+                        rdfs:comment "Сведения о наименовании и (при наличии) ИНН и ОГРН ЮЛ - учредителя (участника), управляющей организации, залогодержателя, управляющего долей участника, внесенные в ЕГРЮЛ (СвЮЛЕГРЮЛТип)"@ru ;
+                        rdfs:label "C72 Participant Entity"@en ,
+                                   "C72 Сведения Об Организации"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C73_Management_Company_Entity
+:C73_Management_Company_Entity rdf:type owl:Class ;
+                               rdfs:subClassOf :C12_EGRUL_Reg_Entity ;
+                               rdfs:comment "Сведения об управляющей компании паевого инвестиционного фонда (СвУпрКомпПИФ)"@ru ;
+                               rdfs:label "C73 Management Company Entity"@en ,
+                                          "C73 Сведения Об Управляющей Компании ПИФ"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C74_Public_Body_Exercising_Founders_Fights_Entity
+:C74_Public_Body_Exercising_Founders_Fights_Entity rdf:type owl:Class ;
+                                                   rdfs:subClassOf :C12_EGRUL_Reg_Entity ;
+                                                   rdfs:comment "Сведения об органе государственной власти, органе местного самоуправления или о юридическом лице, осуществляющем права учредителя (участника)"@ru ;
+                                                   rdfs:label "C74 Public Body Exercising Founders Fights Entity"@en ,
+                                                              "C74 Сведения О Госоргане, Органе Местного Самоуправления Или О ЮЛ Осуществляющем Права Учредителя"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C75_Trustee_Entity
+:C75_Trustee_Entity rdf:type owl:Class ;
+                    rdfs:subClassOf :C12_EGRUL_Reg_Entity ;
+                    rdfs:label "75 Сведения О Доверительном Управляющем"@ru ,
+                               "C75 Trustee Entity"@en .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C76_Inheritance_Manager_Entity
+:C76_Inheritance_Manager_Entity rdf:type owl:Class ;
+                                rdfs:subClassOf :C12_EGRUL_Reg_Entity ;
+                                rdfs:comment "Сведения о лице, осуществляющем управление долей, переходящей в порядке наследования (ЛицоУпрНасл)"@ru ;
+                                rdfs:label "C76 Inheritance Manager Entity"@en ,
+                                           "C76 Сведения О Лице, Управляющем Долей, Переходящей В Порядке Наследования"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C78_LE_Changes_Confirmation_Entity
+:C78_LE_Changes_Confirmation_Entity rdf:type owl:Class ;
+                                    rdfs:subClassOf :C12_EGRUL_Reg_Entity ;
+                                    rdfs:comment "Сведения о свидетельстве, подтверждающем факт внесения записи в ЕГРЮЛ (СвСвид)"@ru ;
+                                    rdfs:label "C78 LE Changes Confirmation Entity"@en ,
+                                               "C78 Сведения О Свидетельстве, Подтверждающем Данные О ЮЛ"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C79_Name_And_Gender_Entity
+:C79_Name_And_Gender_Entity rdf:type owl:Class ;
+                            rdfs:subClassOf :C13_EGRIP_Reg_Entity ;
+                            rdfs:label "C79 Name And Gender Entity"@en ,
+                                       "C79 Сведения о ФИО и Поле ИП"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C7_FTS_Type_List
+:C7_FTS_Type_List rdf:type owl:Class ;
+                  rdfs:comment "Классификаторы, справочники и типы, встречающиеся в данных ФНС"@ru ;
+                  rdfs:label "C7 FTS Type List"@en ,
+                             "C7 Классификаторы ФНС"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C80_Citizenship_Entity
+:C80_Citizenship_Entity rdf:type owl:Class ;
+                        rdfs:subClassOf :C13_EGRIP_Reg_Entity ;
+                        rdfs:label "C80 Citizenship Entity"@en ,
+                                   "C80 Сведения О Гражданстве ИП"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C81_IE_Email_Entity
+:C81_IE_Email_Entity rdf:type owl:Class ;
+                     rdfs:subClassOf :C13_EGRIP_Reg_Entity ;
+                     rdfs:label "C81 IE Email Entity"@en ,
+                                "C81 Сведения Об Адресе Электронной Почты ИП"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C82_IE_Tax_Registrator_Entity
+:C82_IE_Tax_Registrator_Entity rdf:type owl:Class ;
+                               rdfs:subClassOf :C13_EGRIP_Reg_Entity ;
+                               rdfs:comment "Сведения о регистрирующем органе по месту жительства ИП или главы КФХ (СвРегОрг)"@ru ;
+                               rdfs:label "C82 IE Tax Registrator Entity"@en ,
+                                          "C82 Сведения О Региструющем Органе По Месту Жительства"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C83_IE_Status_Entity
+:C83_IE_Status_Entity rdf:type owl:Class ;
+                      rdfs:subClassOf :C13_EGRIP_Reg_Entity ;
+                      rdfs:label "C83 IE Status Entity"@en ,
+                                 "C83 Сведения О Состоянии (Статусе) ИП"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C84_Legal_Entity_Registration
+:C84_Legal_Entity_Registration rdf:type owl:Class ;
+                               rdfs:subClassOf :C13_EGRIP_Reg_Entity ;
+                               rdfs:comment "Сведения о юридическом лице, созданном на базе крестьянского (фермерского) хозяйства (СвНовЮЛ)"@ru ;
+                               rdfs:label "C84 Legal Entity Registration"@en ,
+                                          "C84 Сведения О ЮЛ, Созданном На Базе КФХ"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C85_IE_Tax_Accounting_Entity
+:C85_IE_Tax_Accounting_Entity rdf:type owl:Class ;
+                              rdfs:subClassOf :C13_EGRIP_Reg_Entity ;
+                              rdfs:label "C85 IE Tax Accounting Entity"@en ,
+                                         "C85 Сведения Об Учете ИП В Налоговом Органе"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C86_IE_Social_Insurance_Fund_Registration_Entity
+:C86_IE_Social_Insurance_Fund_Registration_Entity rdf:type owl:Class ;
+                                                  rdfs:subClassOf :C13_EGRIP_Reg_Entity ;
+                                                  rdfs:comment "Сведения о регистрации в качестве страхователя в исполнительном органе Фонда социального страхования Российской Федерации (СвРегФСС)"@ru ;
+                                                  rdfs:label "C86 IE Social Insurance Fund Registration Entity"@en ,
+                                                             "C86 Сведения О Регистрации ИП В ФСС"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C87_IE_Activity_Entity
+:C87_IE_Activity_Entity rdf:type owl:Class ;
+                        rdfs:subClassOf :C13_EGRIP_Reg_Entity ;
+                        rdfs:comment "Сведения о видах экономической деятельности по Общероссийскому классификатору видов экономической деятельности (СвОКВЭД)"@ru ;
+                        rdfs:label "C87 IE Activity Entity"@en ,
+                                   "C87 Сведения О Виде Экономической Деятельности ИП"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C88_IE_License_Entity
+:C88_IE_License_Entity rdf:type owl:Class ;
+                       rdfs:subClassOf :C13_EGRIP_Reg_Entity ;
+                       rdfs:label "C88 IE License Entity"@en ,
+                                  "C88 Сведения О Лицензиях, Выданных ИП"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C89_IE_License_Suspension_Entity
+:C89_IE_License_Suspension_Entity rdf:type owl:Class ;
+                                  rdfs:subClassOf :C13_EGRIP_Reg_Entity ;
+                                  rdfs:label "C89 IE License Suspension Entity"@en ,
+                                             "C89 Сведения О Приостановлении Действия Лицензии ИП"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C8_Error
+:C8_Error rdf:type owl:Class ;
+          rdfs:comment "Класс для обозначения сомнительных и ошибочных сведений"@ru ;
+          rdfs:label "C8 Error"@en ,
+                     "C8 Ошибка"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C90_IE_Registration_Entity
+:C90_IE_Registration_Entity rdf:type owl:Class ;
+                            rdfs:subClassOf :C13_EGRIP_Reg_Entity ;
+                            rdfs:comment "Сведения о регистрации индивидуального предпринимателя или крестьянского (фермерского) хозяйства (СвРегИП)"@ru ;
+                            rdfs:label "C90 IE Registration Entity"@en ,
+                                       "C90 Сведения О Регистрации ИП Или КФХ"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C91_IE_Pension_Fund_Registration_Entity
+:C91_IE_Pension_Fund_Registration_Entity rdf:type owl:Class ;
+                                         rdfs:subClassOf :C13_EGRIP_Reg_Entity ;
+                                         rdfs:comment "Сведения о регистрации в качестве страхователя в территориальном органе Пенсионного фонда Российской Федерации (СвРегПФ)"@ru ;
+                                         rdfs:label "C91 IE Pension Fund Registration Entity"@en ,
+                                                    "C91 Сведения О Регистрации ИП В ПФР"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C92_IE_Changes_Confirmation_Entity
+:C92_IE_Changes_Confirmation_Entity rdf:type owl:Class ;
+                                    rdfs:subClassOf :C13_EGRIP_Reg_Entity ;
+                                    rdfs:comment "Сведения о свидетельстве, подтверждающем факт внесения записи в ЕГРИП"@ru ;
+                                    rdfs:label "C92 IE Changes Confirmation Entity"@en ,
+                                               "C92 Сведения О Свидетельстве, Подтверждающем Данные О ИП"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C93_Tax_Authority
+:C93_Tax_Authority rdf:type owl:Class ;
+                   rdfs:subClassOf :C17_Territorial_State_Bodies ;
+                   rdfs:label "C93 Tax Authority"@en ,
+                              "C93 Налоговый Орган"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C94_Executive_Bodies_Of_Social_Insurance_Fund
+:C94_Executive_Bodies_Of_Social_Insurance_Fund rdf:type owl:Class ;
+                                               rdfs:subClassOf :C17_Territorial_State_Bodies ;
+                                               rdfs:comment "Исполнительный орган Фонда социального страхования Российской Федерации (СвОргФСС)"@ru ;
+                                               rdfs:label "C94 Executive Bodies Of Social Insurance Fund"@en ,
+                                                          "C94 Исполнительный Орган ФСС"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C95_Territorial_Bodies_Of_Pension_Fund
+:C95_Territorial_Bodies_Of_Pension_Fund rdf:type owl:Class ;
+                                        rdfs:subClassOf :C17_Territorial_State_Bodies ;
+                                        rdfs:comment "Территориальный орган Пенсионного фонда Российской Федерации (СвОргПФ)"@ru ;
+                                        rdfs:label "C95 Territorial Bodies Of Pension Fund"@en ,
+                                                   "C95 Территориальный Орган ПФР"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C96_Region_Element
+:C96_Region_Element rdf:type owl:Class ;
+                    rdfs:subClassOf :C26_KLADR_Element ;
+                    rdfs:label "C96 Region Element"@en ,
+                               "C96 Адресообразующий Элемент Регион"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C97_District_Element
+:C97_District_Element rdf:type owl:Class ;
+                      rdfs:subClassOf :C26_KLADR_Element ;
+                      rdfs:label "C97 District Element"@en ,
+                                 "C97 Адресообразующий Элемент Район"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C98_City_Element
+:C98_City_Element rdf:type owl:Class ;
+                  rdfs:subClassOf :C26_KLADR_Element ;
+                  rdfs:label "C98 City Element"@en ,
+                             "C98 Адресообразующий Элемент Город"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C99_Locality_Element
+:C99_Locality_Element rdf:type owl:Class ;
+                      rdfs:subClassOf :C26_KLADR_Element ;
+                      rdfs:label "C99 Locality Element"@en ,
+                                 "C99 Адресообразующий Элемент Населенный Пункт"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/fts#C9_Legal_Entity
+:C9_Legal_Entity rdf:type owl:Class ;
+                 rdfs:subClassOf <http://www.w3.org/ns/org#FormalOrganization> ;
+                 rdfs:label "C9 Legal Entity"@en ,
+                            "C9 Юридическое Лицо"@ru .
+
+
+###  Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi

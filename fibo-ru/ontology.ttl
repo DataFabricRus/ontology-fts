@@ -68,6 +68,13 @@ fibo-ru:Attorney rdf:type owl:Class ;
                  skos:definition "In general, an agent authorized to act in legal capacity for a principal, such as an attorney-in-fact. In specific, a lawyer properly called an attorney-at-law."@en .
 
 
+###  https://w3id.org/datafabric.cc/ontologies/fibo-ru#MutualFund
+fibo-ru:MutualFund rdf:type owl:Class ;
+                   rdfs:subClassOf <https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/FormalBusinessOrganizations/FormallyConstitutedOrganization> ;
+                   rdfs:label "mutual fund"@en ,
+                              "паевой инвестиционный фонд"@ru .
+
+
 ###  https://w3id.org/datafabric.cc/ontologies/fibo-ru#SignatoryRoleInRFJ
 fibo-ru:SignatoryRoleInRFJ rdf:type owl:Class ;
                            rdfs:subClassOf <https://spec.edmcouncil.org/fibo/ontology/FND/Parties/Roles/Role> .

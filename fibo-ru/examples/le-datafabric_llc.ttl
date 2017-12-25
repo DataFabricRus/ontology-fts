@@ -169,17 +169,15 @@
     .
 
 :Datafabric-Address a fibo-be-le-fbo:RegisteredAddress ;
+    rdfs:label "193231, ГОРОД САНКТ-ПЕТЕРБУРГ, улица Латышских стрелков, ДОМ 11, КОРПУС 2, КВАРТИРА 83" ;
+    fts:p18_postcode "193231" ;
     fibo-fnd-rel-rel:appliesTo [
-        a fts:C39_Address_Entity, fibo-fnd-plc-loc:PhysicalLocation ;
-        rdfs:label "193231, ГОРОД САНКТ-ПЕТЕРБУРГ, улица Латышских стрелков, ДОМ 11, КОРПУС 2, КВАРТИРА 83" ;
-        fts:p18_postcode "193231" ;
-        fts:p21_block "КОРПУС 2" ;
-        fts:p23_office_number "КВАРТИРА 83" ;
-        fts:p20_address_code "780000000000684" ;
-        fts:p22_building_number "ДОМ 11" ;
-        fts:p98_located_at :Region-78 ;
-        fts:p98_located_at :Street-1
+        a fibo-fnd-plc-loc:PhysicalLocation ;
+        fibo-fnd-aap-agt:hasName "КВАРТИРА 83" ;
+        fibo-fnd-plc-loc:isLocatedAt :Datafabric-Address-House
     ] .
+
+:Datafabric-Address-House a fts:C117_House_Element .
 
 ##
 # Предыдущие версии (исторические связи) данных

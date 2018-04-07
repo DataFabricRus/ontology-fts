@@ -547,6 +547,11 @@
                 Населенный Пункт</a>
         </li>
         <li>
+            <a href="#C117_House_Element"
+               title="https://w3id.org/datafabric.cc/ontologies/fts#C117_House_Element">C117 Адресообразующий Элемент
+                Здание</a>
+        </li>
+        <li>
             <a href="#C55_Share_In_Stated_Capital_Entity"
                title="https://w3id.org/datafabric.cc/ontologies/fts#C55_Share_In_Stated_Capital_Entity">С55 Доля В
                 Уставном Капитале</a>
@@ -1655,7 +1660,7 @@
             <pre>
             ex:Region-10 a fts:C96_Region_Element ;
                 fts:p25_element_type "РЕСПУБЛИКА" ;
-                fts:p19_region_code "10" ;
+                fts:p19_kladr_code "10" ;
                 fts:p6_name "КАРЕЛИЯ" .
             </pre>
         </div>
@@ -1750,6 +1755,9 @@
                 <sup class="type-c" title="class">c</sup>, <a href="#C99_Locality_Element"
                                                               title="https://w3id.org/datafabric.cc/ontologies/fts#C99_Locality_Element">C99
                 Адресообразующий Элемент Населенный Пункт</a>
+                <sup class="type-c" title="class">c</sup>, <a href="#C117_House_Element"
+                                                              title="https://w3id.org/datafabric.cc/ontologies/fts#C117_House_Element">C117
+                Адресообразующий Элемент Здание</a>
                 <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>is in domain of</dt>
@@ -3948,6 +3956,22 @@
             </dd>
         </dl>
     </div>
+    <div class="entity" id="C117_House_Element">
+        <h3>C117 Адресообразующий Элемент Здание<sup class="type-c" title="class">c</sup>
+            <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+        </h3>
+        <p>
+            <strong>IRI:</strong> https://w3id.org/datafabric.cc/ontologies/fts#C117_House_Element</p>
+        <dl class="description">
+            <dt>has super-classes</dt>
+            <dd>
+                <a href="#C26_KLADR_Element"
+                   title="https://w3id.org/datafabric.cc/ontologies/fts#C26_KLADR_Element">C26 КЛАДР</a>
+                <sup class="type-c" title="class">c</sup>
+            </dd>
+        </dl>
+    </div>
     <div class="entity" id="C55_Share_In_Stated_Capital_Entity">
         <h3>С55 Доля В Уставном Капитале<sup class="type-c" title="class">c</sup>
             <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -5811,16 +5835,12 @@
                title="https://w3id.org/datafabric.cc/ontologies/fts#p18_postcode">p18 индекс</a>
         </li>
         <li>
-            <a href="#p19_region_code"
-               title="https://w3id.org/datafabric.cc/ontologies/fts#p19_region_code">p19 код субъекта РФ</a>
+            <a href="#p19_kladr_code"
+               title="https://w3id.org/datafabric.cc/ontologies/fts#p19_kladr_code">p19 КЛАДР код адреса</a>
         </li>
         <li>
             <a href="#p2_date"
                title="https://w3id.org/datafabric.cc/ontologies/fts#p2_date">p2 дата</a>
-        </li>
-        <li>
-            <a href="#p20_address_code"
-               title="https://w3id.org/datafabric.cc/ontologies/fts#p20_address_code">p20 код адреса по кладр</a>
         </li>
         <li>
             <a href="#p21_block"
@@ -6260,13 +6280,13 @@
             </dl>
         </div>
     </div>
-    <div class="entity" id="p19_region_code">
-        <h3>p19 код субъекта РФ<sup class="type-dp" title="data property">dp</sup>
+    <div class="entity" id="p19_kladr_code">
+        <h3>p19 КЛАДР код адреса<sup class="type-dp" title="data property">dp</sup>
             <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
         </h3>
         <p>
-            <strong>IRI:</strong> https://w3id.org/datafabric.cc/ontologies/fts#p19_region_code</p>
+            <strong>IRI:</strong> https://w3id.org/datafabric.cc/ontologies/fts#p19_kladr_code</p>
         <div class="description">
             <dl>
                 <dt>has range</dt>
@@ -6288,22 +6308,6 @@
                 <dt>has range</dt>
                 <dd>
                     <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">date time</span>
-                </dd>
-            </dl>
-        </div>
-    </div>
-    <div class="entity" id="p20_address_code">
-        <h3>p20 код адреса по кладр<sup class="type-dp" title="data property">dp</sup>
-            <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-        </h3>
-        <p>
-            <strong>IRI:</strong> https://w3id.org/datafabric.cc/ontologies/fts#p20_address_code</p>
-        <div class="description">
-            <dl>
-                <dt>has range</dt>
-                <dd>
-                    <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
                 </dd>
             </dl>
         </div>

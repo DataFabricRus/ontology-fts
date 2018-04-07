@@ -45,10 +45,11 @@
         fts:p18_postcode "193231" ;
         fts:p21_block "КОРПУС 2" ;
         fts:p23_office_number "КВАРТИРА 83" ;
-        fts:p20_address_code "780000000000684" ;
+        fts:p19_kladr_code "780000000000684" ;
         fts:p22_building_number "ДОМ 11" ;
-        fts:p98_located_at ex:Region-78 ;
-        fts:p98_located_at ex:Street-1 .
+        fts:p98_located_at ex:House-1 .
+    ex:Street-1 p113_part_of ex:House-1 .
+    ex:Region-78 p113_part_of ex:Street-1 .
 </pre>
 
 Секция "Сведения о регистрации":
@@ -86,12 +87,15 @@
 <pre>
     ex:Region-78 a fts:C96_Region_Element ;
     fts:p25_element_type "ГОРОД" ;
-    fts:p19_region_code "78" ;
+    fts:p19_kladr_code "78" ;
     fts:p6_name "САНКТ-ПЕТЕРБУРГ" .
 
     ex:Street-1 a fts:C100_Street_Element ;
     fts:p25_element_type "УЛИЦА" ;
+    fts:p19_kladr_code "780000000000684" ;
     fts:p6_name "ЛАТЫШСКИХ СТРЕЛКОВ" .
+
+    ex:House-1 a fts:C117_House_Element ;
 </pre>
 
 <h3>Актуальная и историческая информация о ЮЛ или ИП</h3>

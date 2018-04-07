@@ -1,0 +1,296 @@
+@prefix : <https://w3id.org/datafabric.cc/ontologies/rosstat##> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/datafabric.cc/ontologies/rosstat#> .
+
+<https://w3id.org/datafabric.cc/ontologies/rosstat#> rdf:type owl:Ontology ;
+                                                      owl:versionIRI <https://w3id.org/datafabric.cc/ontologies/rosstat#> ;
+                                                      <http://purl.org/dc/terms/title> "Онтология Бухгалтерской отчетности организаций и ИП (Росстат)"@ru ;
+                                                      <http://purl.org/vocab/vann/preferredNamespacePrefix> "rosstat"^^xsd:string .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/linked-data/cube#attribute
+<http://purl.org/linked-data/cube#attribute> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/linked-data/cube#component
+<http://purl.org/linked-data/cube#component> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/linked-data/cube#componentAttachment
+<http://purl.org/linked-data/cube#componentAttachment> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/linked-data/cube#componentProperty
+<http://purl.org/linked-data/cube#componentProperty> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/linked-data/cube#componentRequired
+<http://purl.org/linked-data/cube#componentRequired> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/linked-data/cube#concept
+<http://purl.org/linked-data/cube#concept> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/linked-data/cube#dimension
+<http://purl.org/linked-data/cube#dimension> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/linked-data/cube#measure
+<http://purl.org/linked-data/cube#measure> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/linked-data/cube#sliceKey
+<http://purl.org/linked-data/cube#sliceKey> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#gYear
+xsd:gYear rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/datafabric.cc/ontologies/rosstat#refOrganization
+<https://w3id.org/datafabric.cc/ontologies/rosstat#refOrganization> rdf:type owl:ObjectProperty ;
+                                                                    rdfs:range <https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/FormalOrganizations/FormalOrganization> .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://purl.org/linked-data/sdmx/2009/dimension#refPeriod
+<http://purl.org/linked-data/sdmx/2009/dimension#refPeriod> rdf:type owl:DatatypeProperty .
+
+
+###  http://purl.org/linked-data/sdmx/2009/measure#obsValue
+<http://purl.org/linked-data/sdmx/2009/measure#obsValue> rdf:type owl:DatatypeProperty .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/rosstat#measure-1210
+<https://w3id.org/datafabric.cc/ontologies/rosstat#measure-1210> rdf:type owl:DatatypeProperty ;
+                                                                 rdfs:subPropertyOf <http://purl.org/linked-data/sdmx/2009/measure#obsValue> ;
+                                                                 rdfs:range xsd:decimal .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/rosstat#measure-1230
+<https://w3id.org/datafabric.cc/ontologies/rosstat#measure-1230> rdf:type owl:DatatypeProperty ;
+                                                                 rdfs:subPropertyOf <http://purl.org/linked-data/sdmx/2009/measure#obsValue> ;
+                                                                 rdfs:range xsd:decimal .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/rosstat#measure-1250
+<https://w3id.org/datafabric.cc/ontologies/rosstat#measure-1250> rdf:type owl:DatatypeProperty ;
+                                                                 rdfs:subPropertyOf <http://purl.org/linked-data/sdmx/2009/measure#obsValue> ;
+                                                                 rdfs:range xsd:decimal .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/rosstat#measure-1370
+<https://w3id.org/datafabric.cc/ontologies/rosstat#measure-1370> rdf:type owl:DatatypeProperty ;
+                                                                 rdfs:subPropertyOf <http://purl.org/linked-data/sdmx/2009/measure#obsValue> ;
+                                                                 rdfs:range xsd:decimal .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/rosstat#measure-1520
+<https://w3id.org/datafabric.cc/ontologies/rosstat#measure-1520> rdf:type owl:DatatypeProperty ;
+                                                                 rdfs:subPropertyOf <http://purl.org/linked-data/sdmx/2009/measure#obsValue> ;
+                                                                 rdfs:range xsd:decimal .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/rosstat#measure-2110
+<https://w3id.org/datafabric.cc/ontologies/rosstat#measure-2110> rdf:type owl:DatatypeProperty ;
+                                                                 rdfs:subPropertyOf <http://purl.org/linked-data/sdmx/2009/measure#obsValue> ;
+                                                                 rdfs:range xsd:decimal .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/rosstat#measure-2400
+<https://w3id.org/datafabric.cc/ontologies/rosstat#measure-2400> rdf:type owl:DatatypeProperty ;
+                                                                 rdfs:subPropertyOf <http://purl.org/linked-data/sdmx/2009/measure#obsValue> ;
+                                                                 rdfs:range xsd:decimal .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/rosstat#measure-2410
+<https://w3id.org/datafabric.cc/ontologies/rosstat#measure-2410> rdf:type owl:DatatypeProperty ;
+                                                                 rdfs:subPropertyOf <http://purl.org/linked-data/sdmx/2009/measure#obsValue> ;
+                                                                 rdfs:range xsd:decimal .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/rosstat#refPeriod
+<https://w3id.org/datafabric.cc/ontologies/rosstat#refPeriod> rdf:type owl:DatatypeProperty ;
+                                                              rdfs:subPropertyOf <http://purl.org/linked-data/sdmx/2009/dimension#refPeriod> ;
+                                                              rdfs:range xsd:gYear .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.org/linked-data/cube#DataStructureDefinition
+<http://purl.org/linked-data/cube#DataStructureDefinition> rdf:type owl:Class .
+
+
+###  http://purl.org/linked-data/cube#DimensionProperty
+<http://purl.org/linked-data/cube#DimensionProperty> rdf:type owl:Class .
+
+
+###  http://purl.org/linked-data/cube#MeasureProperty
+<http://purl.org/linked-data/cube#MeasureProperty> rdf:type owl:Class .
+
+
+###  http://purl.org/linked-data/cube#SliceKey
+<http://purl.org/linked-data/cube#SliceKey> rdf:type owl:Class .
+
+
+###  https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/FormalOrganizations/FormalOrganization
+<https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/FormalOrganizations/FormalOrganization> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://w3id.org/datafabric.cc/ontologies/rosstat#RosstatAccountingReportDSD
+<https://w3id.org/datafabric.cc/ontologies/rosstat#RosstatAccountingReportDSD> rdf:type owl:NamedIndividual ,
+                                                                                        <http://purl.org/linked-data/cube#DataStructureDefinition> ;
+                                                                               <http://purl.org/linked-data/cube#component> [ <http://purl.org/linked-data/cube#measure> <https://w3id.org/datafabric.cc/ontologies/rosstat#measure-2400>
+                                                                                                                            ] ,
+                                                                                                                            [ <http://purl.org/linked-data/cube#measure> <https://w3id.org/datafabric.cc/ontologies/rosstat#measure-2110>
+                                                                                                                            ] ,
+                                                                                                                            [ <http://purl.org/linked-data/cube#measure> <https://w3id.org/datafabric.cc/ontologies/rosstat#measure-2410>
+                                                                                                                            ] ,
+                                                                                                                            _:genid4 ,
+                                                                                                                            [ <http://purl.org/linked-data/cube#measure> <https://w3id.org/datafabric.cc/ontologies/rosstat#measure-1230>
+                                                                                                                            ] ,
+                                                                                                                            [ <http://purl.org/linked-data/cube#measure> <https://w3id.org/datafabric.cc/ontologies/rosstat#measure-1520>
+                                                                                                                            ] ,
+                                                                                                                            [ <http://purl.org/linked-data/cube#measure> <https://w3id.org/datafabric.cc/ontologies/rosstat#measure-1250>
+                                                                                                                            ] ,
+                                                                                                                            [ <http://purl.org/linked-data/cube#measure> <https://w3id.org/datafabric.cc/ontologies/rosstat#measure-1370>
+                                                                                                                            ] ,
+                                                                                                                            _:genid9 ,
+                                                                                                                            _:genid10 ,
+                                                                                                                            [ <http://purl.org/linked-data/cube#dimension> <http://purl.org/linked-data/cube#measureType>
+                                                                                                                            ] ,
+                                                                                                                            [ <http://purl.org/linked-data/cube#measure> <https://w3id.org/datafabric.cc/ontologies/rosstat#measure-1210>
+                                                                                                                            ] ;
+                                                                               <http://purl.org/linked-data/cube#sliceKey> <https://w3id.org/datafabric.cc/ontologies/rosstat#SliceByYearAndOrg> ;
+                                                                               rdfs:label "RDF Data Cube схема данных бухгалтерской отчетности организаций и ИП"@ru .
+
+_:genid4 <http://purl.org/linked-data/cube#attribute> <http://purl.org/linked-data/sdmx/2009/attribute#currency> ;
+          <http://purl.org/linked-data/cube#componentAttachment> <http://purl.org/linked-data/cube#DataSet> ;
+          <http://purl.org/linked-data/cube#componentRequired> "true"^^xsd:boolean .
+
+_:genid9 <http://purl.org/linked-data/cube#componentAttachment> <http://purl.org/linked-data/cube#Slice> ;
+          <http://purl.org/linked-data/cube#dimension> <https://w3id.org/datafabric.cc/ontologies/rosstat#refPeriod> .
+
+_:genid10 <http://purl.org/linked-data/cube#componentAttachment> <http://purl.org/linked-data/cube#Slice> ;
+           <http://purl.org/linked-data/cube#dimension> <https://w3id.org/datafabric.cc/ontologies/rosstat#refOrganization> .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/rosstat#SliceByYearAndOrg
+<https://w3id.org/datafabric.cc/ontologies/rosstat#SliceByYearAndOrg> rdf:type owl:NamedIndividual ,
+                                                                               <http://purl.org/linked-data/cube#SliceKey> ;
+                                                                      <http://purl.org/linked-data/cube#componentProperty> <https://w3id.org/datafabric.cc/ontologies/rosstat#refOrganization> ,
+                                                                                                                           <https://w3id.org/datafabric.cc/ontologies/rosstat#refPeriod> ;
+                                                                      rdfs:label "Бухгалтерская отчетность организации или ИП за отчетный период"@ru .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/rosstat#measure-1210
+<https://w3id.org/datafabric.cc/ontologies/rosstat#measure-1210> rdf:type owl:NamedIndividual ,
+                                                                          <http://purl.org/linked-data/cube#MeasureProperty> .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/rosstat#measure-1230
+<https://w3id.org/datafabric.cc/ontologies/rosstat#measure-1230> rdf:type owl:NamedIndividual ,
+                                                                          <http://purl.org/linked-data/cube#MeasureProperty> .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/rosstat#measure-1250
+<https://w3id.org/datafabric.cc/ontologies/rosstat#measure-1250> rdf:type owl:NamedIndividual ,
+                                                                          <http://purl.org/linked-data/cube#MeasureProperty> .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/rosstat#measure-1370
+<https://w3id.org/datafabric.cc/ontologies/rosstat#measure-1370> rdf:type owl:NamedIndividual ,
+                                                                          <http://purl.org/linked-data/cube#MeasureProperty> .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/rosstat#measure-1520
+<https://w3id.org/datafabric.cc/ontologies/rosstat#measure-1520> rdf:type owl:NamedIndividual ,
+                                                                          <http://purl.org/linked-data/cube#MeasureProperty> .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/rosstat#measure-2110
+<https://w3id.org/datafabric.cc/ontologies/rosstat#measure-2110> rdf:type owl:NamedIndividual ,
+                                                                          <http://purl.org/linked-data/cube#MeasureProperty> .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/rosstat#measure-2400
+<https://w3id.org/datafabric.cc/ontologies/rosstat#measure-2400> rdf:type owl:NamedIndividual ,
+                                                                          <http://purl.org/linked-data/cube#MeasureProperty> .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/rosstat#measure-2410
+<https://w3id.org/datafabric.cc/ontologies/rosstat#measure-2410> rdf:type owl:NamedIndividual ,
+                                                                          <http://purl.org/linked-data/cube#MeasureProperty> .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/rosstat#refOrganization
+<https://w3id.org/datafabric.cc/ontologies/rosstat#refOrganization> rdf:type owl:NamedIndividual ,
+                                                                             <http://purl.org/linked-data/cube#DimensionProperty> .
+
+
+###  https://w3id.org/datafabric.cc/ontologies/rosstat#refPeriod
+<https://w3id.org/datafabric.cc/ontologies/rosstat#refPeriod> rdf:type owl:NamedIndividual ,
+                                                                       <http://purl.org/linked-data/cube#DimensionProperty> .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+<https://w3id.org/datafabric.cc/ontologies/rosstat#measure-1210> rdfs:label "Запасы"@ru .
+
+
+<https://w3id.org/datafabric.cc/ontologies/rosstat#measure-1230> rdfs:label "Дебиторская задолженность"@ru .
+
+
+<https://w3id.org/datafabric.cc/ontologies/rosstat#measure-1250> rdfs:label "Денежные средства"@ru .
+
+
+<https://w3id.org/datafabric.cc/ontologies/rosstat#measure-1370> rdfs:label "Нераспределенная прибыль (непокрытый убыток)"@ru .
+
+
+<https://w3id.org/datafabric.cc/ontologies/rosstat#measure-1520> rdfs:label "Кредиторская задолжность"@ru .
+
+
+<https://w3id.org/datafabric.cc/ontologies/rosstat#measure-2110> rdfs:label "Выручка"@ru .
+
+
+<https://w3id.org/datafabric.cc/ontologies/rosstat#measure-2400> rdfs:label "Чистая прибыль (убыток)"@ru .
+
+
+<https://w3id.org/datafabric.cc/ontologies/rosstat#measure-2410> rdfs:label "Налог на прибыль"@ru .
+
+
+<https://w3id.org/datafabric.cc/ontologies/rosstat#refOrganization> rdfs:label "Организация"@ru .
+
+
+<https://w3id.org/datafabric.cc/ontologies/rosstat#refPeriod> <http://purl.org/linked-data/cube#concept> <http://purl.org/linked-data/sdmx/2009/concept#refPeriod> ;
+                                                              rdfs:label "Период"@ru .
+
+
+###  Generated by the OWL API (version 5.1.0) https://github.com/owlcs/owlapi/

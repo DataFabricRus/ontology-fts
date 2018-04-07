@@ -1,0 +1,156 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix fibo-be-corp-corp: <https://spec.edmcouncil.org/fibo/ontology/BE/Corporations/Corporations/> .
+@prefix fibo-be-fct-fct: <https://spec.edmcouncil.org/fibo/ontology/BE/FunctionalEntities/FunctionalEntities/> .
+@prefix fibo-be-le-lp: <https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/LegalPersons/> .
+@prefix fibo-be-le-lei: <https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/LEIEntities/> .
+@prefix fibo-be-le-fbo: <https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/FormalBusinessOrganizations/> .
+@prefix fibo-be-plc-plc: <https://spec.edmcouncil.org/fibo/ontology/BE/PrivateLimitedCompanies/PrivateLimitedCompanies/> .
+@prefix fibo-be-oac-cown: <https://spec.edmcouncil.org/fibo/ontology/BE/OwnershipAndControl/CorporateOwnership/> .
+@prefix fibo-be-oac-opty: <https://spec.edmcouncil.org/fibo/ontology/BE/OwnershipAndControl/OwnershipParties/> .
+@prefix fibo-fnd-aap-agt: <https://spec.edmcouncil.org/fibo/ontology/FND/AgentsAndPeople/Agents/> .
+@prefix fibo-fnd-aap-ppl: <https://spec.edmcouncil.org/fibo/ontology/FND/AgentsAndPeople/Agents/People/> .
+@prefix fibo-fnd-acc-aeq: <https://spec.edmcouncil.org/fibo/ontology/FND/Accounting/AccountingEquity/> .
+@prefix fibo-fnd-acc-cur: <https://spec.edmcouncil.org/fibo/ontology/FND/Accounting/CurrencyAmount/> .
+@prefix fibo-fnd-acc-4217: <https://spec.edmcouncil.org/fibo/ontology/FND/Accounting/ISO4217-CurrencyCodes/> .
+@prefix fibo-fnd-arr-id: <https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/IdentifiersAndIndices/> .
+@prefix fibo-fnd-arr-doc: <https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Documents/> .
+@prefix fibo-fnd-dt-fd: <https://spec.edmcouncil.org/fibo/ontology/FND/DatesAndTimes/FinancialDates/> .
+@prefix fibo-fnd-law-lcap: <https://spec.edmcouncil.org/fibo/ontology/FND/Law/LegalCapacity/> .
+@prefix fibo-fnd-rel-rel: <https://spec.edmcouncil.org/fibo/ontology/FND/Relations/Relations/> .
+@prefix fibo-fnd-plc-adr: <https://spec.edmcouncil.org/fibo/ontology/FND/Places/Addresses/> .
+@prefix fibo-fnd-plc-cty: <https://spec.edmcouncil.org/fibo/ontology/FND/Places/Countries/> .
+@prefix fibo-fnd-plc-loc: <https://spec.edmcouncil.org/fibo/ontology/FND/Places/Locations/> .
+@prefix fibo-fnd-pty-rl: <https://spec.edmcouncil.org/fibo/ontology/FND/Parties/Roles/> .
+@prefix fibo-fnd-pty-pty: <https://spec.edmcouncil.org/fibo/ontology/FND/Parties/Parties/> .
+@prefix fibo-fnd-oac-own: <https://spec.edmcouncil.org/fibo/ontology/FND/OwnershipAndControl/Ownership/> .
+@prefix fibo-fnd-org-fm: <https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/> .
+@prefix fibo-fnd-org-lg: <https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/LegitimateOrganizations/> .
+@prefix fibo-fnd-org-org: <https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/Organizations/> .
+@prefix fibo-fnd-qt-qtu: <https://spec.edmcouncil.org/fibo/ontology/FND/Quantities/QuantitiesAndUnits/> .
+@prefix fibo-fnd-utl-bt: <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/BusinessFacingTypes/> .
+@prefix fibo-ru: <https://w3id.org/datafabric.cc/ontologies/fibo-ru#> .
+@prefix fibo-ru-activities: <https://w3id.org/datafabric.cc/ontologies/fibo-ru-activities#> .
+@prefix fts: <https://w3id.org/datafabric.cc/ontologies/fts#> .
+@prefix lcc-3166-1: <http://www.omg.org/spec/LCC/Countries/ISO3166-1-CountryCodes/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rov: <http://www.w3.org/ns/regorg#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://example.com/resources/> .
+
+:ITMO a fibo-fnd-org-fm:FormalOrganization ;
+
+    ##
+    # Наименование
+    ##
+    fibo-fnd-rel-rel:hasLegalName "ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ АВТОНОМНОЕ ОБРАЗОВАТЕЛЬНОЕ УЧРЕЖДЕНИЕ ВЫСШЕГО ОБРАЗОВАНИЯ
+        \"САНКТ-ПЕТЕРБУРГСКИЙ НАЦИОНАЛЬНЫЙ ИССЛЕДОВАТЕЛЬСКИЙ УНИВЕРСИТЕТ ИНФОРМАЦИОННЫХ ТЕХНОЛОГИЙ, МЕХАНИКИ И ОПТИКИ\""@ru ;
+    fibo-fnd-rel-rel:hasAlias "УНИВЕРСИТЕТ ИТМО"@ru ;
+
+    ##
+    # Адрес (место нахождения)
+    ##
+    fibo-be-le-fbo:hasRegisteredAddress :ITMO-Address ;
+
+    ##
+    # Сведения о регистрации
+    ##
+    fibo-ru:hasRegistrationIdentifier [ # ОГРН
+        a fibo-be-corp-corp:RegistrationIdentifier ;
+        fibo-fnd-aap-agt:identifies :ITMO ;
+        fibo-fnd-rel-rel:hasUniqueIdentifier "1027806868154" ;
+        fibo-fnd-rel-rel:hasDateOfIssuance [
+            fibo-fnd-dt-fd:hasDateValue "2002-10-24"^^xsd:date
+        ]
+    ] ;
+    fibo-be-corp-corp:hasDateOfRegistration [ # ОГРН Дата
+        fibo-fnd-dt-fd:hasDateValue "2002-10-24"^^xsd:date
+    ] ;
+
+    ##
+    # Сведения об учете в налоговом органе
+    ##
+    fibo-ru:hasVATRegistrationNumber [ # ИНН
+        a fibo-ru:VATIN ;
+        fibo-fnd-aap-agt:identifies :ITMO ;
+        fibo-fnd-rel-rel:hasUniqueIdentifier "7813045547" ;
+        fibo-ru:hasReasonCodeOfIssuance "781301001" ;
+        fibo-fnd-arr-doc:hasDateOfIssuance [
+            fibo-fnd-dt-fd:hasDateValue "1990-07-02"^^xsd:date
+        ]
+    ] ;
+
+    ##
+    # Сведения о статусе организации
+    ##
+    rov:orgStatus fibo-ru:RUOrgStatus-1 ;
+
+    ##
+    # Сведения о лице, имеющем право без доверенности действовать от имени юридического лица
+    ##
+    fibo-be-le-fbo:hasSignatory :ITMO-Signatory-Vasiliev-VN ;
+
+    ##
+    # Сведения об учредителях (участниках) юридического лица
+    ##
+    fibo-be-oac-opty:hasConstitutionalOwner :ITMO-Share-RF-as-Owner ;
+    fibo-be-le-fbo:hasEquity :ITMO-Share-RF ;
+
+    ##
+    # Юрисдикция ЮЛ
+    ##
+    fibo-fnd-org-fm:isDomiciledIn lcc-3166-1:RussianFederation ;
+
+    ##
+    # Сведения о видах экономической деятельности по Общероссийскому классификатору видов экономической деятельности
+    ##
+    # Сведения об основном виде деятельности
+    fibo-ru:hasPrimaryCommercialActivity fibo-ru-activities:OKVED-2014-85.22 ;
+
+    # Сведения о дополнительных видах деятельности
+    fibo-ru:hasCommercialActivity fibo-ru-activities:OKVED-2014-41.20 ;
+    .
+
+:ITMO-Signatory-Vasiliev-VN a fibo-be-le-lp:Signatory ;
+    fibo-fnd-rel-rel:hasFormalName "Ректор"@ru ;
+    fibo-fnd-pty-rl:isPlayedBy :Vasiliev-VN ;
+    fibo-fnd-pty-rl:hasRole fibo-ru:SignatoryRoleInRFJ-02 ; # ген.директор
+    .
+
+:Vasiliev-VN a fibo-be-le-lp:NaturalPerson ;
+    fibo-fnd-aap-agt:hasName "ВАСИЛЬЕВ ВЛАДИМИР НИКОЛАЕВИЧ" ;
+    fibo-fnd-aap-ppl:hasCitizenship lcc-3166-1:RussianFederation ;
+    fibo-ru:hasVATRegistrationNumber [ # ИНН
+        a fibo-ru:VATIN ;
+        fibo-fnd-aap-agt:identifies :Vasiliev-VN ;
+        fibo-fnd-rel-rel:hasUniqueIdentifier "782570622166"
+    ] ;
+    fibo-fnd-pty-rl:playsRole :ITMO-Signatory-Vasiliev-VN ;
+    .
+
+:ITMO-Share-RF a fibo-be-oac-cown:Shareholding ;
+    fibo-fnd-acc-aeq:representsAnInterestIn :ITMO ;
+    fibo-be-oac-opty:isEquityHeldBy :ITMO-Share-RF-as-Owner ;
+    fibo-fnd-rel-rel:isManagedBy :ITMO-Share-RF-isManagedBy-MINOBR .
+
+:ITMO-Share-RF-isManagedBy-MINOBR a fibo-ru:Attorney ;
+        fibo-fnd-pty-rl:isPlayedBy :MINOBR ;
+        fibo-fnd-rel-rel:manages :ITMO-Share-RF .
+
+:ITMO-Share-RF-as-Owner a fibo-be-oac-opty:ConstitutionalOwner ;
+    fibo-fnd-pty-rl:isPlayedBy :PublicBody-RF ;
+    fibo-be-oac-opty:holdsEquityIn :ITMO-Share-RF .
+
+:MINOBR a fibo-fnd-org-fm:FormalOrganization ;
+    fibo-fnd-rel-rel:hasLegalName "МИНИСТЕРСТВО ОБРАЗОВАНИЯ И НАУКИ РОССИЙСКОЙ ФЕДЕРАЦИИ"@ru ;
+    fibo-fnd-pty-rl:playsRole :ITMO-Share-RF-isManagedBy-MINOBR .
+
+:ITMO-Address a fibo-be-le-fbo:RegisteredAddress ;
+    rdfs:label "197101, ГОРОД САНКТ-ПЕТЕРБУРГ, проспект Кронверкский, 49" ;
+    fts:p18_postcode "197101" ;
+    fibo-fnd-rel-rel:appliesTo [
+        a fibo-fnd-plc-loc:PhysicalLocation ;
+        fibo-fnd-plc-loc:isLocatedAt :ITMO-Address-House
+    ] .
+
+:ITMO-Address-House a fts:C117_House_Element .

@@ -1,0 +1,270 @@
+<https://w3id.org/datafabric.cc/ontologies/rosstat#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/datafabric.cc/ontologies/rosstat#> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/datafabric.cc/ontologies/rosstat#> .
+<https://w3id.org/datafabric.cc/ontologies/rosstat#> <http://purl.org/dc/terms/title> "\u041E\u043D\u0442\u043E\u043B\u043E\u0433\u0438\u044F \u0411\u0443\u0445\u0433\u0430\u043B\u0442\u0435\u0440\u0441\u043A\u043E\u0439 \u043E\u0442\u0447\u0435\u0442\u043D\u043E\u0441\u0442\u0438 \u043E\u0440\u0433\u0430\u043D\u0438\u0437\u0430\u0446\u0438\u0439 \u0438 \u0418\u041F (\u0420\u043E\u0441\u0441\u0442\u0430\u0442)"@ru .
+<https://w3id.org/datafabric.cc/ontologies/rosstat#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "rosstat" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/linked-data/cube#attribute
+<http://purl.org/linked-data/cube#attribute> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/linked-data/cube#component
+<http://purl.org/linked-data/cube#component> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/linked-data/cube#componentAttachment
+<http://purl.org/linked-data/cube#componentAttachment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/linked-data/cube#componentProperty
+<http://purl.org/linked-data/cube#componentProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/linked-data/cube#componentRequired
+<http://purl.org/linked-data/cube#componentRequired> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/linked-data/cube#concept
+<http://purl.org/linked-data/cube#concept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/linked-data/cube#dimension
+<http://purl.org/linked-data/cube#dimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/linked-data/cube#measure
+<http://purl.org/linked-data/cube#measure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/linked-data/cube#sliceKey
+<http://purl.org/linked-data/cube#sliceKey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#gYear
+<http://www.w3.org/2001/XMLSchema#gYear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/datafabric.cc/ontologies/rosstat#refOrganization
+<https://w3id.org/datafabric.cc/ontologies/rosstat#refOrganization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/datafabric.cc/ontologies/rosstat#refOrganization> <http://www.w3.org/2000/01/rdf-schema#range> <https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/FormalOrganizations/FormalOrganization> .
+<https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/FormalOrganizations/FormalOrganization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/linked-data/sdmx/2009/dimension#refPeriod
+<http://purl.org/linked-data/sdmx/2009/dimension#refPeriod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# http://purl.org/linked-data/sdmx/2009/measure#obsValue
+<http://purl.org/linked-data/sdmx/2009/measure#obsValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# https://w3id.org/datafabric.cc/ontologies/rosstat#measure-1210
+<https://w3id.org/datafabric.cc/ontologies/rosstat#measure-1210> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/datafabric.cc/ontologies/rosstat#measure-1210> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/linked-data/sdmx/2009/measure#obsValue> .
+<https://w3id.org/datafabric.cc/ontologies/rosstat#measure-1210> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+# 
+# https://w3id.org/datafabric.cc/ontologies/rosstat#measure-1230
+<https://w3id.org/datafabric.cc/ontologies/rosstat#measure-1230> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/datafabric.cc/ontologies/rosstat#measure-1230> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/linked-data/sdmx/2009/measure#obsValue> .
+<https://w3id.org/datafabric.cc/ontologies/rosstat#measure-1230> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+# 
+# https://w3id.org/datafabric.cc/ontologies/rosstat#measure-1250
+<https://w3id.org/datafabric.cc/ontologies/rosstat#measure-1250> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/datafabric.cc/ontologies/rosstat#measure-1250> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/linked-data/sdmx/2009/measure#obsValue> .
+<https://w3id.org/datafabric.cc/ontologies/rosstat#measure-1250> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+# 
+# https://w3id.org/datafabric.cc/ontologies/rosstat#measure-1370
+<https://w3id.org/datafabric.cc/ontologies/rosstat#measure-1370> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/datafabric.cc/ontologies/rosstat#measure-1370> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/linked-data/sdmx/2009/measure#obsValue> .
+<https://w3id.org/datafabric.cc/ontologies/rosstat#measure-1370> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+# 
+# https://w3id.org/datafabric.cc/ontologies/rosstat#measure-1520
+<https://w3id.org/datafabric.cc/ontologies/rosstat#measure-1520> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/datafabric.cc/ontologies/rosstat#measure-1520> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/linked-data/sdmx/2009/measure#obsValue> .
+<https://w3id.org/datafabric.cc/ontologies/rosstat#measure-1520> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+# 
+# https://w3id.org/datafabric.cc/ontologies/rosstat#measure-2110
+<https://w3id.org/datafabric.cc/ontologies/rosstat#measure-2110> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/datafabric.cc/ontologies/rosstat#measure-2110> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/linked-data/sdmx/2009/measure#obsValue> .
+<https://w3id.org/datafabric.cc/ontologies/rosstat#measure-2110> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+# 
+# https://w3id.org/datafabric.cc/ontologies/rosstat#measure-2400
+<https://w3id.org/datafabric.cc/ontologies/rosstat#measure-2400> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/datafabric.cc/ontologies/rosstat#measure-2400> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/linked-data/sdmx/2009/measure#obsValue> .
+<https://w3id.org/datafabric.cc/ontologies/rosstat#measure-2400> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+# 
+# https://w3id.org/datafabric.cc/ontologies/rosstat#measure-2410
+<https://w3id.org/datafabric.cc/ontologies/rosstat#measure-2410> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/datafabric.cc/ontologies/rosstat#measure-2410> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/linked-data/sdmx/2009/measure#obsValue> .
+<https://w3id.org/datafabric.cc/ontologies/rosstat#measure-2410> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+# 
+# https://w3id.org/datafabric.cc/ontologies/rosstat#refPeriod
+<https://w3id.org/datafabric.cc/ontologies/rosstat#refPeriod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/datafabric.cc/ontologies/rosstat#refPeriod> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/linked-data/sdmx/2009/dimension#refPeriod> .
+<https://w3id.org/datafabric.cc/ontologies/rosstat#refPeriod> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#gYear> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/linked-data/cube#DataStructureDefinition
+<http://purl.org/linked-data/cube#DataStructureDefinition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://purl.org/linked-data/cube#DimensionProperty
+<http://purl.org/linked-data/cube#DimensionProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://purl.org/linked-data/cube#MeasureProperty
+<http://purl.org/linked-data/cube#MeasureProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://purl.org/linked-data/cube#SliceKey
+<http://purl.org/linked-data/cube#SliceKey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/FormalOrganizations/FormalOrganization
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/datafabric.cc/ontologies/rosstat#RosstatAccountingReportDSD
+<https://w3id.org/datafabric.cc/ontologies/rosstat#RosstatAccountingReportDSD> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/datafabric.cc/ontologies/rosstat#RosstatAccountingReportDSD> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#DataStructureDefinition> .
+<https://w3id.org/datafabric.cc/ontologies/rosstat#RosstatAccountingReportDSD> <http://purl.org/linked-data/cube#component> _:genid1 .
+_:genid1 <http://purl.org/linked-data/cube#measure> <https://w3id.org/datafabric.cc/ontologies/rosstat#measure-2400> .
+<https://w3id.org/datafabric.cc/ontologies/rosstat#RosstatAccountingReportDSD> <http://purl.org/linked-data/cube#component> _:genid2 .
+_:genid2 <http://purl.org/linked-data/cube#measure> <https://w3id.org/datafabric.cc/ontologies/rosstat#measure-2110> .
+<https://w3id.org/datafabric.cc/ontologies/rosstat#RosstatAccountingReportDSD> <http://purl.org/linked-data/cube#component> _:genid3 .
+_:genid3 <http://purl.org/linked-data/cube#measure> <https://w3id.org/datafabric.cc/ontologies/rosstat#measure-2410> .
+<https://w3id.org/datafabric.cc/ontologies/rosstat#RosstatAccountingReportDSD> <http://purl.org/linked-data/cube#component> _:genid4 .
+_:genid4 <http://purl.org/linked-data/cube#attribute> <http://purl.org/linked-data/sdmx/2009/attribute#currency> .
+_:genid4 <http://purl.org/linked-data/cube#componentAttachment> <http://purl.org/linked-data/cube#DataSet> .
+_:genid4 <http://purl.org/linked-data/cube#componentRequired> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/datafabric.cc/ontologies/rosstat#RosstatAccountingReportDSD> <http://purl.org/linked-data/cube#component> _:genid5 .
+_:genid5 <http://purl.org/linked-data/cube#measure> <https://w3id.org/datafabric.cc/ontologies/rosstat#measure-1230> .
+<https://w3id.org/datafabric.cc/ontologies/rosstat#RosstatAccountingReportDSD> <http://purl.org/linked-data/cube#component> _:genid6 .
+_:genid6 <http://purl.org/linked-data/cube#measure> <https://w3id.org/datafabric.cc/ontologies/rosstat#measure-1520> .
+<https://w3id.org/datafabric.cc/ontologies/rosstat#RosstatAccountingReportDSD> <http://purl.org/linked-data/cube#component> _:genid7 .
+_:genid7 <http://purl.org/linked-data/cube#measure> <https://w3id.org/datafabric.cc/ontologies/rosstat#measure-1250> .
+<https://w3id.org/datafabric.cc/ontologies/rosstat#RosstatAccountingReportDSD> <http://purl.org/linked-data/cube#component> _:genid8 .
+_:genid8 <http://purl.org/linked-data/cube#measure> <https://w3id.org/datafabric.cc/ontologies/rosstat#measure-1370> .
+<https://w3id.org/datafabric.cc/ontologies/rosstat#RosstatAccountingReportDSD> <http://purl.org/linked-data/cube#component> _:genid9 .
+_:genid9 <http://purl.org/linked-data/cube#componentAttachment> <http://purl.org/linked-data/cube#Slice> .
+_:genid9 <http://purl.org/linked-data/cube#dimension> <https://w3id.org/datafabric.cc/ontologies/rosstat#refPeriod> .
+<https://w3id.org/datafabric.cc/ontologies/rosstat#RosstatAccountingReportDSD> <http://purl.org/linked-data/cube#component> _:genid10 .
+_:genid10 <http://purl.org/linked-data/cube#componentAttachment> <http://purl.org/linked-data/cube#Slice> .
+_:genid10 <http://purl.org/linked-data/cube#dimension> <https://w3id.org/datafabric.cc/ontologies/rosstat#refOrganization> .
+<https://w3id.org/datafabric.cc/ontologies/rosstat#RosstatAccountingReportDSD> <http://purl.org/linked-data/cube#component> _:genid11 .
+_:genid11 <http://purl.org/linked-data/cube#dimension> <http://purl.org/linked-data/cube#measureType> .
+<https://w3id.org/datafabric.cc/ontologies/rosstat#RosstatAccountingReportDSD> <http://purl.org/linked-data/cube#component> _:genid12 .
+_:genid12 <http://purl.org/linked-data/cube#measure> <https://w3id.org/datafabric.cc/ontologies/rosstat#measure-1210> .
+<https://w3id.org/datafabric.cc/ontologies/rosstat#RosstatAccountingReportDSD> <http://purl.org/linked-data/cube#sliceKey> <https://w3id.org/datafabric.cc/ontologies/rosstat#SliceByYearAndOrg> .
+<https://w3id.org/datafabric.cc/ontologies/rosstat#RosstatAccountingReportDSD> <http://www.w3.org/2000/01/rdf-schema#label> "RDF Data Cube \u0441\u0445\u0435\u043C\u0430 \u0434\u0430\u043D\u043D\u044B\u0445 \u0431\u0443\u0445\u0433\u0430\u043B\u0442\u0435\u0440\u0441\u043A\u043E\u0439 \u043E\u0442\u0447\u0435\u0442\u043D\u043E\u0441\u0442\u0438 \u043E\u0440\u0433\u0430\u043D\u0438\u0437\u0430\u0446\u0438\u0439 \u0438 \u0418\u041F"@ru .
+# 
+# https://w3id.org/datafabric.cc/ontologies/rosstat#SliceByYearAndOrg
+<https://w3id.org/datafabric.cc/ontologies/rosstat#SliceByYearAndOrg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/datafabric.cc/ontologies/rosstat#SliceByYearAndOrg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#SliceKey> .
+<https://w3id.org/datafabric.cc/ontologies/rosstat#SliceByYearAndOrg> <http://purl.org/linked-data/cube#componentProperty> <https://w3id.org/datafabric.cc/ontologies/rosstat#refOrganization> .
+<https://w3id.org/datafabric.cc/ontologies/rosstat#SliceByYearAndOrg> <http://purl.org/linked-data/cube#componentProperty> <https://w3id.org/datafabric.cc/ontologies/rosstat#refPeriod> .
+<https://w3id.org/datafabric.cc/ontologies/rosstat#SliceByYearAndOrg> <http://www.w3.org/2000/01/rdf-schema#label> "\u0411\u0443\u0445\u0433\u0430\u043B\u0442\u0435\u0440\u0441\u043A\u0430\u044F \u043E\u0442\u0447\u0435\u0442\u043D\u043E\u0441\u0442\u044C \u043E\u0440\u0433\u0430\u043D\u0438\u0437\u0430\u0446\u0438\u0438 \u0438\u043B\u0438 \u0418\u041F \u0437\u0430 \u043E\u0442\u0447\u0435\u0442\u043D\u044B\u0439 \u043F\u0435\u0440\u0438\u043E\u0434"@ru .
+# 
+# https://w3id.org/datafabric.cc/ontologies/rosstat#measure-1210
+<https://w3id.org/datafabric.cc/ontologies/rosstat#measure-1210> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/datafabric.cc/ontologies/rosstat#measure-1210> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#MeasureProperty> .
+# 
+# https://w3id.org/datafabric.cc/ontologies/rosstat#measure-1230
+<https://w3id.org/datafabric.cc/ontologies/rosstat#measure-1230> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/datafabric.cc/ontologies/rosstat#measure-1230> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#MeasureProperty> .
+# 
+# https://w3id.org/datafabric.cc/ontologies/rosstat#measure-1250
+<https://w3id.org/datafabric.cc/ontologies/rosstat#measure-1250> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/datafabric.cc/ontologies/rosstat#measure-1250> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#MeasureProperty> .
+# 
+# https://w3id.org/datafabric.cc/ontologies/rosstat#measure-1370
+<https://w3id.org/datafabric.cc/ontologies/rosstat#measure-1370> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/datafabric.cc/ontologies/rosstat#measure-1370> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#MeasureProperty> .
+# 
+# https://w3id.org/datafabric.cc/ontologies/rosstat#measure-1520
+<https://w3id.org/datafabric.cc/ontologies/rosstat#measure-1520> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/datafabric.cc/ontologies/rosstat#measure-1520> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#MeasureProperty> .
+# 
+# https://w3id.org/datafabric.cc/ontologies/rosstat#measure-2110
+<https://w3id.org/datafabric.cc/ontologies/rosstat#measure-2110> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/datafabric.cc/ontologies/rosstat#measure-2110> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#MeasureProperty> .
+# 
+# https://w3id.org/datafabric.cc/ontologies/rosstat#measure-2400
+<https://w3id.org/datafabric.cc/ontologies/rosstat#measure-2400> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/datafabric.cc/ontologies/rosstat#measure-2400> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#MeasureProperty> .
+# 
+# https://w3id.org/datafabric.cc/ontologies/rosstat#measure-2410
+<https://w3id.org/datafabric.cc/ontologies/rosstat#measure-2410> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/datafabric.cc/ontologies/rosstat#measure-2410> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#MeasureProperty> .
+# 
+# https://w3id.org/datafabric.cc/ontologies/rosstat#refOrganization
+<https://w3id.org/datafabric.cc/ontologies/rosstat#refOrganization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/datafabric.cc/ontologies/rosstat#refOrganization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#DimensionProperty> .
+# 
+# https://w3id.org/datafabric.cc/ontologies/rosstat#refPeriod
+<https://w3id.org/datafabric.cc/ontologies/rosstat#refPeriod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/datafabric.cc/ontologies/rosstat#refPeriod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#DimensionProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Annotations
+# #
+# #################################################################
+# 
+# 
+<https://w3id.org/datafabric.cc/ontologies/rosstat#measure-1210> <http://www.w3.org/2000/01/rdf-schema#label> "\u0417\u0430\u043F\u0430\u0441\u044B"@ru .
+# 
+<https://w3id.org/datafabric.cc/ontologies/rosstat#measure-1230> <http://www.w3.org/2000/01/rdf-schema#label> "\u0414\u0435\u0431\u0438\u0442\u043E\u0440\u0441\u043A\u0430\u044F \u0437\u0430\u0434\u043E\u043B\u0436\u0435\u043D\u043D\u043E\u0441\u0442\u044C"@ru .
+# 
+<https://w3id.org/datafabric.cc/ontologies/rosstat#measure-1250> <http://www.w3.org/2000/01/rdf-schema#label> "\u0414\u0435\u043D\u0435\u0436\u043D\u044B\u0435 \u0441\u0440\u0435\u0434\u0441\u0442\u0432\u0430"@ru .
+# 
+<https://w3id.org/datafabric.cc/ontologies/rosstat#measure-1370> <http://www.w3.org/2000/01/rdf-schema#label> "\u041D\u0435\u0440\u0430\u0441\u043F\u0440\u0435\u0434\u0435\u043B\u0435\u043D\u043D\u0430\u044F \u043F\u0440\u0438\u0431\u044B\u043B\u044C (\u043D\u0435\u043F\u043E\u043A\u0440\u044B\u0442\u044B\u0439 \u0443\u0431\u044B\u0442\u043E\u043A)"@ru .
+# 
+<https://w3id.org/datafabric.cc/ontologies/rosstat#measure-1520> <http://www.w3.org/2000/01/rdf-schema#label> "\u041A\u0440\u0435\u0434\u0438\u0442\u043E\u0440\u0441\u043A\u0430\u044F \u0437\u0430\u0434\u043E\u043B\u0436\u043D\u043E\u0441\u0442\u044C"@ru .
+# 
+<https://w3id.org/datafabric.cc/ontologies/rosstat#measure-2110> <http://www.w3.org/2000/01/rdf-schema#label> "\u0412\u044B\u0440\u0443\u0447\u043A\u0430"@ru .
+# 
+<https://w3id.org/datafabric.cc/ontologies/rosstat#measure-2400> <http://www.w3.org/2000/01/rdf-schema#label> "\u0427\u0438\u0441\u0442\u0430\u044F \u043F\u0440\u0438\u0431\u044B\u043B\u044C (\u0443\u0431\u044B\u0442\u043E\u043A)"@ru .
+# 
+<https://w3id.org/datafabric.cc/ontologies/rosstat#measure-2410> <http://www.w3.org/2000/01/rdf-schema#label> "\u041D\u0430\u043B\u043E\u0433 \u043D\u0430 \u043F\u0440\u0438\u0431\u044B\u043B\u044C"@ru .
+# 
+<https://w3id.org/datafabric.cc/ontologies/rosstat#refOrganization> <http://www.w3.org/2000/01/rdf-schema#label> "\u041E\u0440\u0433\u0430\u043D\u0438\u0437\u0430\u0446\u0438\u044F"@ru .
+# 
+<https://w3id.org/datafabric.cc/ontologies/rosstat#refPeriod> <http://purl.org/linked-data/cube#concept> <http://purl.org/linked-data/sdmx/2009/concept#refPeriod> .
+<https://w3id.org/datafabric.cc/ontologies/rosstat#refPeriod> <http://www.w3.org/2000/01/rdf-schema#label> "\u041F\u0435\u0440\u0438\u043E\u0434"@ru .
+# 
+# Generated by the OWL API (version 5.1.0) https://github.com/owlcs/owlapi/

@@ -54,11 +54,13 @@
     ##
     # Сведения о регистрации
     ##
-    fibo-fnd-aap-agt:isIdentifiedBy [ # ОГРН
+    fibo-ru:hasRegistrationIdentifier [ # ОГРН
         a fibo-be-corp-corp:RegistrationIdentifier ;
         fibo-fnd-aap-agt:identifies :Datafabric ;
         fibo-fnd-rel-rel:hasUniqueIdentifier "1157847449121" ;
-        fibo-fnd-rel-rel:hasDateOfIssuance "2015-12-25"^^xsd:date
+        fibo-fnd-rel-rel:hasDateOfIssuance [ # ОГРН Дата
+            fibo-fnd-dt-fd:hasDateValue "2015-12-25"^^xsd:date
+        ]
     ] ;
     fibo-be-corp-corp:hasDateOfRegistration [ # ОГРН Дата
         fibo-fnd-dt-fd:hasDateValue "2015-12-25"^^xsd:date
@@ -67,12 +69,14 @@
     ##
     # Сведения об учете в налоговом органе
     ##
-    fibo-fnd-aap-agt:isIdentifiedBy [ # ИНН
+    fibo-ru:hasVATRegistrationNumber [ # ИНН
         a fibo-ru:VATIN ;
         fibo-fnd-aap-agt:identifies :Datafabric ;
         fibo-fnd-rel-rel:hasUniqueIdentifier "7811269044" ;
         fibo-ru:hasReasonCodeOfIssuance "781101001" ;
-        fibo-fnd-arr-doc:hasDateOfIssuance "2015-12-25"^^xsd:date
+        fibo-fnd-arr-doc:hasDateOfIssuance [
+           fibo-fnd-dt-fd:hasDateValue "2015-12-25"^^xsd:date
+        ]
     ] ;
 
     ##
@@ -147,7 +151,7 @@
 :Isaev-SA a fibo-be-le-lp:NaturalPerson ;
     fibo-fnd-aap-agt:hasName "ИСАЕВ СЕРГЕЙ АЛЕКСАНДРОВИЧ" ;
     fibo-fnd-aap-ppl:hasCitizenship lcc-3166-1:RussianFederation ;
-    fibo-fnd-aap-agt:isIdentifiedBy [ # ИНН
+    fibo-ru:hasVATRegistrationNumber [ # ИНН
         a fibo-ru:VATIN ;
         fibo-fnd-aap-agt:identifies :Isaev-SA ;
         fibo-fnd-rel-rel:hasUniqueIdentifier "781133781387"
@@ -159,7 +163,7 @@
 :Isaev-Faked-SA a fibo-be-le-lp:NaturalPerson ;
     fibo-fnd-aap-agt:hasName "Faked ИСАЕВ СЕРГЕЙ АЛЕКСАНДРОВИЧ" ;
     fibo-fnd-aap-ppl:hasCitizenship lcc-3166-1:RussianFederation ;
-    fibo-fnd-aap-agt:isIdentifiedBy [ # ИНН
+    fibo-ru:hasVATRegistrationNumber [ # ИНН
         a fibo-ru:VATIN ;
         fibo-fnd-aap-agt:identifies :Isaev-Faked-SA ;
         fibo-fnd-rel-rel:hasUniqueIdentifier "Faked 781133781387"

@@ -50,13 +50,16 @@
     ##
     # Сведения о регистрации
     ##
-    fibo-fnd-aap-agt:isIdentifiedBy [ # ОГРНИП
+    fibo-ru:hasRegistrationIdentifier [ # ОГРНИП
         a fibo-be-corp-corp:RegistrationIdentifier,
             fibo-be-le-fbo:OrganizationIdentifier,
             fibo-fnd-arr-id:Identifier ;
         fibo-fnd-aap-agt:identifies :IE-Hlyzov ;
         fibo-fnd-rel-rel:hasUniqueIdentifier "314784721100136" ;
-        fibo-fnd-rel-rel:hasDateOfIssuance "2014-07-30"^^xsd:date
+        fibo-fnd-rel-rel:hasDateOfIssuance [ # ОГРНИП Дата
+            a fibo-fnd-dt-fd:ExplicitDate, fibo-fnd-dt-fd:Date ;
+            fibo-fnd-dt-fd:hasDateValue "2014-07-30"^^xsd:date
+        ]
     ] ;
     fibo-be-corp-corp:hasDateOfRegistration [ # ОГРНИП Дата
         a fibo-fnd-dt-fd:ExplicitDate, fibo-fnd-dt-fd:Date ;
@@ -64,14 +67,8 @@
     ] ;
 
     ##
-    # Сведения об учете в налоговом органе
+    # Сведения об учете в налоговом органе. У ИП нет отдельной от ФЛ информации о ИНН и т.д.
     ##
-    fibo-fnd-aap-agt:isIdentifiedBy [ # ИНН
-        a fibo-ru:VATIN, fibo-fnd-arr-id:Identifier ;
-        fibo-fnd-aap-agt:identifies :IE-Hlyzov ;
-        fibo-fnd-rel-rel:hasUniqueIdentifier "5505055936460" ;
-        fibo-fnd-arr-doc:hasDateOfIssuance "2014-07-30"^^xsd:date
-    ] ;
 
     ###
     # Сведения о владельце
